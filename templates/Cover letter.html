@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cover Letter Generator | Resume Analyzer Pro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #f8fafc;
+        }
+
+        /* Sidebar Styles - Matching ATS Score.html */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+        }
+
+        .sidebar .logo {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            background: linear-gradient(to right, #fff 0%, #93c5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            padding: 14px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-link.active {
+            background-color: rgba(59, 130, 246, 0.2);
+            border-left: 4px solid #3b82f6;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(59, 130, 246, 0.2);
+            transform: translateX(5px);
+            color: #fff;
+        }
+
+        .main-content {
+            margin-left: 300px;
+            padding: 40px;
+            width: calc(100% - 300px);
+        }
+
+        /* Cover Letter Container */
+        .cover-letter-container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .cover-letter-container h1 {
+            color: #1e3a8a;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .cover-letter-container h1::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 20px;
+            width: 5px;
+            background: #2563eb;
+            border-radius: 5px;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: #1e3a8a;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 180px;
+            line-height: 1.6;
+        }
+
+        /* Generate Button */
+        .generate-button {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+            width: 100%;
+        }
+
+        .generate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Generated Letter */
+        .generated-letter {
+            margin-top: 40px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            display: none;
+        }
+
+        .generated-letter h3 {
+            color: #1e3a8a;
+            font-size: 22px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .generated-letter p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .letter-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .download-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+        }
+
+        .regenerate-button {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+        }
+
+        .regenerate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 20px;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 20px;
+            }
+            
+            .letter-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Resume Analyzer</div>
+        <a href="Dashboard.html" class="nav-link">📊 Dashboard</a>
+        <a href="Ats score.html" class="nav-link">🎯 ATS Score</a>
+        <a href="Resume score.html" class="nav-link">📝 Resume Score</a>
+        <a href="Missing skills.html" class="nav-link">⚠️ Missing Skills</a>
+        <a href="Course recommendations.html" class="nav-link">📚 Course Recommendations</a>
+        <a href="Cover letter.html" class="nav-link active">✉️ Cover Letter Generator</a>
+        <a href="ATS Optimized Resume Builder.html" class="nav-link">📄 ATS Optimized Resume Builder</a>
+    </div>
+
+    <div class="main-content">
+        <div class="cover-letter-container">
+            <h1>Cover Letter Generator</h1>
+            <form id="coverLetterForm">
+                <div class="form-group">
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter the job title" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" name="companyName" placeholder="Enter the company name" required>
+                </div>
+                <div class="form-group">
+                    <label for="yourName">Your Name</label>
+                    <input type="text" id="yourName" name="yourName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="coverLetterContent">Cover Letter Content</label>
+                    <textarea id="coverLetterContent" name="coverLetterContent" placeholder="Write your cover letter content here..." required></textarea>
+                </div>
+                <button type="submit" class="generate-button">Generate Cover Letter</button>
+            </form>
+
+            <div class="generated-letter" id="generatedLetter">
+                <h3>Generated Cover Letter</h3>
+                <div id="letterContent"></div>
+                <div class="letter-actions">
+                    <button class="download-button" onclick="downloadLetter()">Download as PDF</button>
+                    <button class="regenerate-button" onclick="resetForm()">Regenerate Letter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("coverLetterForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const jobTitle = document.getElementById("jobTitle").value;
+            const companyName = document.getElementById("companyName").value;
+            const yourName = document.getElementById("yourName").value;
+            const coverLetterContent = document.getElementById("coverLetterContent").value;
+
+            const today = new Date();
+            const dateString = today.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+
+            const letterContent = `
+                <p>${dateString}</p>
+                <p>${yourName}</p>
+                <p>${companyName}</p>
+                <br>
+                <p>Dear Hiring Manager,</p>
+                <br>
+                <p>I am excited to apply for the ${jobTitle} position at ${companyName}. ${coverLetterContent}</p>
+                <br>
+                <p>Thank you for your time and consideration. I look forward to the opportunity to discuss how my skills and experiences align with your needs.</p>
+                <br>
+                <p>Sincerely,</p>
+                <p>${yourName}</p>
+            `;
+
+            document.getElementById("letterContent").innerHTML = letterContent;
+            document.getElementById("generatedLetter").style.display = "block";
+            
+            // Scroll to the generated letter
+            document.getElementById("generatedLetter").scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function downloadLetter() {
+            alert("This would download the cover letter as a PDF in a real implementation");
+            // In a real implementation, you would use a library like jsPDF
+            // to generate and download the PDF
+        }
+
+        function resetForm() {
+            document.getElementById("coverLetterForm").reset();
+            document.getElementById("generatedLetter").style.display = "none";
+            document.getElementById("coverLetterForm").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
