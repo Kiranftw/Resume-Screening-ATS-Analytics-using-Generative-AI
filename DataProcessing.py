@@ -7,9 +7,11 @@ import pytesseract
 import io
 from functools import wraps
 from PIL import Image
+from newspaper import Article
+
 pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 
-class DataProcessing(object):
+class DocumentProcessing(object):
     def __init__(self) ->None:
         load_dotenv(find_dotenv())
     
@@ -19,13 +21,13 @@ class DataProcessing(object):
         def wrapper(*args, **kwargs):
             try:
                 return func(*args, **kwargs)
-            except Exception as e:
+            except (FileNotFoundError, ValueError,Exception,FileNotFoundError, ValueError, NameError, TypeError, KeyError, IndexError, AttributeError, ValueError, AssertionError) as e:
                 print(f"An error occurred: {e}")
                 raise e
         return wrapper
     
     @ExceptionHandeler
-    def FileProcessing(self,filepath:str) -> str:
+    def FileProcessing(self, filepath:str) -> str:
         if not os.path.exists(filepath):
             raise FileNotFoundError(f"The file {filepath} does not exist.")
         
@@ -65,20 +67,20 @@ class DataProcessing(object):
             for page in doc:
                 ExtractedData += page.get_text()
             doc.close()
+        
+        elif filepath.lower().startswith("https://") or filepath.lower().startswith("http://"):
+            article = Article(filepath)
+            article.download()
+            article.parse()
+            ExtractedData = article.text
         else:
-            raise ValueError("Unsupported file type. Please provide a .docx, .txt, or .pdf file.")
+            raise ValueError("Unsupported file format.")
+        
         return ExtractedData
     
+    @ExceptionHandeler
     def main(self):
-        filepath = input()
-        if not filepath:
-            raise ValueError("Please set the FILE_PATH environment variable.")
-        
-        try:
-            extracted_data = self.FileProcessing(filepath)
-            print(extracted_data)
-        except Exception as e:
-            print(f"An error occurred: {e}")
+        pass
 
 if __name__ == "__main__":
-    data_processor = DataProcessing()
+    DocumentProcessing().main()
