@@ -6,7 +6,7 @@ from dotenv import load_dotenv, find_dotenv
 from langchain.prompts import PromptTemplate
 from pydantic import BaseModel
 from functools import wraps
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any
 import time
 
 class ResumeAnalytics(DocumentProcessing):
@@ -17,9 +17,9 @@ class ResumeAnalytics(DocumentProcessing):
             raise ValueError("API key not found. Please set the GEMINIAPI environment variable.")
         
         genai.configure(api_key=self.__API)
-        models: list[str] = list(model.name for model in genai.list_models())
+        self.models: list[str] = list(model.name for model in genai.list_models())
         
-        if modelname not in models:
+        if modelname not in self.models:
             raise ValueError(f"{modelname} not found! Please check the model name.")
         self.__MODEL = genai.GenerativeModel(
             model_name=modelname,
@@ -28,7 +28,10 @@ class ResumeAnalytics(DocumentProcessing):
             tools=None,
             system_instruction=None,
         )
-        print(self.__MODEL)
+    
+    @property
+    def getAPI(self) -> Any:
+        return self.__API
             
     @staticmethod
     def ExceptionHandelling(func):
@@ -45,11 +48,7 @@ class ResumeAnalytics(DocumentProcessing):
     def makeRequest(self, promptfile: str) -> Any:
         with open(promptfile, "r", encoding = "utf-8") as file:
             promptext = file.read()
-        template = PromptTemplate(
-            template = "Analyze the following {prompt}"
-            input_variables = ["prompt"]
-        )
-        return template.format(prompt = promptext)
+        pass
 
 if __name__ == "__main__":
     object = ResumeAnalytics()
