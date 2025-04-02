@@ -3,7 +3,6 @@ import os
 from typing import Any
 from DataProcessing import DocumentProcessing
 from dotenv import load_dotenv, find_dotenv
-from langchain_core.prompts import PromptTemplate
 from pydantic import BaseModel
 from functools import wraps
 from typing import Dict, List, Optional, Any
@@ -55,29 +54,27 @@ class ResumeAnalytics(DocumentProcessing):
         response = self.__MODEL.generate_content(prompt)
         return response.text
     
-    @ExceptionHandelling
     def resumeanalytics(self, resumepath: str, jobdescription: str, filename: str = "prompt.txt") -> Optional[Dict[str, Any]]:
         resume = self.FileProcessing(resumepath)
         jobdescription = self.FileProcessing(jobdescription)
-        
+
         if not os.path.exists(filename):
             raise FileNotFoundError(f"The file {filename} does not exist.")
         with open(filename, "r", encoding="utf-8") as file:
             prompt = file.read()
-        promptTemplate = PromptTemplate(
-            input_variables=["resume", "jobdescription"],
-            template= prompt
-        )
-        Fprompt = promptTemplate.format(resume=resumepath, jobdescription=jobdescription)
+        Fprompt = f"{prompt}\nResume: {resume}\nJob Description: {jobdescription}"
         try:
             OutputFile = f"{self.JSONFOLDER}/{os.path.basename(resumepath)}.json"
             response = self.getResponse(Fprompt)
+            print(response)
             responseJSON = json.loads(response)
-            with open( OutputFile, "w", encoding="utf-8") as file:
+            with open(OutputFile, "w", encoding="utf-8") as file:
                 json.dump(responseJSON, file, indent=4, ensure_ascii=False)
+
             print(f"JSON file saved: {OutputFile}")
             return responseJSON
-        except JSONDecodeError as e:
+
+        except (JSONDecodeError, Exception) as e:
             print(f"Error in resumeanalytics: {e}")
             return None
     
