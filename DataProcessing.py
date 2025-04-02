@@ -44,7 +44,10 @@ class DocumentProcessing(object):
     
     @ExceptionHandeler
     def FileProcessing(self, filepath:str) -> str:
-        if not os.path.exists(filepath):
+        if not filepath:
+            return ""
+        
+        if not os.path.exists(filepath) and not filepath.lower().startswith("https://") and not filepath.lower().startswith("http://"):
             raise FileNotFoundError(f"The file {filepath} does not exist.")
         
         ExtractedData:str = ""
@@ -56,13 +59,13 @@ class DocumentProcessing(object):
                 for row in table.rows:
                     for cell in row.cells:
                         ExtractedData += cell.text + '\n'
-
-            for image in doc.inline_shapes:
-                imageData = image._inline.graphic.graphicData.pic.nvPicBlip.blob
-                imageData = imageData.decode('utf-8')
-                image = Image.open(io.BytesIO(imageData))
-                text: str = pytesseract.image_to_string(image)
-                ExtractedData += text + '\n'
+            
+            for rel in doc.part.rels:
+                if "image" in doc.part.rels[rel].target_ref:
+                    image_data = doc.part.rels[rel].target_part.blob
+                    image = Image.open(io.BytesIO(image_data))
+                    text = pytesseract.image_to_string(image)
+                    ExtractedData += text + '\n'
         
         elif filepath.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'tiff', 'webp')):
             image = Image.open(filepath)
@@ -70,7 +73,7 @@ class DocumentProcessing(object):
                 image = image.convert("RGB")
             text: str = pytesseract.image_to_string(image)
             if text:
-                ExtractedData += text
+                ExtractedData += text.strip()
             else:
                 raise ValueError("No text found in the image.")
     
@@ -88,6 +91,7 @@ class DocumentProcessing(object):
             article = Article(filepath)
             article.download()
             article.parse()
+            article.nlp()
             ExtractedData = article.text
         else:
             raise ValueError("Unsupported file format.")

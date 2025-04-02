@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,7 @@
             display: flex;
             flex-direction: column;
             gap: 25px;
-            box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar .logo {
@@ -82,7 +83,7 @@
             background-color: #fff;
             padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
             margin-bottom: 40px;
@@ -187,7 +188,7 @@
             padding: 25px;
             border-radius: 12px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
             border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
         }
@@ -279,7 +280,7 @@
 
         .recommendation-item:hover {
             transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
         .recommendation-icon {
@@ -329,134 +330,141 @@
                 position: relative;
                 padding: 20px;
             }
+
             .container {
                 margin-left: 0;
                 width: 100%;
                 padding: 20px;
             }
+
             .score-circle {
                 width: 150px;
                 height: 150px;
             }
+
             .score-value {
                 font-size: 48px;
             }
         }
     </style>
 </head>
+
 <body>
-<div class="sidebar">
-    <div class="logo">
-        <div>Resume</div>
-        <div>Analyzer</div>
+    <div class="sidebar">
+        <div class="logo">
+            <div>Resume</div>
+            <div>Analyzer</div>
+        </div>
+        <a href="Dashboard.html" class="nav-link">📊 Dashboard</a>
+        <a href="Ats score.html" class="nav-link active">🎯 ATS Score</a>
+        <a href="Resume score.html" class="nav-link">📝 Resume Score</a>
+        <a href="Missing skills.html" class="nav-link">⚠️ Missing Skills</a>
+        <a href="Course recommendations.html" class="nav-link">📚 Course Recommendations</a>
+        <a href="Cover letter.html" class="nav-link">✉️ Cover Letter Generator</a>
+        <a href="ATS Optimized Resume Builder.html" class="nav-link">📄 ATS Optimized Resume Builder</a>
     </div>
-    <a href="Dashboard.html" class="nav-link">📊 Dashboard</a>
-    <a href="Ats score.html" class="nav-link active">🎯 ATS Score</a>
-    <a href="Resume score.html" class="nav-link">📝 Resume Score</a>
-    <a href="Missing skills.html" class="nav-link">⚠️ Missing Skills</a>
-    <a href="Course recommendations.html" class="nav-link">📚 Course Recommendations</a>
-    <a href="Cover letter.html" class="nav-link">✉️ Cover Letter Generator</a>
-    <a href="ATS Optimized Resume Builder.html" class="nav-link">📄 ATS Optimized Resume Builder</a>
-</div>
-<div class="container">
-    <div class="score-card">
-        <div class="score-header">
-            <h1 class="score-title">ATS Compatibility Score</h1>
-            <div class="score-badge">Excellent Match</div>
-        </div>
-        
-        <div class="score-display">
-            <div class="score-circle">
-                <span class="score-value">85</span>
-            </div>
-            <div class="progress-label">
-                <span>0%</span>
-                <span>100%</span>
-            </div>
-        </div>
-
-        <div class="analytics-grid">
-            <div class="analytics-item">
-                <div class="value">22</div>
-                <div class="label">Matched Keywords</div>
-            </div>
-            <div class="analytics-item">
-                <div class="value">8</div>
-                <div class="label">Unmatched Keywords</div>
-            </div>
-            <div class="analytics-item">
-                <div class="value">87%</div>
-                <div class="label">Role Fit</div>
-            </div>
-            <div class="analytics-item">
-                <div class="value">92%</div>
-                <div class="label">Format Score</div>
-            </div>
-        </div>
-
-        <div class="details-section">
-            <h2 class="section-title">Matched Keywords</h2>
-            <div class="keywords-list">
-                <span class="keyword">Teamwork</span>
-                <span class="keyword">SEO</span>
-                <span class="keyword">Leadership</span>
-                <span class="keyword">Marketing</span>
-                <span class="keyword">Strategy</span>
-                <span class="keyword">Communication</span>
-                <span class="keyword">Project Management</span>
-                <span class="keyword">Content Creation</span>
+    <div class="container">
+        <div class="score-card">
+            <div class="score-header">
+                <h1 class="score-title">ATS Compatibility Score</h1>
+                <div class="score-badge">Excellent Match</div>
             </div>
 
-            <h2 class="section-title">Unmatched Keywords</h2>
-            <div class="keywords-list" id="unmatchedKeywords">
-                <span class="keyword unmatched">Analytics</span>
-                <span class="keyword unmatched">Python</span>
-                <span class="keyword unmatched">Data Visualization</span>
-                <span class="keyword unmatched">SQL</span>
-                <span class="keyword unmatched">Google Analytics</span>
-            </div>
-
-            <h2 class="section-title">Optimization Recommendations</h2>
-            <div class="recommendations-list">
-                <div class="recommendation-item">
-                    <div class="recommendation-icon">1</div>
-                    <div>Optimize your resume formatting for better ATS readability with standard headings and bullet points</div>
+            <div class="score-display">
+                <div class="score-circle">
+                    <span class="score-value">85</span>
                 </div>
-                <div class="recommendation-item">
-                    <div class="recommendation-icon">2</div>
-                    <div>Add "Python" and "Analytics" to your skills section to match more job descriptions</div>
-                </div>
-                <div class="recommendation-item">
-                    <div class="recommendation-icon">3</div>
-                    <div>Include more job-specific keywords in your experience descriptions to improve matching</div>
-                </div>
-                <div class="recommendation-item">
-                    <div class="recommendation-icon">4</div>
-                    <div>Highlight quantifiable achievements with metrics and numbers to stand out</div>
+                <div class="progress-label">
+                    <span>0%</span>
+                    <span>100%</span>
                 </div>
             </div>
-        </div>
 
-        <button class="add-keyword-btn" id="addKeywordBtn">Add Custom Keyword</button>
+            <div class="analytics-grid">
+                <div class="analytics-item">
+                    <div class="value">22</div>
+                    <div class="label">Matched Keywords</div>
+                </div>
+                <div class="analytics-item">
+                    <div class="value">8</div>
+                    <div class="label">Unmatched Keywords</div>
+                </div>
+                <div class="analytics-item">
+                    <div class="value">87%</div>
+                    <div class="label">Role Fit</div>
+                </div>
+                <div class="analytics-item">
+                    <div class="value">92%</div>
+                    <div class="label">Format Score</div>
+                </div>
+            </div>
+
+            <div class="details-section">
+                <h2 class="section-title">Matched Keywords</h2>
+                <div class="keywords-list">
+                    <span class="keyword">Teamwork</span>
+                    <span class="keyword">SEO</span>
+                    <span class="keyword">Leadership</span>
+                    <span class="keyword">Marketing</span>
+                    <span class="keyword">Strategy</span>
+                    <span class="keyword">Communication</span>
+                    <span class="keyword">Project Management</span>
+                    <span class="keyword">Content Creation</span>
+                </div>
+
+                <h2 class="section-title">Unmatched Keywords</h2>
+                <div class="keywords-list" id="unmatchedKeywords">
+                    <span class="keyword unmatched">Analytics</span>
+                    <span class="keyword unmatched">Python</span>
+                    <span class="keyword unmatched">Data Visualization</span>
+                    <span class="keyword unmatched">SQL</span>
+                    <span class="keyword unmatched">Google Analytics</span>
+                </div>
+
+                <h2 class="section-title">Optimization Recommendations</h2>
+                <div class="recommendations-list">
+                    <div class="recommendation-item">
+                        <div class="recommendation-icon">1</div>
+                        <div>Optimize your resume formatting for better ATS readability with standard headings and
+                            bullet points</div>
+                    </div>
+                    <div class="recommendation-item">
+                        <div class="recommendation-icon">2</div>
+                        <div>Add "Python" and "Analytics" to your skills section to match more job descriptions</div>
+                    </div>
+                    <div class="recommendation-item">
+                        <div class="recommendation-icon">3</div>
+                        <div>Include more job-specific keywords in your experience descriptions to improve matching
+                        </div>
+                    </div>
+                    <div class="recommendation-item">
+                        <div class="recommendation-icon">4</div>
+                        <div>Highlight quantifiable achievements with metrics and numbers to stand out</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="add-keyword-btn" id="addKeywordBtn">Add Custom Keyword</button>
+        </div>
     </div>
-</div>
 
-<script>
-    document.getElementById('addKeywordBtn').addEventListener('click', function() {
-        const keyword = prompt('Enter a new keyword to add to unmatched keywords:');
-        if (keyword && keyword.trim() !== '') {
-            const unmatchedKeywordsList = document.getElementById('unmatchedKeywords');
-            const newKeyword = document.createElement('span');
-            newKeyword.className = 'keyword unmatched';
-            newKeyword.textContent = keyword.trim();
-            unmatchedKeywordsList.appendChild(newKeyword);
-            
-            // Update the unmatched keywords count
-            const unmatchedCountElement = document.querySelector('.analytics-item:nth-child(2) .value');
-            const currentCount = parseInt(unmatchedCountElement.textContent);
-            unmatchedCountElement.textContent = currentCount + 1;
-        }
-    });
-</script>
+    <script>
+        document.getElementById('addKeywordBtn').addEventListener('click', function () {
+            const keyword = prompt('Enter a new keyword to add to unmatched keywords:');
+            if (keyword && keyword.trim() !== '') {
+                const unmatchedKeywordsList = document.getElementById('unmatchedKeywords');
+                const newKeyword = document.createElement('span');
+                newKeyword.className = 'keyword unmatched';
+                newKeyword.textContent = keyword.trim();
+                unmatchedKeywordsList.appendChild(newKeyword);
+
+                // Update the unmatched keywords count
+                const unmatchedCountElement = document.querySelector('.analytics-item:nth-child(2) .value');
+                const currentCount = parseInt(unmatchedCountElement.textContent);
+                unmatchedCountElement.textContent = currentCount + 1;
+            }
+        });
+    </script>
 </body>
+
 </html>

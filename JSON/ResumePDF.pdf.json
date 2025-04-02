@@ -1,0 +1,175 @@
+{
+    "resume_relevance_score": 75,
+    "role_fit_score": 70,
+    "matched_keywords": [
+        "Python",
+        "R",
+        "Java",
+        "SQL",
+        "Data Science",
+        "Machine Learning",
+        "TensorFlow",
+        "Data Analysis",
+        "Data Modeling",
+        "github",
+        "statistics",
+        "data pipelines",
+        "large datasets",
+        "predictive models",
+        "data driven solutions",
+        "exploratory data analysis",
+        "EDA",
+        "programming skills",
+        "cloud platforms"
+    ],
+    "missing_keywords": [
+        "Big Data",
+        "Hadoop",
+        "Spark",
+        "Kafka",
+        "NoSQL databases",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "NLP",
+        "Time Series Forecasting",
+        "MLOps",
+        "Model Monitoring"
+    ],
+    "missing_skills": [
+        "Big Data Technologies",
+        "Cloud Platform Experience (AWS, Azure, Google Cloud)",
+        "MLOps",
+        "Natural Language Processing (NLP)",
+        "Time Series Forecasting"
+    ],
+    "resume_optimization_recommendations": [
+        "Explicitly mention 'Big Data' in the skills or summary section to align with the job title.",
+        "Quantify achievements in projects and work experience to demonstrate impact (e.g., 'Improved model accuracy by X%').",
+        "Add specific cloud platform experience (AWS, Azure, or Google Cloud) to the skills section and elaborate in project descriptions.",
+        "Include projects that involve processing large datasets using technologies like Hadoop, Spark, or Kafka.",
+        "Highlight experience with NoSQL databases like MongoDB or Cassandra.",
+        "Incorporate keywords like 'Data Pipelines' and 'Predictive Models' in the project descriptions to match job requirements.",
+        "Add a section detailing familiarity with MLOps practices and model monitoring techniques.",
+        "Expand on experience with data cleaning and preprocessing, emphasizing handling large volumes of data.",
+        "Refine project descriptions to showcase strong analytical and problem-solving skills.",
+        "Tailor the resume to emphasize experience with the specific tools and technologies mentioned in the job description, such as NLP or time series forecasting if applicable."
+    ],
+    "course_recommendations": {
+        "Big Data Technologies": [
+            {
+                "course_name": "Big Data Specialization",
+                "platform": "Coursera",
+                "description": "Learn to analyze, process, and manage large datasets using big data technologies.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.coursera.org/specializations/big-data"
+            },
+            {
+                "course_name": "Apache Hadoop for Data Science",
+                "platform": "Udemy",
+                "description": "Master the fundamentals of Apache Hadoop for data processing and analysis.",
+                "difficulty_level": "Beginner",
+                "course_link": "https://www.udemy.com/course/apache-hadoop-for-data-science/"
+            },
+            {
+                "course_name": "Big Data Analytics with Apache Spark",
+                "platform": "edX",
+                "description": "Explore big data analytics using Apache Spark for large-scale data processing.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.edx.org/course/big-data-analytics-with-apache-spark"
+            }
+        ],
+        "Cloud Platform Experience (AWS, Azure, Google Cloud)": [
+            {
+                "course_name": "AWS Certified Cloud Practitioner",
+                "platform": "AWS Training",
+                "description": "Learn the fundamentals of AWS cloud services and architecture.",
+                "difficulty_level": "Beginner",
+                "course_link": "https://aws.amazon.com/training/certification/"
+            },
+            {
+                "course_name": "Microsoft Azure Fundamentals AZ-900",
+                "platform": "Microsoft Learn",
+                "description": "Understand the basics of Azure cloud services and solutions.",
+                "difficulty_level": "Beginner",
+                "course_link": "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-az-900/"
+            },
+            {
+                "course_name": "Google Cloud Platform Fundamentals",
+                "platform": "Coursera",
+                "description": "Explore the core concepts of Google Cloud Platform for cloud computing.",
+                "difficulty_level": "Beginner",
+                "course_link": "https://www.coursera.org/learn/gcp-fundamentals"
+            }
+        ],
+        "MLOps": [
+            {
+                "course_name": "MLOps Specialization",
+                "platform": "Coursera",
+                "description": "Learn how to implement, deploy, and manage machine learning models in production.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "course_name": "MLOps (Machine Learning Operations) on AWS",
+                "platform": "Udemy",
+                "description": "Deploy and manage machine learning models using AWS MLOps services.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.udemy.com/course/mlops-machine-learning-operations-on-aws/"
+            },
+            {
+                "course_name": "Introduction to MLOps",
+                "platform": "DataCamp",
+                "description": "Get started with MLOps and learn how to streamline the machine learning lifecycle.",
+                "difficulty_level": "Beginner",
+                "course_link": "https://www.datacamp.com/courses/introduction-to-mlops"
+            }
+        ],
+        "Natural Language Processing (NLP)": [
+            {
+                "course_name": "Natural Language Processing Specialization",
+                "platform": "Coursera",
+                "description": "Master NLP techniques for text analysis, sentiment analysis, and language modeling.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.coursera.org/specializations/natural-language-processing"
+            },
+            {
+                "course_name": "NLP - Natural Language Processing with Python",
+                "platform": "Udemy",
+                "description": "Learn NLP using Python and NLTK library.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.udemy.com/course/nlp-natural-language-processing-with-python/"
+            },
+            {
+                "course_name": "TensorFlow Hub for NLP",
+                "platform": "TensorFlow",
+                "description": "Using TensorFlow Hub to build and train NLP Models",
+                "difficulty_level": "Advanced",
+                "course_link": "https://www.tensorflow.org/hub/tutorials/tf2_text_classification"
+            }
+        ],
+        "Time Series Forecasting": [
+            {
+                "course_name": "Time Series Analysis with Python",
+                "platform": "DataCamp",
+                "description": "Learn time series analysis and forecasting techniques using Python.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.datacamp.com/courses/time-series-analysis-with-arima-models-in-python"
+            },
+            {
+                "course_name": "Time Series Analysis, Forecasting and Machine Learning",
+                "platform": "Udemy",
+                "description": "Learn data analysis, forecasting, and machine learning techniques for time series data.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.udemy.com/course/time-series-analysis-forecasting-and-machine-learning/"
+            },
+            {
+                "course_name": "Practical Time Series Analysis",
+                "platform": "Coursera",
+                "description": "Build and evaluate time series models for forecasting and prediction.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.coursera.org/projects/practical-time-series-analysis"
+            }
+        ]
+    }
+}
