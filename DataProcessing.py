@@ -8,6 +8,8 @@ import io
 from functools import wraps
 from PIL import Image
 from newspaper import Article
+import string
+import re
 
 pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 
@@ -26,6 +28,20 @@ class DocumentProcessing(object):
                 raise e
         return wrapper
     
+    def datacleaning(self, textfile: str) -> str:
+        if not textfile:
+            return ""
+        
+        text = textfile
+        text = re.sub(r'\s+', ' ', text.strip())
+        text = re.sub(r'[^\x00-\x7F]', ' ', text)
+        text = re.sub(r'[-–]', ' ', text) 
+        text = re.sub(r'(\w)[|](\w)', r'\1, \2', text)
+        
+        text = text.replace(" - ", "\n- ").replace(":", ":\n")  
+
+        return text.strip()
+    
     @ExceptionHandeler
     def FileProcessing(self, filepath:str) -> str:
         if not os.path.exists(filepath):
@@ -40,19 +56,19 @@ class DocumentProcessing(object):
                 for row in table.rows:
                     for cell in row.cells:
                         ExtractedData += cell.text + '\n'
+
             for image in doc.inline_shapes:
                 imageData = image._inline.graphic.graphicData.pic.nvPicBlip.blob
                 imageData = imageData.decode('utf-8')
                 image = Image.open(io.BytesIO(imageData))
                 text: str = pytesseract.image_to_string(image)
                 ExtractedData += text + '\n'
-
-        elif filepath.lower().endswith(('.jpg', '.jpeg', '.png', '.gif', '.bmp','.webp')):
-            if filepath.lower().endswith(".wbep"):
-                img = Image.open(filepath).convert("RGB")
-            else:
-                img = Image.open(filepath)
-            text: str  = pytesseract.image_to_string(img)
+        
+        elif filepath.lower().endswith(('jpg', 'jpeg', 'png', 'gif', 'bmp', 'tiff', 'webp')):
+            image = Image.open(filepath)
+            if filepath.lower().endswith("webp"):
+                image = image.convert("RGB")
+            text: str = pytesseract.image_to_string(image)
             if text:
                 ExtractedData += text
             else:
@@ -76,11 +92,4 @@ class DocumentProcessing(object):
         else:
             raise ValueError("Unsupported file format.")
         
-        return ExtractedData
-    
-    @ExceptionHandeler
-    def main(self):
-        pass
-
-if __name__ == "__main__":
-    DocumentProcessing().main()
+        return self.datacleaning(ExtractedData)
