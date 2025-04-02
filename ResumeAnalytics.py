@@ -3,11 +3,13 @@ import os
 from typing import Any
 from DataProcessing import DocumentProcessing
 from dotenv import load_dotenv, find_dotenv
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from pydantic import BaseModel
 from functools import wraps
 from typing import Dict, List, Optional, Any
-import time
+from IPython.display import display, Markdown
+import json
+from json import JSONDecodeError
 
 class ResumeAnalytics(DocumentProcessing):
     def __init__(self, modelname: str ='models/gemini-2.0-flash') -> None:
@@ -21,14 +23,20 @@ class ResumeAnalytics(DocumentProcessing):
         
         if modelname not in self.models:
             raise ValueError(f"{modelname} not found! Please check the model name.")
-        self.__MODEL = genai.GenerativeModel(
+        self.__MODEL: genai.GenerativeModel = genai.GenerativeModel(
             model_name=modelname,
-            generation_config={},
+            generation_config ={
+                "response_mime_type":"application/json"
+            },
             safety_settings={},
             tools=None,
             system_instruction=None,
         )
-    
+        JSONFOLDER = "./JSON"
+        if not os.path.exists(JSONFOLDER):
+            os.makedirs(JSONFOLDER)
+        self.JSONFOLDER = JSONFOLDER
+        
     @property
     def getAPI(self) -> Any:
         return self.__API
@@ -41,14 +49,42 @@ class ResumeAnalytics(DocumentProcessing):
                 return func(*args, **kwargs)
             except Exception as e:
                 print(f"An error occurred: {e}")
-                return None
         return wrapper
     
+    def getResponse(self, prompt: str) -> str:
+        response = self.__MODEL.generate_content(prompt)
+        return response.text
+    
     @ExceptionHandelling
-    def makeRequest(self, promptfile: str) -> Any:
-        with open(promptfile, "r", encoding = "utf-8") as file:
-            promptext = file.read()
-        pass
-
+    def resumeanalytics(self, resumepath: str, jobdescription: str, filename: str = "prompt.txt") -> Optional[Dict[str, Any]]:
+        resume = self.FileProcessing(resumepath)
+        jobdescription = self.FileProcessing(jobdescription)
+        
+        if not os.path.exists(filename):
+            raise FileNotFoundError(f"The file {filename} does not exist.")
+        with open(filename, "r", encoding="utf-8") as file:
+            prompt = file.read()
+        promptTemplate = PromptTemplate(
+            input_variables=["resume", "jobdescription"],
+            template= prompt
+        )
+        Fprompt = promptTemplate.format(resume=resumepath, jobdescription=jobdescription)
+        try:
+            OutputFile = f"{self.JSONFOLDER}/{os.path.basename(resumepath)}.json"
+            response = self.getResponse(Fprompt)
+            responseJSON = json.loads(response)
+            with open( OutputFile, "w", encoding="utf-8") as file:
+                json.dump(responseJSON, file, indent=4, ensure_ascii=False)
+            print(f"JSON file saved: {OutputFile}")
+            return responseJSON
+        except JSONDecodeError as e:
+            print(f"Error in resumeanalytics: {e}")
+            return None
+    
+    def main(self) -> None:
+        resume = r"/home/kiranftw/Resume-Screening-ATS-Analytics-using-Generative-AI/testfiles/ResumePDF.pdf"
+        jd = r"testfiles/jobdescription.txt"
+        self.resumeanalytics(resume, jd)
+        
 if __name__ == "__main__":
-    object = ResumeAnalytics()
+    ResumeAnalytics().main()
