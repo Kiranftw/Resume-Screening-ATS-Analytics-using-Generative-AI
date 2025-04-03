@@ -97,3 +97,9 @@ class DocumentProcessing(object):
             raise ValueError("Unsupported file format.")
         
         return self.datacleaning(ExtractedData)
+    def main():
+        self.FileProcessing()
+
+
+if __name__ == "__main__":
+    DocumentParsing().main()
