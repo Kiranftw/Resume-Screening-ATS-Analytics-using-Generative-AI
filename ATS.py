@@ -1,2 +1,1 @@
-class ATS(object):
-    
+

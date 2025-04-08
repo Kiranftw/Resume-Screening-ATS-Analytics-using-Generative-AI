@@ -91,15 +91,8 @@ class DocumentProcessing(object):
             article = Article(filepath)
             article.download()
             article.parse()
-            article.nlp()
             ExtractedData = article.text
         else:
             raise ValueError("Unsupported file format.")
         
         return self.datacleaning(ExtractedData)
-    def main():
-        self.FileProcessing()
-
-
-if __name__ == "__main__":
-    DocumentParsing().main()
