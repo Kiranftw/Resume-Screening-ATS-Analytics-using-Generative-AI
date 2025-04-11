@@ -346,9 +346,13 @@
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('loginModal')">&times;</button>
             <h2>Login</h2>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <a href="C:\Users\HP\OneDrive\Desktop\PROJECT MAJOR\Dashboard.html" class="auth-button">Login</a>
+            
+            <form action="{{ url_for('login') }}" method="POST">
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <button type="submit" class="auth-button">Login</button>
+            </form>
+
             <div class="social-login">
                 <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" title="Login with Google">
                 <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" title="Login with Facebook">
@@ -362,10 +366,14 @@
         <div class="modal-content">
             <button class="close-btn" onclick="closeModal('signupModal')">&times;</button>
             <h2>Sign Up</h2>
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <a href="C:\Users\HP\OneDrive\Desktop\PROJECT MAJOR\Dashboard.html" class="auth-button">Sign Up</a>
+        
+                <form action="{{ url_for('signup') }}" method="POST">
+                    <input type="text" placeholder="Full Name" name="fullname" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <button type="submit" class="auth-button">Sign Up</button>
+                </form>
+
             <div class="social-login">
                 <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" title="Sign Up with Google">
                 <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" title="Sign Up with Facebook">
