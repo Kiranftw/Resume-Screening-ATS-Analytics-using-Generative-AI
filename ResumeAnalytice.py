@@ -23,7 +23,6 @@ import google.generativeai as genai
 from json import JSONDecodeError
 import datetime
 import logging
-import time
 pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 
 logging.basicConfig(level=logging.INFO)
@@ -232,9 +231,3 @@ class ResumeAnalytics(object):
         print(f"file successfully stored with name coverletter.txt")
         Markdown(response)
         return response
-        
- 
-if __name__ == "__main__":
-    object = ResumeAnalytics()
-    object.CoverLetterGeneration("udaykiran","GenAI Engineer", "Google", "3 years of experience in AI,MachineLearning,GenerativeAI")
-    

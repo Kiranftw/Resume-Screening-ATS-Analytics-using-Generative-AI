@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,7 @@
             display: flex;
             flex-direction: column;
             gap: 25px;
-            box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar .logo {
@@ -627,9 +628,13 @@
         }
 
         @keyframes typingAnimation {
-            0%, 60%, 100% {
+
+            0%,
+            60%,
+            100% {
                 transform: translateY(0);
             }
+
             30% {
                 transform: translateY(-5px);
             }
@@ -656,13 +661,13 @@
                 position: relative;
                 padding: 20px;
             }
-            
+
             .main-content {
                 margin-left: 0;
                 width: 100%;
                 padding: 20px;
             }
-            
+
             .score-grid {
                 grid-template-columns: 1fr;
             }
@@ -687,16 +692,17 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <div class="sidebar">
         <div class="logo">Resume Analyzer</div>
         <a href="{{ url_for('dashboard') }}" class="nav-link">📊 Dashboard</a>
-    <a href="{{ url_for('ats_score') }}" class="nav-link">🎯 ATS Score</a>
-    <a href="{{ url_for('resume_score') }}" class="nav-link">📝 Resume Score</a>
-    <a href="{{ url_for('missing_skills') }}" class="nav-link">⚠️ Missing Skills</a>
-    <a href="{{ url_for('course_recommendations') }}" class="nav-link">📚 Course Recommendations</a>
-    <a href="{{ url_for('cover_letter') }}" class="nav-link">✉️ Cover Letter Generator</a>
-    <a href="{{ url_for('resume_score') }}" class="nav-link">📄 ATS Optimized Resume Builder</a>
+        <a href="{{ url_for('ats_score') }}" class="nav-link">🎯 ATS Score</a>
+        <a href="{{ url_for('resume_score') }}" class="nav-link">📝 Resume Score</a>
+        <a href="{{ url_for('missing_skills') }}" class="nav-link">⚠️ Missing Skills</a>
+        <a href="{{ url_for('course_recommendations') }}" class="nav-link">📚 Course Recommendations</a>
+        <a href="{{ url_for('cover_letter') }}" class="nav-link">✉️ Cover Letter Generator</a>
+        <a href="{{ url_for('resume_score') }}" class="nav-link">📄 ATS Optimized Resume Builder</a>
 
     </div>
     <div class="main-content">
@@ -707,10 +713,13 @@
         <div class="upload-section">
             <h2 class="upload-title">Upload Documents</h2>
             <div class="upload-boxes">
-                <div class="upload-box" id="resume-upload" ondrop="handleDrop(event, 'resume')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                <div class="upload-box" id="resume-upload" ondrop="handleDrop(event, 'resume')"
+                    ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
                     <h3>Resume Upload</h3>
-                    <input type="file" id="resume-file" class="file-input" accept=".pdf,.doc,.docx" onchange="handleFileSelect(event, 'resume')" />
-                    <button class="choose-file-btn" onclick="document.getElementById('resume-file').click()">Choose File</button>
+                    <input type="file" id="resume-file" class="file-input" accept=".pdf,.doc,.docx"
+                        onchange="handleFileSelect(event, 'resume')" />
+                    <button class="choose-file-btn" onclick="document.getElementById('resume-file').click()">Choose
+                        File</button>
                     <div id="resume-file-name" class="file-name"></div>
                     <div class="file-formats">
                         <span class="format">PDF</span>
@@ -719,19 +728,21 @@
                     </div>
                 </div>
 
-                <div class="upload-box" id="job-upload" ondrop="handleDrop(event, 'job')" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                <div class="upload-box" id="job-upload" ondrop="handleDrop(event, 'job')"
+                    ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
                     <h3>Job Description Upload</h3>
-                    <input type="file" id="job-file" class="file-input" accept=".pdf,.doc,.docx" onchange="handleFileSelect(event, 'job')" />
-                    <button class="choose-file-btn" onclick="document.getElementById('job-file').click()">Choose File</button>
+                    <input type="file" id="job-file" class="file-input" accept=".pdf,.doc,.docx"
+                        onchange="handleFileSelect(event, 'job')" />
+                    <button class="choose-file-btn" onclick="document.getElementById('job-file').click()">Choose
+                        File</button>
                     <div id="job-file-name" class="file-name"></div>
                     <div class="file-formats">
                         <span class="format">PDF</span>
                         <span class="format">DOC</span>
                         <span class="format">DOCX</span>
                     </div>
-                    <textarea id="job-text" class="job-text" 
-                              placeholder="Or paste job description here..."
-                              oninput="checkFilesUploaded()"></textarea>
+                    <textarea id="job-text" class="job-text" placeholder="Or paste job description here..."
+                        oninput="checkFilesUploaded()"></textarea>
                 </div>
             </div>
             <button id="analyze-btn" class="analyze-btn" onclick="analyzeDocuments()" disabled>ANALYZE</button>
@@ -800,13 +811,15 @@
             </div>
             <div class="ai-chat-messages" id="ai-messages">
                 <div class="ai-message assistant">
-                    Hello! I'm your Resume AI Assistant. You can upload your resume or job description here and I'll help you analyze it. How can I assist you today?
+                    Hello! I'm your Resume AI Assistant. You can upload your resume or job description here and I'll
+                    help you analyze it. How can I assist you today?
                 </div>
             </div>
             <div class="ai-chat-input">
                 <div class="ai-file-upload" id="ai-file-upload">
                     <label class="ai-file-upload-label">
-                        <input type="file" id="ai-file-input" accept=".pdf,.doc,.docx" onchange="handleAIFileUpload(event)">
+                        <input type="file" id="ai-file-input" accept=".pdf,.doc,.docx"
+                            onchange="handleAIFileUpload(event)">
                         <i class="fas fa-paperclip"></i>
                         <span>Upload Resume or Job Description</span>
                     </label>
@@ -814,7 +827,8 @@
                     <img class="ai-file-preview" id="ai-file-preview" alt="File preview">
                 </div>
                 <div class="ai-chat-input-row">
-                    <input type="text" id="ai-input" placeholder="Ask me anything about resumes..." onkeypress="handleAIKeyPress(event)">
+                    <input type="text" id="ai-input" placeholder="Ask me anything about resumes..."
+                        onkeypress="handleAIKeyPress(event)">
                     <button onclick="sendAIMessage()"><i class="fas fa-paper-plane"></i></button>
                 </div>
             </div>
@@ -830,7 +844,7 @@
             if (file) {
                 displayFileName(file, type);
                 showPopup(`${file.name} uploaded successfully!`);
-                if(type === 'job') document.getElementById('job-text').value = '';
+                if (type === 'job') document.getElementById('job-text').value = '';
                 checkFilesUploaded();
             }
         }
@@ -842,7 +856,7 @@
                 document.getElementById(`${type}-file`).files = event.dataTransfer.files;
                 displayFileName(file, type);
                 showPopup(`${file.name} uploaded successfully!`);
-                if(type === 'job') document.getElementById('job-text').value = '';
+                if (type === 'job') document.getElementById('job-text').value = '';
                 checkFilesUploaded();
             }
             event.target.classList.remove('dragover');
@@ -868,7 +882,7 @@
             const jobFile = document.getElementById('job-file').files.length > 0;
             const jobText = document.getElementById('job-text').value.trim() !== '';
             const analyzeBtn = document.getElementById('analyze-btn');
-            
+
             analyzeBtn.disabled = !(resumeFile && (jobFile || jobText));
         }
 
@@ -876,28 +890,28 @@
             const analyzeBtn = document.getElementById('analyze-btn');
             analyzeBtn.disabled = true;
             analyzeBtn.textContent = "Analyzing...";
-            
+
             const jobText = document.getElementById('job-text').value.trim();
             const jobFile = document.getElementById('job-file').files[0];
-            
+
             showPopup("Analyzing your documents... This may take a moment.");
 
             setTimeout(() => {
                 document.getElementById('dashboard-content').style.display = 'block';
-                
+
                 document.getElementById('ats-score').textContent = Math.floor(Math.random() * 20 + 75) + '%';
                 document.getElementById('resume-score').textContent = Math.floor(Math.random() * 20 + 70) + '%';
                 document.getElementById('keyword-match').textContent = Math.floor(Math.random() * 20 + 80) + '%';
 
                 analyzeBtn.textContent = "ANALYZE";
                 analyzeBtn.disabled = false;
-                
+
                 showPopup("Analysis complete! Your results are ready.");
                 document.getElementById('dashboard-content').scrollIntoView({ behavior: 'smooth' });
 
-                if(jobFile) {
+                if (jobFile) {
                     console.log('Analyzing job description file:', jobFile.name);
-                } else if(jobText) {
+                } else if (jobText) {
                     console.log('Analyzing job description text:', jobText.substring(0, 50) + '...');
                 }
             }, 2000);
@@ -907,7 +921,7 @@
             const popup = document.getElementById('popup');
             const overlay = document.getElementById('popup-overlay');
             const popupMessage = document.querySelector('.popup-message');
-            
+
             popupMessage.textContent = message;
             popup.classList.add('show');
             overlay.classList.add('show');
@@ -916,7 +930,7 @@
         function closePopup() {
             const popup = document.getElementById('popup');
             const overlay = document.getElementById('popup-overlay');
-            
+
             popup.classList.remove('show');
             overlay.classList.remove('show');
         }
@@ -951,7 +965,7 @@
             const previewElement = document.getElementById('ai-file-preview');
             if (file.type.startsWith('image/')) {
                 const reader = new FileReader();
-                reader.onload = function(e) {
+                reader.onload = function (e) {
                     previewElement.src = e.target.result;
                     previewElement.style.display = 'block';
                 };
@@ -966,7 +980,7 @@
 
             setTimeout(() => {
                 removeTypingIndicator();
-                
+
                 let response;
                 if (file.name.toLowerCase().includes('resume')) {
                     response = "Thanks for sharing your resume! I can help analyze it for ATS optimization, missing skills, or suggest improvements. What would you like to know?";
@@ -975,7 +989,7 @@
                 } else {
                     response = "I've received your document. How can I help you with it?";
                 }
-                
+
                 addAIMessage(response, 'assistant');
                 scrollAIChatToBottom();
             }, 1000 + Math.random() * 2000);
@@ -993,10 +1007,10 @@
 
             setTimeout(() => {
                 removeTypingIndicator();
-                
+
                 const response = generateAIResponse(message);
                 addAIMessage(response, 'assistant');
-                
+
                 scrollAIChatToBottom();
             }, 1000 + Math.random() * 2000);
         }
@@ -1038,7 +1052,7 @@
 
         function generateAIResponse(message) {
             const lowerMessage = message.toLowerCase();
-            
+
             if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
                 return "Hello! How can I assist you with your resume or job search today?";
             } else if (lowerMessage.includes('ats') || lowerMessage.includes('applicant tracking system')) {
@@ -1065,7 +1079,7 @@
             }
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const messagesContainer = document.getElementById('ai-messages');
             if (messagesContainer.children.length === 0) {
                 addAIMessage("Hello! I'm your Resume AI Assistant. You can upload your resume or job description here and I'll help you analyze it. How can I assist you today?", 'assistant');
@@ -1073,4 +1087,5 @@
         });
     </script>
 </body>
+
 </html>
