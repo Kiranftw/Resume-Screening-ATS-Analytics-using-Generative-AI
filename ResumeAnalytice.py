@@ -3,6 +3,7 @@ from langchain_community.document_loaders import PyMuPDFLoader, TextLoader, Docx
 from langchain.memory import ConversationSummaryBufferMemory
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from langchain.chains import ConversationChain
+from IPython.display import Markdown, display
 from IPython.display import display, Markdown
 from typing import Dict, List, Optional, Any
 from dotenv import load_dotenv, find_dotenv
@@ -20,6 +21,7 @@ from PIL import Image
 from langchain_google_genai import ChatGoogleGenerativeAI
 import google.generativeai as genai
 from json import JSONDecodeError
+import datetime
 import logging
 import time
 pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
@@ -44,6 +46,7 @@ class ResumeAnalytics(object):
         if not self.__API:
             raise ValueError("API key not found. Please set the GEMINIAPI environment variable.")
         genai.configure(api_key = self.__API)
+        self.outputsFOLDER = "outputs"
         self.model: genai.GenerativeModel = None
         self.chatmodel: ChatGoogleGenerativeAI = None
         ##Initlizing the google AI models for text generations and chatbot
@@ -148,7 +151,6 @@ class ResumeAnalytics(object):
         else:
             return self.datacleaning(filepath)
 
-
     @ExceptionHandeler
     def resumeanalytics(self, resumepath: str, jobdescription: str, filename: str = "prompt.txt") -> Optional[Dict[str, Any]]:
         resume = self.documentParser(resumepath)
@@ -159,11 +161,10 @@ class ResumeAnalytics(object):
         with open(filename, "r", encoding="utf-8") as file:
             prompt = file.read()
         Fprompt = f"{prompt}\nResume: {resume}\nJob Description: {JobDescription}"
-        outputFolder = "outputs"
-        if not os.path.exists(outputFolder):
-            os.makedirs(outputFolder, exist_ok=True)
+        if not os.path.exists(self.outputsFOLDER):
+            os.makedirs(self.outputsFOLDER, exist_ok=True)
         filename = os.path.split(os.path.basename(resumepath))[1]
-        savePath = f"{os.path.join(outputFolder,filename)}.json"
+        savePath = f"{os.path.join(self.outputsFOLDER,filename)}.json"
         try:
             response = self.getResponse(Fprompt)
             responseJSON = json.loads(response)
@@ -181,7 +182,8 @@ class ResumeAnalytics(object):
         except Exception as e:
             print(f"Error in resumeanalytics: {e}")
             return None
-        
+            
+    @ExceptionHandeler   
     def chatbot(self,Document: str, Query: str = None) -> str:
         data: Optional[str] = self.documentParser(Document)
         if not data or data.strip() == "":
@@ -206,9 +208,33 @@ class ResumeAnalytics(object):
             return response
         else:
             return "Document Loaded Successfully"
+    
+    @ExceptionHandeler
+    def CoverLetterGeneration(self,fullname: str, position: str, companyname: str, relvantExperience: str):
+        prompt = ChatPromptTemplate.from_template(
+            """
+            Write a professional cover letter for {fullname}, who is applying for the position of {position} at {companyname}.
+            The candidate has relevant experience in {relevant_experience}. The tone should be formal, enthusiastic, and concise.
+            Today's date is {date}.
+            """
+        )
+        formatted_prompt = prompt.format(
+            fullname=fullname,
+            position=position,
+            companyname=companyname,
+            relevant_experience=relvantExperience,
+            date=datetime.date.today().strftime("%B %d, %Y")
+        )
+        response = str(self.chatmodel.invoke(formatted_prompt))
+        outputpath = os.path.join(self.outputsFOLDER, "coverletter.txt")
+        with open(outputpath, "w", encoding = "utf-8") as file:
+            file.write(response)
+        print(f"file successfully stored with name coverletter.txt")
+        Markdown(response)
+        return response
+        
  
 if __name__ == "__main__":
     object = ResumeAnalytics()
-    resume = input()
-    jd = input()
-    object.resumeanalytics(resume, jd)
+    object.CoverLetterGeneration("udaykiran","GenAI Engineer", "Google", "3 years of experience in AI,MachineLearning,GenerativeAI")
+    

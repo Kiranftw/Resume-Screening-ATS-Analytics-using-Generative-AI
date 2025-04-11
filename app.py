@@ -10,6 +10,7 @@ def home():
 def dashboard():
     return render_template('Dashboard.html')
 
+
 @app.route('/ats-score')
 def ats_score():
     return render_template('Ats score.html')
