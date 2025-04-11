@@ -131,4 +131,3 @@ class ResumeAnalytics(DocumentProcessing):
             return response
         else:
             return "Document Loaded Successfully"
-        
