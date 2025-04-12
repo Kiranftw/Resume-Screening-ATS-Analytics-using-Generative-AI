@@ -7,6 +7,7 @@ from IPython.display import Markdown, display
 from IPython.display import display, Markdown
 from typing import Dict, List, Optional, Any
 from dotenv import load_dotenv, find_dotenv
+from newspaper import Article
 from docx import Document
 import pytesseract
 from typing import List, Dict
@@ -100,6 +101,7 @@ class ResumeAnalytics(object):
     
     @ExceptionHandeler
     def datacleaning(self, textfile: str) -> str:
+        #cleaning special symbols/characters from the given data to reduce the tokens 
         if not textfile:
             return ""
         
@@ -119,7 +121,19 @@ class ResumeAnalytics(object):
 
         if os.path.exists(filepath):
             ext = os.path.splitext(filepath)[1].lower()
-
+        
+        scraped_data = ""
+        if filepath.startswith("http://") or filepath.startswith("https://"):
+            A = Article(filepath)
+            A.download()
+            A.parse()
+            scraped_data += A.text
+            if scraped_data:
+                print(f"successfully scraped data from given URL (filepath)")
+                return scraped_data
+            else:
+                raise ValueError("couldn't find/ Error in scraping data from the given website")
+                
             if ext in [".pdf", ".docx", ".txt"]:
                 if ext == ".pdf":
                     loader = PyMuPDFLoader(filepath)
@@ -184,6 +198,7 @@ class ResumeAnalytics(object):
             
     @ExceptionHandeler   
     def chatbot(self,Document: str, Query: str = None) -> str:
+        #chatbot built on top of Google's small language model (GEMMA) with chunk streaming & can handle 30 request per minute
         data: Optional[str] = self.documentParser(Document)
         if not data or data.strip() == "":
             print("[Bot]: Unable to extract any meaningful content from the file.")
