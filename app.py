@@ -6,7 +6,6 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-# ---------- DATABASE SETUP ----------
 
 def get_db_connection():
     conn = sqlite3.connect('users.db')
@@ -25,7 +24,6 @@ def init_db():
         ''')
 init_db()
 
-# ---------- ROUTES ----------
 
 @app.route('/')
 def landing_page():

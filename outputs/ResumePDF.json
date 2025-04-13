@@ -1,0 +1,165 @@
+{
+    "RRSCORE": 65,
+    "ROLEFITSCORE": 60,
+    "ATS_SCORE": 70,
+    "keyword_match_score": 68,
+    "matched_keywords": [
+        "Python",
+        "R",
+        "Java",
+        "SQL",
+        "Data Science",
+        "Machine Learning",
+        "TensorFlow",
+        "Data Analysis",
+        "Data Cleaning",
+        "Github",
+        "Linux",
+        "Windows",
+        "Big Data",
+        "Data Pipelines",
+        "Predictive Models",
+        "Statistical Modeling",
+        "Cross Functional Teams",
+        "Data Driven Solutions",
+        "Optimize Data Storage",
+        "Exploratory Data Analysis",
+        "Trends",
+        "Patterns",
+        "Documentation",
+        "Workflows",
+        "AI",
+        "Computer Science",
+        "Statistics",
+        "Problem Solving Skills",
+        "Communication",
+        "Collaboration",
+        "Natural Language Processing",
+        "NLP"
+    ],
+    "missing_keywords": [
+        "Hadoop",
+        "Spark",
+        "Kafka",
+        "NoSQL",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "PyTorch",
+        "MLOps",
+        "Model Monitoring",
+        "Time Series Forecasting"
+    ],
+    "missing_skills": [
+        "Big Data Frameworks",
+        "Cloud Platforms",
+        "Deep Learning Frameworks",
+        "Deploying Machine Learning Models"
+    ],
+    "actionable_feedback": [
+        "Explicitly mention 'Big Data Frameworks' under the skills section.",
+        "Add specific projects where you used 'Machine Learning' techniques on large datasets.",
+        "Include your experience with 'SQL' and 'NoSQL' databases in the skills section.",
+        "Detail your experience with 'Cloud Platforms' like AWS, Azure, or Google Cloud in your projects or experience section.",
+        "Specify your proficiency level (Beginner, Intermediate, Advanced) for each skill.",
+        "Highlight experience with 'Data Pipelines' and 'Data Storage' optimization in your experience section.",
+        "Elaborate on your experience with 'Statistical Modeling' and 'Predictive Models' in projects.",
+        "Quantify the results of your data analysis projects with metrics.",
+        "Incorporate keywords such as 'Hadoop', 'Spark', or 'Kafka' if you have any experience with them, even if basic.",
+        "Add a section detailing familiarity with 'MLOps' and 'Model Monitoring' techniques, if applicable."
+    ],
+    "course_recommendations": {
+        "Big Data Frameworks": [
+            {
+                "course_name": "Big Data Specialization",
+                "platform": "Coursera",
+                "description": "Learn to apply tools like Hadoop, Spark, and MapReduce to manage and analyze large datasets.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.coursera.org/specializations/big-data"
+            },
+            {
+                "course_name": "Apache Spark with Scala - Hands On with Big Data!",
+                "platform": "Udemy",
+                "description": "Master Spark and Scala to process big data efficiently. Includes real-world examples and hands-on projects.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/"
+            },
+            {
+                "course_name": "Big Data Analysis with Scala and Spark",
+                "platform": "edX",
+                "description": "Covers the fundamentals of distributed data processing using Scala and Spark, suitable for data professionals.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.edx.org/course/big-data-analysis-with-scala-and-spark"
+            }
+        ],
+        "Cloud Platforms": [
+            {
+                "course_name": "AWS Certified Cloud Practitioner",
+                "platform": "Coursera",
+                "description": "Understand basic AWS cloud concepts, services, security, architecture, pricing, and support.",
+                "difficulty_level": "Beginner",
+                "course_link": "https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
+            },
+            {
+                "course_name": "Microsoft Azure Fundamentals AZ-900 Certification",
+                "platform": "Udemy",
+                "description": "Learn the basics of Azure cloud services, including compute, storage, networking, and security.",
+                "difficulty_level": "Beginner",
+                "course_link": "https://www.udemy.com/course/microsoft-azure-fundamentals-az-900-certification-2020/"
+            },
+            {
+                "course_name": "Google Cloud Platform Fundamentals: Core Infrastructure",
+                "platform": "Coursera",
+                "description": "Explore Google Cloud Platform's core infrastructure services, including computing, storage, and networking.",
+                "difficulty_level": "Beginner",
+                "course_link": "https://www.coursera.org/learn/gcp-fundamentals"
+            }
+        ],
+        "Deep Learning Frameworks": [
+            {
+                "course_name": "Deep Learning Specialization",
+                "platform": "Coursera",
+                "description": "Master deep learning concepts, neural networks, and build models with TensorFlow and Python.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.coursera.org/specializations/deep-learning"
+            },
+            {
+                "course_name": "PyTorch for Deep Learning with Python",
+                "platform": "Udemy",
+                "description": "Learn PyTorch for deep learning and build models using image classification, GANs, and more.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.udemy.com/course/pytorch-for-deep-learning-with-python/"
+            },
+            {
+                "course_name": "TensorFlow in Practice Specialization",
+                "platform": "Coursera",
+                "description": "Learn to use TensorFlow to build scalable AI-powered applications. Covers practical deep learning implementations.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.coursera.org/specializations/tensorflow-in-practice"
+            }
+        ],
+        "Deploying Machine Learning Models": [
+            {
+                "course_name": "Machine Learning Engineering for Production (MLOps) Specialization",
+                "platform": "Coursera",
+                "description": "Learn to deploy, monitor, and manage machine learning models in production environments.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "course_name": "MLOps: Continuous Delivery and Automation Pipelines in Machine Learning",
+                "platform": "Udemy",
+                "description": "Set up an automated machine learning pipeline with continuous integration and continuous deployment.",
+                "difficulty_level": "Intermediate",
+                "course_link": "https://www.udemy.com/course/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning/"
+            },
+            {
+                "course_name": "Deploying Machine Learning Models",
+                "platform": "YouTube",
+                "description": "Learn how to deploy machine learning models in simple manner with example.",
+                "difficulty_level": "Beginner",
+                "course_link": "https://m.youtube.com/watch?v=0tR0za3cOUw"
+            }
+        ]
+    }
+}
