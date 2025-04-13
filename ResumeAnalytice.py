@@ -122,11 +122,14 @@ class ResumeAnalytics(object):
         if os.path.exists(filepath):
             ext = os.path.splitext(filepath)[1].lower()
         
-        scraped_data = ""
         if filepath.startswith("http://") or filepath.startswith("https://"):
+            scraped_data = ""
             A = Article(filepath)
-            A.download()
-            A.parse()
+            try:
+                A.download()
+                A.parse()
+            except Exception as e:
+                raise ValueError(f"Error in downloading or parsing the URL: {e}")
             scraped_data += A.text
             if scraped_data:
                 print(f"successfully scraped data from given URL (filepath)")
@@ -134,35 +137,34 @@ class ResumeAnalytics(object):
             else:
                 raise ValueError("couldn't find/ Error in scraping data from the given website")
                 
-            if ext in [".pdf", ".docx", ".txt"]:
-                if ext == ".pdf":
-                    loader = PyMuPDFLoader(filepath)
-                elif ext == ".docx":
-                    loader = Docx2txtLoader(filepath)
-                elif ext == ".txt":
-                    loader = TextLoader(filepath)
-                else:
-                    print("Unsupported document format.")
-                    return None
-
-                document = loader.load()
-                filecontent: str = " ".join([doc.page_content for doc in document])
-                return self.datacleaning(filecontent.strip()) if filecontent else None
-
-            elif ext in [".jpg", ".jpeg", ".png", ".webp"]:
-                image = Image.open(filepath)
-                if image.mode != "RGB":
-                    image = image.convert("RGB")
-                filecontent: str = pytesseract.image_to_string(image)
-                if not filecontent.strip():
-                    raise ValueError("No text found in the image.")
-                return self.datacleaning(filecontent)
-
+        elif ext in [".pdf", ".docx", ".txt"]:
+            if ext == ".pdf":
+                loader = PyMuPDFLoader(filepath)
+            elif ext == ".docx":
+                loader = Docx2txtLoader(filepath)
+            elif ext == ".txt":
+                loader = TextLoader(filepath)
             else:
-                print("Invalid file format.")
+                print("Unsupported document format.")
                 return None
+
+            document = loader.load()
+            filecontent: str = " ".join([doc.page_content for doc in document])
+            return self.datacleaning(filecontent.strip()) if filecontent else None
+
+        elif ext in [".jpg", ".jpeg", ".png", ".webp"]:
+            image = Image.open(filepath)
+            if image.mode != "RGB":
+                image = image.convert("RGB")
+            filecontent: str = pytesseract.image_to_string(image)
+            if not filecontent.strip():
+                raise ValueError("No text found in the image.")
+            return self.datacleaning(filecontent)
+
         else:
-            return self.datacleaning(filepath)
+            print("Invalid file format.")
+            return None
+
 
     @ExceptionHandeler
     def resumeanalytics(self, resumepath: str, jobdescription: str, filename: str = "prompt.txt") -> Optional[Dict[str, Any]]:
