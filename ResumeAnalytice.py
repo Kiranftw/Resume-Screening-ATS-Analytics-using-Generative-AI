@@ -248,3 +248,15 @@ class ResumeAnalytics(object):
         print(f"file successfully stored with name coverletter.txt")
         Markdown(response)
         return response
+    
+    def getATS(self,resume:str, jobdescription:str) -> Optional[Dict]:
+        prompt = ChatPromptTemplate.format_prompt
+
+    
+if __name__ =="__main__":
+    object = ResumeAnalytics()
+    resume = r"/home/kiranftw/COLLEGE/Resume-Screening-ATS-Analytics-using-Generative-AI/uploads/ResumePDF.pdf"
+    jd = r"outputs/coverletter.txt"
+    data = object.resumeanalytics(resume, jd)
+    print(data)
+    print(data["RESUME_RELEVANCE_SCORE"])

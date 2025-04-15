@@ -1,274 +1,81 @@
 {
-    "resume_relevance_score": 65,
-    "role_fit_score": 60,
-    "matched_keywords": [
+    "RESUME_RELEVANCE_SCORE": 65,
+    "ROLE_FIT_SCORE": 60,
+    "ATS_SCORE": 70,
+    "KEYWORD_MATCH_SCORE": 75,
+    "MATCHED_KEYWORDS": [
         "Python",
-        "Data Science",
-        "R",
-        "SQL",
-        "TensorFlow",
         "Machine Learning",
-        "Statistics",
-        "Data Analysis",
-        "Data Cleaning",
-        "Data Preprocessing",
-        "Github",
-        "Linux",
-        "Windows",
-        "communication",
-        "problem solving",
-        "models",
-        "programming",
-        "Java"
+        "Artificial Intelligence",
+        "GenAI",
+        "TensorFlow"
     ],
-    "missing_keywords": [
-        "Big Data",
-        "Hadoop",
-        "Spark",
-        "Kafka",
-        "NoSQL",
-        "AWS",
-        "Azure",
-        "Google Cloud",
-        "NLP",
-        "MLOps",
-        "Data pipelines",
-        "predictive models",
-        "Data storage",
-        "data retrieval",
-        "Data processing",
-        "EDA",
-        "workflows"
+    "MISSING_KEYWORDS": [
+        "PyTorch",
+        "Large Language Models",
+        "Generative Techniques"
     ],
-    "missing_skills": [
-        "Big Data frameworks",
-        "Cloud platforms",
-        "Deep learning frameworks",
-        "Natural language processing (NLP)",
-        "Time series forecasting",
-        "Deploying machine learning models",
-        "MLOps",
-        "Data pipelines",
-        "Statistical modeling"
+    "MISSING_SKILLS": [
+        "Deploying Large Language Models",
+        "Researching Novel Generative Techniques"
     ],
-    "resume_optimization_recommendations": [
-        "Explicitly mention 'Big Data' in the resume, possibly in the skills or summary section.",
-        "Include projects or experiences that demonstrate the use of Hadoop, Spark, or Kafka.",
-        "Add specific cloud platforms (AWS, Azure, or Google Cloud) used in projects or work experience to the skills section.",
-        "Detail experience with deep learning frameworks like TensorFlow or PyTorch in the projects or skills section.",
-        "If experienced in deploying machine learning models, add this to the skills or experience section.",
-        "Quantify achievements whenever possible, such as 'Improved model accuracy by X%' or 'Reduced data processing time by Y%'.",
-        "Elaborate on experience with data pipelines and data processing, explicitly using these terms.",
-        "Create a separate 'Big Data' or 'Cloud Computing' section to highlight relevant skills and experience.",
-        "Incorporate keywords like 'predictive modeling' and 'statistical modeling' into descriptions of data science projects.",
-        "Add metrics to the resume to highlight impact, like 'Developed a model that improved sales by 15%'."
+    "RESUME_TIPS": [
+        "Add 'PyTorch' to your skills section to highlight your experience with relevant frameworks.",
+        "Include 'Large Language Models' in your project descriptions to showcase experience with LLMs.",
+        "Incorporate 'Generative Techniques' within your project summaries to reflect your expertise.",
+        "Quantify your experience with Machine Learning projects (e.g., 'Improved model accuracy by X%').",
+        "Mention specific applications of Python, such as data analysis or AI development.",
+        "Highlight any experience with responsible AI development to align with Google's values.",
+        "Tailor the skills section to emphasize proficiency in AI-specific tools and technologies.",
+        "Expand on your experience with data preprocessing and cleaning.",
+        "Specify the versions of Python and TensorFlow you are proficient with.",
+        "Add a section detailing AI-related projects, emphasizing your contributions and outcomes."
     ],
-    "course_recommendations": {
-        "Big Data frameworks": [
+    "COURSE_RECOMMENDATIONS": {
+        "Deploying Large Language Models": [
             {
-                "course_name": "Big Data Specialization",
-                "platform": "Coursera",
-                "description": "A comprehensive series covering Hadoop, Spark, and other Big Data technologies.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.coursera.org/specializations/big-data"
+                "COURSE_NAME": "TensorFlow in Practice",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to deploy ML models using TensorFlow, focusing on practical application and scalability.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
             },
             {
-                "course_name": "Apache Kafka Series - Learn Apache Kafka for Beginners v3",
-                "platform": "Udemy",
-                "description": "Learn how to build real-time data pipelines and streaming applications with Apache Kafka.",
-                "difficulty_level": "Beginner",
-                "course_link": "https://www.udemy.com/course/apache-kafka/"
+                "COURSE_NAME": "AI Product Management",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the basics of being an AI Product Manager.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/ai-product-management/"
             },
             {
-                "course_name": "Hadoop Platform and Application Framework",
-                "platform": "edX",
-                "description": "Learn the fundamentals of the Hadoop platform, its ecosystem, and how to develop applications on it.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.edx.org/course/hadoop-platform-and-application-framework"
+                "COURSE_NAME": "MLOps Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn modern MLOps (Machine Learning Operations) practices to deploy and manage machine learning models in production.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
             }
         ],
-        "Cloud platforms": [
+        "Researching Novel Generative Techniques": [
             {
-                "course_name": "AWS Certified Cloud Practitioner",
-                "platform": "Coursera",
-                "description": "Learn the fundamentals of AWS cloud services and prepare for the AWS Certified Cloud Practitioner exam.",
-                "difficulty_level": "Beginner",
-                "course_link": "https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
+                "COURSE_NAME": "Generative Adversarial Networks (GANs) Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Explore GANs and their applications, learning how to design and implement generative models.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/specializations/generative-adversarial-networks-gans"
             },
             {
-                "course_name": "Microsoft Azure Fundamentals AZ-900 Exam Prep",
-                "platform": "Udemy",
-                "description": "Get a foundational understanding of Azure cloud services and prepare for the AZ-900 certification exam.",
-                "difficulty_level": "Beginner",
-                "course_link": "https://www.udemy.com/course/microsoft-azure-fundamentals-az-900-exam-prep/"
+                "COURSE_NAME": "Generative AI with Large Language Models",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Explore generative AI models, focusing on the architecture, functionality, and ethical considerations of LLMs.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/generative-ai-with-llms"
             },
             {
-                "course_name": "Google Cloud Platform Fundamentals: Core Infrastructure",
-                "platform": "Coursera",
-                "description": "Learn the core infrastructure components of Google Cloud Platform and how to use them.",
-                "difficulty_level": "Beginner",
-                "course_link": "https://www.coursera.org/learn/gcp-fundamentals"
-            }
-        ],
-        "Deep learning frameworks": [
-            {
-                "course_name": "TensorFlow Developer Professional Certificate",
-                "platform": "Coursera",
-                "description": "Learn TensorFlow to build and train neural networks for various applications.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.coursera.org/professional-certificates/tensorflow-in-practice"
-            },
-            {
-                "course_name": "Deep Learning with PyTorch",
-                "platform": "Udemy",
-                "description": "Learn to build deep learning models using PyTorch.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.udemy.com/course/deep-learning-pytorch/"
-            },
-            {
-                "course_name": "MIT 6.S191: Introduction to Deep Learning",
-                "platform": "YouTube",
-                "description": "Introductory deep learning course from MIT.",
-                "difficulty_level": "Beginner",
-                "course_link": "https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26Z2I_Lzu"
-            }
-        ],
-        "Natural language processing (NLP)": [
-            {
-                "course_name": "Natural Language Processing Specialization",
-                "platform": "Coursera",
-                "description": "Gain expertise in NLP through a series of courses covering fundamental concepts and advanced techniques.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.coursera.org/specializations/natural-language-processing"
-            },
-            {
-                "course_name": "NLP - Natural Language Processing with Python",
-                "platform": "Udemy",
-                "description": "Learn NLP techniques using Python and libraries like NLTK and SpaCy.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.udemy.com/course/nlp-natural-language-processing-with-python/"
-            },
-            {
-                "course_name": "Practical NLP",
-                "platform": "fast.ai",
-                "description": "A code-first introduction to Natural Language Processing",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://course.fast.ai/Lessons/lesson10.html"
-            }
-        ],
-        "Time series forecasting": [
-            {
-                "course_name": "Time Series Analysis",
-                "platform": "Coursera",
-                "description": "Learn time series analysis techniques and how to apply them to real-world data.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.coursera.org/learn/time-series-analysis"
-            },
-            {
-                "course_name": "Complete Time Series Data Science Bootcamp in Python",
-                "platform": "Udemy",
-                "description": "Learn how to forecast time series data using Python, ARIMA models, and other techniques.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.udemy.com/course/complete-time-series-data-science-bootcamp-in-python/"
-            },
-            {
-                "course_name": "Time Series with Python",
-                "platform": "DataCamp",
-                "description": "Learn and implement ARIMA models to forecast future values of a time series.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.datacamp.com/courses/time-series-with-python"
-            }
-        ],
-        "Deploying machine learning models": [
-            {
-                "course_name": "Machine Learning Engineering for Production (MLOps) Specialization",
-                "platform": "Coursera",
-                "description": "Learn how to deploy, monitor, and maintain machine learning models in production environments.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
-            },
-            {
-                "course_name": "Deploying Machine Learning Models",
-                "platform": "Udemy",
-                "description": "Learn to deploy machine learning models using various tools and platforms like Flask and Docker.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.udemy.com/course/deploying-machine-learning-models/"
-            },
-            {
-                "course_name": "ML Model Deployment with Google Cloud Platform",
-                "platform": "DataCamp",
-                "description": "Build and deploy a real-time predictions with Google Cloud",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.datacamp.com/courses/ml-model-deployment-with-google-cloud-platform"
-            }
-        ],
-        "MLOps": [
-            {
-                "course_name": "MLOps (Machine Learning Operations) Specialization",
-                "platform": "Coursera",
-                "description": "Learn the principles and practices of MLOps for automating and scaling machine learning workflows.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
-            },
-            {
-                "course_name": "MLOps: Continuous Delivery and Automation Pipelines in Machine Learning",
-                "platform": "Udemy",
-                "description": "Learn to build and automate MLOps pipelines using tools like Docker, Kubernetes, and Jenkins.",
-                "difficulty_level": "Advanced",
-                "course_link": "https://www.udemy.com/course/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning/"
-            },
-            {
-                "course_name": "Effective MLOps: Model Development to Production",
-                "platform": "DataCamp",
-                "description": "Build a Model Pipeline and Deploy it for Real-Time Inference",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.datacamp.com/courses/effective-mlops-model-development-to-production"
-            }
-        ],
-        "Data pipelines": [
-            {
-                "course_name": "Data Engineering with Google Cloud Specialization",
-                "platform": "Coursera",
-                "description": "Learn how to design and build data pipelines using Google Cloud services like Dataflow and BigQuery.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.coursera.org/specializations/data-engineering-gcp"
-            },
-            {
-                "course_name": "Data Pipelines with Apache Airflow",
-                "platform": "Udemy",
-                "description": "Learn how to build and manage data pipelines using Apache Airflow.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.udemy.com/course/data-pipelines-with-apache-airflow/"
-            },
-            {
-                "course_name": "Building Data Pipelines in Python",
-                "platform": "DataCamp",
-                "description": "Build, test, and deploy an end-to-end data pipeline",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.datacamp.com/courses/building-data-pipelines-in-python"
-            }
-        ],
-        "Statistical modeling": [
-            {
-                "course_name": "Statistical Modeling and Regression Analysis",
-                "platform": "Coursera",
-                "description": "Learn statistical modeling techniques and regression analysis for data analysis and prediction.",
-                "difficulty_level": "Intermediate",
-                "course_link": "https://www.coursera.org/learn/regression-modeling"
-            },
-            {
-                "course_name": "Statistics with R - The Ultimate Beginners Guide",
-                "platform": "Udemy",
-                "description": "Statistical Modeling using R for Data Science",
-                "difficulty_level": "Beginner",
-                "course_link": "https://www.udemy.com/course/statistics-with-r/"
-            },
-            {
-                "course_name": "Statistical Thinking for Data Science and Analytics",
-                "platform": "edX",
-                "description": "Introduction to fundamental statistical concepts, their relevance to real-world applications, and the tools needed to apply them.",
-                "difficulty_level": "Beginner",
-                "course_link": "https://www.edx.org/course/statistical-thinking-for-data-science-and-analytics"
+                "COURSE_NAME": "Creative Applications of Deep Learning with TensorFlow",
+                "PLATFORM": "Kadenze",
+                "DESCRIPTION": "Learn to build creative applications using deep learning techniques in TensorFlow, focusing on artistic and novel uses.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.kadenze.com/courses/creative-applications-of-deep-learning-with-tensorflow-v"
             }
         ]
     }

@@ -752,15 +752,16 @@
             <div class="score-grid">
                 <div class="score-card">
                     <div class="score-title">ATS Score</div>
-                    <div class="score-value" id="ats-score">85%</div>
+                    <div class="score-value" id="ats-score">{{ ats_score }}%
+                    </div>
                 </div>
                 <div class="score-card">
                     <div class="score-title">Resume Score</div>
-                    <div class="score-value" id="resume-score">78%</div>
+                    <div class="score-value" id="resume-score">{{ resume_score }}%</div>
                 </div>
                 <div class="score-card">
                     <div class="score-title">Keyword Match</div>
-                    <div class="score-value" id="keyword-match">92%</div>
+                    <div class="score-value" id="keyword-match">{{ keyword_match }}%</div>
                 </div>
             </div>
 
@@ -899,9 +900,9 @@
             setTimeout(() => {
                 document.getElementById('dashboard-content').style.display = 'block';
 
-                document.getElementById('ats-score').textContent = Math.floor(Math.random() * 20 + 75) + '%';
-                document.getElementById('resume-score').textContent = Math.floor(Math.random() * 20 + 70) + '%';
-                document.getElementById('keyword-match').textContent = Math.floor(Math.random() * 20 + 80) + '%';
+                // document.getElementById('ats-score').textContent = Math.floor(Math.random() * 20 + 75) + '%';
+                // document.getElementById('resume-score').textContent = Math.floor(Math.random() * 20 + 70) + '%';
+                // document.getElementById('keyword-match').textContent = Math.floor(Math.random() * 20 + 80) + '%';
 
                 analyzeBtn.textContent = "ANALYZE";
                 analyzeBtn.disabled = false;
