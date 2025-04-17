@@ -250,8 +250,9 @@ class ResumeAnalytics(object):
         return response
     
     def getATS(self,resume:str, jobdescription:str) -> Optional[Dict]:
-        prompt = ChatPromptTemplate.format_prompt
-
+        prompt = ChatPromptTemplate.format_prompt(
+            
+        )
     
 if __name__ =="__main__":
     object = ResumeAnalytics()

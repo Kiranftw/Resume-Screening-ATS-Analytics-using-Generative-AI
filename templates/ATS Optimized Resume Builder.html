@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Optimized Resume Builder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #f8fafc;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+        }
+
+        .sidebar .logo {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            background: linear-gradient(to right, #fff 0%, #93c5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            padding: 14px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-link.active {
+            background-color: rgba(59, 130, 246, 0.2);
+            border-left: 4px solid #3b82f6;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(59, 130, 246, 0.2);
+            transform: translateX(5px);
+            color: #fff;
+        }
+
+        .main-content {
+            margin-left: 300px;
+            padding: 40px;
+            width: calc(100% - 300px);
+        }
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            margin-bottom: 30px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1e3a8a;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .page-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 25px;
+            width: 5px;
+            background: #2563eb;
+            border-radius: 5px;
+        }
+
+        .logout-btn {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+        }
+
+        .logout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(239, 68, 68, 0.3);
+        }
+
+        .resume-builder-container {
+            display: flex;
+            gap: 30px;
+        }
+
+        .resume-upload-section {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 20px;
+            width: 5px;
+            background: #2563eb;
+            border-radius: 5px;
+        }
+
+        .upload-box {
+            background-color: #f8fafc;
+            border: 2px dashed #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .upload-box.dragover {
+            border-color: #2563eb;
+            background-color: #f0f7ff;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .choose-file-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin: 20px 0;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .choose-file-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+        }
+
+        .file-formats {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .format {
+            background-color: #e0e7ff;
+            color: #4338ca;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .file-name {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #64748b;
+            word-break: break-all;
+            max-width: 100%;
+        }
+
+        .resume-preview {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .preview-container {
+            flex-grow: 1;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            overflow-y: auto;
+            background-color: #f8fafc;
+        }
+
+        .preview-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .action-btn {
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+        }
+
+        .optimize-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .optimize-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+        }
+
+        .job-matches-section {
+            margin-top: 40px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .job-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .job-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+        }
+
+        .job-header {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 20px;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .job-company {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+        }
+
+        .job-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .job-body {
+            padding: 20px;
+        }
+
+        .job-description {
+            color: #4b5563;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .job-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .job-skill {
+            background-color: #e0e7ff;
+            color: #4338ca;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .job-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px 20px;
+        }
+
+        .job-match {
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        .apply-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .popup.show {
+            display: block;
+        }
+
+        .popup-overlay.show {
+            display: block;
+        }
+
+        .popup-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        .popup-message {
+            color: #4b5563;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .popup-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .popup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e2e8f0;
+            border-top: 4px solid #2563eb;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 1024px) {
+            .resume-builder-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 20px;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 20px;
+            }
+            
+            .job-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .preview-actions {
+                flex-direction: column;
+            }
+            
+            .action-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Resume Analyzer</div>
+        <a href="Dashboard.html" class="nav-link">📊 Dashboard</a>
+        <a href="Ats score.html" class="nav-link">🎯 ATS Score</a>
+        <a href="Resume score.html" class="nav-link">📝 Resume Score</a>
+        <a href="Missing skills.html" class="nav-link">⚠️ Missing Skills</a>
+        <a href="Course recommendations.html" class="nav-link">📚 Course Recommendations</a>
+        <a href="Cover letter.html" class="nav-link">✉️ Cover Letter Generator</a>
+        <a href="ATS Optimized Resume Builder.html" class="nav-link active">📄 ATS Optimized Resume Builder</a>
+    </div>
+    <div class="main-content">
+        <div class="top-nav">
+            <h1 class="page-title">ATS Optimized Resume Builder</h1>
+            <button class="logout-btn" onclick="handleLogout()">Logout</button>
+        </div>
+
+        <div class="resume-builder-container">
+            <div class="resume-upload-section">
+                <h3 class="section-title">Upload Your Resume</h3>
+                <div class="upload-box" id="resume-upload" ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                    <i class="fas fa-file-upload" style="font-size: 48px; color: #93c5fd; margin-bottom: 15px;"></i>
+                    <p>Drag & drop your resume here</p>
+                    <p style="color: #94a3b8; font-size: 14px; margin: 10px 0;">or</p>
+                    <input type="file" id="resume-file" class="file-input" accept=".pdf,.doc,.docx" onchange="handleFileSelect(event)" />
+                    <button class="choose-file-btn" onclick="document.getElementById('resume-file').click()">Choose File</button>
+                    <div id="resume-file-name" class="file-name"></div>
+                    <div class="file-formats">
+                        <span class="format">PDF</span>
+                        <span class="format">DOC</span>
+                        <span class="format">DOCX</span>
+                    </div>
+                </div>
+
+                <h3 class="section-title">Build From Scratch</h3>
+                <button class="optimize-btn action-btn" onclick="startNewResume()">
+                    <i class="fas fa-plus"></i> Create New Resume
+                </button>
+            </div>
+
+            <div class="resume-preview">
+                <h3 class="section-title">Resume Preview</h3>
+                <div class="preview-container" id="preview-container">
+                    <div style="text-align: center; color: #94a3b8; padding: 40px 20px;">
+                        <i class="fas fa-file-alt" style="font-size: 48px; margin-bottom: 15px;"></i>
+                        <p>Upload your resume or create a new one to see the preview</p>
+                    </div>
+                </div>
+                <div class="preview-actions">
+                    <button class="download-btn action-btn" id="download-btn" disabled onclick="downloadResume()">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                    <button class="optimize-btn action-btn" id="optimize-btn" disabled onclick="optimizeResume()">
+                        <i class="fas fa-magic"></i> Optimize for ATS
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="job-matches-section" id="job-matches-section" style="display: none;">
+            <h3 class="section-title">Recommended Jobs For You</h3>
+            <div class="job-grid" id="job-grid">
+                <!-- Job cards will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="popup" id="popup">
+        <h3 class="popup-title" id="popup-title">Upload Successful</h3>
+        <p class="popup-message" id="popup-message">Your file has been uploaded successfully.</p>
+        <button class="popup-btn" onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+        // Sample resume data structure
+        const sampleResume = {
+            name: "Rahul Sharma",
+            title: "Senior Software Engineer",
+            contact: {
+                email: "rahul.sharma@example.com",
+                phone: "+91 9876543210",
+                location: "Bangalore, India",
+                linkedin: "linkedin.com/in/rahulsharma"
+            },
+            summary: "Experienced software engineer with 5+ years of expertise in full-stack development. Specialized in JavaScript frameworks and cloud technologies. Passionate about building scalable web applications and mentoring junior developers.",
+            skills: ["JavaScript", "React", "Node.js", "AWS", "Python", "Docker", "Agile Methodologies"],
+            experience: [
+                {
+                    position: "Senior Software Engineer",
+                    company: "Tech Solutions India",
+                    duration: "2020 - Present",
+                    description: "Led a team of 5 developers to build a scalable e-commerce platform. Implemented microservices architecture that improved performance by 40%."
+                },
+                {
+                    position: "Software Engineer",
+                    company: "WebApps India",
+                    duration: "2018 - 2020",
+                    description: "Developed and maintained React-based frontend applications. Collaborated with UX team to improve user engagement by 25%."
+                }
+            ],
+            education: [
+                {
+                    degree: "M.Tech in Computer Science",
+                    university: "IIT Bombay",
+                    year: "2018"
+                },
+                {
+                    degree: "B.E. in Software Engineering",
+                    university: "University of Mumbai",
+                    year: "2016"
+                }
+            ]
+        };
+
+        // Sample job data with Indian Rupee salaries
+        const sampleJobs = [
+            {
+                id: 1,
+                title: "Senior Full Stack Developer",
+                company: "TechMahindra",
+                location: "Bangalore",
+                type: "Full-time",
+                salary: "₹12,00,000 - ₹18,00,000",
+                posted: "2 days ago",
+                description: "We're looking for an experienced Full Stack Developer to join our team. You'll be responsible for developing and maintaining our web applications using modern JavaScript frameworks.",
+                skills: ["JavaScript", "React", "Node.js", "AWS", "MongoDB"],
+                match: 92
+            },
+            {
+                id: 2,
+                title: "JavaScript Engineer",
+                company: "Infosys",
+                location: "Pune",
+                type: "Full-time",
+                salary: "₹10,00,000 - ₹15,00,000",
+                posted: "1 week ago",
+                description: "Join our team to build innovative web applications. We value clean code, good architecture, and continuous learning.",
+                skills: ["JavaScript", "TypeScript", "React", "Redux", "Jest"],
+                match: 87
+            },
+            {
+                id: 3,
+                title: "Cloud Software Developer",
+                company: "Wipro",
+                location: "Hyderabad",
+                type: "Full-time",
+                salary: "₹13,00,000 - ₹17,00,000",
+                posted: "3 days ago",
+                description: "Looking for a developer with experience in cloud technologies to help us build our next-generation platform.",
+                skills: ["AWS", "Docker", "Kubernetes", "Python", "Node.js"],
+                match: 85
+            },
+            {
+                id: 4,
+                title: "Frontend Developer (React)",
+                company: "TCS",
+                location: "Chennai",
+                type: "Full-time",
+                salary: "₹9,00,000 - ₹14,00,000",
+                posted: "5 days ago",
+                description: "We're seeking a React developer to join our frontend team. You'll work closely with designers to implement beautiful, responsive UIs.",
+                skills: ["React", "CSS", "Redux", "GraphQL", "Jest"],
+                match: 83
+            },
+            {
+                id: 5,
+                title: "Backend Engineer",
+                company: "HCL Technologies",
+                location: "Noida",
+                type: "Full-time",
+                salary: "₹11,00,000 - ₹16,00,000",
+                posted: "1 day ago",
+                description: "Help us build scalable backend services for our data platform. Experience with microservices is a plus.",
+                skills: ["Node.js", "Python", "PostgreSQL", "Docker", "AWS"],
+                match: 79
+            },
+            {
+                id: 6,
+                title: "Full Stack Developer",
+                company: "Flipkart",
+                location: "Bangalore",
+                type: "Full-time",
+                salary: "₹15,00,000 - ₹20,00,000",
+                posted: "2 weeks ago",
+                description: "Join our team to build innovative e-commerce solutions. We're looking for passionate developers who love solving complex problems.",
+                skills: ["JavaScript", "React", "Node.js", "MongoDB", "AWS"],
+                match: 88
+            }
+        ];
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                displayFileName(file);
+                showPopup(`${file.name} uploaded successfully!`);
+                processResume(file);
+            }
+        }
+
+        function handleDrop(event) {
+            event.preventDefault();
+            const file = event.dataTransfer.files[0];
+            if (file) {
+                document.getElementById('resume-file').files = event.dataTransfer.files;
+                displayFileName(file);
+                showPopup(`${file.name} uploaded successfully!`);
+                processResume(file);
+            }
+            event.target.classList.remove('dragover');
+        }
+
+        function handleDragOver(event) {
+            event.preventDefault();
+            event.target.classList.add('dragover');
+        }
+
+        function handleDragLeave(event) {
+            event.preventDefault();
+            event.target.classList.remove('dragover');
+        }
+
+        function displayFileName(file) {
+            const fileNameElement = document.getElementById('resume-file-name');
+            fileNameElement.textContent = file.name;
+        }
+
+        function processResume(file) {
+            // In a real app, you would parse the resume file here
+            // For this demo, we'll use the sample resume data
+            
+            showPopup("Processing your resume...");
+            
+            setTimeout(() => {
+                renderResumePreview(sampleResume);
+                document.getElementById('download-btn').disabled = false;
+                document.getElementById('optimize-btn').disabled = false;
+                findJobMatches(sampleResume);
+                showPopup("Resume processed successfully! Found 6 matching jobs.");
+            }, 2000);
+        }
+
+        function renderResumePreview(resumeData) {
+            const previewContainer = document.getElementById('preview-container');
+            
+            // Create HTML for the resume preview
+            let html = `
+                <div style="font-family: Arial, sans-serif; color: #1e3a8a;">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h1 style="font-size: 28px; margin-bottom: 5px;">${resumeData.name}</h1>
+                        <h2 style="font-size: 18px; color: #4b5563; margin-bottom: 15px;">${resumeData.title}</h2>
+                        <div style="display: flex; justify-content: center; gap: 15px; font-size: 14px; color: #64748b;">
+                            <span>${resumeData.contact.email}</span>
+                            <span>${resumeData.contact.phone}</span>
+                            <span>${resumeData.contact.location}</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <h3 style="font-size: 18px; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 10px;">SUMMARY</h3>
+                        <p style="font-size: 14px; line-height: 1.6;">${resumeData.summary}</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <h3 style="font-size: 18px; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 10px;">SKILLS</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            `;
+            
+            // Add skills
+            resumeData.skills.forEach(skill => {
+                html += `<span style="background-color: #e0e7ff; color: #4338ca; padding: 4px 12px; border-radius: 20px; font-size: 12px;">${skill}</span>`;
+            });
+            
+            html += `
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <h3 style="font-size: 18px; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 10px;">EXPERIENCE</h3>
+            `;
+            
+            // Add experience
+            resumeData.experience.forEach(exp => {
+                html += `
+                    <div style="margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                            <strong style="font-size: 16px;">${exp.position}</strong>
+                            <span style="color: #64748b; font-size: 14px;">${exp.duration}</span>
+                        </div>
+                        <div style="font-style: italic; color: #4b5563; margin-bottom: 5px; font-size: 14px;">${exp.company}</div>
+                        <p style="font-size: 14px; line-height: 1.6;">${exp.description}</p>
+                    </div>
+                `;
+            });
+            
+            html += `
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 18px; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px; margin-bottom: 10px;">EDUCATION</h3>
+            `;
+            
+            // Add education
+            resumeData.education.forEach(edu => {
+                html += `
+                    <div style="margin-bottom: 10px;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <strong style="font-size: 16px;">${edu.degree}</strong>
+                            <span style="color: #64748b; font-size: 14px;">${edu.year}</span>
+                        </div>
+                        <div style="font-style: italic; color: #4b5563; font-size: 14px;">${edu.university}</div>
+                    </div>
+                `;
+            });
+            
+            html += `</div></div>`;
+            
+            previewContainer.innerHTML = html;
+        }
+
+        function findJobMatches(resumeData) {
+            const jobMatchesSection = document.getElementById('job-matches-section');
+            const jobGrid = document.getElementById('job-grid');
+            
+            // Show the job matches section
+            jobMatchesSection.style.display = 'block';
+            
+            // Clear any existing job cards
+            jobGrid.innerHTML = '';
+            
+            // Sort jobs by match score (descending)
+            const sortedJobs = [...sampleJobs].sort((a, b) => b.match - a.match);
+            
+            // Create job cards
+            sortedJobs.forEach(job => {
+                const jobCard = document.createElement('div');
+                jobCard.className = 'job-card';
+                
+                // Calculate how many skills match
+                const matchedSkills = job.skills.filter(skill => 
+                    resumeData.skills.some(resumeSkill => 
+                        resumeSkill.toLowerCase().includes(skill.toLowerCase()) || 
+                        skill.toLowerCase().includes(resumeSkill.toLowerCase())
+                    )
+                ).length;
+                
+                jobCard.innerHTML = `
+                    <div class="job-header">
+                        <div class="job-title">${job.title}</div>
+                        <div class="job-company">${job.company} • ${job.location}</div>
+                        <div class="job-meta">
+                            <div class="job-meta-item"><i class="fas fa-briefcase"></i> ${job.type}</div>
+                            <div class="job-meta-item"><i class="fas fa-rupee-sign"></i> ${job.salary}</div>
+                            <div class="job-meta-item"><i class="far fa-clock"></i> ${job.posted}</div>
+                        </div>
+                    </div>
+                    <div class="job-body">
+                        <p class="job-description">${job.description}</p>
+                        <div class="job-skills">
+                            ${job.skills.map(skill => `
+                                <span class="job-skill" style="${resumeData.skills.some(resumeSkill => 
+                                    resumeSkill.toLowerCase().includes(skill.toLowerCase()) || 
+                                    skill.toLowerCase().includes(resumeSkill.toLowerCase())
+                                ) ? 'background-color: #dbeafe; font-weight: 600;' : ''}">${skill}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-match">${job.match}% Match (${matchedSkills}/${job.skills.length} skills)</div>
+                        <button class="apply-btn" onclick="applyForJob(${job.id})">
+                            <i class="fas fa-paper-plane"></i> Apply
+                        </button>
+                    </div>
+                `;
+                
+                jobGrid.appendChild(jobCard);
+            });
+            
+            // Scroll to job matches section
+            setTimeout(() => {
+                jobMatchesSection.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+
+        function applyForJob(jobId) {
+            const job = sampleJobs.find(j => j.id === jobId);
+            showPopup(`Applying for ${job.title} at ${job.company}...`);
+            
+            // In a real app, this would submit an application
+            setTimeout(() => {
+                showPopup(`Application submitted successfully for ${job.title}!`);
+            }, 1500);
+        }
+
+        function startNewResume() {
+            showPopup("Creating a new resume...");
+            
+            setTimeout(() => {
+                renderResumePreview({
+                    name: "Your Name",
+                    title: "Your Professional Title",
+                    contact: {
+                        email: "your.email@example.com",
+                        phone: "+91 9876543210",
+                        location: "Your City, India",
+                        linkedin: "linkedin.com/in/yourprofile"
+                    },
+                    summary: "Write a brief summary highlighting your key qualifications and experience.",
+                    skills: ["Skill 1", "Skill 2", "Skill 3"],
+                    experience: [
+                        {
+                            position: "Your Position",
+                            company: "Company Name",
+                            duration: "Month Year - Present",
+                            description: "Describe your responsibilities and achievements in this role."
+                        }
+                    ],
+                    education: [
+                        {
+                            degree: "Your Degree",
+                            university: "University Name",
+                            year: "Year"
+                        }
+                    ]
+                });
+                
+                document.getElementById('download-btn').disabled = false;
+                document.getElementById('optimize-btn').disabled = false;
+                document.getElementById('job-matches-section').style.display = 'none';
+                showPopup("New resume template created. Edit the fields to customize your resume.");
+            }, 1000);
+        }
+
+        function optimizeResume() {
+            showPopup("Optimizing your resume for ATS...");
+            
+            // In a real app, this would analyze and optimize the resume
+            setTimeout(() => {
+                // Simulate optimization by adding some ATS-friendly improvements
+                const optimizedResume = JSON.parse(JSON.stringify(sampleResume));
+                optimizedResume.skills.push("Agile Methodologies", "CI/CD");
+                optimizedResume.summary = "Results-driven Senior Software Engineer with 5+ years of experience in full-stack JavaScript development (React, Node.js) and cloud technologies (AWS). Proven track record of leading teams to deliver scalable web applications with 40% performance improvements. Strong expertise in Agile methodologies and CI/CD pipelines.";
+                
+                renderResumePreview(optimizedResume);
+                findJobMatches(optimizedResume);
+                showPopup("Resume optimized successfully! Your ATS score improved by 15%.");
+            }, 2000);
+        }
+
+        function downloadResume() {
+            showPopup("Downloading your resume...");
+            
+            // In a real app, this would generate a PDF or DOCX file
+            setTimeout(() => {
+                showPopup("Resume downloaded successfully!");
+            }, 1000);
+        }
+
+        function showPopup(message, title = "Success") {
+            const popup = document.getElementById('popup');
+            const overlay = document.getElementById('popup-overlay');
+            const popupTitle = document.getElementById('popup-title');
+            const popupMessage = document.getElementById('popup-message');
+            
+            popupTitle.textContent = title;
+            popupMessage.textContent = message;
+            popup.classList.add('show');
+            overlay.classList.add('show');
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            const overlay = document.getElementById('popup-overlay');
+            
+            popup.classList.remove('show');
+            overlay.classList.remove('show');
+        }
+
+        function handleLogout() {
+            showPopup('Logging out...');
+            setTimeout(() => {
+                window.location.href = 'LANDING PAGE.html';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

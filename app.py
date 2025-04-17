@@ -8,95 +8,6 @@ import logging
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
-
-result = {
-    "RESUME_RELEVANCE_SCORE": 65,
-    "ROLE_FIT_SCORE": 55,
-    "ATS_SCORE": 60,
-    "KEYWORD_MATCH_SCORE": 70,
-    "MATCHED_KEYWORDS": [
-        "Python",
-        "Machine Learning",
-        "AI",
-        "Skills",
-        "Projects",
-        "Data Science",
-        "Gemini API",
-        "GenAI"
-    ],
-    "MISSING_KEYWORDS": [
-        "Generative AI",
-        "TensorFlow",
-        "PyTorch",
-        "Large Language Models",
-        "Novel Generative Techniques"
-    ],
-    "MISSING_SKILLS": [
-        "Deploying Large Language Models",
-        "Researching Novel Generative Techniques"
-    ],
-    "RESUME_TIPS": [
-        "Add 'Generative AI' to the skills section.",
-        "Include specific projects showcasing experience with TensorFlow or PyTorch.",
-        "Quantify experience with AI projects using metrics.",
-        "Expand on the description of AI-related projects, explicitly mentioning the application of Large Language Models.",
-        "Add 'LLM' and 'Large Language Models' as keywords in your resume.",
-        "Detail the process of deploying AI models in project descriptions.",
-        "Include 'model deployment' as a keyword in your skills section.",
-        "Mention any research experience related to generative techniques.",
-        "Elaborate on experience with responsible AI development, if applicable.",
-        "Highlight experience with specific Google AI technologies like PaLM 2 or Gemini, if available."
-    ],
-    "COURSE_RECOMMENDATIONS": {
-        "Deploying Large Language Models": [
-            {
-                "COURSE_NAME": "TensorFlow Developer Professional Certificate",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to build and deploy TensorFlow models in various environments.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/professional-certificates/tensorflow-in-practice"
-            },
-            {
-                "COURSE_NAME": "AI Product Management",
-                "PLATFORM": "Udacity",
-                "DESCRIPTION": "Learn how to manage the product lifecycle for AI products, including deployment considerations.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.udacity.com/course/ai-product-manager--nd088"
-            },
-            {
-                "COURSE_NAME": "Full Stack Deep Learning",
-                "PLATFORM": "Fullstackdeeplearning.com",
-                "DESCRIPTION": "A practical course covering the entire deep learning lifecycle, from data collection to deployment.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://fullstackdeeplearning.com/"
-            }
-        ],
-        "Researching Novel Generative Techniques": [
-            {
-                "COURSE_NAME": "Generative Adversarial Networks (GANs) Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn the fundamentals of GANs and implement various generative models.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/generative-adversarial-networks-gans"
-            },
-            {
-                "COURSE_NAME": "Deep Learning Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Covers fundamental concepts of deep learning and neural networks.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/deep-learning"
-            },
-            {
-                "COURSE_NAME": "Natural Language Processing Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the elements of natural language processing (NLP).",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/natural-language-processing"
-            }
-        ]
-    }
-}
-print(result["ATS_SCORE"])
 def get_db_connection():
     conn = sqlite3.connect('users.db')
     conn.row_factory = sqlite3.Row
@@ -128,32 +39,43 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
+analyzer = ResumeAnalytics()
 import logging
 
-@app.route('/dashboard', methods=['GET', 'POST'])
-def dashboard():
-    if 'user' not in session:
-        flash('Please login first.', 'warning')
-        return redirect(url_for('landing_page'))
+@app.route('/dashboard', methods=['POST'])
+def analyze():
+    resume_file = request.files.get('resume')
+    job_file = request.files.get('jobdesc')
 
-    ats_score = None
-    resume_score = None
-    keyword_match = None
-    
-    ats_score = result['ATS_SCORE']
-    resume_score = result['RESUME_RELEVANCE_SCORE']
-    keyword_match = result['KEYWORD_MATCH_SCORE']
-        
-     
+    if not resume_file or not job_file:
+        return "Both files are required.", 400
+
+    resume_path = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(resume_file.filename))
+    job_path = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(job_file.filename))
+
+    resume_file.save(resume_path)
+    job_file.save(job_path)
+
+    results = analyzer.resumeanalytics(resume_path, job_path)
+
+    if not results:
+        return "Analysis failed. Check logs for details."
+
+    # Get scores
+    ats_score = results["ATS_SCORE"]
+    resume_score = results["RESUME_RELEVANCE_SCORE"]
+    keyword_match = results["KEYWORD_MATCH_SCORE"]
+
+    # Optional: include the full AI-generated description/feedback
+    summary_description = results # You can change this key
+
     return render_template(
-        'Dashboard.html',
-        username=session['user'],
+        "Dashboard.html",
         ats_score=ats_score,
         resume_score=resume_score,
-        keyword_match=keyword_match
+        keyword_match=keyword_match,
+        summary=summary_description
     )
-
 
 @app.route('/ats-score')
 def ats_score():
@@ -227,10 +149,7 @@ def logout():
 @app.errorhandler(500)
 def handle_errors(e):
     flash("Something went wrong. Redirected to home.", "warning")
-    return redirect(url_for('landing_page'))  # Redirect to landing page on errors
-
-# ---------- MAIN ----------
-
+    return redirect(url_for('landing_page'))  # Redirect to
 if __name__ == '__main__':
     app.run(debug=True)
 
