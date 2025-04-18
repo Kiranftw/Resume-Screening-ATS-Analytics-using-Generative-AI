@@ -67,19 +67,6 @@ class ResumeAnalytics(object):
                 break
         if self.model is None or self.chatmodel is None:
             raise ValueError(f"Error in initlizing the models")
-        
-        #Initlizing the memory & conversation chain
-        self.memory = ConversationSummaryBufferMemory(
-            llm = self.chatmodel,
-            max_tokens = 100000,
-            return_messages = True,
-            memory_key = "history"
-        )
-        self.conversation = ConversationChain(
-            llm = self.chatmodel,
-            memory = self.memory,
-            verbose = True
-        )
     
     @ExceptionHandeler 
     @property
@@ -99,10 +86,9 @@ class ResumeAnalytics(object):
         else:
             raise ValueError("Invalid response format from the model.")
     
-    @ExceptionHandeler
     def datacleaning(self, textfile: str) -> str:
         #cleaning special symbols/characters from the given data to reduce the tokens 
-        if not textfile:
+        if not textfile or textfile.strip() == "":
             return ""
         
         text = textfile
@@ -114,8 +100,9 @@ class ResumeAnalytics(object):
         text = text.replace(" - ", "\n- ").replace(":", ":\n")  
 
         return text.strip()
-   
-    def documentParser(self, filepath: str) -> Optional[str]:
+    
+    @ExceptionHandeler
+    def documentParser(self, filepath: str) -> str:
         if not filepath:
             raise ValueError("No input provided.")
 
@@ -125,11 +112,8 @@ class ResumeAnalytics(object):
         if filepath.startswith("http://") or filepath.startswith("https://"):
             scraped_data = ""
             A = Article(filepath)
-            try:
-                A.download()
-                A.parse()
-            except Exception as e:
-                raise ValueError(f"Error in downloading or parsing the URL: {e}")
+            A.download()
+            A.parse()
             scraped_data += A.text
             if scraped_data:
                 print(f"successfully scraped data from given URL (filepath)")
@@ -146,7 +130,7 @@ class ResumeAnalytics(object):
                 loader = TextLoader(filepath)
             else:
                 print("Unsupported document format.")
-                return None
+                raise ValueError("Unsupported document format.")
 
             document = loader.load()
             filecontent: str = " ".join([doc.page_content for doc in document])
@@ -163,8 +147,7 @@ class ResumeAnalytics(object):
 
         else:
             print("Invalid file format.")
-            return None
-
+            raise ValueError("Invalid file format.")
 
     @ExceptionHandeler
     def resumeanalytics(self, resumepath: str, jobdescription: str, filename: str = "prompt.txt") -> Optional[Dict[str, Any]]:
@@ -201,6 +184,12 @@ class ResumeAnalytics(object):
     @ExceptionHandeler   
     def chatbot(self,Document: str, Query: str = None) -> str:
         #chatbot built on top of Google's small language model (GEMMA) with chunk streaming & can handle 30 request per minute
+        self.memory = ConversationSummaryBufferMemory(
+            llm = self.chatmodel,
+            max_tokens = 100000,
+            return_messages = True,
+            memory_key = "history"
+        )
         data: Optional[str] = self.documentParser(Document)
         if not data or data.strip() == "":
             print("[Bot]: Unable to extract any meaningful content from the file.")
@@ -250,14 +239,6 @@ class ResumeAnalytics(object):
         return response
     
     def getATS(self,resume:str, jobdescription:str) -> Optional[Dict]:
-        prompt = ChatPromptTemplate.format_prompt(
+        prompt = ChatPromptTemplate.from_template(
             
         )
-    
-if __name__ =="__main__":
-    object = ResumeAnalytics()
-    resume = r"/home/kiranftw/COLLEGE/Resume-Screening-ATS-Analytics-using-Generative-AI/uploads/ResumePDF.pdf"
-    jd = r"outputs/coverletter.txt"
-    data = object.resumeanalytics(resume, jd)
-    print(data)
-    print(data["RESUME_RELEVANCE_SCORE"])
