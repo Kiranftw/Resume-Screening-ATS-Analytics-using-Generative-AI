@@ -46,8 +46,8 @@
             }
         ],
         "Projects": [
-            "CV ANALYTICS DASHBOARD",
-            "Conversation chatbot using API"
+            "CV ANALYTICS DASHBOARD: Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements.",
+            "Conversation chatbot using API: Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
         ],
         "Certifications": [
             "DSA PYTHON : By CampusX",
@@ -57,9 +57,9 @@
         "Education": "B. Tech, CSE DATA SCIENCE Nalla Narsimha Reddy educational society 2022 25 | Hyderabad CGPA: 7.6\nDiploma, Industrial & Product Design CIPET CENTRAL INSTITUTE OF PETROCHEMICAL ENGEINEERING & TECHNOLO0GY 2020 22 | Hyderabad Percentage: 77.7%\nIntermediate, MPC Narayana Junior college 2018 20 | Hyderabad Percentage: 70%"
     },
     "ATS Score": {
-        "Total Score": 85,
+        "Total Score": 84,
         "Breakdown": {
-            "Format Score": 10,
+            "Format Score": 9,
             "Spelling & Grammar": 8,
             "Summary": 10,
             "Skills": 9,
@@ -71,12 +71,12 @@
         }
     },
     "Recommendations": [
-        "Expand on soft skills with specific examples.",
-        "Proofread carefully for minor grammatical errors.",
-        "Quantify achievements in work experience with metrics.",
-        "Provide more details on the technologies used in projects.",
-        "Consider adding a brief summary of your career goals.",
-        "Standardize formatting for dates and locations.",
-        "Ensure consistent verb tense throughout the resume."
+        "Consider quantifying achievements in work experience with specific numbers or metrics to demonstrate impact.",
+        "Proofread carefully to eliminate typos and grammatical errors.",
+        "Add a section for soft skills, highlighting abilities like teamwork, communication, and problem-solving.",
+        "Ensure consistent formatting throughout the resume for a cleaner look.",
+        "Consider adding more details to the education section, such as relevant coursework or academic achievements.",
+        "Reformat the dates in experience and education for better readability.",
+        "Consider adding brief descriptions to certifications to showcase relevance."
     ]
 }

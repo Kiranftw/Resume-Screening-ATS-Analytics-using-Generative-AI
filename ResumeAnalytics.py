@@ -16,7 +16,6 @@ import os
 from functools import wraps
 from newspaper import Article
 import re
-import base64
 import json
 from PIL import Image
 import logging
@@ -49,7 +48,6 @@ class ResumeAnalytics(object):
         self.outputsFOLDER = "outputs"
         self.model: genai.GenerativeModel = None
         self.chatmodel: ChatGoogleGenerativeAI = None
-        ##Initlizing the google AI models for text generations and chatbot
         for model in genai.list_models():
             if model.name == modelname:
                 self.model: genai.GenerativeModel = genai.GenerativeModel(
@@ -65,6 +63,7 @@ class ResumeAnalytics(object):
                     temperature = 0.7,
                 )
                 break
+        logger.info("CHAT/TEXT GENERATION MODELS initialized successfully.")
         if self.model is None or self.chatmodel is None:
             raise ValueError(f"Error in initlizing the models")
     
@@ -229,14 +228,14 @@ class ResumeAnalytics(object):
             Today's date is {date}.
             """
         )
-        formatted_prompt = prompt.format(
+        formatted_prompt: str = prompt.format(
             fullname=fullname,
             position=position,
             companyname=companyname,
             relevant_experience=relvantExperience,
             date=datetime.date.today().strftime("%B %d, %Y")
         )
-        response = str(self.chatmodel.invoke(formatted_prompt))
+        response: str = str(self.chatmodel.invoke(formatted_prompt))
         outputpath = os.path.join(self.outputsFOLDER, "coverletter.txt")
         with open(outputpath, "w", encoding = "utf-8") as file:
             file.write(response)
@@ -246,14 +245,14 @@ class ResumeAnalytics(object):
     
     @ExceptionHandeler
     def ATSanalytics(self,resume: str, jobdescription: str = None) -> Optional[Dict[str, Any]]:
-        resume_data = self.documentParser(resume)
-        resumeLength = resume_data.get("pages", 0) if resume_data else 0
-        JD = self.documentParser(jobdescription)
+        resume_data: dict = self.documentParser(resume)
+        resumeLength: int = resume_data.get("pages", 0) if resume_data else 0
+        JD: str = self.documentParser(jobdescription)
         if not resume_data or not resume_data.get("content"):
             logger.error("No content found in the resume.")
             return {"error": "Could not extract meaningful content from resume."}
         logger.info("Resume content extracted successfully.")
-        prompt = ChatPromptTemplate.from_template(
+        prompt: ChatPromptTemplate = ChatPromptTemplate.from_template(
             """
             You are an advanced ATS (Applicant Tracking System) evaluator.
 
@@ -348,7 +347,9 @@ class ResumeAnalytics(object):
         except Exception as e:
             print(f"Error in ATSanalytics: {e}")
             return None
-        
+    
+    #TODO- Has to develop this function by tomorrow
+    @ExceptionHandeler
     def getJOBRecommedations(self,resume: str) -> None:
         pass
 
