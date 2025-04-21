@@ -19,11 +19,11 @@ import re
 import base64
 import json
 from PIL import Image
+import logging
 from langchain_google_genai import ChatGoogleGenerativeAI
 import google.generativeai as genai
 from json import JSONDecodeError
 import datetime
-import logging
 pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 
 logging.basicConfig(level=logging.INFO)
@@ -102,12 +102,12 @@ class ResumeAnalytics(object):
         return text.strip()
     
     @ExceptionHandeler
-    def documentParser(self, filepath: str) -> str:
+    def documentParser(self, filepath: str) -> dict:
         if not filepath:
             raise ValueError("No input provided.")
 
         if os.path.exists(filepath):
-            ext = os.path.splitext(filepath)[1].lower()
+            ext = os.path.splitext(filepath)[1].lower() if os.path.exists(filepath) else None
         
         if filepath.startswith("http://") or filepath.startswith("https://"):
             scraped_data = ""
@@ -117,7 +117,7 @@ class ResumeAnalytics(object):
             scraped_data += A.text
             if scraped_data:
                 print(f"successfully scraped data from given URL (filepath)")
-                return scraped_data
+                return {"content": scraped_data, "pages": 1}
             else:
                 raise ValueError("couldn't find/ Error in scraping data from the given website")
                 
@@ -134,7 +134,11 @@ class ResumeAnalytics(object):
 
             document = loader.load()
             filecontent: str = " ".join([doc.page_content for doc in document])
-            return self.datacleaning(filecontent.strip()) if filecontent else None
+            pages = len(document)
+            return {
+                "content": self.datacleaning(filecontent.strip()) if filecontent else None,
+                "pages": pages
+            }
 
         elif ext in [".jpg", ".jpeg", ".png", ".webp"]:
             image = Image.open(filepath)
@@ -143,8 +147,10 @@ class ResumeAnalytics(object):
             filecontent: str = pytesseract.image_to_string(image)
             if not filecontent.strip():
                 raise ValueError("No text found in the image.")
-            return self.datacleaning(filecontent)
-
+            return {
+                "content": self.datacleaning(filecontent),
+                "pages": 1 
+            }
         else:
             print("Invalid file format.")
             raise ValueError("Invalid file format.")
@@ -237,3 +243,116 @@ class ResumeAnalytics(object):
         print(f"file successfully stored with name coverletter.txt")
         Markdown(response)
         return response
+    
+    @ExceptionHandeler
+    def ATSanalytics(self,resume: str, jobdescription: str = None) -> Optional[Dict[str, Any]]:
+        resume_data = self.documentParser(resume)
+        resumeLength = resume_data.get("pages", 0) if resume_data else 0
+        JD = self.documentParser(jobdescription)
+        if not resume_data or not resume_data.get("content"):
+            logger.error("No content found in the resume.")
+            return {"error": "Could not extract meaningful content from resume."}
+        logger.info("Resume content extracted successfully.")
+        prompt = ChatPromptTemplate.from_template(
+            """
+            You are an advanced ATS (Applicant Tracking System) evaluator.
+
+            Your job is to:
+            1. Extract key information from the given resume.
+            2. Calculate an overall ATS score (0 - 100) based on:
+                - Resume Format & Length (10 points)
+                - Spelling & Grammar (10 points)
+                - Summary or Objective (10 points)
+                - Skills: Hard & Soft (10 points)(remove some points if the user misses any of the skills in soft or hard)
+                - Work Experience (10 points)
+                - Projects (10 points)
+                - Certifications (10 points)
+                - Education (10 points)
+                - Contact Details (10 points)
+            3. Penalize for:
+                - Missing sections (e.g., no certifications, no contact details)
+                - Resume longer than 2 pages (deduct up to 5 points from format score)
+            4. Provide specific improvement recommendations.
+
+            === Resume Content ===
+            {resume_text}
+            Length (in pages): {resumeLength}
+            === OUTPUT FORMAT ===
+            Return a valid JSON object in this structure:
+            {{
+                "Extracted Data": {{
+                    "Name": "...",
+                    "Contact Details": "...",
+                    "Summary or Objective": "...",
+                    "Skills": {{
+                        "Soft Skills": [...],
+                        "Hard Skills": [...]
+                    }},
+                    "Experience": [
+                        {{
+                            "Title": "...",
+                            "Company": "...",
+                            "Duration": "...",
+                            "Description": "..."
+                        }}
+                    ],
+                    "Projects": [...],
+                    "Certifications": [...],
+                    "Education": "..."
+                }},
+                "ATS Score": {{
+                    "Total Score": <score_out_of_100>,
+                    "Breakdown": {{
+                        "Format Score": <score_out_of_10>,
+                        "Spelling & Grammar": <score_out_of_10>,
+                        "Summary": <score_out_of_10>,
+                        "Skills": <score_out_of_10>,
+                        "Experience": <score_out_of_10>,
+                        "Projects": <score_out_of_10>,
+                        "Certifications": <score_out_of_10>,
+                        "Education": <score_out_of_10>,
+                        "Contact Details": <score_out_of_10>
+                    }}
+                }},
+                "Recommendations": [
+                    "...",  // bullet point suggestions for improvement
+                    "...",
+                    "...",
+                    "7 recommendations"
+                ]
+            }}
+            """
+        )
+        formatted_prompt = prompt.format(
+            resume_text=resume_data["content"],
+            resumeLength=resumeLength
+        )
+        logger.info("ATS Prompt formatted successfully.")
+        response = self.getResponse(formatted_prompt)
+        logger.info("ATS analytics response received from model.")
+        try:
+            if not os.path.exists(self.outputsFOLDER):
+                os.makedirs(self.outputsFOLDER, exist_ok = True)
+            responseJSON = json.loads(response)
+            outputpath = os.path.join(self.outputsFOLDER, "ATSanalytics.json")
+            with open(outputpath, "w", encoding="utf-8") as file:
+                json.dump(responseJSON, file, indent=4, ensure_ascii=False)
+            print(f"ATS analytics JSON file saved: {outputpath}")
+            return responseJSON
+        except JSONDecodeError as e:
+            print(f"Error decoding JSON: {e}")
+        except FileNotFoundError as e:
+            print(f"Error: {e}")
+        except ValueError as e:
+            print(f"Error: {e}")
+        except Exception as e:
+            print(f"Error in ATSanalytics: {e}")
+            return None
+        
+    def getJOBRecommedations(self,resume: str) -> None:
+        pass
+
+if __name__ == "__main__":
+    object = ResumeAnalytics()
+    resume = input("Enter the path to the resume file: ")
+    object.ATSanalytics(resume)
