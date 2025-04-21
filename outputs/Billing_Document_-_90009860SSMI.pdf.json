@@ -1,0 +1,290 @@
+{
+    "RESUME_RELEVANCE_SCORE": 10,
+    "ROLE_FIT_SCORE": 5,
+    "ATS_SCORE": 5,
+    "KEYWORD_MATCH_SCORE": 10,
+    "MATCHED_KEYWORDS": [
+        "Invoice"
+    ],
+    "MISSING_KEYWORDS": [
+        "tax",
+        "GST",
+        "PAN",
+        "CIN",
+        "MSME",
+        "supply",
+        "shipping",
+        "billing",
+        "address",
+        "payment",
+        "mode"
+    ],
+    "MISSING_SKILLS": [],
+    "RESUME_TIPS": [
+        "Include a dedicated skills section listing relevant skills.",
+        "Add a summary or objective statement to highlight key qualifications.",
+        "Quantify achievements and responsibilities using metrics whenever possible.",
+        "Ensure consistent formatting throughout the resume for better readability.",
+        "Tailor the resume to match the specific keywords and requirements of the job description.",
+        "Use action verbs to describe responsibilities and accomplishments.",
+        "List certifications and licenses relevant to the job.",
+        "Proofread the resume carefully to eliminate any grammatical errors or typos.",
+        "Include contact information prominently at the top of the resume.",
+        "Save the resume in a format that is easily parsed by ATS systems (e.g., .docx, .pdf)."
+    ],
+    "COURSE_RECOMMENDATIONS": {
+        "tax": [
+            {
+                "COURSE_NAME": "Taxation Course",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Basic knowledge of taxation",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Tax Law Specialization",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "In-depth look into tax law",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Advanced Corporate Taxation",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Advanced course in coporate taxation",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "GST": [
+            {
+                "COURSE_NAME": "Goods and Services Tax (GST) Course",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Introduction to Goods and Services Tax (GST) principles and practices.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "GST Compliance and Filing",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "A comprehensive guide to GST compliance, return filing, and record keeping.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Advanced GST Practitioner Course",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Advanced topics in GST, including audits, assessments, and dispute resolution.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "PAN": [
+            {
+                "COURSE_NAME": "Understanding Permanent Account Number (PAN)",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "An overview of the PAN system, its purpose, and application process.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "PAN Card Application and Verification",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "A step-by-step guide to applying for a PAN card and verifying its authenticity.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "PAN and Income Tax Compliance",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "How PAN is used in income tax compliance and financial transactions.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "CIN": [
+            {
+                "COURSE_NAME": "Corporate Identification Number (CIN) Basics",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Introduction to CIN, its structure, and significance for companies.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "CIN Search and Company Information",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "How to search for CIN and retrieve company information from regulatory databases.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "CIN and Corporate Governance",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "The role of CIN in corporate governance and regulatory compliance.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "MSME": [
+            {
+                "COURSE_NAME": "Micro, Small & Medium Enterprises (MSME) Overview",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Understand the MSME sector, its importance, and government schemes.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "MSME Registration and Benefits",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Step-by-step guidance on registering as an MSME and the associated benefits.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "MSME Finance and Funding Options",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Exploring financing and funding options for MSMEs, including loans and grants.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "supply": [
+            {
+                "COURSE_NAME": "Supply Chain Management Fundamentals",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Basic concepts of supply chain management, including planning, sourcing, and logistics.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Demand and Supply Planning",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Techniques for forecasting demand and aligning supply to meet customer needs.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Global Supply Chain Strategy",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Developing and implementing strategies for managing global supply chains.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "shipping": [
+            {
+                "COURSE_NAME": "Introduction to Shipping and Logistics",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "An overview of the shipping industry, including different modes of transport and logistics operations.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Shipping Documentation and Compliance",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Understanding shipping documentation, customs regulations, and compliance requirements.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Advanced Shipping Management",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Advanced topics in shipping, including risk management, insurance, and trade finance.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "billing": [
+            {
+                "COURSE_NAME": "Billing and Invoicing Essentials",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "The basics of billing and invoicing, including creating accurate invoices and managing payments.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Accounting for Billing Professionals",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Accounting principles and practices for billing professionals.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Advanced Billing Systems and Automation",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Advanced techniques in billing, including system implementation and automation.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "address": [
+            {
+                "COURSE_NAME": "Geographic Information Systems (GIS) Basics",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Introduction to GIS and mapping technologies.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Data Management and Address Standardization",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Managing and standardizing address data for accuracy and efficiency.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Spatial Data Analysis and Visualization",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Analyzing and visualizing spatial data, including address-related information.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "payment": [
+            {
+                "COURSE_NAME": "Payment Processing Fundamentals",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Basic concepts of payment processing, including different payment methods and security.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Secure Payment Systems",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Implementing and managing secure payment systems to prevent fraud.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Advanced Payment Technologies",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Exploring advanced payment technologies, including blockchain and cryptocurrencies.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "mode": [
+            {
+                "COURSE_NAME": "Modes of Transportation",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Different modes of transportation, their characteristics, and applications.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Transportation Planning and Management",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Planning and managing transportation systems for efficiency and sustainability.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Intelligent Transportation Systems",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Implementing and managing intelligent transportation systems for smart cities.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ]
+    }
+}

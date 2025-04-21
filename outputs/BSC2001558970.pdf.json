@@ -1,0 +1,259 @@
+{
+    "RESUME_RELEVANCE_SCORE": 10,
+    "ROLE_FIT_SCORE": 5,
+    "ATS_SCORE": 5,
+    "KEYWORD_MATCH_SCORE": 15,
+    "MATCHED_KEYWORDS": [],
+    "MISSING_KEYWORDS": [
+        "LLM",
+        "Agents",
+        "agent",
+        "workflows",
+        "automation",
+        "reasoning",
+        "APIs",
+        "guardrails",
+        "orchestration",
+        "models",
+        "Tools",
+        "instructions",
+        "python",
+        "classifiers",
+        "sentiment",
+        "chatbot",
+        "systems",
+        "accuracy"
+    ],
+    "MISSING_SKILLS": [
+        "AI",
+        "machine learning",
+        "LLM application development",
+        "Prompt engineering",
+        "API integration",
+        "Data analysis",
+        "Security protocols",
+        "Software security",
+        "system design"
+    ],
+    "RESUME_TIPS": [
+        "Include skills section highlighting technical proficiency.",
+        "Quantify achievements in previous roles with metrics.",
+        "Add projects demonstrating relevant experience.",
+        "Incorporate keywords from the job description in the resume.",
+        "Use a standard resume format for ATS compatibility.",
+        "Add your AI or coding skill to your resume",
+        "Add technical project showcasing abilities",
+        "Add a skills section",
+        "Include a summary or objective section to highlight your value proposition.",
+        "Tailor the resume to match the job description."
+    ],
+    "COURSE_RECOMMENDATIONS": {
+        "AI": [
+            {
+                "COURSE_NAME": "AI For Everyone",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A non-technical introduction to AI, its applications, and societal impact.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/ai-for-everyone"
+            },
+            {
+                "COURSE_NAME": "Artificial Intelligence A-Z™: Learn How To Build An AI",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn to build AI, understand the concepts, and implement them in real-world scenarios.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.udemy.com/course/artificial-intelligence-az/"
+            },
+            {
+                "COURSE_NAME": "Professional Certificate in Applied AI",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn to apply AI to solve real-world problems.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "machine learning": [
+            {
+                "COURSE_NAME": "Machine Learning",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A foundational course in machine learning covering algorithms, theory, and applications.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/machine-learning"
+            },
+            {
+                "COURSE_NAME": "Complete Machine Learning & Data Science Bootcamp",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "A comprehensive bootcamp covering machine learning algorithms, data science tools, and techniques.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/complete-machine-learning-and-data-science-bootcamp/"
+            },
+            {
+                "COURSE_NAME": "Machine Learning Specialization",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "In-depth coverage of machine learning algorithms, including supervised and unsupervised learning.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://platform.com/course"
+            }
+        ],
+        "LLM application development": [
+            {
+                "COURSE_NAME": "LangChain for LLM Application Development",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course teaches how to use LangChain to build applications powered by large language models (LLMs).",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/langchain-for-llm-application-development"
+            },
+            {
+                "COURSE_NAME": "Building LLM-Powered Apps",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn how to build end-to-end applications with LLMs, covering everything from prompt engineering to deployment.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/building-llm-powered-apps/"
+            },
+            {
+                "COURSE_NAME": "AI Product Management Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to apply AI to solve real-world problems.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/ai-product-management"
+            }
+        ],
+        "Prompt engineering": [
+            {
+                "COURSE_NAME": "Prompt Engineering for Developers",
+                "PLATFORM": "DeepLearning.AI",
+                "DESCRIPTION": "Learn how to craft effective prompts for large language models to achieve desired outputs.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.deeplearning.ai/short-courses/prompt-engineering-for-developers"
+            },
+            {
+                "COURSE_NAME": "Prompt Engineering: From Words to Art",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Understand the power of prompt engineering and create stunning art.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.udemy.com/course/prompt-engineering-from-words-to-art/"
+            },
+            {
+                "COURSE_NAME": "Generative AI for Project Managers",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to apply AI to solve real-world problems.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/projects/generative-ai-for-project-managers"
+            }
+        ],
+        "API integration": [
+            {
+                "COURSE_NAME": "REST APIs with Python",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn how to build and consume RESTful APIs using Python.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/rest-apis-with-python/"
+            },
+            {
+                "COURSE_NAME": "API Design and Fundamentals",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the basics of API design and how to create effective APIs.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/api-design"
+            },
+            {
+                "COURSE_NAME": "Server-side Development with NodeJS, Express and MongoDB",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to apply AI to solve real-world problems.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/server-side-nodejs"
+            }
+        ],
+        "Data analysis": [
+            {
+                "COURSE_NAME": "Data Analysis with Python",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the basics of API design and how to create effective APIs.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/data-analysis-with-python"
+            },
+            {
+                "COURSE_NAME": "Data Science A-Z™: Real-Life Data Science Exercises Included",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the basics of API design and how to create effective APIs.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/data-science-a-z-real-life-data-science-exercises-included/"
+            },
+            {
+                "COURSE_NAME": "Databases and SQL for Data Science",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to apply AI to solve real-world problems.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/sql-for-data-science"
+            }
+        ],
+        "Security protocols": [
+            {
+                "COURSE_NAME": "Cybersecurity Basics",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the basics of API design and how to create effective APIs.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/cybersecurity-basics"
+            },
+            {
+                "COURSE_NAME": "The Complete Cyber Security Course: Hackers Exposed!",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the basics of API design and how to create effective APIs.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/the-complete-internet-security-course-volume-1/"
+            },
+            {
+                "COURSE_NAME": "Ethical Hacking Essentials (EHE)",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to apply AI to solve real-world problems.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/professional-certificates/ethical-hacking"
+            }
+        ],
+        "Software security": [
+            {
+                "COURSE_NAME": "Software Security",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the basics of API design and how to create effective APIs.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/software-security"
+            },
+            {
+                "COURSE_NAME": "DevSecOps: Security in Agile and DevOps",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the basics of API design and how to create effective APIs.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/devsecops-security-in-agile-and-devops/"
+            },
+            {
+                "COURSE_NAME": "AWS Security Fundamentals",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to apply AI to solve real-world problems.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/aws-security-fundamentals"
+            }
+        ],
+        "system design": [
+            {
+                "COURSE_NAME": "System Design Interview Prep",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the basics of API design and how to create effective APIs.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.udemy.com/course/system-design-interview-prep/"
+            },
+            {
+                "COURSE_NAME": "Grokking the System Design Interview",
+                "PLATFORM": "Educative.io",
+                "DESCRIPTION": "Learn the basics of API design and how to create effective APIs.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.educative.io/courses/grokking-the-system-design-interview"
+            },
+            {
+                "COURSE_NAME": "System Design Fundamentals",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to apply AI to solve real-world problems.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/system-design"
+            }
+        ]
+    }
+}

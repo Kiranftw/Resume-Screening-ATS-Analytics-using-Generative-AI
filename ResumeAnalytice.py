@@ -237,8 +237,3 @@ class ResumeAnalytics(object):
         print(f"file successfully stored with name coverletter.txt")
         Markdown(response)
         return response
-    
-    def getATS(self,resume:str, jobdescription:str) -> Optional[Dict]:
-        prompt = ChatPromptTemplate.from_template(
-            
-        )
