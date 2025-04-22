@@ -347,11 +347,6 @@ class ResumeAnalytics(object):
         except Exception as e:
             print(f"Error in ATSanalytics: {e}")
             return None
-    
-    #TODO- Has to develop this function by tomorrow
-    @ExceptionHandeler
-    def getJOBRecommedations(self,resume: str) -> None:
-        pass
 
 if __name__ == "__main__":
     object = ResumeAnalytics()

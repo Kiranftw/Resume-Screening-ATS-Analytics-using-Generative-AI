@@ -1,82 +1,98 @@
 {
     "Extracted Data": {
-        "Name": "R SAI UDAY KIRAN",
-        "Contact Details": "udaykiranftw@gmail.com | +91 9398831577",
-        "Summary or Objective": "Tech Enthusiast | Data Science/ Analytics",
+        "Name": "Harsha Vardhini Pendyala",
+        "Contact Details": "LinkedIn: www.linkedin.com/in/harsha vardhini04\nEmail: 40harsha@gmail.com\nGitHub: https://github.com/Harshavarma04/\nPhone: (+91) 8886066070\nAddress: Chengicherla, Hyderabad, Telangana",
+        "Summary or Objective": null,
         "Skills": {
-            "Soft Skills": [],
+            "Soft Skills": [
+                "Problem Solving",
+                "Data Analysis"
+            ],
             "Hard Skills": [
                 "Python",
                 "C",
-                "Java",
+                "MYSQL",
                 "R",
-                "SQL",
-                "GitHub",
-                "Linux",
-                "Windows",
-                "NumPy",
-                "Pandas",
-                "Matplotlib",
-                "Scikit Learn",
-                "TensorFlow",
-                "Linear Regression",
-                "Multilinear Regression",
-                "Data Cleaning",
-                "Data Preprocessing",
-                "Logistics Regression",
-                "Decision Trees",
-                "K Means",
-                "KNN",
-                "CAD/CAM",
-                "SolidWorks"
+                "Java",
+                "Artificial intelligence",
+                "MongoDB",
+                "Machine Learning",
+                "Statistics",
+                "NLP",
+                "Mongo DB",
+                "Microsoft Power BI",
+                "Microsoft Excel",
+                "W.E.K.A toolkit",
+                "Postman",
+                "MySQL workbench"
             ]
         },
         "Experience": [
             {
-                "Title": "ASSISTANT TOOL MAKER",
-                "Company": "Acme Tooling s",
-                "Duration": "Jan 2022 - June 2022",
-                "Description": "Gained hands on experience in complex mould designs and development Worked with CAD/CAM and SolidWorks design software s to build intricate designs. contributed to the end to end development of mould' s from initial design through manufacturing and quality control"
+                "Title": "Data Science Intern",
+                "Company": "Innomatics Research Labs",
+                "Duration": "11th Sep 2024 to 20th Nov 2024",
+                "Description": null
             },
             {
-                "Title": "Intern",
-                "Company": "InternPe",
-                "Duration": "Nov 2023 - Dec 2023",
-                "Description": "Applied the OOPS & Data Structures concepts while developing games and applications Worked on some specific modules like NumPy, Pandas for Data Manipulation on the real world datasets from Kaggle"
+                "Title": "AICTE Google AI ML course",
+                "Company": null,
+                "Duration": "25th July 2024 To 8th Sep 2024",
+                "Description": null
+            },
+            {
+                "Title": "Data analytics Internship",
+                "Company": "Internship studio",
+                "Duration": "15 May 2024 To 19 Jun 2024",
+                "Description": null
+            },
+            {
+                "Title": "Data science program",
+                "Company": "1stop",
+                "Duration": "01 Oct 2023 To 15 Nov 2023",
+                "Description": null
             }
         ],
         "Projects": [
-            "CV ANALYTICS DASHBOARD: Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements.",
-            "Conversation chatbot using API: Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
+            "Smart Sentiment Analysis of YouTube Comments. (Role Team Lead): Developed a sentiment analysis model for YouTube comments, classifying emotions to gain insights into viewer reactions and engagement trends, with an option to download results as a PDF report for easy review and analysis.",
+            "Keyword Based Resume Screening to Enhance Recruitment Efficiency: Built a scalable automated resume screening pipeline for handling 900+ resumes, reducing manual screening time by 90% and boosting recruitment efficiency with data driven shortlisting.",
+            "Extracting Keyphrases From Scientific Content. (Role Team Lead): Developed an intelligent web application using NLP and Flask that extracts and explains key terms from scientific text, enabling faster comprehension and reducing information lookup time by 80% for researchers and students.",
+            "Exploratory Data Analysis Projects: Performed EDA on credit and AMCAT datasets, analyzing and visualizing credit trends, and applied statistical tests to validate hypotheses and explore data relationships."
         ],
         "Certifications": [
-            "DSA PYTHON : By CampusX",
-            "Python & JAVA Essentials : By APNA College",
-            "Machine Learning : By IBM & CampusX"
+            "Advanced Data Analysis Internship Program certification from Innomatics research labs.",
+            "Data science foundations certification from Great learning.",
+            "Advanced ML and GenAI Internship Program certification from Innomatics research labs.",
+            "Artificial intelligence program certification from RINEX.",
+            "Pragati: Path to Future Cohort 3 certification from Infosys in collaboration with Springboard."
         ],
-        "Education": "B. Tech, CSE DATA SCIENCE Nalla Narsimha Reddy educational society 2022 25 | Hyderabad CGPA: 7.6\nDiploma, Industrial & Product Design CIPET CENTRAL INSTITUTE OF PETROCHEMICAL ENGEINEERING & TECHNOLO0GY 2020 22 | Hyderabad Percentage: 77.7%\nIntermediate, MPC Narayana Junior college 2018 20 | Hyderabad Percentage: 70%"
+        "Education": [
+            "B. TECH (CSE DS) NALLA NARASIMHA REDDY EDUCATIONAL SOCITY SGROUP OF INSTITUTIONS JNTUH PURSUING 8.56",
+            "INTERRMIDIATE SRI CHAITANYA JUNIOR KALASALA TSBIE 2021 9.20",
+            "S.S.C ST. ALPHONSUS HIGH SCHOOL SSC BOARD 2019 8.3"
+        ]
     },
     "ATS Score": {
-        "Total Score": 84,
+        "Total Score": 78,
         "Breakdown": {
-            "Format Score": 9,
-            "Spelling & Grammar": 8,
-            "Summary": 10,
+            "Format Score": 8,
+            "Spelling & Grammar": 10,
+            "Summary": 0,
             "Skills": 9,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
-            "Education": 8,
+            "Education": 10,
             "Contact Details": 10
         }
     },
     "Recommendations": [
-        "Consider quantifying achievements in work experience with specific numbers or metrics to demonstrate impact.",
-        "Proofread carefully to eliminate typos and grammatical errors.",
-        "Add a section for soft skills, highlighting abilities like teamwork, communication, and problem-solving.",
-        "Ensure consistent formatting throughout the resume for a cleaner look.",
-        "Consider adding more details to the education section, such as relevant coursework or academic achievements.",
-        "Reformat the dates in experience and education for better readability.",
-        "Consider adding brief descriptions to certifications to showcase relevance."
+        "Add a professional summary or objective to highlight your key skills and career goals.",
+        "Quantify your achievements in your work experience and projects to demonstrate impact.",
+        "Tailor your resume to match the specific job description, emphasizing relevant skills and experiences.",
+        "Ensure consistent formatting throughout the resume for a polished and professional look.",
+        "Consider adding more soft skills to the skills section.",
+        "Prioritize the information based on relevance to the job you are applying for, placing the most important details at the top.",
+        "Proofread carefully for any typos or grammatical errors."
     ]
 }
