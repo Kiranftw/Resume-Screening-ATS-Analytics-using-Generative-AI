@@ -1,81 +1,104 @@
 {
     "RESUME_RELEVANCE_SCORE": 65,
-    "ROLE_FIT_SCORE": 60,
-    "ATS_SCORE": 70,
-    "KEYWORD_MATCH_SCORE": 75,
+    "ROLE_FIT_SCORE": 55,
+    "ATS_SCORE": 60,
+    "KEYWORD_MATCH_SCORE": 70,
     "MATCHED_KEYWORDS": [
+        "GenAI",
         "Python",
         "Machine Learning",
         "Artificial Intelligence",
-        "GenAI",
-        "TensorFlow"
+        "Generative AI"
     ],
     "MISSING_KEYWORDS": [
-        "PyTorch",
-        "Large Language Models",
-        "Generative Techniques"
+        "TensorFlow",
+        "PyTorch"
     ],
     "MISSING_SKILLS": [
-        "Deploying Large Language Models",
-        "Researching Novel Generative Techniques"
+        "Developing large language models",
+        "Deploying large language models",
+        "Researching novel generative techniques"
     ],
     "RESUME_TIPS": [
-        "Add 'PyTorch' to your skills section to highlight your experience with relevant frameworks.",
-        "Include 'Large Language Models' in your project descriptions to showcase experience with LLMs.",
-        "Incorporate 'Generative Techniques' within your project summaries to reflect your expertise.",
-        "Quantify your experience with Machine Learning projects (e.g., 'Improved model accuracy by X%').",
-        "Mention specific applications of Python, such as data analysis or AI development.",
-        "Highlight any experience with responsible AI development to align with Google's values.",
-        "Tailor the skills section to emphasize proficiency in AI-specific tools and technologies.",
-        "Expand on your experience with data preprocessing and cleaning.",
-        "Specify the versions of Python and TensorFlow you are proficient with.",
-        "Add a section detailing AI-related projects, emphasizing your contributions and outcomes."
+        "Add 'TensorFlow' and 'PyTorch' to the skills section to highlight your experience with these technologies.",
+        "Quantify your achievements in the projects section by including metrics or results.",
+        "Explicitly mention your experience with 'developing large language models' in the projects section.",
+        "Include 'deploying large language models' in your project descriptions to showcase practical application.",
+        "Add a section detailing your experience in 'researching novel generative techniques'.",
+        "Tailor the resume summary to directly address the requirements outlined in the job description.",
+        "Elaborate on the 'Gemini API' project to emphasize its relevance to generative AI.",
+        "Add specific examples of how you contributed to Google's GenAI initiatives.",
+        "Ensure that your contact information, including LinkedIn profile, is easily accessible.",
+        "Update the resume with the most recent projects and experiences related to GenAI."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Deploying Large Language Models": [
+        "Developing large language models": [
             {
-                "COURSE_NAME": "TensorFlow in Practice",
+                "COURSE_NAME": "TensorFlow Developer Professional Certificate",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to deploy ML models using TensorFlow, focusing on practical application and scalability.",
+                "DESCRIPTION": "Learn to build and deploy scalable TensorFlow models.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
+                "COURSE_LINK": "https://www.coursera.org/professional-certificates/tensorflow-in-practice"
             },
             {
-                "COURSE_NAME": "AI Product Management",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn the basics of being an AI Product Manager.",
+                "COURSE_NAME": "Deep Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Covers neural networks, CNNs, RNNs, and more.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/ai-product-management/"
+                "COURSE_LINK": "https://www.coursera.org/specializations/deep-learning"
             },
             {
-                "COURSE_NAME": "MLOps Specialization",
+                "COURSE_NAME": "Natural Language Processing Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn modern MLOps (Machine Learning Operations) practices to deploy and manage machine learning models in production.",
+                "DESCRIPTION": "Focuses on NLP tasks like machine translation and question answering.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+                "COURSE_LINK": "https://www.coursera.org/specializations/natural-language-processing"
             }
         ],
-        "Researching Novel Generative Techniques": [
+        "Deploying large language models": [
+            {
+                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Covers building, integrating, and deploying ML pipelines.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "COURSE_NAME": "AWS Certified Machine Learning – Specialty",
+                "PLATFORM": "Amazon Training",
+                "DESCRIPTION": "Teaches deploying ML models on AWS infrastructure.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://aws.amazon.com/training/certification/"
+            },
+            {
+                "COURSE_NAME": "TensorFlow: Data and Deployment",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Focuses on deploying TensorFlow models at scale.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/tensorflow-data-deployment"
+            }
+        ],
+        "Researching novel generative techniques": [
             {
                 "COURSE_NAME": "Generative Adversarial Networks (GANs) Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Explore GANs and their applications, learning how to design and implement generative models.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/specializations/generative-adversarial-networks-gans"
-            },
-            {
-                "COURSE_NAME": "Generative AI with Large Language Models",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Explore generative AI models, focusing on the architecture, functionality, and ethical considerations of LLMs.",
+                "DESCRIPTION": "Teaches GANs for generating realistic images and data.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/generative-ai-with-llms"
+                "COURSE_LINK": "https://www.coursera.org/specializations/generative-adversarial-networks-gans"
             },
             {
                 "COURSE_NAME": "Creative Applications of Deep Learning with TensorFlow",
                 "PLATFORM": "Kadenze",
-                "DESCRIPTION": "Learn to build creative applications using deep learning techniques in TensorFlow, focusing on artistic and novel uses.",
+                "DESCRIPTION": "Explores creative applications of deep learning.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.kadenze.com/courses/creative-applications-of-deep-learning-with-tensorflow-v"
+                "COURSE_LINK": "https://www.kadenze.com/courses/creative-applications-of-deep-learning-with-tensorflow-v2-charles-frye"
+            },
+            {
+                "COURSE_NAME": "Advanced Machine Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Covers advanced topics including reinforcement learning and unsupervised learning.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/specializations/aml"
             }
         ]
     }

@@ -1,7 +1,7 @@
 {
     "Extracted Data": {
         "Name": "Harsha Vardhini Pendyala",
-        "Contact Details": "LinkedIn: www.linkedin.com/in/harsha vardhini04\nEmail: 40harsha@gmail.com\nGitHub: https://github.com/Harshavarma04/\nPhone: (+91) 8886066070\nAddress: Chengicherla, Hyderabad, Telangana",
+        "Contact Details": "LinkedIn www.linkedin.com/in/harsha vardhini04 Email 40harsha@gmail.com GitHub https://github.com/Harshavarma04/ Phone (+91) 8886066070 Address Chengicherla, Hyderabad, Telangana",
         "Summary or Objective": null,
         "Skills": {
             "Soft Skills": [
@@ -32,39 +32,27 @@
                 "Title": "Data Science Intern",
                 "Company": "Innomatics Research Labs",
                 "Duration": "11th Sep 2024 to 20th Nov 2024",
-                "Description": null
-            },
-            {
-                "Title": "AICTE Google AI ML course",
-                "Company": null,
-                "Duration": "25th July 2024 To 8th Sep 2024",
-                "Description": null
+                "Description": "AICTE Google AI ML course 25th July 2024 To 8th Sep 2024"
             },
             {
                 "Title": "Data analytics Internship",
                 "Company": "Internship studio",
                 "Duration": "15 May 2024 To 19 Jun 2024",
-                "Description": null
-            },
-            {
-                "Title": "Data science program",
-                "Company": "1stop",
-                "Duration": "01 Oct 2023 To 15 Nov 2023",
-                "Description": null
+                "Description": "1stop Data science program 01 Oct 2023 To 15 Nov 2023"
             }
         ],
         "Projects": [
-            "Smart Sentiment Analysis of YouTube Comments. (Role Team Lead): Developed a sentiment analysis model for YouTube comments, classifying emotions to gain insights into viewer reactions and engagement trends, with an option to download results as a PDF report for easy review and analysis.",
-            "Keyword Based Resume Screening to Enhance Recruitment Efficiency: Built a scalable automated resume screening pipeline for handling 900+ resumes, reducing manual screening time by 90% and boosting recruitment efficiency with data driven shortlisting.",
-            "Extracting Keyphrases From Scientific Content. (Role Team Lead): Developed an intelligent web application using NLP and Flask that extracts and explains key terms from scientific text, enabling faster comprehension and reducing information lookup time by 80% for researchers and students.",
-            "Exploratory Data Analysis Projects: Performed EDA on credit and AMCAT datasets, analyzing and visualizing credit trends, and applied statistical tests to validate hypotheses and explore data relationships."
+            "Smart Sentiment Analysis of YouTube Comments. (Role Team Lead) Developed a sentiment analysis model for YouTube comments, classifying emotions to gain insights into viewer reactions and engagement trends, with an option to download results as a PDF report for easy review and analysis.",
+            "Keyword Based Resume Screening to Enhance Recruitment Efficiency. Built a scalable automated resume screening pipeline for handling 900+ resumes, reducing manual screening time by 90% and boosting recruitment efficiency with data driven shortlisting.",
+            "Extracting Keyphrases From Scientific Content. (Role Team Lead) Developed an intelligent web application using NLP and Flask that extracts and explains key terms from scientific text, enabling faster comprehension and reducing information lookup time by 80% for researchers and students.",
+            "Exploratory Data Analysis Projects. Performed EDA on credit and AMCAT datasets, analyzing and visualizing credit trends, and applied statistical tests to validate hypotheses and explore data relationships."
         ],
         "Certifications": [
             "Advanced Data Analysis Internship Program certification from Innomatics research labs.",
             "Data science foundations certification from Great learning.",
             "Advanced ML and GenAI Internship Program certification from Innomatics research labs.",
             "Artificial intelligence program certification from RINEX.",
-            "Pragati: Path to Future Cohort 3 certification from Infosys in collaboration with Springboard."
+            "Pragati: Path to Future Cohort 3\" certification from Infosys in collaboration with Springboard."
         ],
         "Education": [
             "B. TECH (CSE DS) NALLA NARASIMHA REDDY EDUCATIONAL SOCITY SGROUP OF INSTITUTIONS JNTUH PURSUING 8.56",
@@ -88,11 +76,10 @@
     },
     "Recommendations": [
         "Add a professional summary or objective to highlight your key skills and career goals.",
-        "Quantify your achievements in your work experience and projects to demonstrate impact.",
-        "Tailor your resume to match the specific job description, emphasizing relevant skills and experiences.",
-        "Ensure consistent formatting throughout the resume for a polished and professional look.",
-        "Consider adding more soft skills to the skills section.",
-        "Prioritize the information based on relevance to the job you are applying for, placing the most important details at the top.",
-        "Proofread carefully for any typos or grammatical errors."
+        "Quantify achievements in your work experience and project descriptions to demonstrate impact.",
+        "Ensure consistent formatting throughout the resume.",
+        "Tailor your resume to match the specific requirements of each job you apply for.",
+        "Expand on soft skills.",
+        "Proofread carefully to fix minor grammatical issues."
     ]
 }

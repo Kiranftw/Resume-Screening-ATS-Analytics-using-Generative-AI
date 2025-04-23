@@ -171,6 +171,7 @@ class ResumeAnalytics(object):
         try:
             response = self.getResponse(Fprompt)
             responseJSON = json.loads(response)
+            print(responseJSON)
             with open(savePath, "w", encoding="utf-8") as file:
                 json.dump(responseJSON, file, indent=4, ensure_ascii=False)
             print(f"JSON file saved: {savePath}")
@@ -246,6 +247,7 @@ class ResumeAnalytics(object):
     @ExceptionHandeler
     def ATSanalytics(self,resume: str, jobdescription: str = None) -> Optional[Dict[str, Any]]:
         resume_data: dict = self.documentParser(resume)
+        print(resume_data)
         resumeLength: int = resume_data.get("pages", 0) if resume_data else 0
         JD: str = self.documentParser(jobdescription)
         if not resume_data or not resume_data.get("content"):
@@ -347,8 +349,56 @@ class ResumeAnalytics(object):
         except Exception as e:
             print(f"Error in ATSanalytics: {e}")
             return None
+    
+    def getJobRecommendations(self, resume: str) -> str:
+        resume: Dict = self.documentParser(resume)
+        if not resume or not resume.get("content"):
+            logger.error("No content found in the resume.")
+            return "Could not extract meaningful content from resume."
+
+        logger.info("Resume content extracted successfully.")
+
+        prompt_text = (
+            "You are an expert career advisor. Based on the resume content below, analyze the candidate's skills, experience, and qualifications. "
+            "Identify the top 5 job roles that are most relevant to the resume and assign a relevance score out of 100 for each. "
+            "Return the result as a valid JSON object, where each key is a job role and the value is the relevance score (an integer between 0 and 100). "
+            "\n\n=== OUTPUT FORMAT EXAMPLE ===\n"
+            '{\n'
+            '  "Data Scientist": 95,\n'
+            '  "Data Analyst": 90,\n'
+            '  "Machine Learning Engineer": 85,\n'
+            '  "Business Analyst": 80,\n'
+            '  "Software Engineer": 75\n'
+            '}\n\n'
+            "=== Resume Content ===\n"
+            f"{resume['content']}"
+        )
+
+        logger.info("Job Recommendations Prompt formatted successfully.")
+        response = self.getResponse(prompt_text)
+        logger.info("Job recommendations response received from model.")
+
+        try:
+            if not os.path.exists(self.outputsFOLDER):
+                os.makedirs(self.outputsFOLDER, exist_ok=True)
+            responseJSON = json.loads(response)
+            outputpath = os.path.join(self.outputsFOLDER, "JobRecommendations.json")
+            with open(outputpath, "w", encoding="utf-8") as file:
+                json.dump(responseJSON, file, indent=4, ensure_ascii=False)
+            print(f"Job recommendations JSON file saved: {outputpath}")
+            return responseJSON
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON: {e}")
+        except FileNotFoundError as e:
+            print(f"Error: {e}")
+        except ValueError as e:
+            print(f"Error: {e}")
+        except Exception as e:
+            print(f"Error in getJobRecommendations: {e}")
+            return None
 
 if __name__ == "__main__":
     object = ResumeAnalytics()
-    resume = input("Enter the path to the resume file: ")
-    object.ATSanalytics(resume)
+    resume = input("RESUME: ")
+    data = object.documentParser(resume)
+    print(data)
