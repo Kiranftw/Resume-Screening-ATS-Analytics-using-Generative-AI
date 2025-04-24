@@ -378,8 +378,8 @@
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            width: 70px;
-            height: 70px;
+            width: 90px;
+            height: 90px;
             background-color: var(--primary-color);
             border-radius: 50%;
             display: flex;
@@ -392,7 +392,7 @@
             box-shadow: var(--shadow-md);
             transition: all 0.2s;
             line-height: 1.2;
-            font-size: 0.875rem;
+            font-size: 1rem;
         }
 
         .chat-boat:hover {
@@ -632,18 +632,17 @@
                 <div>BOAT</div>
             </div>
 
-            <div class="chat-modal" id="chat-modal">
+            <div class="chat-modal" id="chat-modal" style="display: none;">
                 <div class="chat-header">
                     <h3>Resume Assistant</h3>
                     <button class="close-chat" onclick="toggleChat()">×</button>
                 </div>
                 <div class="chat-messages" id="chat-messages">
                     <div class="bot-message">Hello! I'm your resume assistant. How can I help you improve your resume
-                        today?
-                    </div>
+                        today?</div>
                 </div>
                 <div class="chat-input-container">
-                    <input type="text" class="chat-input" id="chat-input" placeholder="Type your message...">
+                    <input type="text" class="chat-input" id="chat-input" placeholder="Type your message..." />
                     <button class="send-btn" onclick="sendMessage()">Send</button>
                 </div>
             </div>
@@ -658,43 +657,39 @@
                 // Toggle chat modal
                 function toggleChat() {
                     const chatModal = document.getElementById('chat-modal');
-                    if (chatModal.style.display === 'flex') {
-                        chatModal.style.display = 'none';
-                    } else {
-                        chatModal.style.display = 'flex';
-                    }
+                    chatModal.style.display = chatModal.style.display === 'flex' ? 'none' : 'flex';
                 }
 
                 // Send chat message
                 function sendMessage() {
                     const input = document.getElementById('chat-input');
                     const message = input.value.trim();
+                    const chatMessages = document.getElementById('chat-messages');
 
                     if (message) {
-                        const chatMessages = document.getElementById('chat-messages');
-
                         // Add user message
                         chatMessages.innerHTML += `<div class="user-message">${message}</div>`;
                         input.value = '';
-
-                        // Simulate bot response
-                        setTimeout(() => {
-                            let response = "I'm analyzing your resume. Based on what I can see, you might want to add more industry-specific keywords to improve your ATS score.";
-
-                            if (message.toLowerCase().includes('keyword')) {
-                                response = "Your resume is missing these key terms: project management, agile, customer relations, and data analysis.";
-                            } else if (message.toLowerCase().includes('skill')) {
-                                response = "Consider adding these skills: Python programming, data visualization, market research, and content strategy.";
-                            } else if (message.toLowerCase().includes('ats')) {
-                                response = "Your ATS score is 45/100. To improve it, make sure your resume includes keywords from the job description and uses a clean, simple format.";
-                            }
-
-                            chatMessages.innerHTML += `<div class="bot-message">${response}</div>`;
-                            chatMessages.scrollTop = chatMessages.scrollHeight;
-                        }, 500);
-
-                        // Scroll to bottom
                         chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                        // Send message to backend
+                        fetch('/chatbot', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({ query: message })
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                const botResponse = data.response || "Sorry, I couldn't process your message.";
+                                chatMessages.innerHTML += `<div class="bot-message">${botResponse}</div>`;
+                                chatMessages.scrollTop = chatMessages.scrollHeight;
+                            })
+                            .catch(() => {
+                                chatMessages.innerHTML += `<div class="bot-message">There was an error connecting to the assistant.</div>`;
+                                chatMessages.scrollTop = chatMessages.scrollHeight;
+                            });
                     }
                 }
 

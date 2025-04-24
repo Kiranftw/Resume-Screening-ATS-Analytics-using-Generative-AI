@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import os
 from werkzeug.utils import secure_filename
 from ResumeAnalytics import ResumeAnalytics
+
 app = Flask(__name__)
 
 UPLOAD_FOLDER = 'uploads'
@@ -15,7 +16,7 @@ ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt', 'doc', 'jpeg', 'jpg', 'png', 'webp'}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-analytics = ResumeAnalytics()  # instantiate your object
+analytics = ResumeAnalytics()  # Instantiate your analytics object
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
@@ -87,6 +88,13 @@ def dashboard():
                                course_recommendations=course_recommendations)
 
     return render_template('DASHBOARD.html', show_dashboard=False)
+
+@app.route('/chatbot', methods=['POST'])
+def chatbot_route():
+    data = request.get_json()
+    query = data.get("query", "")
+    response = analytics.chatbot(Query=query)  # Fixed: use the instance
+    return jsonify({"response": response})
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

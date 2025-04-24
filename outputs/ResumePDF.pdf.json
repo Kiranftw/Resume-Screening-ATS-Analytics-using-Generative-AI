@@ -1,142 +1,117 @@
 {
-    "RESUME_RELEVANCE_SCORE": 5,
-    "ROLE_FIT_SCORE": 5,
-    "ATS_SCORE": 10,
-    "KEYWORD_MATCH_SCORE": 0,
-    "MATCHED_KEYWORDS": [],
-    "MISSING_KEYWORDS": [
-        "TAX INVOICE",
-        "CGST/SGST Rules,2017",
-        "CIN No",
-        "Original for Recipent",
-        "Duplicate for Transportar",
-        "Triplicate for Supplier",
-        "Extra Copy",
-        "PAN",
-        "GSTIN",
-        "IRN",
-        "E Way Bill No",
-        "GST Invoice No",
-        "GST Invoice Date",
-        "Document No",
-        "Del No",
-        "Bill Type",
-        "Order Type",
-        "PO & Date",
-        "Terms of Payment",
-        "Delivery Terms",
-        "Bill To Party",
-        "Ship To Party",
-        "MEANS OF TRANSPORT",
-        "TRANSPORTER NAME",
-        "Vehicle No",
-        "LR No & Date",
-        "Place Of Supply",
-        "Code",
-        "Destination",
-        "Cust.Mat.No",
-        "Description of Goods",
-        "Cast No.",
-        "Bundle No.",
-        "Size Shape Condition",
-        "HSN /SAC Code",
-        "Qty",
-        "PCs",
-        "UOM",
-        "Length Color",
-        "Rate Per Item",
-        "Taxable Value",
-        "CGST %",
-        "SGST %",
-        "IGST %",
-        "Total",
-        "RCS AR",
-        "REVERSE CHARGE BASIS",
-        "Authorised Signatory",
-        "Company Website",
-        "TERMS & CONDITIONS OF SALE INVOICE"
+    "RESUME_RELEVANCE_SCORE": 60,
+    "ROLE_FIT_SCORE": 50,
+    "ATS_SCORE": 70,
+    "KEYWORD_MATCH_SCORE": 65,
+    "MATCHED_KEYWORDS": [
+        "agent",
+        "workflows",
+        "automation",
+        "APIs",
+        "execution",
+        "reasoning",
+        "models",
+        "evaluate",
+        "customer service",
+        "data",
+        "systems",
+        "instructions",
+        "Python",
+        "LLM",
+        "tools"
     ],
-    "MISSING_SKILLS": [],
+    "MISSING_KEYWORDS": [
+        "orchestration",
+        "guardrails",
+        "multi agent systems",
+        "single agent systems",
+        "handoffs"
+    ],
+    "MISSING_SKILLS": [
+        "Agent Design",
+        "Prompt Engineering",
+        "API Integration"
+    ],
     "RESUME_TIPS": [
-        "Add specific projects showcasing experience with relevant tools and technologies.",
-        "Quantify achievements in previous roles to demonstrate impact.",
-        "Tailor the resume to match the job description by including relevant keywords from the job posting.",
-        "Ensure consistent formatting throughout the resume for better readability.",
-        "Include specific technologies used in each project to highlight technical skills.",
-        "Add details about contributions to open-source projects.",
-        "Provide more details about the tools used.",
-        "Add information about any awards or recognition received.",
-        "Refine the skills section by including specific versions or proficiency levels for each skill.",
-        "Provide context about the specific domain. "
+        "In the skills section, explicitly mention proficiency in Agent Design to align with job requirements.",
+        "Add a project or experience bullet point specifically showcasing experience in Prompt Engineering, detailing the methodologies used.",
+        "Include details about specific API integrations you've worked on, especially if they relate to agent workflows.",
+        "In the experience section, use action verbs like 'Orchestrated' or 'Automated' to describe tasks related to workflows to match the job description.",
+        "Quantify achievements in previous roles with metrics related to efficiency or accuracy improvements to highlight the practical impact.",
+        "Create a dedicated section for 'Agent-Based Projects' if applicable, or integrate agent-related projects into existing projects with clear descriptions.",
+        "Expand on the 'ML & DS' section to include specific methodologies for handling unstructured data, as mentioned in the job description.",
+        "In the summary/objective, include keywords like 'workflow automation' and 'agent technologies' to improve relevance from the start.",
+        "Ensure clear headers and formatting to make the resume ATS-compatible and improve the readability of skills and experiences.",
+        "Add certifications or projects related to AI safety and guardrails to highlight your awareness of responsible AI practices."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "TAX INVOICE": [
+        "Agent Design": [
             {
-                "COURSE_NAME": "Basics of Tax Invoices",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn the fundamental concepts of tax invoices, including their structure and importance.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://udemy.com/course"
-            },
-            {
-                "COURSE_NAME": "Tax Invoice Compliance",
+                "COURSE_NAME": "AI Agents: Building Autonomous AI Systems",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Understand the legal requirements and compliance standards related to tax invoices.",
+                "DESCRIPTION": "Learn the principles of designing and building autonomous AI agents using modern machine learning techniques and architectures.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://coursera.com/course"
+                "COURSE_LINK": "https://www.coursera.com/courses?query=ai+agents"
             },
             {
-                "COURSE_NAME": "Advanced Tax Invoice Management",
+                "COURSE_NAME": "Building and Deploying AI Agents",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "A comprehensive guide to constructing, testing, and deploying AI agents for real-world applications with a focus on practical implementation.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/courses/search/?q=ai+agent+design"
+            },
+            {
+                "COURSE_NAME": "Intelligent Agents",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Explore advanced techniques for managing and auditing tax invoices effectively.",
+                "DESCRIPTION": "Explore the fundamental concepts and architectures of intelligent agents, including perception, reasoning, and action planning.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://edx.org/course"
+                "COURSE_LINK": "https://www.edx.org/search?q=intelligent+agents"
             }
         ],
-        "CGST/SGST Rules,2017": [
+        "Prompt Engineering": [
             {
-                "COURSE_NAME": "CGST/SGST Fundamentals",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn the basics of Central Goods and Services Tax (CGST) and State Goods and Services Tax (SGST).",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://udemy.com/course"
-            },
-            {
-                "COURSE_NAME": "CGST/SGST Compliance",
+                "COURSE_NAME": "Prompt Engineering for LLMs",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Understand the compliance requirements under CGST and SGST rules.",
+                "DESCRIPTION": "Master the art of prompt engineering to effectively communicate with and control Large Language Models (LLMs), optimizing their performance and results.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://coursera.com/course"
+                "COURSE_LINK": "https://www.coursera.org/courses?query=prompt+engineering"
             },
             {
-                "COURSE_NAME": "Advanced CGST/SGST Implementation",
+                "COURSE_NAME": "Effective Prompting: Unlocking the Power of AI Language Models",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn techniques to craft effective prompts for AI language models, improving their output quality and tailoring them for specific tasks.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.udemy.com/courses/search/?q=prompt+engineering"
+            },
+            {
+                "COURSE_NAME": "Prompt Engineering and Advanced NLP with Transformers",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Explore advanced strategies for implementing CGST and SGST in business operations.",
+                "DESCRIPTION": "Explore advanced prompt engineering techniques and how they integrate with transformer models for sophisticated natural language processing applications.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://edx.org/course"
+                "COURSE_LINK": "https://www.edx.org/search?q=prompt+engineering"
             }
         ],
-        "CIN No": [
+        "API Integration": [
             {
-                "COURSE_NAME": "Understanding Corporate Identification Number",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn the basics of Corporate Identification Number (CIN) and its significance.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://udemy.com/course"
-            },
-            {
-                "COURSE_NAME": "CIN and Regulatory Compliance",
+                "COURSE_NAME": "API Design and Fundamentals",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Understand the regulatory implications and compliance requirements related to CIN.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://coursera.com/course"
+                "DESCRIPTION": "Learn the fundamentals of API design, development, and integration, including RESTful principles, authentication, and best practices.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/courses?query=api+integration"
             },
             {
-                "COURSE_NAME": "Advanced Corporate Governance",
+                "COURSE_NAME": "REST APIs with Python",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "A practical course on building and consuming RESTful APIs using Python, covering topics like request handling, data serialization, and API security.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/courses/search/?q=api+integration+python"
+            },
+            {
+                "COURSE_NAME": "Microservices API: Design and Development",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Explore advanced strategies for corporate governance, including CIN management.",
+                "DESCRIPTION": "Explore advanced concepts in microservices API design, including scalability, fault tolerance, and modern API patterns for distributed systems.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://edx.org/course"
+                "COURSE_LINK": "https://www.edx.org/search?q=api+design"
             }
         ]
     }

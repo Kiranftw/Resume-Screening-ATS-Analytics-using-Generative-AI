@@ -13,6 +13,7 @@ import pytesseract
 from typing import List, Dict
 import pytesseract
 import os
+import markdown
 from functools import wraps
 from newspaper import Article
 import re
@@ -59,6 +60,7 @@ class ResumeAnalytics(object):
                 )
             elif model.name == chatmodel:
                 self.chatmodel: ChatGoogleGenerativeAI = ChatGoogleGenerativeAI(
+                    
                     model = chatmodel,
                     temperature = 0.7,
                 )
@@ -187,38 +189,27 @@ class ResumeAnalytics(object):
             print(f"Error in resumeanalytics: {e}")
             return None
             
-    @ExceptionHandeler   
-    def chatbot(self,Document: str, Query: str = None) -> str:
-        #chatbot built on top of Google's small language model (GEMMA) with chunk streaming & can handle 30 request per minute
+    @ExceptionHandeler
+    def chatbot(self, Query: str) -> str:
+        if not Query or Query.strip() == "":
+            return "Please type a message to continue."
+
         self.memory = ConversationSummaryBufferMemory(
-            llm = self.chatmodel,
-            max_tokens = 100000,
-            return_messages = True,
-            memory_key = "history"
+            llm=self.chatmodel,
+            max_tokens=100000,
+            return_messages=True,
+            memory_key="history"
         )
-        data: Optional[str] = self.documentParser(Document)
-        if not data or data.strip() == "":
-            print("[Bot]: Unable to extract any meaningful content from the file.")
-            return "Unable to extract any meaningful content from the file. Please check the document and try again."
-        
-        self.memory.chat_memory.add_user_message(data)
-        self.memory.chat_memory.add_ai_message("Document Loaded Successfully")
-        if Query:
-            print("\n[Bot]: ", end="", flush=True)
-            response: str = ""
-            messages = self.memory.chat_memory.messages.copy()
-            messages.append(HumanMessage(content = Query))
-            for chunk in self.chatmodel.stream(messages):
-                if chunk.content:
-                    print(chunk.content, end = "", flush = True)
-                    response += chunk.content
-            print()
-            self.memory.chat_memory.add_user_message(Query)
-            self.memory.chat_memory.add_ai_message(response)
-            Markdown(response)
-            return response
-        else:
-            return "Document Loaded Successfully"
+
+        messages = self.memory.chat_memory.messages.copy()
+        messages.append(HumanMessage(content=Query))
+
+        response = self.chatmodel.invoke(messages).content
+        self.memory.chat_memory.add_user_message(Query)
+        self.memory.chat_memory.add_ai_message(response)
+
+        # 🔥 Convert markdown to HTML before sending back
+        return markdown.markdown(response)
     
     @ExceptionHandeler
     def CoverLetterGeneration(self,fullname: str, position: str, companyname: str, relvantExperience: str):

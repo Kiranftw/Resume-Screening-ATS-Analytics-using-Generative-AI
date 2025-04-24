@@ -26,7 +26,9 @@
                 "Logistics Regression",
                 "Decision Trees",
                 "K Means",
-                "KNN"
+                "KNN",
+                "CAD/CAM",
+                "SolidWorks"
             ]
         },
         "Experience": [
@@ -59,7 +61,7 @@
         ]
     },
     "ATS Score": {
-        "Total Score": 85,
+        "Total Score": 82,
         "Breakdown": {
             "Format Score": 10,
             "Spelling & Grammar": 8,
@@ -68,17 +70,17 @@
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
-            "Education": 8,
-            "Contact Details": 10
+            "Education": 10,
+            "Contact Details": 5
         }
     },
     "Recommendations": [
-        "Proofread for minor grammatical errors and typos to improve clarity.",
-        "Consider adding a brief summary or objective to highlight your career goals.",
-        "Quantify achievements in your experience section to showcase impact.",
-        "Add some soft skills to the skills section to give more insight.",
-        "Standardize date formats for consistency.",
-        "Elaborate on the technologies used in your projects for better understanding.",
-        "Consider adding months to the education start and end dates"
+        "Ensure consistent formatting throughout the resume.",
+        "Proofread carefully to eliminate grammatical errors and typos.",
+        "Quantify achievements in work experience and projects with specific numbers and results to demonstrate impact.",
+        "Tailor the resume to match specific job descriptions to highlight the most relevant skills and experience.",
+        "Provide percentages in education with proper formatting.",
+        "The candidate should add location with all experiences and projects.",
+        "Add more soft skills to the resume"
     ]
 }
