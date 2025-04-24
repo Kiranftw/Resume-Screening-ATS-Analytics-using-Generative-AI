@@ -48,6 +48,8 @@
             padding: 2rem;
             background-color: white;
             border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
         }
 
         .main-content {
@@ -378,8 +380,8 @@
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            width: 90px;
-            height: 90px;
+            width: 70px;
+            height: 70px;
             background-color: var(--primary-color);
             border-radius: 50%;
             display: flex;
@@ -392,7 +394,7 @@
             box-shadow: var(--shadow-md);
             transition: all 0.2s;
             line-height: 1.2;
-            font-size: 1rem;
+            font-size: 0.875rem;
         }
 
         .chat-boat:hover {
@@ -493,6 +495,102 @@
             cursor: pointer;
             font-weight: 600;
         }
+
+        /* New styles for course recommendations */
+        .sidebar-nav {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .nav-item {
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-md);
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-item:hover {
+            background-color: #f1f5f9;
+        }
+
+        .nav-item.active {
+            background-color: #e0e7ff;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-box {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .typing-indicator {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .typing-indicator span {
+            width: 8px;
+            height: 8px;
+            background-color: #555;
+            border-radius: 50%;
+            animation: blink 1.4s infinite both;
+        }
+
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes blink {
+
+            0%,
+            80%,
+            100% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -500,18 +598,31 @@
     <div class="container">
         <div class="sidebar">
             <h2 class="section-title">Resume Analyzer</h2>
-            <!-- Navigation or additional controls can go here -->
+
+            <!-- Navigation for course recommendations -->
+            <div class="sidebar-nav">
+                <a href="/dashboard" class="nav-item">
+                    <span class="nav-icon">📟</span>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+            <div class="sidebar-nav">
+                <a href="/course-recommendations" class="nav-item">
+                    <span class="nav-icon">📚</span>
+                    <span>Course Recommendations</span>
+                </a>
+            </div>
         </div>
 
         <div class="main-content">
             <div class="header">
                 <div class="welcome-container">
                     <div class="welcome-box">
-                        <span class="welcome">welcome</span>
-                        <span class="username">username</span>
+                        <span class="welcome">Welcome</span>
+                        <span class="username">Username</span>
                     </div>
                 </div>
-                <button class="logout-btn">logout</button>
+                <button class="logout-btn">Logout</button>
             </div>
             <form method="POST" action="/dashboard" enctype="multipart/form-data">
                 <div class="upload-container">
@@ -544,7 +655,11 @@
 
                 <button type="submit" class="analyze-btn">Analyze</button>
             </form>
-
+            <div id="loading-overlay">
+                <div class="loading-box">
+                    <p>Analyzing, please wait...</p>
+                </div>
+            </div>
             {% if show_dashboard %}
             <div class="dashboard" id="dashboard">
                 <h2 class="section-title">Analysis Results</h2>
@@ -632,17 +747,18 @@
                 <div>BOAT</div>
             </div>
 
-            <div class="chat-modal" id="chat-modal" style="display: none;">
+            <div class="chat-modal" id="chat-modal">
                 <div class="chat-header">
                     <h3>Resume Assistant</h3>
                     <button class="close-chat" onclick="toggleChat()">×</button>
                 </div>
                 <div class="chat-messages" id="chat-messages">
                     <div class="bot-message">Hello! I'm your resume assistant. How can I help you improve your resume
-                        today?</div>
+                        today?
+                    </div>
                 </div>
                 <div class="chat-input-container">
-                    <input type="text" class="chat-input" id="chat-input" placeholder="Type your message..." />
+                    <input type="text" class="chat-input" id="chat-input" placeholder="Type your message...">
                     <button class="send-btn" onclick="sendMessage()">Send</button>
                 </div>
             </div>
@@ -660,17 +776,20 @@
                     chatModal.style.display = chatModal.style.display === 'flex' ? 'none' : 'flex';
                 }
 
-                // Send chat message
                 function sendMessage() {
                     const input = document.getElementById('chat-input');
                     const message = input.value.trim();
                     const chatMessages = document.getElementById('chat-messages');
+                    const botTyping = document.getElementById('bot-typing');
 
                     if (message) {
                         // Add user message
                         chatMessages.innerHTML += `<div class="user-message">${message}</div>`;
                         input.value = '';
                         chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                        // Show typing indicator
+                        botTyping.style.display = 'flex';
 
                         // Send message to backend
                         fetch('/chatbot', {
@@ -682,16 +801,26 @@
                         })
                             .then(response => response.json())
                             .then(data => {
+                                // Hide typing indicator
+                                botTyping.style.display = 'none';
+
                                 const botResponse = data.response || "Sorry, I couldn't process your message.";
                                 chatMessages.innerHTML += `<div class="bot-message">${botResponse}</div>`;
                                 chatMessages.scrollTop = chatMessages.scrollHeight;
                             })
                             .catch(() => {
+                                botTyping.style.display = 'none';
                                 chatMessages.innerHTML += `<div class="bot-message">There was an error connecting to the assistant.</div>`;
                                 chatMessages.scrollTop = chatMessages.scrollHeight;
                             });
                     }
                 }
+                // Add event listener for Enter key in chat
+                document.getElementById('chat-input').addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
 
                 // Add event listener for Enter key in chat
                 document.getElementById('chat-input').addEventListener('keypress', function (e) {
@@ -711,6 +840,12 @@
                     this.nextElementSibling.textContent = fileName;
                 });
             </script>
+            <script>
+                document.querySelector("form").addEventListener("submit", function () {
+                    document.getElementById("loading-overlay").style.display = "flex";
+                });
+            </script>
+
 </body>
 
 </html>

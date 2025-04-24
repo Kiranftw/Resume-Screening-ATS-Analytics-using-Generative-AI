@@ -1,20 +1,345 @@
 {
-    "RESUME_RELEVANCE_SCORE": 0,
-    "ROLE_FIT_SCORE": 0,
-    "ATS_SCORE": 0,
-    "KEYWORD_MATCH_SCORE": 0,
-    "MATCHED_KEYWORDS": [],
-    "MISSING_KEYWORDS": [],
-    "MISSING_SKILLS": [],
-    "RESUME_TIPS": [],
+    "RESUME_RELEVANCE_SCORE": 65,
+    "ROLE_FIT_SCORE": 60,
+    "ATS_SCORE": 70,
+    "KEYWORD_MATCH_SCORE": 75,
+    "MATCHED_KEYWORDS": [
+        "Data Scientist",
+        "Data Analysis",
+        "Machine Learning",
+        "Python",
+        "R",
+        "SQL",
+        "Data Exploration",
+        "Data Cleaning",
+        "Data Preparation",
+        "Feature Engineering",
+        "Statistical Analysis",
+        "Hypothesis Testing",
+        "Modeling",
+        "Data Visualization",
+        "Power BI",
+        "Data-driven",
+        "Communication",
+        "Problem Solving",
+        "Databases",
+        "APIs",
+        "Machine Learning Models",
+        "Algorithms",
+        "Statistics",
+        "Data Wrangling",
+        "Large Datasets",
+        "Product Managers",
+        "Engineering",
+        "Marketing",
+        "Sales",
+        "Operations",
+        "Data Science",
+        "Computer Science",
+        "Mathematics",
+        "Engineering",
+        "Economics",
+        "Programming Skills",
+        "Relational Databases",
+        "NoSQL Databases",
+        "Deep Learning",
+        "TensorFlow",
+        "PyTorch",
+        "Cloud Platforms",
+        "AWS",
+        "Azure",
+        "GCP",
+        "MLOps",
+        "Docker",
+        "CI/CD pipelines",
+        "Tableau",
+        "Data Science Methodologies"
+    ],
+    "MISSING_KEYWORDS": [
+        "Causal Inference Analysis",
+        "A/B Tests",
+        "Anomaly Detection",
+        "Optimization",
+        "Scikit-learn",
+        "Keras",
+        "XGBoost",
+        "Model Deployment",
+        "Model Monitoring",
+        "MLflow",
+        "Kubeflow",
+        "Looker",
+        "Hadoop",
+        "Hive",
+        "Presto",
+        "SageMaker",
+        "Azure ML",
+        "Google AI Platform",
+        "Spark",
+        "Experimental Design",
+        "Data Integrity",
+        "Causal Inference",
+        "Model Validation",
+        "Data Quality",
+        "Data Governance",
+        "Unsupervised Learning",
+        "Reinforcement Learning",
+        "Predictive Models",
+        "Complex Datasets",
+        "Data Informed Strategies"
+    ],
+    "MISSING_SKILLS": [
+        "MLOps Practices",
+        "Big Data Technologies",
+        "Cloud Platforms",
+        "Statistical Theory",
+        "Experiment Design",
+        "Data Governance",
+        "Unsupervised Learning",
+        "Reinforcement Learning",
+        "Predictive Modeling",
+        "A/B Testing Design and Execution"
+    ],
+    "RESUME_TIPS": [
+        "Quantify achievements with metrics to demonstrate impact (e.g., 'Reduced manual screening time by 90%').",
+        "Explicitly mention experience with cloud platforms like AWS, Azure, or GCP.",
+        "Add specific experience with MLOps tools like MLflow or Kubeflow.",
+        "Include projects showcasing experience with deep learning frameworks like TensorFlow or PyTorch.",
+        "List experience with big data technologies such as Spark or Hadoop.",
+        "Highlight experience with A/B testing design and execution.",
+        "Elaborate on experience with experimental design and statistical theory.",
+        "Mention any contributions to open-source projects or publications.",
+        "Add details on model deployment and monitoring strategies.",
+        "Include specific experience with data governance practices."
+    ],
     "COURSE_RECOMMENDATIONS": {
-        "MISSING_SKILL_1": [
+        "MLOps Practices": [
             {
-                "COURSE_NAME": "",
-                "PLATFORM": "",
-                "DESCRIPTION": "",
-                "DIFFICULTY": "",
-                "COURSE_LINK": ""
+                "COURSE_NAME": "MLOps (Machine Learning Operations) Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization covers the core concepts of MLOps, including model deployment, monitoring, and automation. You'll learn how to build scalable and reproducible machine learning pipelines.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "COURSE_NAME": "AWS Machine Learning DevOps Engineer Professional Certificate",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to deploy, manage, and monitor machine learning models on AWS using DevOps principles. This course focuses on practical skills and tools for automating the ML lifecycle.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/professional-certificates/aws-machine-learning-devops-engineer"
+            },
+            {
+                "COURSE_NAME": "MLOps: Continuous Delivery and Automation Pipelines in Machine Learning",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "This course provides a hands-on introduction to building continuous delivery and automation pipelines for machine learning models using tools like Jenkins and Docker.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning/"
+            }
+        ],
+        "Big Data Technologies": [
+            {
+                "COURSE_NAME": "Big Data Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization covers the fundamental concepts and tools for working with big data, including Hadoop, Spark, and MapReduce.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
+            },
+            {
+                "COURSE_NAME": "Apache Spark with Scala - Hands On with Big Data!",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn how to use Apache Spark and Scala to process and analyze large datasets. This course focuses on practical examples and hands-on exercises.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/"
+            },
+            {
+                "COURSE_NAME": "Hadoop Platform and Application Framework",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Explore the architecture and components of the Hadoop platform, and learn how to develop and deploy big data applications.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/hadoop-platform-and-application-framework"
+            }
+        ],
+        "Cloud Platforms": [
+            {
+                "COURSE_NAME": "AWS Certified Machine Learning – Specialty",
+                "PLATFORM": "AWS Training",
+                "DESCRIPTION": "This course prepares you for the AWS Certified Machine Learning – Specialty exam. Learn how to build, train, and deploy machine learning models on AWS.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://aws.amazon.com/training/certification/machine-learning-specialty/"
+            },
+            {
+                "COURSE_NAME": "Microsoft Azure AI Fundamentals",
+                "PLATFORM": "Microsoft Learn",
+                "DESCRIPTION": "Learn the fundamentals of AI and machine learning on Azure, including how to use Azure Machine Learning service.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://learn.microsoft.com/en-us/training/paths/azure-ai-fundamentals/"
+            },
+            {
+                "COURSE_NAME": "Google Cloud Platform Machine Learning Engineer Professional Certificate",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This professional certificate covers the essential skills and knowledge for building and deploying machine learning solutions on Google Cloud Platform.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/professional-certificates/gcp-machine-learning-engineer"
+            }
+        ],
+        "Statistical Theory": [
+            {
+                "COURSE_NAME": "Statistics with R Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn statistical concepts and methods using R. The specialization covers probability, inference, regression, and modeling.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/statistics"
+            },
+            {
+                "COURSE_NAME": "Statistical Thinking for Data Science and Analytics",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course introduces the fundamental principles of statistical thinking and their application to data science problems.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/statistical-thinking-for-data-science-and-analytics"
+            },
+            {
+                "COURSE_NAME": "Probability and Statistics",
+                "PLATFORM": "MIT OpenCourseWare",
+                "DESCRIPTION": "A comprehensive introduction to probability and statistics, covering topics such as random variables, distributions, hypothesis testing, and regression.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://ocw.mit.edu/courses/mathematics/18-05-probability-and-statistics-spring-2014/"
+            }
+        ],
+        "Experiment Design": [
+            {
+                "COURSE_NAME": "A/B Testing Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to design, execute, and analyze A/B tests to optimize websites, apps, and marketing campaigns.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/ab-testing"
+            },
+            {
+                "COURSE_NAME": "Experimentation for Engineers and Scientists",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the principles and techniques of experimental design, including factorial designs, response surface methodology, and Taguchi methods.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/experimentation-for-engineers-and-scientists/"
+            },
+            {
+                "COURSE_NAME": "Design of Experiments",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course covers the fundamental concepts and methods of design of experiments, including randomization, blocking, and factorial designs.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/design-of-experiments"
+            }
+        ],
+        "Data Governance": [
+            {
+                "COURSE_NAME": "Data Governance: Privacy, Security, and Compliance",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course covers the key principles and practices of data governance, including data privacy, security, and compliance.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/data-governance"
+            },
+            {
+                "COURSE_NAME": "Data Governance for Business Professionals",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "This course provides a practical introduction to data governance for business professionals, covering topics such as data quality, data stewardship, and data policies.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.udemy.com/course/data-governance-for-business-professionals/"
+            },
+            {
+                "COURSE_NAME": "Data Governance: Managing Enterprise Data",
+                "PLATFORM": "LinkedIn Learning",
+                "DESCRIPTION": "Learn how to implement a data governance program in your organization, covering topics such as data strategy, data architecture, and data quality management.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.linkedin.com/learning/data-governance-managing-enterprise-data"
+            }
+        ],
+        "Unsupervised Learning": [
+            {
+                "COURSE_NAME": "Unsupervised Learning in Python",
+                "PLATFORM": "DataCamp",
+                "DESCRIPTION": "This course introduces unsupervised learning techniques, including clustering, dimensionality reduction, and anomaly detection.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.datacamp.com/courses/unsupervised-learning-in-python"
+            },
+            {
+                "COURSE_NAME": "Advanced Machine Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "One course in this specialization focuses on unsupervised learning.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/specializations/advanced-machine-learning"
+            },
+            {
+                "COURSE_NAME": "Unsupervised Machine Learning: Cluster Analysis in Python",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn cluster analysis in depth with this Python-focused course.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/unsupervised-machine-learning-cluster-analysis-in-python/"
+            }
+        ],
+        "Reinforcement Learning": [
+            {
+                "COURSE_NAME": "Reinforcement Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization provides a comprehensive introduction to reinforcement learning, covering topics such as Markov decision processes, dynamic programming, and Monte Carlo methods.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/reinforcement-learning"
+            },
+            {
+                "COURSE_NAME": "Deep Reinforcement Learning 2.0",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "This course provides a hands-on introduction to deep reinforcement learning using TensorFlow and Keras.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/deep-reinforcement-learning-20/"
+            },
+            {
+                "COURSE_NAME": "Reinforcement Learning",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course explores the foundations of reinforcement learning, covering topics such as Q-learning, SARSA, and policy gradients.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/reinforcement-learning"
+            }
+        ],
+        "Predictive Modeling": [
+            {
+                "COURSE_NAME": "Predictive Modeling and Analytics",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to build predictive models using statistical and machine learning techniques. This course covers topics such as regression, classification, and time series analysis.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/predictive-modeling-analytics"
+            },
+            {
+                "COURSE_NAME": "Practical Predictive Analytics: Models and Data",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "This course provides a practical introduction to predictive analytics, covering topics such as data preparation, model selection, and model evaluation.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/practical-predictive-analytics-models-and-data/"
+            },
+            {
+                "COURSE_NAME": "Data Science: Predictive Modeling",
+                "PLATFORM": "Harvard Extension School",
+                "DESCRIPTION": "Learn to build predictive models using real-world case studies.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.extension.harvard.edu/course/data-science-predictive-modeling"
+            }
+        ],
+        "A/B Testing Design and Execution": [
+            {
+                "COURSE_NAME": "A/B Testing for Business Analysts and Data Scientists",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn how to design and analyze A/B tests to optimize websites, apps, and marketing campaigns.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/ab-testing-for-business-analysts-and-data-scientists/"
+            },
+            {
+                "COURSE_NAME": "A/B Testing Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization covers the key principles and practices of A/B testing, including experiment design, data analysis, and statistical inference.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/ab-testing"
+            },
+            {
+                "COURSE_NAME": "A/B Testing: From Hypothesis to Implementation",
+                "PLATFORM": "DataCamp",
+                "DESCRIPTION": "Learn how to design and execute A/B tests using Python.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.datacamp.com/courses/ab-testing-from-hypothesis-to-implementation"
             }
         ]
     }

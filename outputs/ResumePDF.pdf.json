@@ -1,117 +1,205 @@
 {
-    "RESUME_RELEVANCE_SCORE": 60,
-    "ROLE_FIT_SCORE": 50,
-    "ATS_SCORE": 70,
-    "KEYWORD_MATCH_SCORE": 65,
+    "RESUME_RELEVANCE_SCORE": 65,
+    "ROLE_FIT_SCORE": 60,
+    "ATS_SCORE": 62,
+    "KEYWORD_MATCH_SCORE": 70,
     "MATCHED_KEYWORDS": [
-        "agent",
-        "workflows",
-        "automation",
-        "APIs",
-        "execution",
-        "reasoning",
-        "models",
-        "evaluate",
-        "customer service",
-        "data",
-        "systems",
-        "instructions",
+        "Data Scientist",
         "Python",
-        "LLM",
-        "tools"
+        "Machine Learning",
+        "Data Analysis",
+        "SQL",
+        "Data Cleaning",
+        "Statistics",
+        "Modeling",
+        "Data Visualization",
+        "Programming",
+        "Algorithms",
+        "Data",
+        "Engineering",
+        "Hypothesis Testing",
+        "Data Exploration",
+        "Feature Engineering",
+        "TensorFlow",
+        "Data informed",
+        "Insights",
+        "Data sets",
+        "Visualization",
+        "Github",
+        "APIs"
     ],
     "MISSING_KEYWORDS": [
-        "orchestration",
-        "guardrails",
-        "multi agent systems",
-        "single agent systems",
-        "handoffs"
+        "R",
+        "A/B tests",
+        "Causal inference",
+        "Supervised learning",
+        "Unsupervised learning",
+        "Reinforcement learning",
+        "Clustering",
+        "Anomaly detection",
+        "Optimization",
+        "PyTorch",
+        "Keras",
+        "XGBoost",
+        "MLOps",
+        "Tableau",
+        "Power BI",
+        "Matplotlib",
+        "Seaborn",
+        "Plotly",
+        "Product managers",
+        "SAS",
+        "NoSQL",
+        "Hadoop",
+        "Hive",
+        "Presto",
+        "AWS",
+        "Azure",
+        "GCP",
+        "SageMaker",
+        "Azure ML",
+        "Google AI Platform",
+        "MLflow",
+        "Kubeflow",
+        "Docker",
+        "CI/CD pipelines",
+        "Looker",
+        "NLP",
+        "Computer vision"
     ],
     "MISSING_SKILLS": [
-        "Agent Design",
-        "Prompt Engineering",
-        "API Integration"
+        "Statistical Analysis",
+        "Hypothesis Testing",
+        "Machine Learning Model Deployment and Monitoring (MLOps)",
+        "Big data technologies (e.g., Spark, Hadoop, Hive, Presto)",
+        "Cloud platforms (e.g., AWS, Azure, GCP)"
     ],
     "RESUME_TIPS": [
-        "In the skills section, explicitly mention proficiency in Agent Design to align with job requirements.",
-        "Add a project or experience bullet point specifically showcasing experience in Prompt Engineering, detailing the methodologies used.",
-        "Include details about specific API integrations you've worked on, especially if they relate to agent workflows.",
-        "In the experience section, use action verbs like 'Orchestrated' or 'Automated' to describe tasks related to workflows to match the job description.",
-        "Quantify achievements in previous roles with metrics related to efficiency or accuracy improvements to highlight the practical impact.",
-        "Create a dedicated section for 'Agent-Based Projects' if applicable, or integrate agent-related projects into existing projects with clear descriptions.",
-        "Expand on the 'ML & DS' section to include specific methodologies for handling unstructured data, as mentioned in the job description.",
-        "In the summary/objective, include keywords like 'workflow automation' and 'agent technologies' to improve relevance from the start.",
-        "Ensure clear headers and formatting to make the resume ATS-compatible and improve the readability of skills and experiences.",
-        "Add certifications or projects related to AI safety and guardrails to highlight your awareness of responsible AI practices."
+        "Quantify achievements with data whenever possible (e.g., 'Improved model accuracy by 15%').",
+        "Add specific projects demonstrating experience with machine learning model deployment (MLOps).",
+        "Detail experience with data visualization tools like Tableau or Power BI.",
+        "Include specific projects using cloud platforms (AWS, Azure, GCP) for machine learning.",
+        "Incorporate keywords like 'A/B testing' and 'causal inference' in relevant experience descriptions.",
+        "Highlight experience with big data technologies like Spark or Hadoop.",
+        "Explicitly mention experience with statistical analysis and hypothesis testing.",
+        "Add specific examples of applying machine learning for tasks like clustering or anomaly detection.",
+        "Include any experience with deep learning frameworks beyond TensorFlow, such as PyTorch.",
+        "List specific database skills beyond SQL, such as experience with NoSQL databases."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Agent Design": [
+        "Statistical Analysis": [
             {
-                "COURSE_NAME": "AI Agents: Building Autonomous AI Systems",
+                "COURSE_NAME": "Statistical Analysis with R for Public Health",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn the principles of designing and building autonomous AI agents using modern machine learning techniques and architectures.",
+                "DESCRIPTION": "This course teaches the fundamentals of statistical analysis using R, focusing on applications in public health. Learn to perform hypothesis testing, regression analysis, and data visualization.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.com/courses?query=ai+agents"
+                "COURSE_LINK": "https://www.coursera.org/courses?query=statistical%20analysis%20with%20r"
             },
             {
-                "COURSE_NAME": "Building and Deploying AI Agents",
+                "COURSE_NAME": "Statistics with Python",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "A comprehensive guide to constructing, testing, and deploying AI agents for real-world applications with a focus on practical implementation.",
+                "DESCRIPTION": "A comprehensive course covering statistical concepts and their implementation using Python. Topics include descriptive statistics, probability distributions, hypothesis testing, and regression.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/courses/search/?q=ai+agent+design"
+                "COURSE_LINK": "https://www.udemy.com/courses/search/?src=ukw&q=Statistics+with+Python"
             },
             {
-                "COURSE_NAME": "Intelligent Agents",
+                "COURSE_NAME": "Data Analysis and Statistical Inference",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Explore the fundamental concepts and architectures of intelligent agents, including perception, reasoning, and action planning.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/search?q=intelligent+agents"
+                "DESCRIPTION": "This course covers data analysis and statistical inference, including study design, data collection, exploratory data analysis, and statistical modeling. Focuses on understanding uncertainty and making valid inferences.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/learn/data-analysis-statistics"
             }
         ],
-        "Prompt Engineering": [
+        "Hypothesis Testing": [
             {
-                "COURSE_NAME": "Prompt Engineering for LLMs",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Master the art of prompt engineering to effectively communicate with and control Large Language Models (LLMs), optimizing their performance and results.",
+                "COURSE_NAME": "Inferential Statistics",
+                "PLATFORM": "Udacity",
+                "DESCRIPTION": "Learn the concepts and methods of inferential statistics, including hypothesis testing and confidence intervals. Gain hands-on experience with real-world datasets.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=prompt+engineering"
+                "COURSE_LINK": "https://www.udacity.com/course/inferential-statistics--ud201"
             },
             {
-                "COURSE_NAME": "Effective Prompting: Unlocking the Power of AI Language Models",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn techniques to craft effective prompts for AI language models, improving their output quality and tailoring them for specific tasks.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/courses/search/?q=prompt+engineering"
+                "COURSE_NAME": "Hypothesis Testing in Practice",
+                "PLATFORM": "DataCamp",
+                "DESCRIPTION": "A practical course on hypothesis testing, covering various types of tests (t-tests, chi-square tests, ANOVA) and their applications in data analysis.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.datacamp.com/courses/hypothesis-testing-in-practice"
             },
             {
-                "COURSE_NAME": "Prompt Engineering and Advanced NLP with Transformers",
+                "COURSE_NAME": "Statistical Thinking for Data Science and Analytics",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Explore advanced prompt engineering techniques and how they integrate with transformer models for sophisticated natural language processing applications.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/search?q=prompt+engineering"
+                "DESCRIPTION": "Develop statistical thinking skills for data science and analytics, covering hypothesis testing, confidence intervals, and statistical modeling.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/mitx-statistical-thinking-for-data-science-and-analytics"
             }
         ],
-        "API Integration": [
+        "Machine Learning Model Deployment and Monitoring (MLOps)": [
             {
-                "COURSE_NAME": "API Design and Fundamentals",
+                "COURSE_NAME": "MLOps (Machine Learning Operations) Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn the fundamentals of API design, development, and integration, including RESTful principles, authentication, and best practices.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=api+integration"
-            },
-            {
-                "COURSE_NAME": "REST APIs with Python",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "A practical course on building and consuming RESTful APIs using Python, covering topics like request handling, data serialization, and API security.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/courses/search/?q=api+integration+python"
-            },
-            {
-                "COURSE_NAME": "Microservices API: Design and Development",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Explore advanced concepts in microservices API design, including scalability, fault tolerance, and modern API patterns for distributed systems.",
+                "DESCRIPTION": "This specialization covers the principles and practices of MLOps, including model deployment, monitoring, and automation using tools like Docker, Kubernetes, and CI/CD pipelines.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/search?q=api+design"
+                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "COURSE_NAME": "MLOps: Continuous Delivery and Automation Pipelines in Machine Learning",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn how to build continuous delivery and automation pipelines for machine learning models using tools like Jenkins, Docker, and Kubernetes.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.udemy.com/course/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning/"
+            },
+            {
+                "COURSE_NAME": "AWS Machine Learning Engineer Professional Certificate",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A professional certificate focusing on deploying and scaling machine learning models on AWS using services like SageMaker and other MLOps tools.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/professional-certificates/aws-machine-learning-engineer"
+            }
+        ],
+        "Big data technologies (e.g., Spark, Hadoop, Hive, Presto)": [
+            {
+                "COURSE_NAME": "Apache Spark with Python - Big Data with PySpark",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn Apache Spark with Python to analyze big data. Cover PySpark, Spark SQL, DataFrames, and Spark Streaming.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/apache-spark-with-python-big-data-with-pyspark/"
+            },
+            {
+                "COURSE_NAME": "Big Data Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A specialization covering the fundamentals of big data processing using Hadoop, Spark, and other related technologies.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
+            },
+            {
+                "COURSE_NAME": "Hadoop Platform and Application Framework",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn the Hadoop platform and application framework, covering HDFS, MapReduce, and other core components.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/hadoop-platform-and-application-framework"
+            }
+        ],
+        "Cloud platforms (e.g., AWS, Azure, GCP)": [
+            {
+                "COURSE_NAME": "AWS Certified Machine Learning - Specialty",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "A comprehensive course to prepare for the AWS Certified Machine Learning - Specialty exam, covering various AWS ML services.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.udemy.com/course/aws-certified-machine-learning-specialty/"
+            },
+            {
+                "COURSE_NAME": "Microsoft Azure AI Fundamentals",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A course covering the fundamentals of AI on Azure, including machine learning, computer vision, and natural language processing.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/ai-azure-fundamentals"
+            },
+            {
+                "COURSE_NAME": "Google Cloud Platform Fundamentals: Core Infrastructure",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A course introducing the core infrastructure components of Google Cloud Platform, including compute, storage, and networking.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/gcp-fundamentals"
             }
         ]
     }

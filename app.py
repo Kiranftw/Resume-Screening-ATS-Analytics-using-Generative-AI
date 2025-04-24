@@ -96,5 +96,9 @@ def chatbot_route():
     response = analytics.chatbot(Query=query)  # Fixed: use the instance
     return jsonify({"response": response})
 
+@app.route('/course-recommendations')
+def course_recommendations():
+    return render_template('course_recommendations.html')
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
