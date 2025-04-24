@@ -23,7 +23,6 @@ import logging
 from langchain_google_genai import ChatGoogleGenerativeAI
 import google.generativeai as genai
 from json import JSONDecodeError
-import datetime
 pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 
 logging.basicConfig(level=logging.INFO)
@@ -208,32 +207,42 @@ class ResumeAnalytics(object):
         self.memory.chat_memory.add_user_message(Query)
         self.memory.chat_memory.add_ai_message(response)
 
-        # 🔥 Convert markdown to HTML before sending back
         return markdown.markdown(response)
     
-    @ExceptionHandeler
-    def CoverLetterGeneration(self,fullname: str, position: str, companyname: str, relvantExperience: str):
-        prompt = ChatPromptTemplate.from_template(
+    def getCoverLetter(self, resume: str, jobdescription: str):
+        resume_text = self.documentParser(resume)
+        prompt: ChatPromptTemplate = ChatPromptTemplate.from_template(
             """
-            Write a professional cover letter for {fullname}, who is applying for the position of {position} at {companyname}.
-            The candidate has relevant experience in {relevant_experience}. The tone should be formal, enthusiastic, and concise.
-            Today's date is {date}.
-            """
+        Based on the following resume and job description, generate a professional cover letter.
+        The cover letter should highlight the candidate's relevant skills and experiences that match the job requirements.
+
+        Resume:
+        {RESUME}
+        Job Description:
+        {JOBDESCRIPTION}
+
+        Please format the cover letter as follows:
+        1. Start with a professional greeting
+        2. Include an opening paragraph that expresses interest in the position
+        3. In the body paragraphs, highlight 2-3 key qualifications that match the job requirements
+        4. Include a closing paragraph that reiterates interest and provides contact information
+        5. End with a professional sign-off
+        Highlight the main heading/title of the cover letter in bold(markdown format).
+        The tone should be professional, enthusiastic, and confident & just give me the cover letter no additional greetings to the user.
+        """
         )
         formatted_prompt: str = prompt.format(
-            fullname=fullname,
-            position=position,
-            companyname=companyname,
-            relevant_experience=relvantExperience,
-            date=datetime.date.today().strftime("%B %d, %Y")
+            RESUME=resume_text["content"],
+            JOBDESCRIPTION=jobdescription
         )
-        response: str = str(self.chatmodel.invoke(formatted_prompt))
-        outputpath = os.path.join(self.outputsFOLDER, "coverletter.txt")
-        with open(outputpath, "w", encoding = "utf-8") as file:
+        response = self.getResponse(formatted_prompt)
+        if not os.path.exists(self.outputsFOLDER):
+            os.makedirs(self.outputsFOLDER, exist_ok=True)
+        PATH = os.path.join(self.outputsFOLDER, "CoverLetter.txt")
+        with open(PATH, "w", encoding="utf-8") as file:
             file.write(response)
-        print(f"file successfully stored with name coverletter.txt")
-        Markdown(response)
-        return response
+        logger.info("Cover letter generated successfully.")
+        return markdown.markdown(response)
     
     @ExceptionHandeler
     def ATSanalytics(self,resume: str, jobdescription: str = None) -> Optional[Dict[str, Any]]:
@@ -391,5 +400,6 @@ class ResumeAnalytics(object):
 if __name__ == "__main__":
     object = ResumeAnalytics()
     resume = input("RESUME: ")
-    data = object.documentParser(resume)
+    jd = input("JOB DESCRIPTION: ")
+    data = object.getCoverLetter(resume, jd)
     print(data)
