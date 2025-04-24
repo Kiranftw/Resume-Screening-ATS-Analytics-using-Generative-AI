@@ -513,111 +513,85 @@
                 </div>
                 <button class="logout-btn">logout</button>
             </div>
-
-            <form action="/dashboard" method="POST" enctype="multipart/form-data">
-                <div class="upload-section">
-                    <h2 class="section-title">Upload Documents</h2>
-
-                    <div class="upload-container">
-                        <div class="upload-card">
-                            <h3 class="upload-title">Resume Upload</h3>
-                            <input type="file" id="resume-upload" name="resume" class="file-upload">
-                            <label for="resume-upload" class="choose-file-btn">Choose File</label>
-                            <div class="file-types">
-                                <span class="file-type">PDF</span>
-                                <span class="file-type">DOC</span>
-                                <span class="file-type">DOCX</span>
-                            </div>
-                        </div>
-
-                        <div class="upload-card">
-                            <h3 class="upload-title">Job Description Upload</h3>
-                            <input type="file" id="jd-upload" name="jd" class="file-upload">
-                            <label for="jd-upload" class="choose-file-btn">Choose File</label>
-                            <div class="file-types">
-                                <span class="file-type">PDF</span>
-                                <span class="file-type">DOC</span>
-                                <span class="file-type">DOCX</span>
-                            </div>
+            <form method="POST" action="/dashboard" enctype="multipart/form-data">
+                <div class="upload-container">
+                    <div class="upload-card">
+                        <h3 class="upload-title">Resume Upload</h3>
+                        <input type="file" id="resume-upload" name="resume" class="file-upload">
+                        <label for="resume-upload" class="choose-file-btn">
+                            {{ resume_filename if resume_filename else 'Choose File' }}
+                        </label>
+                        <div class="file-types">
+                            <span class="file-type">PDF</span>
+                            <span class="file-type">DOC</span>
+                            <span class="file-type">DOCX</span>
                         </div>
                     </div>
 
-                    <button type="submit" class="analyze-btn">Analyze</button>
+                    <div class="upload-card">
+                        <h3 class="upload-title">Job Description Upload</h3>
+                        <input type="file" id="jd-upload" name="jd" class="file-upload">
+                        <label for="jd-upload" class="choose-file-btn">
+                            {{ jd_filename if jd_filename else 'Choose File' }}
+                        </label>
+                        <div class="file-types">
+                            <span class="file-type">PDF</span>
+                            <span class="file-type">DOC</span>
+                            <span class="file-type">DOCX</span>
+                        </div>
+                    </div>
                 </div>
+
+                <button type="submit" class="analyze-btn">Analyze</button>
             </form>
 
-
-            <!-- Dashboard Section (Hidden Initially) -->
+            {% if show_dashboard %}
             <div class="dashboard" id="dashboard">
                 <h2 class="section-title">Analysis Results</h2>
 
+                <!-- Scores Section -->
                 <div class="scores-container">
                     <div class="score-card">
                         <div class="score-circle">
                             <div class="score-title">ATS</div>
-                            <div class="score-value">45</div>
+                            <div class="score-value">{{ ats_score }}</div>
                         </div>
                         <p>Applicant Tracking System Score</p>
                     </div>
                     <div class="score-card">
                         <div class="score-circle">
                             <div class="score-title">RRS</div>
-                            <div class="score-value">45</div>
+                            <div class="score-value">{{ rrs_score }}</div>
                         </div>
                         <p>Resume Relevance Score</p>
                     </div>
                     <div class="score-card">
                         <div class="score-circle">
                             <div class="score-title">RFS</div>
-                            <div class="score-value">45</div>
+                            <div class="score-value">{{ rfs_score }}</div>
                         </div>
                         <p>Resume Format Score</p>
                     </div>
                 </div>
 
+                <!-- Resume Components Section -->
                 <div class="dashboard-content">
                     <div class="checklist-card">
                         <h3 class="checklist-title">Resume Components</h3>
+                        {% for component, status in resume_components.items() %}
                         <div class="checklist-item">
-                            <span class="custom-checkbox checked"></span>
-                            <span class="checklist-label">Transliterate</span>
+                            <span class="custom-checkbox {% if status %}checked{% endif %}"></span>
+                            <span class="checklist-label">{{ component }}</span>
                         </div>
-                        <div class="checklist-item">
-                            <span class="custom-checkbox checked"></span>
-                            <span class="checklist-label">Spelling & Grammar</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="custom-checkbox"></span>
-                            <span class="checklist-label">Summary</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="custom-checkbox checked"></span>
-                            <span class="checklist-label">Skills</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="custom-checkbox checked"></span>
-                            <span class="checklist-label">Experience</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="custom-checkbox"></span>
-                            <span class="checklist-label">Certification</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="custom-checkbox checked"></span>
-                            <span class="checklist-label">Education</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="custom-checkbox checked"></span>
-                            <span class="checklist-label">Contact Details</span>
-                        </div>
+                        {% endfor %}
                     </div>
 
+                    <!-- Resume Strength Analysis Section -->
                     <div class="analysis-section">
                         <div class="chart-card">
                             <h3 class="chart-title">Resume Strength Analysis</h3>
                             <div class="chart-container">
                                 <svg class="chart-svg" viewBox="0 0 400 200" preserveAspectRatio="none">
-                                    <!-- Placeholder for chart visualization -->
                                     <path d="M0,200 L50,150 L100,100 L150,120 L200,80 L250,70 L300,50 L350,30 L400,10"
                                         stroke="#3b82f6" stroke-width="3" fill="none"></path>
                                     <path
@@ -627,112 +601,121 @@
                             </div>
                         </div>
 
+                        <!-- Missing Info Section -->
                         <div class="missing-info">
                             <div class="missing-card">
                                 <h4 class="missing-title">MISSING KEYWORDS</h4>
-                                <div class="missing-count">45</div>
+                                <div class="missing-count">{{ missing_keywords }}</div>
                             </div>
                             <div class="missing-card">
                                 <h4 class="missing-title">MISSING SKILLS</h4>
-                                <div class="missing-count">45</div>
+                                <div class="missing-count">{{ missing_skills }}</div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <a href="#" class="download-btn">Download Report</a>
             </div>
-        </div>
-    </div>
 
-    <div class="chat-boat" onclick="toggleChat()">
-        <div>CHAT</div>
-        <div>BOAT</div>
-    </div>
+            <a href="#" class="download-btn">Download Report</a>
 
-    <div class="chat-modal" id="chat-modal">
-        <div class="chat-header">
-            <h3>Resume Assistant</h3>
-            <button class="close-chat" onclick="toggleChat()">×</button>
-        </div>
-        <div class="chat-messages" id="chat-messages">
-            <div class="bot-message">Hello! I'm your resume assistant. How can I help you improve your resume today?
+            <script>
+                window.onload = function () {
+                    document.getElementById('dashboard').style.display = 'block';  // Show the dashboard
+                    document.querySelector('.upload-container').style.display = 'none';  // Hide the upload section
+                };
+            </script>
+            {% endif %}
+
+
+            <div class="chat-boat" onclick="toggleChat()">
+                <div>CHAT</div>
+                <div>BOAT</div>
             </div>
-        </div>
-        <div class="chat-input-container">
-            <input type="text" class="chat-input" id="chat-input" placeholder="Type your message...">
-            <button class="send-btn" onclick="sendMessage()">Send</button>
-        </div>
-    </div>
 
-    <script>
-        // Toggle dashboard visibility
-        function showDashboard() {
-            document.getElementById('dashboard').style.display = 'block';
-            document.querySelector('.upload-section').style.display = 'none';
-        }
+            <div class="chat-modal" id="chat-modal">
+                <div class="chat-header">
+                    <h3>Resume Assistant</h3>
+                    <button class="close-chat" onclick="toggleChat()">×</button>
+                </div>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="bot-message">Hello! I'm your resume assistant. How can I help you improve your resume
+                        today?
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chat-input" placeholder="Type your message...">
+                    <button class="send-btn" onclick="sendMessage()">Send</button>
+                </div>
+            </div>
 
-        // Toggle chat modal
-        function toggleChat() {
-            const chatModal = document.getElementById('chat-modal');
-            if (chatModal.style.display === 'flex') {
-                chatModal.style.display = 'none';
-            } else {
-                chatModal.style.display = 'flex';
-            }
-        }
+            <script>
+                // Toggle dashboard visibility
+                function showDashboard() {
+                    document.getElementById('dashboard').style.display = 'block';
+                    document.querySelector('.upload-section').style.display = 'none';
+                }
 
-        // Send chat message
-        function sendMessage() {
-            const input = document.getElementById('chat-input');
-            const message = input.value.trim();
-
-            if (message) {
-                const chatMessages = document.getElementById('chat-messages');
-
-                // Add user message
-                chatMessages.innerHTML += `<div class="user-message">${message}</div>`;
-                input.value = '';
-
-                // Simulate bot response
-                setTimeout(() => {
-                    let response = "I'm analyzing your resume. Based on what I can see, you might want to add more industry-specific keywords to improve your ATS score.";
-
-                    if (message.toLowerCase().includes('keyword')) {
-                        response = "Your resume is missing these key terms: project management, agile, customer relations, and data analysis.";
-                    } else if (message.toLowerCase().includes('skill')) {
-                        response = "Consider adding these skills: Python programming, data visualization, market research, and content strategy.";
-                    } else if (message.toLowerCase().includes('ats')) {
-                        response = "Your ATS score is 45/100. To improve it, make sure your resume includes keywords from the job description and uses a clean, simple format.";
+                // Toggle chat modal
+                function toggleChat() {
+                    const chatModal = document.getElementById('chat-modal');
+                    if (chatModal.style.display === 'flex') {
+                        chatModal.style.display = 'none';
+                    } else {
+                        chatModal.style.display = 'flex';
                     }
+                }
 
-                    chatMessages.innerHTML += `<div class="bot-message">${response}</div>`;
-                    chatMessages.scrollTop = chatMessages.scrollHeight;
-                }, 500);
+                // Send chat message
+                function sendMessage() {
+                    const input = document.getElementById('chat-input');
+                    const message = input.value.trim();
 
-                // Scroll to bottom
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }
-        }
+                    if (message) {
+                        const chatMessages = document.getElementById('chat-messages');
 
-        // Add event listener for Enter key in chat
-        document.getElementById('chat-input').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        });
+                        // Add user message
+                        chatMessages.innerHTML += `<div class="user-message">${message}</div>`;
+                        input.value = '';
 
-        // File input display filename
-        document.getElementById('resume-upload').addEventListener('change', function () {
-            const fileName = this.files[0]?.name || 'No file chosen';
-            this.nextElementSibling.textContent = fileName;
-        });
+                        // Simulate bot response
+                        setTimeout(() => {
+                            let response = "I'm analyzing your resume. Based on what I can see, you might want to add more industry-specific keywords to improve your ATS score.";
 
-        document.getElementById('jd-upload').addEventListener('change', function () {
-            const fileName = this.files[0]?.name || 'No file chosen';
-            this.nextElementSibling.textContent = fileName;
-        });
-    </script>
+                            if (message.toLowerCase().includes('keyword')) {
+                                response = "Your resume is missing these key terms: project management, agile, customer relations, and data analysis.";
+                            } else if (message.toLowerCase().includes('skill')) {
+                                response = "Consider adding these skills: Python programming, data visualization, market research, and content strategy.";
+                            } else if (message.toLowerCase().includes('ats')) {
+                                response = "Your ATS score is 45/100. To improve it, make sure your resume includes keywords from the job description and uses a clean, simple format.";
+                            }
+
+                            chatMessages.innerHTML += `<div class="bot-message">${response}</div>`;
+                            chatMessages.scrollTop = chatMessages.scrollHeight;
+                        }, 500);
+
+                        // Scroll to bottom
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                    }
+                }
+
+                // Add event listener for Enter key in chat
+                document.getElementById('chat-input').addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+
+                // File input display filename
+                document.getElementById('resume-upload').addEventListener('change', function () {
+                    const fileName = this.files[0]?.name || 'No file chosen';
+                    this.nextElementSibling.textContent = fileName;
+                });
+
+                document.getElementById('jd-upload').addEventListener('change', function () {
+                    const fileName = this.files[0]?.name || 'No file chosen';
+                    this.nextElementSibling.textContent = fileName;
+                });
+            </script>
 </body>
 
 </html>
