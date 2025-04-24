@@ -308,38 +308,36 @@
 
             <h2 class="section-title">Course Recommendations</h2>
 
+            <!-- templates/course_recommendations.html -->
             <div class="grid">
                 <div class="card">
                     <h3 class="card-title">Missing Technical Skills</h3>
                     <ul class="skill-list">
-                        <li class="skill-item">Python (Advanced)</li>
-                        <li class="skill-item">TensorFlow</li>
-                        <li class="skill-item">PyTorch</li>
-                        <li class="skill-item">Natural Language Processing</li>
-                        <li class="skill-item">Computer Vision</li>
+                        {% for skill in missing_technical_skills %}
+                        <li class="skill-item">{{ skill }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
 
                 <div class="card">
                     <h3 class="card-title">Missing Soft Skills</h3>
                     <ul class="skill-list">
-                        <li class="skill-item">Technical Leadership</li>
-                        <li class="skill-item">Stakeholder Management</li>
-                        <li class="skill-item">Agile Methodology</li>
-                        <li class="skill-item">Project Planning</li>
+                        {% for skill in missing_soft_skills %}
+                        <li class="skill-item">{{ skill }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
 
                 <div class="card role-card">
                     <h3 class="card-title">Best Role Matches</h3>
                     <div>
-                        <span class="role-match">Data Scientist: 92%</span>
-                        <span class="role-match">Machine Learning Engineer: 89%</span>
-                        <span class="role-match">AI Research Engineer: 87%</span>
-                        <span class="role-match">Data Engineer: 85%</span>
+                        {% for role, score in role_matches.items() %}
+                        <span class="role-match">{{ role }}: {{ score }}%</span>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
+
 
             <div class="card course-card">
                 <h3 class="card-title">Recommended Courses to Improve Your Skills</h3>

@@ -97,8 +97,35 @@ def chatbot_route():
     return jsonify({"response": response})
 
 @app.route('/course-recommendations')
-def course_recommendations():
-    return render_template('course_recommendations.html')
+def show_course_recommendations():
+    missing_technical_skills = [
+        "Python (Advanced)",
+        "TensorFlow",
+        "PyTorch",
+        "Natural Language Processing",
+        "Computer Vision"
+    ]
+
+    missing_soft_skills = [
+        "Technical Leadership",
+        "Stakeholder Management",
+        "Agile Methodology",
+        "Project Planning"
+    ]
+
+    role_matches = {
+        "Data Scientist": 92,
+        "Machine Learning Engineer": 89,
+        "AI Research Engineer": 87,
+        "Data Engineer": 85
+    }
+
+    return render_template(
+        'course_recommendations.html',
+        missing_technical_skills=missing_technical_skills,
+        missing_soft_skills=missing_soft_skills,
+        role_matches=role_matches
+    )
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
