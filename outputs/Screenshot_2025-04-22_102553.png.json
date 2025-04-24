@@ -1,0 +1,120 @@
+{
+    "RESUME_RELEVANCE_SCORE": 75,
+    "ROLE_FIT_SCORE": 70,
+    "ATS_SCORE": 72,
+    "KEYWORD_MATCH_SCORE": 65,
+    "MATCHED_KEYWORDS": [
+        "Python",
+        "Data Science",
+        "Data Analytics",
+        "SQL",
+        "GitHub",
+        "Linux",
+        "Windows",
+        "NumPy",
+        "Pandas",
+        "Matplotlib",
+        "Scikit Learn",
+        "Machine Learning",
+        "Linear Regression",
+        "Logistic Regression",
+        "Decision Trees",
+        "K-Means",
+        "KNN",
+        "Data Cleaning",
+        "Data Preprocessing",
+        "OOP",
+        "DSA",
+        "CAD/CAM",
+        "SolidWorks"
+    ],
+    "MISSING_KEYWORDS": [
+        "TensorFlow",
+        "Gemini API",
+        "GenAI"
+    ],
+    "MISSING_SKILLS": [],
+    "RESUME_TIPS": [
+        "Increase the font size for programming languages.",
+        "Make sure there are dates associated with the technologies.",
+        "Expand description of the projects",
+        "Make sure to create a more detailed format for the resume.",
+        "Add a summary at the top of the resume to briefly overview your skills and experience.",
+        "Quantify achievements and responsibilities with metrics whenever possible.",
+        "Tailor the resume to specific job descriptions by highlighting relevant skills and experiences.",
+        "Clearly label sections like 'Skills,' 'Experience,' and 'Projects' for better readability.",
+        "Ensure consistent formatting throughout the resume, including font type, size, and spacing.",
+        "Proofread the resume carefully for grammatical errors and typos."
+    ],
+    "COURSE_RECOMMENDATIONS": {
+        "TensorFlow": [
+            {
+                "COURSE_NAME": "TensorFlow in Practice",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn TensorFlow for practical deep learning applications.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/course/tensorflow-in-practice"
+            },
+            {
+                "COURSE_NAME": "TensorFlow 2.0: A Complete Overview",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Master TensorFlow 2.0 with hands-on projects and examples.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.udemy.com/course/tensorflow-2-a-complete-overview/"
+            },
+            {
+                "COURSE_NAME": "Advanced Deep Learning with TensorFlow",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Explore advanced deep learning techniques using TensorFlow.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/course/advanced-deep-learning-with-tensorflow"
+            }
+        ],
+        "Gemini API": [
+            {
+                "COURSE_NAME": "Intro to Gemini API",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to utilize Gemini API for multiple purposes.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://platform.com/course"
+            },
+            {
+                "COURSE_NAME": "Gemini API: A Complete Overview",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Master Gemini API with hands-on projects and examples.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.udemy.com/course/Gemini-API-a-complete-overview/"
+            },
+            {
+                "COURSE_NAME": "Advanced Deep Learning with Gemini API",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Explore advanced deep learning techniques using Gemini API.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/course/advanced-deep-learning-with-Gemini-API"
+            }
+        ],
+        "GenAI": [
+            {
+                "COURSE_NAME": "Generative AI for Beginners",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Introductory course to Generative AI concepts and applications.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/course/generative-ai-for-beginners"
+            },
+            {
+                "COURSE_NAME": "Generative AI Fundamentals",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the basics of generative AI models and their implementation.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/generative-ai-fundamentals/"
+            },
+            {
+                "COURSE_NAME": "Advanced Generative Models",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Deep dive into advanced generative models and techniques.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/course/advanced-generative-models"
+            }
+        ]
+    }
+}

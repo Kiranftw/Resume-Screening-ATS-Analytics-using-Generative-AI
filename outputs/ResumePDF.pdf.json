@@ -1,104 +1,142 @@
 {
-    "RESUME_RELEVANCE_SCORE": 65,
-    "ROLE_FIT_SCORE": 55,
-    "ATS_SCORE": 60,
-    "KEYWORD_MATCH_SCORE": 70,
-    "MATCHED_KEYWORDS": [
-        "GenAI",
-        "Python",
-        "Machine Learning",
-        "Artificial Intelligence",
-        "Generative AI"
-    ],
+    "RESUME_RELEVANCE_SCORE": 5,
+    "ROLE_FIT_SCORE": 5,
+    "ATS_SCORE": 10,
+    "KEYWORD_MATCH_SCORE": 0,
+    "MATCHED_KEYWORDS": [],
     "MISSING_KEYWORDS": [
-        "TensorFlow",
-        "PyTorch"
+        "TAX INVOICE",
+        "CGST/SGST Rules,2017",
+        "CIN No",
+        "Original for Recipent",
+        "Duplicate for Transportar",
+        "Triplicate for Supplier",
+        "Extra Copy",
+        "PAN",
+        "GSTIN",
+        "IRN",
+        "E Way Bill No",
+        "GST Invoice No",
+        "GST Invoice Date",
+        "Document No",
+        "Del No",
+        "Bill Type",
+        "Order Type",
+        "PO & Date",
+        "Terms of Payment",
+        "Delivery Terms",
+        "Bill To Party",
+        "Ship To Party",
+        "MEANS OF TRANSPORT",
+        "TRANSPORTER NAME",
+        "Vehicle No",
+        "LR No & Date",
+        "Place Of Supply",
+        "Code",
+        "Destination",
+        "Cust.Mat.No",
+        "Description of Goods",
+        "Cast No.",
+        "Bundle No.",
+        "Size Shape Condition",
+        "HSN /SAC Code",
+        "Qty",
+        "PCs",
+        "UOM",
+        "Length Color",
+        "Rate Per Item",
+        "Taxable Value",
+        "CGST %",
+        "SGST %",
+        "IGST %",
+        "Total",
+        "RCS AR",
+        "REVERSE CHARGE BASIS",
+        "Authorised Signatory",
+        "Company Website",
+        "TERMS & CONDITIONS OF SALE INVOICE"
     ],
-    "MISSING_SKILLS": [
-        "Developing large language models",
-        "Deploying large language models",
-        "Researching novel generative techniques"
-    ],
+    "MISSING_SKILLS": [],
     "RESUME_TIPS": [
-        "Add 'TensorFlow' and 'PyTorch' to the skills section to highlight your experience with these technologies.",
-        "Quantify your achievements in the projects section by including metrics or results.",
-        "Explicitly mention your experience with 'developing large language models' in the projects section.",
-        "Include 'deploying large language models' in your project descriptions to showcase practical application.",
-        "Add a section detailing your experience in 'researching novel generative techniques'.",
-        "Tailor the resume summary to directly address the requirements outlined in the job description.",
-        "Elaborate on the 'Gemini API' project to emphasize its relevance to generative AI.",
-        "Add specific examples of how you contributed to Google's GenAI initiatives.",
-        "Ensure that your contact information, including LinkedIn profile, is easily accessible.",
-        "Update the resume with the most recent projects and experiences related to GenAI."
+        "Add specific projects showcasing experience with relevant tools and technologies.",
+        "Quantify achievements in previous roles to demonstrate impact.",
+        "Tailor the resume to match the job description by including relevant keywords from the job posting.",
+        "Ensure consistent formatting throughout the resume for better readability.",
+        "Include specific technologies used in each project to highlight technical skills.",
+        "Add details about contributions to open-source projects.",
+        "Provide more details about the tools used.",
+        "Add information about any awards or recognition received.",
+        "Refine the skills section by including specific versions or proficiency levels for each skill.",
+        "Provide context about the specific domain. "
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Developing large language models": [
+        "TAX INVOICE": [
             {
-                "COURSE_NAME": "TensorFlow Developer Professional Certificate",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to build and deploy scalable TensorFlow models.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/professional-certificates/tensorflow-in-practice"
+                "COURSE_NAME": "Basics of Tax Invoices",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the fundamental concepts of tax invoices, including their structure and importance.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://udemy.com/course"
             },
             {
-                "COURSE_NAME": "Deep Learning Specialization",
+                "COURSE_NAME": "Tax Invoice Compliance",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Covers neural networks, CNNs, RNNs, and more.",
+                "DESCRIPTION": "Understand the legal requirements and compliance standards related to tax invoices.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/deep-learning"
+                "COURSE_LINK": "https://coursera.com/course"
             },
             {
-                "COURSE_NAME": "Natural Language Processing Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Focuses on NLP tasks like machine translation and question answering.",
+                "COURSE_NAME": "Advanced Tax Invoice Management",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Explore advanced techniques for managing and auditing tax invoices effectively.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/specializations/natural-language-processing"
+                "COURSE_LINK": "https://edx.org/course"
             }
         ],
-        "Deploying large language models": [
+        "CGST/SGST Rules,2017": [
             {
-                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Covers building, integrating, and deploying ML pipelines.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+                "COURSE_NAME": "CGST/SGST Fundamentals",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the basics of Central Goods and Services Tax (CGST) and State Goods and Services Tax (SGST).",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://udemy.com/course"
             },
             {
-                "COURSE_NAME": "AWS Certified Machine Learning – Specialty",
-                "PLATFORM": "Amazon Training",
-                "DESCRIPTION": "Teaches deploying ML models on AWS infrastructure.",
+                "COURSE_NAME": "CGST/SGST Compliance",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Understand the compliance requirements under CGST and SGST rules.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://coursera.com/course"
+            },
+            {
+                "COURSE_NAME": "Advanced CGST/SGST Implementation",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Explore advanced strategies for implementing CGST and SGST in business operations.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://aws.amazon.com/training/certification/"
-            },
-            {
-                "COURSE_NAME": "TensorFlow: Data and Deployment",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Focuses on deploying TensorFlow models at scale.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/tensorflow-data-deployment"
+                "COURSE_LINK": "https://edx.org/course"
             }
         ],
-        "Researching novel generative techniques": [
+        "CIN No": [
             {
-                "COURSE_NAME": "Generative Adversarial Networks (GANs) Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Teaches GANs for generating realistic images and data.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/generative-adversarial-networks-gans"
+                "COURSE_NAME": "Understanding Corporate Identification Number",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the basics of Corporate Identification Number (CIN) and its significance.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://udemy.com/course"
             },
             {
-                "COURSE_NAME": "Creative Applications of Deep Learning with TensorFlow",
-                "PLATFORM": "Kadenze",
-                "DESCRIPTION": "Explores creative applications of deep learning.",
+                "COURSE_NAME": "CIN and Regulatory Compliance",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Understand the regulatory implications and compliance requirements related to CIN.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.kadenze.com/courses/creative-applications-of-deep-learning-with-tensorflow-v2-charles-frye"
+                "COURSE_LINK": "https://coursera.com/course"
             },
             {
-                "COURSE_NAME": "Advanced Machine Learning Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Covers advanced topics including reinforcement learning and unsupervised learning.",
+                "COURSE_NAME": "Advanced Corporate Governance",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Explore advanced strategies for corporate governance, including CIN management.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/specializations/aml"
+                "COURSE_LINK": "https://edx.org/course"
             }
         ]
     }

@@ -1,5 +1,0 @@
-    </div>
-    <div class="main-content">
-        <div class="top-nav">
-            <button class="logout-btn" onclick="handleLogout()">Logout</button>
-        </div>

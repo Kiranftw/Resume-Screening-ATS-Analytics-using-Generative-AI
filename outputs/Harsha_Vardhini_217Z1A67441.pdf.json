@@ -7,5 +7,15 @@
     "MISSING_KEYWORDS": [],
     "MISSING_SKILLS": [],
     "RESUME_TIPS": [],
-    "COURSE_RECOMMENDATIONS": {}
+    "COURSE_RECOMMENDATIONS": {
+        "MISSING_SKILL_1": [
+            {
+                "COURSE_NAME": "",
+                "PLATFORM": "",
+                "DESCRIPTION": "",
+                "DIFFICULTY": "",
+                "COURSE_LINK": ""
+            }
+        ]
+    }
 }
