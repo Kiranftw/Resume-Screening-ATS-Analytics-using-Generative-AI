@@ -29,12 +29,20 @@ FIRST
    - Ensure that each point is big like 2 lines and also highlight the main keywords with bold ** here i will use markdown formar in web app
 
 6. *Course Recommendations for Missing Skills*  
-   For each missing skill, recommend exactly 3 high-quality courses to address the gap. Each course must include:  
-   - course_name: The title of the course.  
-   - platform: E.g., Coursera, Udemy, edX.  
-   - description: A brief summary of the course content and its relevance.  
-   - difficulty_level: Beginner, Intermediate, or Advanced.  
-   - course_link: A valid URL to the course (use placeholders like https://platform.com/course if unavailable).  
+    For each missing skill, recommend exactly **three high-quality courses** that help address the skill gap. The recommendations must follow this structure:
+
+    - Provide **two courses** from **paid platforms** such as Coursera, Udemy, or edX.
+    - Provide **one free course** from **YouTube** as an accessible alternative.
+
+    Each course must include the following details:
+    - **course_name**: The title of the course.  
+    - **platform**: E.g., Coursera, Udemy, edX, or YouTube.  
+    - **description**: A concise summary of what the course covers and how it addresses the missing skill.  
+    - **difficulty_level**: Beginner, Intermediate, or Advanced.  
+    - **course_link**: A valid URL to the course. If the exact course link is unavailable, use a placeholder like `https://platform.com/course`.
+
+    Ensure recommendations are relevant to the specific missing skill and vary in difficulty if appropriate.
+
 {
   "RESUME_RELEVANCE_SCORE": 0,
   "ROLE_FIT_SCORE": 0,

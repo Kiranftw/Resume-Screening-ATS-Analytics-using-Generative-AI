@@ -70,12 +70,11 @@ def dashboard():
         # Store in shared_data
         shared_data['missing_keywords'] = missing_keywordslist
         shared_data['missing_skills'] = missing_skillslist
-        shared_data['resume_tips'] = resume_tips  # <<=== ✨ ADD THIS LINE ✨
+        shared_data['resume_tips'] = resume_tips  
+        shared_data['course_recommendations'] = course_recommendations
 
-        print("[DEBUG] Missing Keywords:", missing_keywordslist)
-        print("[DEBUG] Missing Skills:", missing_skillslist)
-        print("[DEBUG] Resume Tips:", resume_tips)  # <<=== (Optional) Print to debug
 
+        print("[DEBUG] Course Recommendations:", course_recommendations)  # <<=== (Optional) Print to debug
         # === ATS Analysis ===
         atsresult = analytics.ATSanalytics(resume_path)
         if atsresult is None:
@@ -117,14 +116,11 @@ def chatbot_route():
 
 @app.route('/resume-insights')
 def show_course_recommendations():
-    # Fetching data from shared_data dictionary
     missing_technical_skills = shared_data.get('missing_keywords', [])
     missing_soft_skills = shared_data.get('missing_skills', [])
     resume_tips = shared_data.get('resume_tips', [])
-
-    # Warning if no skills found
-    if not missing_technical_skills and not missing_soft_skills:
-        print("[WARNING] No missing skills or keywords found in shared_data.")
+    courseRecommendations = shared_data.get('course_recommendations', {})
+    print("[DEBUG] Course Recommendations:", courseRecommendations)  # <<=== (Optional) Print to debug
 
     # Static role matches
     role_matches = {
@@ -150,7 +146,35 @@ def show_course_recommendations():
 
 @app.route('/course-recommendations')
 def courseRecommendations():
-    return render_template('Course recommendations.html')
+    raw_course_data = shared_data.get('course_recommendations', {})
+
+
+    paid_course_recommendations = {}
+    youtube_course_recommendations = {}
+
+    # Separate YouTube vs paid platforms
+    for topic, courses in raw_course_data.items():
+        paid_courses = []
+        youtube_courses = []
+
+        for course in courses:
+            if course['PLATFORM'].lower() == 'youtube':
+                youtube_courses.append(course)
+            else:
+                paid_courses.append(course)
+
+        if paid_courses:
+            paid_course_recommendations[topic] = paid_courses
+        if youtube_courses:
+            youtube_course_recommendations[topic] = youtube_courses 
+        
+    print("[DEBUG] Paid Course Recommendations:", paid_course_recommendations)
+
+    return render_template(
+        'recommendations.html',
+        paid_course_recommendations=paid_course_recommendations,
+        youtube_course_recommendations=youtube_course_recommendations
+    )
 
 @app.route('/')
 def landing_page():

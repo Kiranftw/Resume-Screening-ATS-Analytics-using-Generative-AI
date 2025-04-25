@@ -19,8 +19,6 @@
                 "Matplotlib",
                 "Scikit Learn",
                 "TensorFlow",
-                "ML",
-                "DS",
                 "Linear Regression",
                 "Multilinear Regression",
                 "Data Cleaning",
@@ -33,27 +31,21 @@
         },
         "Experience": [
             {
-                "Title": "ASSISTANT TOOL MAKER",
+                "Title": "Intern",
                 "Company": "Acme Tooling s",
-                "Duration": "Jan 2022 - June 2022",
+                "Duration": "Jan 2022 – June 2022",
                 "Description": "Gained hands on experience in complex mould designs and development Worked with CAD/CAM and SolidWorks design software s to build intricate designs. contributed to the end to end development of mould' s from initial design through manufacturing and quality control"
             },
             {
                 "Title": "Intern",
                 "Company": "InternPe",
-                "Duration": "Nov 2023 - Dec 2023",
+                "Duration": "Nov 2023 – Dec 2023",
                 "Description": "Applied the OOPS & Data Structures concepts while developing games and applications Worked on some specific modules like NumPy, Pandas for Data Manipulation on the real world datasets from Kaggle"
             }
         ],
         "Projects": [
-            {
-                "Title": "CV ANALYTICS DASHBOARD",
-                "Description": "Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply."
-            },
-            {
-                "Title": "Conversation chatbot using API",
-                "Description": "Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
-            }
+            "CV ANALYTICS DASHBOARD: Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply.",
+            "Conversation chatbot using API: Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
         ],
         "Certifications": [
             "DSA PYTHON : By CampusX",
@@ -61,32 +53,32 @@
             "Machine Learning : By IBM & CampusX"
         ],
         "Education": [
-            "B. Tech, CSE  DATA SCIENCE Nalla Narsimha Reddy educational society 2022 25 | Hyderabad CGPA: 7.6",
-            "Diploma, Industrial & Product Design CIPET   CENTRAL INSTITUTE OF PETROCHEMICAL ENGEINEERING & TECHNOLO0GY 2020 22 | Hyderabad Percentage: 77.7%",
-            "Intermediate, MPC Narayana Junior college 2018  20 | Hyderabad Percentage: 70%"
+            "B. Tech, CSE DATA SCIENCE Nalla Narsimha Reddy educational society 2022 25 | Hyderabad CGPA: 7.6",
+            "Diploma, Industrial & Product Design CIPET CENTRAL INSTITUTE OF PETROCHEMICAL ENGEINEERING & TECHNOLO0GY 2020 22 | Hyderabad Percentage: 77.7%",
+            "Intermediate, MPC Narayana Junior college 2018 20 | Hyderabad Percentage: 70%"
         ]
     },
     "ATS Score": {
-        "Total Score": 88,
+        "Total Score": 85,
         "Breakdown": {
             "Format Score": 10,
-            "Spelling & Grammar": 8,
+            "Spelling & Grammar": 9,
             "Summary": 10,
-            "Skills": 10,
+            "Skills": 8,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
             "Education": 10,
-            "Contact Details": 10
+            "Contact Details": 8
         }
     },
     "Recommendations": [
-        "While your resume does contain relevant skills, consider elaborating on your **soft skills** with specific examples of how you have applied them in previous roles or projects. Quantify your achievements whenever possible to demonstrate the impact you made.",
-        "In the Experience section, provide more context and quantifiable results for your responsibilities. For example, instead of saying you 'worked with CAD/CAM,' specify the type of projects you worked on and the outcomes achieved using those tools, use **metrics** to show impact.",
-        "Expand on your projects by detailing the specific technologies you used and the challenges you overcame. Providing more technical depth will showcase your expertise and problem-solving abilities, focusing on **technical challenges** will create a great impact.",
-        "Consider adding a brief summary or objective statement at the beginning of your resume to clearly articulate your career goals and highlight your key qualifications. This will help capture the attention of recruiters and hiring managers, make it more **personalized**.",
-        "Proofread your resume carefully for any typos or grammatical errors. Even small mistakes can detract from your credibility, use **Grammarly** or any other tool to make it more proffesional.",
-        "Ensure that your contact details are accurate and up-to-date, including your phone number and email address. Also, consider adding a professional **LinkedIn profile URL** to your resume to showcase your network and experience.",
-        "Customize your resume for each job application by tailoring your skills and experience to match the specific requirements of the position. This will demonstrate your relevance and increase your chances of getting an interview, use **keywords** properly."
+        "Add a section dedicated to **soft skills** to showcase interpersonal and communication abilities.",
+        "Proofread the resume carefully to eliminate any spelling or grammatical errors. Pay close attention to **typos and inconsistencies**.",
+        "Consider adding a brief **summary** or **objective statement** at the beginning to highlight career goals and qualifications.",
+        "Quantify achievements in the work experience section using numbers and metrics to demonstrate the **impact of contributions**.",
+        "Tailor the resume to match the specific requirements of each job application to improve **relevance and ATS compatibility**.",
+        "Provide specific dates (month and year) for education and experience entries to ensure **clarity and consistency**.",
+        "List specific tools, technologies, and methodologies used in projects and work experience to showcase **technical expertise**."
     ]
 }

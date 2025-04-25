@@ -172,7 +172,6 @@ class ResumeAnalytics(object):
         try:
             response = self.getResponse(Fprompt)
             responseJSON = json.loads(response)
-            print(responseJSON)
             with open(savePath, "w", encoding="utf-8") as file:
                 json.dump(responseJSON, file, indent=4, ensure_ascii=False)
             print(f"JSON file saved: {savePath}")
@@ -247,7 +246,6 @@ class ResumeAnalytics(object):
     @ExceptionHandeler
     def ATSanalytics(self,resume: str, jobdescription: str = None) -> Optional[Dict[str, Any]]:
         resume_data: dict = self.documentParser(resume)
-        print(resume_data)
         resumeLength: int = resume_data.get("pages", 0) if resume_data else 0
         JD: str = self.documentParser(jobdescription)
         if not resume_data or not resume_data.get("content"):
@@ -397,10 +395,3 @@ class ResumeAnalytics(object):
         except Exception as e:
             print(f"Error in getJobRecommendations: {e}")
             return None
-
-if __name__ == "__main__":
-    object = ResumeAnalytics()
-    resume = input("RESUME: ")
-    jd = input("JOB DESCRIPTION: ")
-    data = object.getCoverLetter(resume, jd)
-    print(data)
