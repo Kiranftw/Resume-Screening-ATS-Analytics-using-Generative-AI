@@ -205,6 +205,24 @@
             margin-top: 2rem;
         }
 
+        .copy-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            float: right;
+            margin-top: -40px;
+            margin-right: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
+
         .action-btn {
             padding: 0.75rem 1.5rem;
             background-color: var(--primary-color);
@@ -259,6 +277,63 @@
             font-weight: 600;
         }
 
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1 1 30%;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .scroll-box {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-item {
+            background-color: #eee;
+            margin: 5px 0;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        .role-match {
+            display: block;
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .progress-bar-container {
+            background-color: #ddd;
+            height: 8px;
+            width: 100%;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+
         .nav-icon {
             width: 20px;
             height: 20px;
@@ -275,6 +350,115 @@
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 500;
+        }
+
+        /* Base card styles */
+        .card {
+            flex: 1 1 30%;
+            background-color: white;
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Grid layout */
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 2rem;
+        }
+
+        /* Role card specific styles */
+        .role-card {
+            text-align: left;
+        }
+
+        /* Progress bar styles */
+        .progress-bar-container {
+            background-color: #ddd;
+            height: 8px;
+            width: 100%;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        /* Scrollable content box */
+        .scroll-box {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 10px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        /* Role match list styles */
+        /* Role match list styles */
+        .role-match-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .role-match-item {
+            padding: 8px 12px;
+            margin-bottom: 5px;
+            background-color: #f1f3f5;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .role-name {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .role-percentage {
+            background-color: #e0e7ff;
+            color: #4338ca;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Copy button styles */
+        .copy-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            float: right;
+            margin-top: -40px;
+            margin-right: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -308,35 +492,58 @@
 
             <h2 class="section-title">Course Recommendations</h2>
 
-            <!-- templates/course_recommendations.html -->
             <div class="grid">
+
                 <div class="card">
                     <h3 class="card-title">Missing Technical Skills</h3>
-                    <ul class="skill-list">
-                        {% for skill in missing_technical_skills %}
-                        <li class="skill-item">{{ skill }}</li>
-                        {% endfor %}
-                    </ul>
+                    <button class="copy-btn" onclick="copyToClipboard('technical-skills')">Copy</button>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: {{ 100 - (missing_technical_skills|length * 5) }}%">
+                        </div>
+                    </div>
+                    <div class="scroll-box" id="technical-skills">
+                        <ul class="skill-list">
+                            {% for skill in missing_technical_skills %}
+                            <li class="skill-item">{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <h3 class="card-title">Missing Soft Skills</h3>
-                    <ul class="skill-list">
-                        {% for skill in missing_soft_skills %}
-                        <li class="skill-item">{{ skill }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
-                <div class="card role-card">
-                    <h3 class="card-title">Best Role Matches</h3>
-                    <div>
-                        {% for role, score in role_matches.items() %}
-                        <span class="role-match">{{ role }}: {{ score }}%</span>
-                        {% endfor %}
+                    <h3 class="card-title">Missing Keywords</h3>
+                    <button class="copy-btn" onclick="copyToClipboard('soft-skills')">Copy</button>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: {{ 100 - (missing_soft_skills|length * 5) }}%"></div>
+                    </div>
+                    <div class="scroll-box" id="soft-skills">
+                        <ul class="skill-list">
+                            {% for skill in missing_soft_skills %}
+                            <li class="skill-item">{{ skill }}</li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
+                <div class="card role-card">
+                    <h3 class="card-title">Best Role Matches</h3>
+                    <button class="copy-btn" onclick="copyToClipboard('role-matches')">Copy</button>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 92%"></div>
+                    </div>
+                    <div class="scroll-box" id="role-matches">
+                        <ul class="role-match-list">
+                            {% for role, score in role_matches.items() %}
+                            <li class="role-match-item">
+                                <span class="role-name">{{ role }}</span>
+                                <span class="role-percentage">{{ score }}%</span>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
             </div>
+
 
 
             <div class="card course-card">
@@ -363,6 +570,7 @@
                         <span class="course-platform">Udemy</span>
                     </div>
                     <span class="course-difficulty">Intermediate</span>
+
                     <p class="course-description">
                         A comprehensive guide to constructing, testing, and deploying AI agents for real-world
                         applications with a focus on practical implementation. Includes hands-on projects with
@@ -387,6 +595,86 @@
                         Course</a>
                 </div>
             </div>
+            <script>
+                function copyToClipboard(elementId) {
+                    const element = document.getElementById(elementId);
+                    if (element) {
+                        // Create a temporary textarea element to hold the text
+                        const textarea = document.createElement('textarea');
+                        // Get the text content, preserving line breaks
+                        textarea.value = element.innerText;
+
+                        // Make the textarea invisible
+                        textarea.style.position = 'fixed';
+                        textarea.style.top = 0;
+                        textarea.style.left = 0;
+                        textarea.style.width = '1px';
+                        textarea.style.height = '1px';
+                        textarea.style.padding = 0;
+                        textarea.style.border = 'none';
+                        textarea.style.outline = 'none';
+                        textarea.style.boxShadow = 'none';
+                        textarea.style.background = 'transparent';
+
+                        // Append the textarea to the document
+                        document.body.appendChild(textarea);
+
+                        // Select the text in the textarea
+                        textarea.select();
+                        textarea.setSelectionRange(0, 99999); // For mobile devices
+
+                        // Copy the text
+                        try {
+                            navigator.clipboard.writeText(textarea.value).then(function () {
+                                console.log('Content copied to clipboard');
+                                // Optional: Provide user feedback, e.g., change button text to "Copied!"
+                                // Find the button that triggered the copy (you might need a different approach if you want direct feedback on the button)
+                                const copyButton = document.querySelector(`#${elementId}`).closest('.card').querySelector('.copy-btn');
+                                const originalText = copyButton.innerText;
+                                copyButton.innerText = 'Copied!';
+                                setTimeout(() => {
+                                    copyButton.innerText = originalText;
+                                }, 2000); // Change back after 2 seconds
+
+                            }, function (err) {
+                                console.error('Could not copy text: ', err);
+                                // Fallback for browsers where clipboard API is not available or permission is denied
+                                document.execCommand('copy');
+                                const copyButton = document.querySelector(`#${elementId}`).closest('.card').querySelector('.copy-btn');
+                                const originalText = copyButton.innerText;
+                                copyButton.innerText = 'Copied (fallback)!';
+                                setTimeout(() => {
+                                    copyButton.innerText = originalText;
+                                }, 2000);
+                            });
+                        } catch (err) {
+                            console.error('Async copy failed, trying execCommand: ', err);
+                            // Fallback for older browsers
+                            textarea.focus();
+                            textarea.select();
+                            try {
+                                document.execCommand('copy');
+                                console.log('Fallback copy successful');
+                                const copyButton = document.querySelector(`#${elementId}`).closest('.card').querySelector('.copy-btn');
+                                const originalText = copyButton.innerText;
+                                copyButton.innerText = 'Copied (fallback)!';
+                                setTimeout(() => {
+                                    copyButton.innerText = originalText;
+                                }, 2000);
+                            } catch (err) {
+                                console.error('Fallback copy failed: ', err);
+                            }
+                        }
+
+
+                        // Remove the temporary textarea
+                        document.body.removeChild(textarea);
+
+                    } else {
+                        console.error("Element with ID '" + elementId + "' not found.");
+                    }
+                }
+            </script>
 
             <div class="action-buttons">
                 <button class="action-btn secondary">Generate Cover Letter</button>

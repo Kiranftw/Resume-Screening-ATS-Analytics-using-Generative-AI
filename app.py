@@ -5,26 +5,30 @@ from ResumeAnalytics import ResumeAnalytics
 
 app = Flask(__name__)
 
+# === Configuration ===
 UPLOAD_FOLDER = 'uploads'
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
+ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt', 'doc', 'jpeg', 'jpg', 'png', 'webp'}
+
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # Max 16MB
 
-ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt', 'doc', 'jpeg', 'jpg', 'png', 'webp'}
+# Create uploads directory if it doesn't exist
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
+# === Global Variables ===
+analytics = ResumeAnalytics()
+shared_data = {}  # For sharing state between routes
+
+# === Helper Function ===
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-analytics = ResumeAnalytics()  # Instantiate your analytics object
-
+# === Routes ===
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
-    resume_filename = None
-    jd_filename = None
+    resume_filename = jd_filename = None
     show_dashboard = False
 
-    # Default values
     ats_score = rrs_score = rfs_score = None
     total_ats_score = breakdown = None
     resume_components = {}
@@ -34,7 +38,6 @@ def dashboard():
     if request.method == 'POST':
         resume = request.files.get('resume')
         jd = request.files.get('jd')
-
         resume_path = jd_path = None
 
         if resume and allowed_file(resume.filename):
@@ -47,7 +50,7 @@ def dashboard():
             jd_path = os.path.join(app.config['UPLOAD_FOLDER'], jd_filename)
             jd.save(jd_path)
 
-        # === Resume Relevance + Role Fit + ATS + Recommendations ===
+        # === Resume Analysis ===
         result = analytics.resumeanalytics(resume_path, jd_path)
         if result is None:
             return render_template('DASHBOARD.html', error="Error in analysis. Please try again.")
@@ -55,10 +58,21 @@ def dashboard():
         ats_score = result.get('ATS_SCORE')
         rrs_score = result.get('RESUME_RELEVANCE_SCORE')
         rfs_score = result.get('ROLE_FIT_SCORE')
-        missing_keywords = len(result.get('MISSING_KEYWORDS', []))
-        missing_skills = len(result.get('MISSING_SKILLS', []))
         resume_tips = result.get('RESUME_TIPS', [])
         course_recommendations = result.get('COURSE_RECOMMENDATIONS', {})
+
+        # Extract missing skills/keywords
+        missing_keywordslist = result.get('MISSING_KEYWORDS', [])
+        missing_skillslist = result.get('MISSING_SKILLS', [])
+        missing_keywords = len(missing_keywordslist)
+        missing_skills = len(missing_skillslist)
+
+        # Store in shared_data
+        shared_data['missing_keywords'] = missing_keywordslist
+        shared_data['missing_skills'] = missing_skillslist
+
+        print("[DEBUG] Missing Keywords:", missing_keywordslist)
+        print("[DEBUG] Missing Skills:", missing_skillslist)
 
         # === ATS Analysis ===
         atsresult = analytics.ATSanalytics(resume_path)
@@ -89,30 +103,23 @@ def dashboard():
 
     return render_template('DASHBOARD.html', show_dashboard=False)
 
+
 @app.route('/chatbot', methods=['POST'])
 def chatbot_route():
     data = request.get_json()
     query = data.get("query", "")
-    response = analytics.chatbot(Query=query)  # Fixed: use the instance
+    response = analytics.chatbot(Query=query)
     return jsonify({"response": response})
+
 
 @app.route('/course-recommendations')
 def show_course_recommendations():
-    missing_technical_skills = [
-        "Python (Advanced)",
-        "TensorFlow",
-        "PyTorch",
-        "Natural Language Processing",
-        "Computer Vision"
-    ]
+    missing_technical_skills = shared_data.get('missing_keywords', [])
+    missing_soft_skills = shared_data.get('missing_skills', [])
 
-    missing_soft_skills = [
-        "Technical Leadership",
-        "Stakeholder Management",
-        "Agile Methodology",
-        "Project Planning"
-    ]
-
+    if not missing_technical_skills and not missing_soft_skills:
+        print("[WARNING] No missing skills or keywords found in shared_data.")
+    
     role_matches = {
         "Data Scientist": 92,
         "Machine Learning Engineer": 89,
@@ -127,5 +134,7 @@ def show_course_recommendations():
         role_matches=role_matches
     )
 
+
+# === Run App ===
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
