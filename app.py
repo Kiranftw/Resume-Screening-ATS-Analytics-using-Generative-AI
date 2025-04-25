@@ -115,7 +115,7 @@ def chatbot_route():
     return jsonify({"response": response})
 
 
-@app.route('/course-recommendations')
+@app.route('/resume-insights')
 def show_course_recommendations():
     # Fetching data from shared_data dictionary
     missing_technical_skills = shared_data.get('missing_keywords', [])
@@ -148,7 +148,13 @@ def show_course_recommendations():
         resume_tips=resume_tips_html
     )
 
+@app.route('/course-recommendations')
+def courseRecommendations():
+    return render_template('Course recommendations.html')
 
+@app.route('/')
+def landing_page():
+    return render_template('Landing Page.html')
 # === Run App ===
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)
