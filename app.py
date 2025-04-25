@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import os
 from werkzeug.utils import secure_filename
 from ResumeAnalytics import ResumeAnalytics
-
+import markdown
 app = Flask(__name__)
 
 # === Configuration ===
@@ -51,6 +51,7 @@ def dashboard():
             jd.save(jd_path)
 
         # === Resume Analysis ===
+# === Resume Analysis ===
         result = analytics.resumeanalytics(resume_path, jd_path)
         if result is None:
             return render_template('DASHBOARD.html', error="Error in analysis. Please try again.")
@@ -61,7 +62,6 @@ def dashboard():
         resume_tips = result.get('RESUME_TIPS', [])
         course_recommendations = result.get('COURSE_RECOMMENDATIONS', {})
 
-        # Extract missing skills/keywords
         missing_keywordslist = result.get('MISSING_KEYWORDS', [])
         missing_skillslist = result.get('MISSING_SKILLS', [])
         missing_keywords = len(missing_keywordslist)
@@ -70,9 +70,11 @@ def dashboard():
         # Store in shared_data
         shared_data['missing_keywords'] = missing_keywordslist
         shared_data['missing_skills'] = missing_skillslist
+        shared_data['resume_tips'] = resume_tips  # <<=== ✨ ADD THIS LINE ✨
 
         print("[DEBUG] Missing Keywords:", missing_keywordslist)
         print("[DEBUG] Missing Skills:", missing_skillslist)
+        print("[DEBUG] Resume Tips:", resume_tips)  # <<=== (Optional) Print to debug
 
         # === ATS Analysis ===
         atsresult = analytics.ATSanalytics(resume_path)
@@ -83,6 +85,7 @@ def dashboard():
         ats_score_data = atsresult.get('ATS Score', {})
         total_ats_score = ats_score_data.get('Total Score')
         breakdown = ats_score_data.get('Breakdown', {})
+        shared_data['ats_tips'] = atsresult.get('Recommendations', []) 
 
         show_dashboard = True
 
@@ -114,27 +117,38 @@ def chatbot_route():
 
 @app.route('/course-recommendations')
 def show_course_recommendations():
+    # Fetching data from shared_data dictionary
     missing_technical_skills = shared_data.get('missing_keywords', [])
     missing_soft_skills = shared_data.get('missing_skills', [])
+    resume_tips = shared_data.get('resume_tips', [])
 
+    # Warning if no skills found
     if not missing_technical_skills and not missing_soft_skills:
         print("[WARNING] No missing skills or keywords found in shared_data.")
-    
+
+    # Static role matches
     role_matches = {
         "Data Scientist": 92,
         "Machine Learning Engineer": 89,
         "AI Research Engineer": 87,
         "Data Engineer": 85
     }
+    resume_tips = shared_data.get('resume_tips', []) + shared_data.get('ats_tips', [])
+    import random
+    random.shuffle(resume_tips)
+    resume_tips_html = [markdown.markdown(tip) for tip in resume_tips]
 
+    
+    # Render the course_recommendations.html page with data
     return render_template(
         'course_recommendations.html',
         missing_technical_skills=missing_technical_skills,
         missing_soft_skills=missing_soft_skills,
-        role_matches=role_matches
+        role_matches=role_matches,
+        resume_tips=resume_tips_html
     )
 
 
 # === Run App ===
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=8000)

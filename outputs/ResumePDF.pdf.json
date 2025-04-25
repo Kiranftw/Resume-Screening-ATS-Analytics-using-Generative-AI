@@ -12,424 +12,330 @@
         "Statistics",
         "Data Analysis",
         "Data Cleaning",
-        "Feature Engineering",
-        "TensorFlow",
-        "Communication",
-        "Problem Solving",
+        "Data Preparation",
         "Data Visualization",
-        "APIs",
-        "Data Exploration",
-        "Hypothesis Testing",
         "Algorithms",
-        "Data Driven",
-        "Modeling",
-        "Data Integrity",
+        "Data Manipulation",
+        "TensorFlow",
+        "APIs",
         "Github",
         "Linear Regression",
         "Logistic Regression",
-        "K-Means",
-        "KNN",
-        "Scikit Learn",
-        "Pandas",
-        "Numpy",
-        "Matplotlib"
+        "Experimental Design",
+        "Hypothesis Testing"
     ],
     "MISSING_KEYWORDS": [
-        "R",
-        "NoSQL",
-        "PyTorch",
-        "Keras",
-        "XGBoost",
-        "Tableau",
-        "Power BI",
-        "Plotly",
+        "Predictive Models",
+        "Data Informed Strategies",
+        "EDA",
+        "Feature Engineering",
         "A/B Testing",
-        "Causal Inference Analysis",
+        "Causal Inference",
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Reinforcement Learning",
+        "Anomaly Detection",
+        "Optimization",
+        "Model Deployment",
         "MLOps",
         "Data Engineers",
         "Software Engineers",
-        "Product Managers",
         "Cloud Platforms",
-        "Big Data Technologies",
+        "AWS",
+        "Azure",
+        "GCP",
+        "SageMaker",
+        "Azure ML",
+        "Google AI Platform",
+        "MLflow",
+        "Kubeflow",
+        "Docker",
+        "CI/CD Pipelines",
+        "Tableau",
+        "Power BI",
+        "Looker",
         "Spark",
         "Hadoop",
         "Hive",
-        "Presto",
-        "Docker",
-        "CI/CD Pipelines"
+        "Presto"
     ],
     "MISSING_SKILLS": [
-        "Deep Learning",
-        "Model Deployment",
-        "Statistical Analysis",
-        "Experimental Design",
-        "Data wrangling",
-        "Regression",
-        "Classification",
-        "Clustering",
-        "Dimensionality Reduction",
-        "Ensemble Methods",
-        "Data Preprocessing",
-        "Azure",
-        "AWS",
-        "GCP"
+        "Predictive Modeling",
+        "Feature Engineering Pipelines",
+        "A/B Test Analysis",
+        "Causal Inference Analysis",
+        "Supervised Learning Techniques",
+        "Unsupervised Learning Techniques",
+        "Reinforcement Learning Techniques",
+        "Model Deployment Strategies",
+        "MLOps Practices",
+        "Cloud Platform Management (AWS, Azure, GCP)",
+        "Big Data Technologies (Spark, Hadoop, Hive, Presto)"
     ],
     "RESUME_TIPS": [
-        "Add 'R' to your programming skills section.",
-        "Include 'Tableau' or 'Power BI' in your skills section to highlight data visualization capabilities.",
-        "Specify experience with 'A/B testing' in the experience section.",
-        "Mention experience with 'MLOps' tools and practices.",
-        "List specific cloud platforms (e.g., AWS, Azure, GCP) and related ML services used.",
-        "Detail experience with big data technologies like 'Spark' or 'Hadoop'.",
-        "Add 'Docker' and 'CI/CD Pipelines' to your skills to showcase MLOps knowledge.",
-        "Quantify results in project descriptions to demonstrate impact (e.g., 'Improved model accuracy by X%').",
-        "Explicitly state experience with statistical analysis techniques.",
-        "Incorporate missing keywords naturally into the resume's experience and project descriptions to improve ATS alignment."
+        "Emphasize your experience with **predictive modeling** to directly align with the job description’s requirements, showcase specific projects where you developed and implemented such models using specific data science methods.",
+        "Include examples of your experience in building **feature engineering pipelines** to highlight your ability to prepare data for modeling, detailing the tools and techniques used to clean, transform, and engineer features.",
+        "Add details about your experience with **A/B testing** and the analysis of results to demonstrate your proficiency in experimental design and statistical validation, specifically mentioning any tools used such as Python or R.",
+        "Incorporate projects or experiences related to **causal inference analysis** to show your understanding of identifying the true impact of interventions and the statistical methods you employed for robust results.",
+        "Highlight your hands-on experience with **supervised, unsupervised, and reinforcement learning** techniques by providing use cases or projects where you applied these methods to solve real-world problems.",
+        "Describe your proficiency in **model deployment strategies** and your involvement in transitioning models from development to production environments, including any challenges faced and solutions implemented.",
+        "Detail your knowledge and application of **MLOps practices** to illustrate your understanding of the processes and tools required for scalable and reproducible machine learning pipelines, such as MLflow or Kubeflow.",
+        "Showcase your experience with **cloud platform management** (AWS, Azure, GCP) and related ML services (SageMaker, Azure ML, Google AI Platform) to align with the preferred qualifications of the job description.",
+        "Mention your experience with **big data technologies** like Spark, Hadoop, Hive, and Presto to demonstrate your ability to handle and process large datasets, highlighting specific projects and outcomes.",
+        "Provide links to relevant projects in your GitHub portfolio that demonstrate your skills in the required technologies, make sure the projects related to data science and software dev related"
     ],
     "COURSE_RECOMMENDATIONS": {
-        "R": [
+        "Predictive Modeling": [
             {
-                "COURSE_NAME": "Data Science and Machine Learning Bootcamp with R",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Comprehensive course covering R programming, data analysis, and machine learning techniques. Includes hands-on projects and real-world examples.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/data-science-and-machine-learning-bootcamp-with-r/"
-            },
-            {
-                "COURSE_NAME": "R Programming A-Z™: R For Data Science With Real Exercises!",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn R programming and data science through real-world exercises. Covers data manipulation, visualization, and statistical analysis.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/r-programming-a-z-r-for-data-science-with-real-exercises/"
-            },
-            {
-                "COURSE_NAME": "Data Analysis with R",
+                "COURSE_NAME": "Advanced Predictive Modeling Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to analyze data and create reproducible research reports using R.",
+                "DESCRIPTION": "This specialization covers advanced techniques in predictive modeling, including time series analysis, survival analysis, and machine learning models for prediction.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/specializations/advanced-predictive-modeling"
+            },
+            {
+                "COURSE_NAME": "Predictive Analytics Using Python",
+                "PLATFORM": "DataCamp",
+                "DESCRIPTION": "Learn how to build predictive models using Python, covering techniques like regression, classification, and model evaluation.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/data-analysis-with-r"
+                "COURSE_LINK": "https://www.datacamp.com/courses/predictive-analytics-using-python"
+            },
+            {
+                "COURSE_NAME": "Machine Learning A-Z: Hands-On Python & R In Data Science",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Comprehensive course covering machine learning algorithms, including predictive modeling techniques, with hands-on projects in Python and R.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/machinelearning/"
             }
         ],
-        "Model Deployment": [
+        "Feature Engineering Pipelines": [
+            {
+                "COURSE_NAME": "Feature Engineering for Machine Learning",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to create, select, and transform features for machine learning models to improve their performance.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/feature-engineering"
+            },
+            {
+                "COURSE_NAME": "Practical Feature Engineering",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "A hands-on course focused on practical feature engineering techniques for improving the accuracy and robustness of machine learning models.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/practical-feature-engineering/"
+            },
+            {
+                "COURSE_NAME": "Advanced Feature Engineering",
+                "PLATFORM": "Kaggle Learn",
+                "DESCRIPTION": "Dive deep into the world of feature engineering with this advanced course. Cover the ways to make new feature and etc",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.kaggle.com/learn/feature-engineering"
+            }
+        ],
+        "A/B Test Analysis": [
+            {
+                "COURSE_NAME": "A/B Testing Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to design, run, and analyze A/B tests to improve product performance and user experience.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/ab-testing"
+            },
+            {
+                "COURSE_NAME": "A/B Testing: From Hypothesis to Launch",
+                "PLATFORM": "Udacity",
+                "DESCRIPTION": "This course covers the end-to-end process of A/B testing, from forming hypotheses to launching successful experiments.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udacity.com/course/ab-testing--ud257"
+            },
+            {
+                "COURSE_NAME": "Experimentation and Testing",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn the basics of experimentation and A/B Testing",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/experimentation-testing"
+            }
+        ],
+        "Causal Inference Analysis": [
+            {
+                "COURSE_NAME": "Causal Inference",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn the fundamentals of causal inference, including potential outcomes, causal graphs, and identification strategies.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/causal-inference"
+            },
+            {
+                "COURSE_NAME": "Causal Inference: The Mixtape",
+                "PLATFORM": "Online (Scott Cunningham)",
+                "DESCRIPTION": "A free online book and resources covering various aspects of causal inference, from basic concepts to advanced techniques.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://mixtape.scunning.com/"
+            },
+            {
+                "COURSE_NAME": "Causal Inference with Python",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the various skills to be able to implement different machine learning models",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/causal-inference-with-python/"
+            }
+        ],
+        "Supervised Learning Techniques": [
+            {
+                "COURSE_NAME": "Supervised Machine Learning: Regression and Classification",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the fundamental concepts and algorithms of supervised learning, including regression and classification techniques.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/machine-learning"
+            },
+            {
+                "COURSE_NAME": "Applied Machine Learning in Python",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "An intermediate level course where you will learn and apply common supervised learning techniques",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/python-machine-learning"
+            },
+            {
+                "COURSE_NAME": "Supervised Learning Capstone",
+                "PLATFORM": "Udacity",
+                "DESCRIPTION": "A capstone to test your previous knowledge",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.udacity.com/course/supervised-learning-capstone--nd009"
+            }
+        ],
+        "Unsupervised Learning Techniques": [
+            {
+                "COURSE_NAME": "Unsupervised Learning in Python",
+                "PLATFORM": "DataCamp",
+                "DESCRIPTION": "Learn about clustering, and dimensionality reduction, including some popular machine learning algorithms for the task",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.datacamp.com/courses/unsupervised-learning-in-python"
+            },
+            {
+                "COURSE_NAME": "Advanced Machine Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization covers many advanced topics and also the different methods in machine learning",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/specializations/aml"
+            },
+            {
+                "COURSE_NAME": "Unsupervised Learning and Recommenders",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Covers all the details of unsupervised learning and the applications",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/unsupervised-learning-recommenders"
+            }
+        ],
+        "Reinforcement Learning Techniques": [
+            {
+                "COURSE_NAME": "Reinforcement Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn about the foundations and application of reinforcement learning",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/reinforcement-learning"
+            },
+            {
+                "COURSE_NAME": "Reinforcement Learning",
+                "PLATFORM": "Udacity",
+                "DESCRIPTION": "Master the skills to make an intelligent agent through reinforcement learning methods",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udacity.com/course/reinforcement-learning--ud600"
+            },
+            {
+                "COURSE_NAME": "Deep Reinforcement Learning",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Covers the skills to build complex AI models",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.udemy.com/course/deep-reinforcement-learning-in-python/"
+            }
+        ],
+        "Model Deployment Strategies": [
             {
                 "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to deploy, monitor, and maintain machine learning models in production environments.",
-                "DIFFICULTY": "Intermediate",
+                "DESCRIPTION": "Learn how to deploy, monitor, and maintain machine learning models in production environments.",
+                "DIFFICULTY": "Advanced",
                 "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
             },
             {
                 "COURSE_NAME": "Deploying Machine Learning Models",
                 "PLATFORM": "Udacity",
-                "DESCRIPTION": "Learn the best practices for deploying machine learning models to the cloud.",
+                "DESCRIPTION": "You will gain the skills on deploying machine learning models",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udacity.com/course/deploying-machine-learning-models--nd339"
+            },
+            {
+                "COURSE_NAME": "Machine Learning Deployment",
+                "PLATFORM": "DataCamp",
+                "DESCRIPTION": "Dive into deploying machine learning models in this in depth course",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.udacity.com/course/deploying-machine-learning-models--nd0821"
+                "COURSE_LINK": "https://www.datacamp.com/courses/machine-learning-deployment-with-python"
+            }
+        ],
+        "MLOps Practices": [
+            {
+                "COURSE_NAME": "MLOps (Machine Learning Operations) Fundamentals",
+                "PLATFORM": "Google Cloud Training",
+                "DESCRIPTION": "You will learn the fundamentals of MLOps",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://cloud.google.com/training/machine-learning/mlops"
             },
             {
                 "COURSE_NAME": "MLOps: Continuous Delivery and Automation Pipelines in Machine Learning",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Automate the machine learning lifecycle with continuous delivery and automation pipelines.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/mlops-continuous-delivery-machine-learning"
-            }
-        ],
-        "Statistical Analysis": [
-            {
-                "COURSE_NAME": "Statistics with Python Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Gain a strong foundation in statistics and data analysis using Python.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/statistics-with-python"
-            },
-            {
-                "COURSE_NAME": "Statistical Thinking for Data Science and Analytics",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn fundamental statistical concepts and their application to data science.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/course/statistical-thinking-for-data-science-and-analytics"
-            },
-            {
-                "COURSE_NAME": "Business Statistics and Analysis Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Apply statistical methods to solve real-world business problems and make data-driven decisions.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/business-statistics"
-            }
-        ],
-        "Experimental Design": [
-            {
-                "COURSE_NAME": "A/B Testing Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Master the principles and practices of A/B testing for data-driven decision making.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/ab-testing"
-            },
-            {
-                "COURSE_NAME": "Experimentation and Testing for Business Decisions",
-                "PLATFORM": "Udacity",
-                "DESCRIPTION": "Learn how to design, conduct, and analyze experiments to improve business outcomes.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udacity.com/course/experimentation-testing-business-decisions--ud257"
-            },
-            {
-                "COURSE_NAME": "Causal Inference",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn about causal inference and design of experiments.",
+                "DESCRIPTION": "Learn how to automate your machine learning pipeline",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/course/causal-inference"
+                "COURSE_LINK": "https://www.coursera.org/learn/mlops-continuous-delivery-machine-learning-pipelines"
+            },
+            {
+                "COURSE_NAME": "MLOps Engineering",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "In this course you will build a MLOps pipeline",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/mlops-engineering/"
             }
         ],
-        "Data wrangling": [
-            {
-                "COURSE_NAME": "Data Wrangling with Python",
-                "PLATFORM": "Udacity",
-                "DESCRIPTION": "Learn how to gather, assess, clean, and analyze data using Python.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udacity.com/course/data-wrangling-with-python--ud880"
-            },
-            {
-                "COURSE_NAME": "Cleaning Data in Python",
-                "PLATFORM": "DataCamp",
-                "DESCRIPTION": "Learn data cleaning techniques and best practices with Python.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.datacamp.com/courses/cleaning-data-in-python"
-            },
-            {
-                "COURSE_NAME": "Data Manipulation with Pandas",
-                "PLATFORM": "DataCamp",
-                "DESCRIPTION": "Master the use of Pandas for data manipulation and analysis.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.datacamp.com/courses/manipulating-dataframes-with-pandas"
-            }
-        ],
-        "Regression": [
-            {
-                "COURSE_NAME": "Regression Models",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about regression analysis and its applications.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/regression-models"
-            },
-            {
-                "COURSE_NAME": "Multiple Linear Regression in Python",
-                "PLATFORM": "DataCamp",
-                "DESCRIPTION": "Learn multiple linear regression in Python.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.datacamp.com/community/tutorials/multiple-linear-regression-in-python"
-            },
-            {
-                "COURSE_NAME": "Linear Regression and Modeling",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "A-Z guide on linear regression and modeling",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/linear-regression-and-modeling/"
-            }
-        ],
-        "Classification": [
-            {
-                "COURSE_NAME": "Classification Models",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about Classification analysis and its applications.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/classification-models"
-            },
-            {
-                "COURSE_NAME": "Machine Learning with Python: Classification",
-                "PLATFORM": "DataCamp",
-                "DESCRIPTION": "Learn about Classification with Python.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.datacamp.com/courses/supervised-learning-with-scikit-learn"
-            },
-            {
-                "COURSE_NAME": "Classification Masterclass",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Master the different type classification.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/classification-models/"
-            }
-        ],
-        "Clustering": [
-            {
-                "COURSE_NAME": "Cluster Analysis in Data Mining",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about Clustering analysis and its applications.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/cluster-analysis"
-            },
-            {
-                "COURSE_NAME": "Mastering K-Means Clustering and Applications in Python",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn about K-Means Clustering with Python.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/mastering-k-means-clustering-and-applications-in-python/"
-            },
-            {
-                "COURSE_NAME": "Clustering Techniques",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Master Clustering Techniques.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/clustering-techniques/"
-            }
-        ],
-        "Dimensionality Reduction": [
-            {
-                "COURSE_NAME": "Principal Component Analysis (PCA)",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn Principal Component Analysis (PCA)",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/principal-component-analysis/"
-            },
-            {
-                "COURSE_NAME": "Dimensionality Reduction",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about Dimensionality Reduction analysis and its applications.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/data-mining"
-            },
-            {
-                "COURSE_NAME": "Dimensionality Reduction in Python",
-                "PLATFORM": "DataCamp",
-                "DESCRIPTION": "Learn about Dimensionality Reduction with Python.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.datacamp.com/courses/dimensionality-reduction-in-python"
-            }
-        ],
-        "Ensemble Methods": [
-            {
-                "COURSE_NAME": "Ensemble Machine Learning in Python",
-                "PLATFORM": "DataCamp",
-                "DESCRIPTION": "Learn about Ensemble Machine Learning in Python.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.datacamp.com/courses/ensemble-methods-in-python"
-            },
-            {
-                "COURSE_NAME": "Advanced Machine Learning",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about Advanced Machine Learning.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/aml"
-            },
-            {
-                "COURSE_NAME": "Ensemble Methods",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn about Ensemble Methods.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/a-z-ensemble-machine-learning/"
-            }
-        ],
-        "Data Preprocessing": [
-            {
-                "COURSE_NAME": "Data Preprocessing with scikit-learn",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn Data Preprocessing with scikit-learn.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/data-preprocessing-with-scikit-learn/"
-            },
-            {
-                "COURSE_NAME": "Feature Engineering for Machine Learning",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn Feature Engineering for Machine Learning.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/feature-engineering"
-            },
-            {
-                "COURSE_NAME": "Data Preprocessing",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn about Data Preprocessing.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/complete-guide-to-data-preprocessing/"
-            }
-        ],
-        "Azure": [
-            {
-                "COURSE_NAME": "Microsoft Azure Machine Learning",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about Microsoft Azure Machine Learning.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/professional-certificates/azure-machine-learning"
-            },
-            {
-                "COURSE_NAME": "AI-900: Microsoft Azure AI Fundamentals",
-                "PLATFORM": "Microsoft",
-                "DESCRIPTION": "Learn AI fundamentals with Azure.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://learn.microsoft.com/en-us/training/paths/ai-900-describe-ai-concepts-azure-services/"
-            },
-            {
-                "COURSE_NAME": "Azure for Data Scientists",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn how to use Azure for Data Science.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/azure-for-data-scientists/"
-            }
-        ],
-        "AWS": [
+        "Cloud Platform Management (AWS, Azure, GCP)": [
             {
                 "COURSE_NAME": "AWS Certified Machine Learning - Specialty",
-                "PLATFORM": "AWS",
-                "DESCRIPTION": "Learn about AWS Certified Machine Learning",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://aws.amazon.com/certification/certified-machine-learning-specialty/"
+                "PLATFORM": "AWS Training and Certification",
+                "DESCRIPTION": "You will learn the specific AWS technologies and concepts",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://aws.amazon.com/training/certification/"
             },
             {
-                "COURSE_NAME": "Machine Learning with AWS",
+                "COURSE_NAME": "Microsoft Azure AI Fundamentals",
+                "PLATFORM": "Microsoft Learn",
+                "DESCRIPTION": "Learn the fundamentals of the azure AI",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://learn.microsoft.com/en-us/training/paths/azure-ai-fundamentals/"
+            },
+            {
+                "COURSE_NAME": "Google Cloud Machine Learning Engineer Professional Certificate",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to use AWS for Machine Learning.",
+                "DESCRIPTION": "Build production models for Google Cloud and learn how to use the various technologies",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/aws-machine-learning"
-            },
-            {
-                "COURSE_NAME": "AWS AI Services",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn AWS AI Services",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/aws-ai-services/"
+                "COURSE_LINK": "https://www.coursera.org/professional-certificates/gcp-machine-learning-engineer"
             }
         ],
-        "GCP": [
+        "Big Data Technologies (Spark, Hadoop, Hive, Presto)": [
             {
-                "COURSE_NAME": "Google Cloud Machine Learning",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about Google Cloud Machine Learning",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-tensorflow-gcp"
-            },
-            {
-                "COURSE_NAME": "GCP Data Science",
+                "COURSE_NAME": "Spark and Hadoop Developer in Python",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn about GCP Data Science",
+                "DESCRIPTION": "Learn how to use Spark, Hadoop and other big data tools",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/gcp-data-science/"
+                "COURSE_LINK": "https://www.udemy.com/course/spark-and-hadoop-developer-in-python/"
             },
             {
-                "COURSE_NAME": "GCP Machine Learning",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn about GCP Machine Learning",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/google-cloud-platform-machine-learning-and-artificial-intelligence/"
-            }
-        ],
-        "Deep Learning": [
-            {
-                "COURSE_NAME": "Deep Learning Specialization",
+                "COURSE_NAME": "Big Data Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Master the fundamentals of deep learning.",
+                "DESCRIPTION": "Learn the essential concepts and technologies for big data",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/deep-learning"
+                "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
             },
             {
-                "COURSE_NAME": "TensorFlow Developer Professional Certificate",
+                "COURSE_NAME": "Data Warehousing with Google BigQuery",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Become a TensorFlow expert.",
+                "DESCRIPTION": "Covers BigQuery and data warehousing",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/professional-certificates/tensorflow-in-practice"
-            },
-            {
-                "COURSE_NAME": "PyTorch for Deep Learning",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn deep learning with PyTorch.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/pytorch-for-deep-learning/"
+                "COURSE_LINK": "https://www.coursera.org/professional-certificates/gcp-data-warehousing"
             }
         ]
     }

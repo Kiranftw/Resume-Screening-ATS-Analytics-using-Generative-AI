@@ -320,6 +320,7 @@ class ResumeAnalytics(object):
                     "...",
                     "...",
                     "7 recommendations"
+                    - Ensure that each point is big like 2 lines and also highlight the main keywords with bold ** here i will use markdown formar in web app
                 ]
             }}
             """

@@ -140,69 +140,79 @@
             box-shadow: var(--shadow-sm);
         }
 
-        .course-card {
-            grid-column: span 2;
-        }
-
-        .course-item {
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
+        /* Resume Improvement Recommendations Styles */
+        .recommendation-card {
             background-color: white;
             border-radius: var(--radius-lg);
+            padding: 1.5rem;
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
         }
 
-        .course-header {
+        .recommendation-items {
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .recommendation-item {
             display: flex;
-            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #f8fafc;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .recommendation-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .recommendation-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 32px;
+            height: 32px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .recommendation-content {
+            flex: 1;
+        }
+
+        .recommendation-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
             margin-bottom: 0.5rem;
         }
 
-        .course-name {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        .course-platform {
-            font-size: 0.9rem;
+        .recommendation-description {
             color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
-        .course-difficulty {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background-color: #e0e7ff;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: #4338ca;
-        }
+        /* Make sure this works well on mobile */
+        @media (max-width: 768px) {
+            .recommendation-item {
+                flex-direction: column;
+            }
 
-        .course-description {
-            margin: 1rem 0;
-            color: var(--text-dark);
-        }
-
-        .course-link {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: var(--radius-md);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .course-link:hover {
-            background-color: var(--primary-hover);
-        }
-
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
+            .recommendation-number {
+                margin-bottom: 0.5rem;
+                margin-right: 0;
+            }
         }
 
         .copy-btn {
@@ -247,6 +257,20 @@
         .action-btn.secondary:hover {
             background-color: #f1f5f9;
         }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
 
         /* Sidebar navigation styles */
         .sidebar-nav {
@@ -490,7 +514,7 @@
                 <button class="logout-btn">Logout</button>
             </div>
 
-            <h2 class="section-title">Course Recommendations</h2>
+            <h2 class="section-title">Resume Insights</h2>
 
             <div class="grid">
 
@@ -544,57 +568,29 @@
 
             </div>
 
-
-
-            <div class="card course-card">
-                <h3 class="card-title">Recommended Courses to Improve Your Skills</h3>
-
-                <div class="course-item">
-                    <div class="course-header">
-                        <span class="course-name">AI Agents: Building Autonomous AI Systems</span>
-                        <span class="course-platform">Coursera</span>
+            <!-- Resume Improvement Recommendations -->
+            <div class="card recommendation-card">
+                <h3 class="card-title">Resume Improvement Recommendations</h3>
+                <div class="recommendation-items">
+                    {% if resume_tips %}
+                    {% for tip in resume_tips %}
+                    <div class="recommendation-item">
+                        <div class="recommendation-number">{{ loop.index }}</div>
+                        <div class="recommendation-content">
+                            <!-- Render the markdown converted HTML with the safe filter -->
+                            <p>{{ tip|safe }}</p>
+                            <p class="recommendation-description">{{ tip.description }}</p>
+                        </div>
                     </div>
-                    <span class="course-difficulty">Intermediate</span>
-                    <p class="course-description">
-                        Learn the principles of designing and building autonomous AI agents using modern machine
-                        learning techniques and architectures. This course covers everything from basic agent design to
-                        advanced deployment strategies.
-                    </p>
-                    <a href="https://www.coursera.com/courses?query=aicourseagents" target="_blank"
-                        class="course-link">View Course</a>
-                </div>
-
-                <div class="course-item">
-                    <div class="course-header">
-                        <span class="course-name">Building and Deploying AI Agents</span>
-                        <span class="course-platform">Udemy</span>
-                    </div>
-                    <span class="course-difficulty">Intermediate</span>
-
-                    <p class="course-description">
-                        A comprehensive guide to constructing, testing, and deploying AI agents for real-world
-                        applications with a focus on practical implementation. Includes hands-on projects with
-                        TensorFlow and PyTorch.
-                    </p>
-                    <a href="https://www.udemy.com/courses/search/?q=aicourseagentdesign" target="_blank"
-                        class="course-link">View Course</a>
-                </div>
-
-                <div class="course-item">
-                    <div class="course-header">
-                        <span class="course-name">Advanced Python for AI Applications</span>
-                        <span class="course-platform">edX</span>
-                    </div>
-                    <span class="course-difficulty">Advanced</span>
-                    <p class="course-description">
-                        Master advanced Python concepts specifically tailored for AI and machine learning applications.
-                        Covers optimization techniques, multiprocessing, and efficient data handling for large-scale AI
-                        systems.
-                    </p>
-                    <a href="https://www.edx.org/course/advanced-python-for-ai" target="_blank" class="course-link">View
-                        Course</a>
+                    {% endfor %}
+                    {% else %}
+                    <p style="text-align:center; font-weight:600; color: #4b5563;">No specific recommendations
+                        available.
+                        Great job! 🎉</p>
+                    {% endif %}
                 </div>
             </div>
+
             <script>
                 function copyToClipboard(elementId) {
                     const element = document.getElementById(elementId);
@@ -675,11 +671,12 @@
                     }
                 }
             </script>
-
-            <div class="action-buttons">
-                <button class="action-btn secondary">Generate Cover Letter</button>
-                <button class="action-btn">Find Matching Jobs</button>
+            <div class="recommendation-buttons" style="margin-top: 20px; text-align: center;">
+                <button class="btn-primary" style="margin: 5px;">Generate Cover Letter</button>
+                <button class="btn-primary" style="margin: 5px;">Find Matching Jobs</button>
             </div>
+
+
         </div>
     </div>
 </body>

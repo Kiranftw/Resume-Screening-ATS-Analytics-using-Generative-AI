@@ -21,34 +21,49 @@
                 "TensorFlow",
                 "ML",
                 "DS",
-                "Linear & Multilinear Regression",
+                "Linear Regression",
+                "Multilinear Regression",
                 "Data Cleaning",
                 "Data Preprocessing",
                 "Logistics Regression",
                 "Decision Trees",
                 "K Means",
-                "KNN",
-                "CAD/CAM",
-                "SOLID WORKS"
+                "KNN"
             ]
         },
         "Experience": [
             {
-                "Title": "Intern",
+                "Title": "ASSISTANT TOOL MAKER",
                 "Company": "Acme Tooling s",
                 "Duration": "Jan 2022 – June 2022",
-                "Description": "ASSISTANT TOOL MAKER CAD/CAM | SOLID WORKS Gained hands on experience in complex mould designs and development Worked with CAD/CAM and SolidWorks design software s to build intricate designs. contributed to the end to end development of mould' s from initial design through manufacturing and quality control"
+                "Description": "Gained hands on experience in complex mould designs and development Worked with CAD/CAM and SolidWorks design software s to build intricate designs. contributed to the end to end development of mould' s from initial design through manufacturing and quality control"
             },
             {
                 "Title": "Intern",
                 "Company": "InternPe",
                 "Duration": "Nov 2023 – Dec 2023",
-                "Description": "PYTHON | OOPS | DATA STRUCTURES Applied the OOPS & Data Structures concepts while developing games and applications Worked on some specific modules like NumPy, Pandas for Data Manipulation on the real world datasets from Kaggle"
+                "Description": "Applied the OOPS & Data Structures concepts while developing games and applications Worked on some specific modules like NumPy, Pandas for Data Manipulation on the real world datasets from Kaggle"
             }
         ],
         "Projects": [
-            "CV ANALYTICS DASHBOARD Python | Gemini API | GenAI Problem: Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply.",
-            "Conversation chatbot using API Python | Gemini API | GenAI Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
+            {
+                "Name": "CV ANALYTICS DASHBOARD",
+                "Description": "Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply.",
+                "Skills": [
+                    "Python",
+                    "Gemini API",
+                    "GenAI"
+                ]
+            },
+            {
+                "Name": "Conversation chatbot using API",
+                "Description": "Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data",
+                "Skills": [
+                    "Python",
+                    "Gemini API",
+                    "GenAI"
+                ]
+            }
         ],
         "Certifications": [
             "DSA PYTHON : By CampusX",
@@ -62,26 +77,26 @@
         ]
     },
     "ATS Score": {
-        "Total Score": 82,
+        "Total Score": 85,
         "Breakdown": {
             "Format Score": 10,
-            "Spelling & Grammar": 8,
+            "Spelling & Grammar": 9,
             "Summary": 10,
-            "Skills": 9,
+            "Skills": 8,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
-            "Education": 10,
-            "Contact Details": 5
+            "Education": 8,
+            "Contact Details": 10
         }
     },
     "Recommendations": [
-        "Add specific dates/years to education entries.",
-        "Expand on the summary/objective to clearly state career goals.",
-        "Quantify achievements in work experience using metrics.",
-        "Include action verbs at the beginning of each bullet point in the experience section.",
-        "Consider adding a 'Skills' section separate from programming languages and tools. ",
-        "Proofread for minor grammatical errors (e.g., 'mould's').",
-        "Add soft skills to the skill sections"
+        "While your resume includes several hard skills, actively identify and list **soft skills** relevant to the roles you're targeting; this can significantly enhance your profile's appeal to potential employers.",
+        "Although your resume is generally well-structured, consider adding a brief **professional summary** or objective statement to immediately capture the recruiter's attention and highlight your career goals.",
+        "In your education section, you can highlight **relevant coursework** to specific job roles or skills acquired that are directly applicable to positions you're applying for.",
+        "For each project and work experience listed, try to quantify your achievements with **specific numbers or data**; this helps recruiters understand the impact of your work more clearly.",
+        "Expand the descriptions of your **certifications** to include key skills or knowledge gained; this demonstrates the value and relevance of each certification.",
+        "The **Spelling and grammar** mistakes should be eliminated to increase the score.",
+        "Make sure all your data such as github and linkedin links are working and navigate to the correct webpage."
     ]
 }

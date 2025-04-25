@@ -24,8 +24,9 @@ FIRST
 
 5. *Resume Optimization Recommendations*  
    Provide exactly 10 actionable suggestions to improve the resume’s alignment with the job description.  
-   - Focus on enhancing keyword visibility, ATS compatibility, and clarity in skills, experience, and projects.  
+   - Focus on enhancing keyword visibility, ATS compatibility, and clarity in skills, experience, and projects.
    - Ensure recommendations are specific (e.g., "Add 'Docker' to the skills section" rather than "Add technical skills").
+   - Ensure that each point is big like 2 lines and also highlight the main keywords with bold ** here i will use markdown formar in web app
 
 6. *Course Recommendations for Missing Skills*  
    For each missing skill, recommend exactly 3 high-quality courses to address the gap. Each course must include:  
