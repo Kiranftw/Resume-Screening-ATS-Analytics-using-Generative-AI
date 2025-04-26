@@ -56,6 +56,8 @@
             flex: 1;
             padding: 2rem;
             background-color: var(--light-bg);
+            position: relative;
+            /* For positioning tooltips */
         }
 
         .header {
@@ -265,12 +267,68 @@
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
+            position: relative;
+            cursor: pointer;
         }
 
         .btn-primary:hover {
             background-color: #0056b3;
         }
 
+        /* Tooltip styles for cover letter preview */
+        .tooltip {
+            position: absolute;
+            display: none;
+            background-color: white;
+            border-radius: var(--radius-md);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1rem;
+            width: 350px;
+            z-index: 1000;
+            border: 1px solid var(--border-color);
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 0.9rem;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 10px;
+        }
+
+        .tooltip-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .tooltip-content {
+            line-height: 1.5;
+            color: var(--text-muted);
+        }
+
+        .tooltip-arrow {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid white;
+        }
+
+        .tooltip-footer {
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.8rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
 
         /* Sidebar navigation styles */
         .sidebar-nav {
@@ -357,7 +415,6 @@
             transition: width 0.3s ease;
         }
 
-
         .nav-icon {
             width: 20px;
             height: 20px;
@@ -432,7 +489,6 @@
             padding-top: 10px;
         }
 
-        /* Role match list styles */
         /* Role match list styles */
         .role-match-list {
             list-style: none;
@@ -679,9 +735,55 @@
                         console.error("Element with ID '" + elementId + "' not found.");
                     }
                 }
+
+                // Show and hide tooltips for cover letter preview
+                document.addEventListener('DOMContentLoaded', function () {
+                    const coverLetterBtn = document.getElementById('cover-letter-btn');
+                    const coverLetterTooltip = document.getElementById('cover-letter-tooltip');
+
+                    coverLetterBtn.addEventListener('mouseenter', function () {
+                        coverLetterTooltip.style.display = 'block';
+                    });
+
+                    coverLetterBtn.addEventListener('mouseleave', function () {
+                        coverLetterTooltip.style.display = 'none';
+                    });
+
+                    coverLetterBtn.addEventListener('click', function () {
+                        // This is where you'd handle the download functionality
+                        downloadCoverLetter();
+                    });
+                });
+
+                function downloadCoverLetter() {
+                    // This function would handle the AJAX request to get the cover letter from the backend
+                    // and trigger the download
+                    fetch('/api/download-cover-letter')
+                        .then(response => response.blob())
+                        .then(blob => {
+                            const url = window.URL.createObjectURL(blob);
+                            const a = document.createElement('a');
+                            a.style.display = 'none';
+                            a.href = url;
+                            a.download = 'cover_letter.docx';
+                            document.body.appendChild(a);
+                            a.click();
+                            window.URL.revokeObjectURL(url);
+                        })
+                        .catch(error => console.error('Error downloading cover letter:', error));
+                }
             </script>
-            <div class="recommendation-buttons" style="margin-top: 20px; text-align: center;">
-                <button class="btn-primary" style="margin: 5px;">Generate Cover Letter</button>
+            <div class="recommendation-buttons" style="margin-top: 20px; text-align: center; position: relative;">
+                <!-- Cover Letter Button with Tooltip -->
+                <button id="cover-letter-btn" class="btn-primary" style="margin: 5px;">Generate Cover Letter</button>
+                <div id="cover-letter-tooltip" class="tooltip">
+                    <div class="tooltip-title">Cover Letter Preview</div>
+                    <div class="tooltip-content">
+                        {{ cover_letter_preview|safe }}
+                    </div>
+                    <div class="tooltip-footer">Click button to download the full cover letter</div>
+                    <div class="tooltip-arrow"></div>
+                </div>
                 <button class="btn-primary" style="margin: 5px;">Find Matching Jobs</button>
             </div>
 

@@ -53,6 +53,11 @@ def dashboard():
         # === Resume Analysis ===
 # === Resume Analysis ===
         result = analytics.resumeanalytics(resume_path, jd_path)
+        if jd_path and resume_path:
+            cover_letter = analytics.getCoverLetter(resume_path, jd_path)
+            shared_data['cover_letter'] = cover_letter
+            # Store preview (first 150 characters + ellipsis)
+            shared_data['cover_letter_preview'] = cover_letter[:150] + "..." if len(cover_letter) > 150 else cover_letter
         if result is None:
             return render_template('DASHBOARD.html', error="Error in analysis. Please try again.")
 
@@ -120,7 +125,15 @@ def show_course_recommendations():
     missing_soft_skills = shared_data.get('missing_skills', [])
     resume_tips = shared_data.get('resume_tips', [])
     courseRecommendations = shared_data.get('course_recommendations', {})
-    print("[DEBUG] Course Recommendations:", courseRecommendations)  # <<=== (Optional) Print to debug
+
+    # Fetch cover letter preview first
+    cover_letter_preview = shared_data.get(
+        'cover_letter_preview',
+        'No cover letter available. Please upload resume and job description to generate one.'
+    )
+
+    print("[DEBUG] Course Recommendations:", courseRecommendations)
+    print("[DEBUG] Cover Letter Preview:", cover_letter_preview)
 
     # Static role matches
     role_matches = {
@@ -129,20 +142,22 @@ def show_course_recommendations():
         "AI Research Engineer": 87,
         "Data Engineer": 85
     }
+    
     resume_tips = shared_data.get('resume_tips', []) + shared_data.get('ats_tips', [])
     import random
     random.shuffle(resume_tips)
     resume_tips_html = [markdown.markdown(tip) for tip in resume_tips]
 
-    
-    # Render the course_recommendations.html page with data
+    # Render the page
     return render_template(
         'course_recommendations.html',
         missing_technical_skills=missing_technical_skills,
         missing_soft_skills=missing_soft_skills,
         role_matches=role_matches,
-        resume_tips=resume_tips_html
+        resume_tips=resume_tips_html,
+        cover_letter_preview=cover_letter_preview
     )
+
 
 @app.route('/course-recommendations')
 def courseRecommendations():
