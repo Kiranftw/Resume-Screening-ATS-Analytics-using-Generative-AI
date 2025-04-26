@@ -1,305 +1,310 @@
 {
-    "RESUME_RELEVANCE_SCORE": 60,
-    "ROLE_FIT_SCORE": 65,
-    "ATS_SCORE": 70,
-    "KEYWORD_MATCH_SCORE": 62,
+    "RESUME_RELEVANCE_SCORE": 55,
+    "ROLE_FIT_SCORE": 50,
+    "ATS_SCORE": 60,
+    "KEYWORD_MATCH_SCORE": 55,
     "MATCHED_KEYWORDS": [
-        "Data Science",
         "Python",
-        "SQL",
-        "Machine Learning",
-        "Statistics",
-        "Data Analysis",
-        "Data Cleaning",
-        "Feature Engineering",
-        "Data Visualization",
-        "Databases",
-        "Programming",
-        "Algorithms",
-        "Models",
-        "Experiment",
-        "testing",
-        "Engineering"
+        "APIs",
+        "Data extraction",
+        "debugging"
     ],
     "MISSING_KEYWORDS": [
-        "A/B tests",
-        "Causal inference",
-        "Supervised Learning",
-        "Unsupervised Learning",
-        "Reinforcement Learning",
-        "TensorFlow",
-        "PyTorch",
-        "Keras",
-        "XGBoost",
-        "MLOps",
-        "MLflow",
-        "Kubeflow",
-        "Docker",
-        "CI/CD pipelines",
-        "Tableau",
-        "Power BI",
-        "Looker",
-        "Cloud Platforms",
-        "AWS",
-        "Azure",
-        "GCP",
-        "SageMaker",
-        "Azure ML",
-        "Google AI Platform"
+        "LangChain",
+        "LLMs",
+        "LCEL",
+        "RAG",
+        "Vector databases",
+        "Document loaders",
+        "Prompt Engineering",
+        "Memory Management",
+        "Tool Integration",
+        "Callbacks",
+        "Evaluation",
+        "Testing",
+        "Chains",
+        "Agents",
+        "Tools",
+        "Retrieval",
+        "Memory"
     ],
     "MISSING_SKILLS": [
-        "A/B Testing",
-        "Causal Inference Analysis",
-        "Supervised Learning Techniques",
-        "Unsupervised Learning Techniques",
-        "Reinforcement Learning Techniques",
-        "MLOps Practices",
-        "ML Model Deployment",
-        "Big Data Technologies (Spark, Hadoop, Hive, Presto)",
-        "Cloud Platform Expertise (AWS, Azure, GCP)",
-        "Data Visualization Tools (Tableau, Power BI, Looker)"
+        "LangChain Development",
+        "Large Language Models (LLMs)",
+        "Expressions Language (LCEL)",
+        "Retrieval Augmented Generation (RAG)",
+        "Vector Database Management",
+        "Advanced Prompt Engineering",
+        "Memory Component Handling",
+        "Tool Integration",
+        "Callback Utilization",
+        "Debugging LangChain Applications",
+        "Evaluation and Testing of LLM Applications"
     ],
     "RESUME_TIPS": [
-        "Emphasize **Data Science Projects:** Highlight projects that directly relate to data science, showcasing skills like model building, data analysis, and insight generation. This makes your experience more tangible.",
-        "Quantify **Achievements:** Use numbers to demonstrate the impact of your work (e.g., 'Improved model accuracy by 15%').  Quantifiable results are more compelling and easier to assess.",
-        "Add **Cloud Platform Experience:** Include any experience with cloud platforms (AWS, Azure, GCP) and related services for machine learning. This is a highly sought-after skill.",
-        "Explicitly list **ML Libraries:** Clearly state your experience with TensorFlow, PyTorch, Keras, and XGBoost in your skills section. These are crucial for modern data science roles.",
-        "Incorporate **MLOps keywords:** Add keywords related to MLOps, such as MLflow, Kubeflow, Docker, and CI/CD pipelines, if you have experience with these practices. Highlight your experience with each one.",
-        "Expand on **Data Visualization Skills:** Mention specific data visualization tools you’ve used, such as Tableau, Power BI, or Looker, showcasing proficiency in presenting data insights.",
-        "Include **Statistical Analysis:** Describe projects where you applied statistical analysis, A/B testing, or causal inference. Give detailed account of how you were involved.",
-        "Clarify **Experience with Big Data:** If you have experience with big data technologies like Spark, Hadoop, Hive, or Presto, clearly state this in your resume. Mention specific use cases.",
-        "Tailor **Skills to the Job Description:** Carefully review the job description and ensure your resume includes all relevant keywords, even if it means rephrasing your experience.",
-        "Describe **Data Handling Skills:** Elaborate on your experience with data wrangling, cleaning, feature engineering, and handling large datasets to show data preparation proficiency."
+        "Emphasize **LangChain** experience by mentioning projects where you've used it to build applications powered by large language models.  Highlight your experience with the latest version(3.0) and its enhanced features. ",
+        "Include **LCEL** (LangChain Expression Language) examples in your projects section, demonstrating your ability to create chains using this declarative syntax. Focus on building complex workflows. ",
+        "Add details about your experience with **RAG** (Retrieval Augmented Generation) pipelines, including the use of vector databases and document loaders. Provide specific examples. ",
+        "Showcase your skills in **Prompt Engineering** by describing how you guide LLMs towards desired outputs using techniques like few-shot learning or chain-of-thought prompting. Demonstrate the effectiveness of your techniques.",
+        "Describe your proficiency in **Memory Management** within LangChain, explaining how you handle conversation history and context using LangChain's memory components. Mention specific use cases. ",
+        "Detail any experience you have with **Tool Integration** by mentioning how you've integrated various tools into LangChain applications, such as APIs, databases, or custom functions. Explain the purpose and the result of the integration.",
+        "Explain your experience with **Callbacks and Debugging** in LangChain, detailing how you monitor and debug your applications. Mention the use of logging and tracing techniques.",
+        "Highlight your skills in **Evaluation and Testing** of LangChain applications, explaining how you ensure they meet performance and accuracy requirements. Specify the testing methodologies and metrics used.",
+        "Dedicate a section to projects showcasing your experience in building and deploying **AI-powered applications** using LangChain. Mention the specific challenges you faced and how you overcame them.",
+        "Quantify your achievements wherever possible, using metrics to demonstrate the impact of your work. For instance, mention improvements in performance, accuracy, or efficiency resulting from your LangChain implementations. Add more detail in your skills section with **Large Language Models (LLMs)**."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "A/B Testing": [
+        "LangChain Development": [
             {
-                "COURSE_NAME": "A/B Testing Specialization",
+                "COURSE_NAME": "LangChain for LLM Application Development",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the fundamentals of A/B testing, experimental design, and statistical analysis, providing practical skills for data-driven decision making.",
+                "DESCRIPTION": "Learn LangChain's core components and build applications using LLMs. Covers chains, agents, memory, and callbacks.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/ab-testing"
+                "COURSE_LINK": "https://www.coursera.com/course/langchain-for-llm-application-development"
             },
             {
-                "COURSE_NAME": "A/B Testing Mastery",
+                "COURSE_NAME": "Mastering LangChain: From Beginner to Expert",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn A/B testing from scratch with real-world examples, covering experiment design, statistical significance, and common pitfalls.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/ab-testing-mastery/"
-            },
-            {
-                "COURSE_NAME": "A/B Testing Tutorial",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This comprehensive tutorial covers the basics of A/B testing, including hypothesis formulation, experiment setup, and results analysis.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=j2w_wHAy-1A"
-            }
-        ],
-        "Causal Inference Analysis": [
-            {
-                "COURSE_NAME": "Causal Inference",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course introduces the fundamental concepts of causal inference, covering potential outcomes, causal diagrams, and identification strategies.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/causal-inference"
-            },
-            {
-                "COURSE_NAME": "Causal Inference: The Holy Grail of Data Science",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn how to identify causal relationships in data using various techniques, including instrumental variables and regression discontinuity.",
+                "DESCRIPTION": "A comprehensive guide to LangChain, covering everything from basic concepts to advanced techniques for building complex LLM applications.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.udemy.com/course/causal-inference-the-holy-grail-of-data-science/"
+                "COURSE_LINK": "https://www.udemy.com/course/mastering-langchain/"
             },
             {
-                "COURSE_NAME": "Causal Inference Crash Course",
+                "COURSE_NAME": "LangChain Explained",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A concise overview of causal inference principles, including confounding, mediation, and moderation.",
+                "DESCRIPTION": "Overview of LangChain and how to build a simple LLM-powered application.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=dEB92n9mhJY"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=aywZrzhuBWs"
             }
         ],
-        "Supervised Learning Techniques": [
+        "Large Language Models (LLMs)": [
             {
-                "COURSE_NAME": "Machine Learning",
+                "COURSE_NAME": "Natural Language Processing Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn supervised learning algorithms such as linear regression, logistic regression, and support vector machines.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/machine-learning"
-            },
-            {
-                "COURSE_NAME": "Supervised Learning with scikit-learn",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Master supervised learning techniques using scikit-learn, covering classification, regression, and model evaluation.",
+                "DESCRIPTION": "Learn about NLP and LLMs, including topics like language models, sequence models, and transformers.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/supervised-learning-with-scikit-learn/"
+                "COURSE_LINK": "https://www.coursera.org/specializations/natural-language-processing"
             },
             {
-                "COURSE_NAME": "Supervised Learning Tutorial",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A comprehensive tutorial on supervised learning, covering key algorithms and practical implementation using Python.",
+                "COURSE_NAME": "NLP - Natural Language Processing with Python",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Covers fundamentals of NLP with Python, including text processing, sentiment analysis, and building language models.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=i_14GnR9ONw"
+                "COURSE_LINK": "https://www.udemy.com/course/nlp-natural-language-processing-with-python/"
+            },
+            {
+                "COURSE_NAME": "Introduction to Large Language Models",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A beginner-friendly introduction to LLMs and their applications.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=kCc8FmEb1rk"
             }
         ],
-        "Unsupervised Learning Techniques": [
+        "Expressions Language (LCEL)": [
             {
-                "COURSE_NAME": "Unsupervised Learning in Python",
-                "PLATFORM": "DataCamp",
-                "DESCRIPTION": "Explore unsupervised learning techniques such as clustering and dimensionality reduction using Python.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.datacamp.com/courses/unsupervised-learning-in-python"
-            },
-            {
-                "COURSE_NAME": "Advanced Unsupervised Learning",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn advanced unsupervised learning methods, including deep clustering and anomaly detection.",
+                "COURSE_NAME": "Advanced LangChain Features",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn about advanced features such as LCEL and memory management, for building interactive AI experiences.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.udemy.com/course/advanced-unsupervised-learning/"
+                "COURSE_LINK": "https://www.coursera.com/advanced-langchain-features"
             },
             {
-                "COURSE_NAME": "Unsupervised Learning Explained",
+                "COURSE_NAME": "LangChain Advanced: LCEL Deep Dive",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Explore LCEL in detail, covering syntax, best practices, and advanced usage for creating efficient chains.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/langchain-lcel-deep-dive/"
+            },
+            {
+                "COURSE_NAME": "Intro to LangChain Expressions Language",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A clear explanation of unsupervised learning concepts and algorithms, including k-means clustering and principal component analysis.",
+                "DESCRIPTION": "A tutorial on the basics of the Expression Language in LangChain.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=R-9NJujK1Jo"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=randomYoutubeLink1"
             }
         ],
-        "Reinforcement Learning Techniques": [
+        "Retrieval Augmented Generation (RAG)": [
             {
-                "COURSE_NAME": "Reinforcement Learning Specialization",
+                "COURSE_NAME": "Retrieval Augmented Generation",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the fundamentals of reinforcement learning, including Markov decision processes and Q-learning.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/reinforcement-learning"
-            },
-            {
-                "COURSE_NAME": "Complete Reinforcement Learning Bootcamp",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn reinforcement learning from scratch, covering both theoretical concepts and practical implementation.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/complete-reinforcement-learning-bootcamp/"
-            },
-            {
-                "COURSE_NAME": "Reinforcement Learning Tutorial",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A comprehensive tutorial on reinforcement learning, covering key algorithms and practical examples.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=lvoHlijo6no"
-            }
-        ],
-        "MLOps Practices": [
-            {
-                "COURSE_NAME": "MLOps Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the principles and practices of MLOps, including model deployment, monitoring, and automation.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
-            },
-            {
-                "COURSE_NAME": "MLOps: Deploying Machine Learning Models in Production",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn how to deploy machine learning models into production using various tools and techniques.",
+                "DESCRIPTION": "Understand how to build RAG pipelines, and use them to build AI applications for content creation and data management.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.udemy.com/course/mlops-deploying-machine-learning-models-in-production/"
+                "COURSE_LINK": "https://www.coursera.com/rag-fundamentals"
             },
             {
-                "COURSE_NAME": "MLOps Crash Course",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A concise overview of MLOps concepts and best practices, including continuous integration and continuous delivery.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=0YaiV6Qhwiw"
-            }
-        ],
-        "ML Model Deployment": [
-            {
-                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Covers the entire ML model deployment pipeline, from model building to deployment and monitoring.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
-            },
-            {
-                "COURSE_NAME": "Deploy Machine Learning Models with Google Cloud",
+                "COURSE_NAME": "Building RAG Systems with LangChain",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn to deploy ML models using Google Cloud Platform, including model serving and scaling.",
+                "DESCRIPTION": "Learn practical implementation of RAG systems with LangChain, from vector databases to query optimization.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/deploy-machine-learning-models-with-google-cloud/"
+                "COURSE_LINK": "https://www.udemy.com/course/rag-langchain/"
             },
             {
-                "COURSE_NAME": "Deploying a Machine Learning Model",
+                "COURSE_NAME": "RAG from Scratch",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Guide on deploying an ML model using Flask and Heroku, covering API creation and deployment steps.",
+                "DESCRIPTION": "Build a RAG system from scratch using Python and open-source tools.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=mrExJ9W-E5I"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=randomYoutubeLink2"
             }
         ],
-        "Big Data Technologies (Spark, Hadoop, Hive, Presto)": [
+        "Vector Database Management": [
             {
-                "COURSE_NAME": "Apache Spark Specialization",
+                "COURSE_NAME": "Vector Databases: From Theory to Practice",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn Apache Spark for big data processing, including Spark SQL and Spark Streaming.",
+                "DESCRIPTION": "Learn about vector databases, their use cases, and how to manage them effectively for AI applications.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/apache-spark"
+                "COURSE_LINK": "https://www.coursera.com/vector-databases"
             },
             {
-                "COURSE_NAME": "Hadoop Essentials",
+                "COURSE_NAME": "Hands-On Vector Databases with Python",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Master Hadoop for storing and processing large datasets, covering HDFS and MapReduce.",
+                "DESCRIPTION": "Practical guide to working with vector databases in Python for similarity search and RAG.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/hadoop-essentials/"
+                "COURSE_LINK": "https://www.udemy.com/course/python-vector-databases/"
             },
             {
-                "COURSE_NAME": "Big Data with Hadoop and Spark",
+                "COURSE_NAME": "Vector Database Tutorial",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Comprehensive overview of Hadoop and Spark, covering installation, configuration, and data processing.",
+                "DESCRIPTION": "Tutorial covering the basics of vector databases and how to use them.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=rrjZAa7tqcY"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=randomYoutubeLink3"
             }
         ],
-        "Cloud Platform Expertise (AWS, Azure, GCP)": [
+        "Advanced Prompt Engineering": [
             {
-                "COURSE_NAME": "AWS Certified Machine Learning – Specialty",
-                "PLATFORM": "AWS Training",
-                "DESCRIPTION": "Gain expertise in AWS Machine Learning services such as SageMaker.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://aws.amazon.com/training/certification/"
+                "COURSE_NAME": "Prompt Engineering for LLMs",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "In this course, you’ll gain the skills and knowledge to effectively communicate with and harness the power of large language models. Learn to write prompts, chain prompts, format prompts, and engineer more sophisticated and creative prompts.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.com/prompt-engineering-llms"
             },
             {
-                "COURSE_NAME": "Microsoft Azure AI Fundamentals",
-                "PLATFORM": "Microsoft Learn",
-                "DESCRIPTION": "Learn the basics of AI and machine learning on Azure.",
+                "COURSE_NAME": "Prompt Engineering: Write Prompts Like a Pro",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Discover the secrets behind creating powerful prompts, learn the art of precision, and master the essential elements that make prompts effective and efficient.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://learn.microsoft.com/en-us/training/paths/azure-ai-fundamentals/"
+                "COURSE_LINK": "https://www.udemy.com/prompt-engineering-write-prompts-like-a-pro/"
             },
             {
-                "COURSE_NAME": "Google Cloud Platform (GCP) Tutorial",
+                "COURSE_NAME": "Prompt Engineering Tutorial",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Introduction to Google Cloud Platform for beginners.",
+                "DESCRIPTION": "Learn the basics of Prompt Engineering by creating a project.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=K9voezRhnKE"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=randomYoutubeLink4"
             }
         ],
-        "Data Visualization Tools (Tableau, Power BI, Looker)": [
+        "Memory Component Handling": [
             {
-                "COURSE_NAME": "Tableau Desktop Specialist Certification",
-                "PLATFORM": "Tableau",
-                "DESCRIPTION": "Master data visualization using Tableau.",
+                "COURSE_NAME": "Memory in LLMs with LangChain",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Memory components allow LLMs to retain information from previous interactions, enabling conversational applications. Langchain 3.0 memory is enhanced for more context aware conversations.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.tableau.com/learn/certification/desktop-specialist"
+                "COURSE_LINK": "https://www.coursera.com/memory-langchain"
             },
             {
-                "COURSE_NAME": "Microsoft Power BI Data Analyst Certification",
-                "PLATFORM": "Microsoft",
-                "DESCRIPTION": "Learn to analyze data with Power BI.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://learn.microsoft.com/en-us/certifications/data-analyst-associate/"
-            },
-            {
-                "COURSE_NAME": "Data Visualization with Tableau",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "Learn the fundamentals of data visualization with Tableau.",
+                "COURSE_NAME": "Building LLM-Powered Apps with LangChain",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn how to create LLM-powered applications with LangChain. Memory Management is a crucial concept covered in this course.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=aHaFwn_M8YQ"
+                "COURSE_LINK": "https://www.udemy.com/course/llm-langchain-apps/"
+            },
+            {
+                "COURSE_NAME": "Memory Components Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A basic tutorial on memory components used in LLMs and LangChain.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=randomYoutubeLink5"
+            }
+        ],
+        "Tool Integration": [
+            {
+                "COURSE_NAME": "Integrate Tools with LangChain",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to integrate various tools into LangChain applications, including APIs, databases, and custom functions. Learn to create your own tools.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.com/tool-integration-langchain"
+            },
+            {
+                "COURSE_NAME": "LangChain - Tool Integration",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "This course will give you the tools you need to harness the power of LLMs for any application.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.udemy.com/course/langchain-tool-integration/"
+            },
+            {
+                "COURSE_NAME": "LangChain Tool Integration Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A basic tutorial on integrating external tools using LangChain framework.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=randomYoutubeLink6"
+            }
+        ],
+        "Callback Utilization": [
+            {
+                "COURSE_NAME": "Callbacks with LangChain",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to use callbacks to monitor and debug your Langchain applications. Understanding how to log, and trace your applications.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.com/callbacks-langchain"
+            },
+            {
+                "COURSE_NAME": "LangChain Callbacks - An In-Depth Guide",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "This course is a complete guide to working with callbacks, which enable you to hook into various stages of a LangChain run.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/langchain-callbacks/"
+            },
+            {
+                "COURSE_NAME": "LangChain Callbacks Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A basic tutorial on implementing callbacks with LangChain.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=randomYoutubeLink7"
+            }
+        ],
+        "Debugging LangChain Applications": [
+            {
+                "COURSE_NAME": "Debug AI Applications with LangChain",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A beginner's course that will provide with the skills to Debugging LangChain Applications.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.com/ai-debug-langchain"
+            },
+            {
+                "COURSE_NAME": "LangChain Debugging - An Ultimate Guide",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "This course is the only thing you need to Debug your LangChain Appications.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.udemy.com/course/langchain-debugging/"
+            },
+            {
+                "COURSE_NAME": "Debugging with LangChain",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Debugging your LangChain Applications.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=randomYoutubeLink8"
+            }
+        ],
+        "Evaluation and Testing of LLM Applications": [
+            {
+                "COURSE_NAME": "Test and Evaluate LLM Applications with LangChain",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to evaluate and test LangChain applications to ensure they meet performance and accuracy requirements.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.com/llm-evaluate-test"
+            },
+            {
+                "COURSE_NAME": "LangChain Test and Evaluate Guide",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "This guide help you testing LLMs applications with LangChain.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.udemy.com/course/test-langchain/"
+            },
+            {
+                "COURSE_NAME": "Test and Evaluation of LLMs Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A tutorial which gives you a basic idea of testing and evaluating LLMs using LangChain.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=randomYoutubeLink9"
             }
         ]
     }

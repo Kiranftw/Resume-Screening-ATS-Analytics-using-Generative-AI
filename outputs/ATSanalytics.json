@@ -19,6 +19,8 @@
                 "Matplotlib",
                 "Scikit Learn",
                 "TensorFlow",
+                "ML",
+                "DS",
                 "Linear Regression",
                 "Multilinear Regression",
                 "Data Cleaning",
@@ -53,8 +55,8 @@
             "Machine Learning : By IBM & CampusX"
         ],
         "Education": [
-            "B. Tech, CSE DATA SCIENCE Nalla Narsimha Reddy educational society 2022 25 | Hyderabad CGPA: 7.6",
-            "Diploma, Industrial & Product Design CIPET CENTRAL INSTITUTE OF PETROCHEMICAL ENGEINEERING & TECHNOLO0GY 2020 22 | Hyderabad Percentage: 77.7%",
+            "B. Tech, CSE  DATA SCIENCE Nalla Narsimha Reddy educational society 2022 25 | Hyderabad CGPA: 7.6",
+            "Diploma, Industrial & Product Design CIPET   CENTRAL INSTITUTE OF PETROCHEMICAL ENGEINEERING & TECHNOLO0GY 2020 22 | Hyderabad Percentage: 77.7%",
             "Intermediate, MPC Narayana Junior college 2018 20 | Hyderabad Percentage: 70%"
         ]
     },
@@ -68,17 +70,17 @@
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
-            "Education": 10,
-            "Contact Details": 8
+            "Education": 8,
+            "Contact Details": 10
         }
     },
     "Recommendations": [
-        "Add a section dedicated to **soft skills** to showcase interpersonal and communication abilities.",
-        "Proofread the resume carefully to eliminate any spelling or grammatical errors. Pay close attention to **typos and inconsistencies**.",
-        "Consider adding a brief **summary** or **objective statement** at the beginning to highlight career goals and qualifications.",
-        "Quantify achievements in the work experience section using numbers and metrics to demonstrate the **impact of contributions**.",
-        "Tailor the resume to match the specific requirements of each job application to improve **relevance and ATS compatibility**.",
-        "Provide specific dates (month and year) for education and experience entries to ensure **clarity and consistency**.",
-        "List specific tools, technologies, and methodologies used in projects and work experience to showcase **technical expertise**."
+        "Consider adding a **summary** section to highlight your key qualifications and career goals prominently. This helps employers quickly understand your value proposition.",
+        "Quantify your achievements in your **experience** section with metrics or numbers to demonstrate the impact of your work, for example, 'Improved mold design efficiency by 15% using SolidWorks'.",
+        "In the **skills** section, categorize soft skills separately from hard skills to provide a clearer picture of your abilities.",
+        "Expand on your **education** section by including relevant coursework or academic projects to showcase your knowledge in specific areas.",
+        "Proofread your resume carefully to eliminate any spelling or grammatical errors, as this can significantly impact the perceived professionalism of your application.",
+        "In the **projects** section, provide more detail about the technologies used and the outcomes achieved, emphasizing the impact of your contributions.",
+        "Add **dates** to your education and certificates to clearly show the timeline"
     ]
 }
