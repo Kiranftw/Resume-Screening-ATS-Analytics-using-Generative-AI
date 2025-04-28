@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Chat Assistant | Document Analyzer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --light-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --card-background: #fff;
+            --text-secondary: #6b7280;
+            --accent-blue: #3b82f6;
+            --accent-light-blue: #e0e7ff;
+            --ai-message-bg: #f3f4f6;
+            --user-message-bg: #2563eb;
+            --ai-message-text: #1f2937;
+            --user-message-text: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 280px;
+            padding: 2rem;
+            background-color: white;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .sidebar-nav {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .nav-item {
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-md);
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-item:hover {
+            background-color: #f1f5f9;
+        }
+
+        .nav-item.active {
+            background-color: #e0e7ff;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main content styles */
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            background-color: var(--light-bg);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .back-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logout-btn {
+            padding: 0.5rem 1rem;
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .logout-btn:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* Chat container */
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .chat-header {
+            padding: 1rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .chat-header-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-lg);
+            line-height: 1.5;
+            position: relative;
+        }
+
+        .ai-message {
+            align-self: flex-start;
+            background-color: var(--ai-message-bg);
+            color: var(--ai-message-text);
+            border-bottom-left-radius: var(--radius-sm);
+        }
+
+        .user-message {
+            align-self: flex-end;
+            background-color: var(--user-message-bg);
+            color: var(--user-message-text);
+            border-bottom-right-radius: var(--radius-sm);
+        }
+
+        .message-time {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            text-align: right;
+        }
+
+        .user-message .message-time {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Document attachment message */
+        .document-message {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background-color: var(--accent-light-blue);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Documents preview container */
+        .documents-preview-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Compact document preview */
+        .document-preview-compact {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background-color: var(--accent-light-blue);
+            border-radius: var(--radius-md);
+            max-width: fit-content;
+            font-size: 0.85rem;
+        }
+
+        .document-icon {
+            width: 16px;
+            height: 16px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .document-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            max-width: 150px;
+            overflow: hidden;
+        }
+
+        .document-name {
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .document-size {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .remove-document {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            border-radius: 50%;
+        }
+
+        .remove-document:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Chat input container */
+        .chat-input-container {
+            padding: 1rem;
+            border-top: 1px solid var(--border-color);
+            background-color: white;
+        }
+
+        .chat-input-wrapper {
+            display: flex;
+            align-items: flex-end;
+            gap: 0.5rem;
+        }
+
+        .file-upload-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: all 0.2s;
+        }
+
+        .file-upload-btn:hover {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+        }
+
+        .file-upload-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .chat-input-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .chat-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            resize: none;
+            min-height: 50px;
+            max-height: 150px;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .send-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .send-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .send-btn:disabled {
+            background-color: var(--border-color);
+            cursor: not-allowed;
+        }
+
+        /* Loading indicator */
+        .loading-dots {
+            display: flex;
+            gap: 0.5rem;
+            padding: 1rem;
+        }
+
+        .loading-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--text-muted);
+            border-radius: 50%;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+
+        .loading-dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .loading-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loading-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .message {
+                max-width: 90%;
+            }
+
+            .documents-preview-container {
+                flex-direction: column;
+            }
+
+            .document-preview-compact {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2 class="section-title">PDF Assistant</h2>
+
+            <!-- Navigation -->
+            <div class="sidebar-nav">
+                <a href="/dashboard" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/pdf-chat" class="nav-item active">
+                    <span class="nav-icon">💬</span>
+                    <span>Chat with PDF</span>
+                </a>
+                <a href="/document-history" class="nav-item">
+                    <span class="nav-icon">📚</span>
+                    <span>Document History</span>
+                </a>
+                <a href="/settings" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <a href="/dashboard" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                    </svg>
+                    Back to Dashboard
+                </a>
+                <button class="logout-btn">Logout</button>
+            </div>
+
+            <!-- Chat Container -->
+            <div class="chat-container">
+                <div class="chat-header">
+                    <svg class="chat-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
+                    </svg>
+                    <span>PDF Assistant</span>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Default welcome message -->
+                    <div class="message ai-message">
+                        Hello! I'm your PDF assistant. Upload PDF documents using the + button below and I'll help you
+                        analyze and understand their content.
+                        You can ask me questions about the documents and I'll provide answers based on their contents.
+                        <div class="message-time" id="welcomeTime"></div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <button class="file-upload-btn" id="fileUploadBtn" title="Upload PDF">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 5v14M5 12h14"></path>
+                            </svg>
+                            <input type="file" id="fileInput" accept=".pdf" style="display: none;">
+                        </button>
+
+                        <div class="chat-input-area" id="chatInputArea">
+                            <!-- Documents preview will appear here -->
+                            <div class="documents-preview-container" id="documentsPreview"></div>
+                            <textarea class="chat-input" id="chatInput"
+                                placeholder="Ask a question about the document..." rows="1"></textarea>
+                        </div>
+
+                        <button class="send-btn" id="sendBtn" disabled>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set welcome message time
+        document.getElementById('welcomeTime').textContent = formatTime(new Date());
+
+        // Store uploaded files
+        const uploadedFiles = [];
+
+        // File upload handling
+        document.getElementById('fileUploadBtn').addEventListener('click', function () {
+            document.getElementById('fileInput').click();
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function (e) {
+            if (e.target.files.length > 0) {
+                const file = e.target.files[0];
+                if (file.type === 'application/pdf') {
+                    // Add file to our collection
+                    const fileId = 'file-' + Date.now();
+                    uploadedFiles.push({
+                        id: fileId,
+                        file: file
+                    });
+
+                    // Update the documents preview
+                    updateDocumentsPreview();
+
+                    // Enable send button if there's at least one file
+                    document.getElementById('sendBtn').disabled = false;
+
+                    // Add system message about the uploaded file
+                    addMessage('ai', `I've received your PDF document "${file.name}". You can now ask me questions about it.`);
+                } else {
+                    alert('Please upload a PDF file.');
+                }
+
+                // Reset the file input
+                e.target.value = '';
+            }
+        });
+
+        // Update documents preview
+        function updateDocumentsPreview() {
+            const previewContainer = document.getElementById('documentsPreview');
+            previewContainer.innerHTML = '';
+
+            uploadedFiles.forEach(fileObj => {
+                const file = fileObj.file;
+                const fileId = fileObj.id;
+
+                const docElement = document.createElement('div');
+                docElement.className = 'document-preview-compact';
+                docElement.id = fileId;
+                docElement.innerHTML = `
+                    <svg class="document-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"></path>
+                        <polyline points="13 2 13 9 20 9"></polyline>
+                    </svg>
+                    <div class="document-info">
+                        <div class="document-name" title="${file.name}">${file.name}</div>
+                        <div class="document-size">${formatFileSize(file.size)}</div>
+                    </div>
+                    <button class="remove-document" onclick="removeSpecificDocument('${fileId}')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                `;
+
+                previewContainer.appendChild(docElement);
+            });
+
+            // Show or hide container based on if there are files
+            previewContainer.style.display = uploadedFiles.length > 0 ? 'flex' : 'none';
+        }
+
+        // Remove specific document
+        function removeSpecificDocument(fileId) {
+            // Find index of file to remove
+            const fileIndex = uploadedFiles.findIndex(file => file.id === fileId);
+
+            if (fileIndex !== -1) {
+                const fileName = uploadedFiles[fileIndex].file.name;
+
+                // Remove from array
+                uploadedFiles.splice(fileIndex, 1);
+
+                // Update UI
+                updateDocumentsPreview();
+
+                // Disable send button if no files remain
+                if (uploadedFiles.length === 0) {
+                    document.getElementById('sendBtn').disabled = true;
+                    addMessage('ai', 'All documents have been removed. Please upload a new PDF to continue.');
+                } else {
+                    addMessage('ai', `The document "${fileName}" has been removed.`);
+                }
+            }
+        }
+
+        // Remove all documents (legacy function kept for compatibility)
+        function removeDocument() {
+            uploadedFiles.length = 0;
+            updateDocumentsPreview();
+            document.getElementById('sendBtn').disabled = true;
+            addMessage('ai', 'All documents have been removed. Please upload a new PDF to continue.');
+        }
+
+        // Format file size
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+        }
+
+        // Format time
+        function formatTime(date) {
+            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+
+        // Add message to chat
+        function addMessage(sender, text) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            messageDiv.innerHTML = `
+                ${text}
+                <div class="message-time">${formatTime(new Date())}</div>
+            `;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Send message
+        document.getElementById('sendBtn').addEventListener('click', sendMessage);
+        document.getElementById('chatInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+
+            if (message && uploadedFiles.length > 0) {
+                // Add user message
+                addMessage('user', message);
+                input.value = '';
+
+                // Reset input height
+                input.style.height = 'auto';
+
+                // Show loading indicator
+                const loadingDiv = document.createElement('div');
+                loadingDiv.className = 'loading-dots';
+                loadingDiv.innerHTML = `
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                `;
+                document.getElementById('chatMessages').appendChild(loadingDiv);
+                document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
+
+                // Simulate AI response (in a real app, this would be an API call)
+                setTimeout(() => {
+                    document.getElementById('chatMessages').removeChild(loadingDiv);
+
+                    // Sample responses - in a real app, these would come from your AI service
+                    const sampleResponses = [
+                        "Based on the documents, the key points are...",
+                        "The PDF mentions this information on page 3...",
+                        "I've analyzed the content and found that...",
+                        "The documents don't specifically address that, but they do mention..."
+                    ];
+
+                    const randomResponse = sampleResponses[Math.floor(Math.random() * sampleResponses.length)];
+                    addMessage('ai', randomResponse);
+                }, 1500);
+            }
+        }
+
+        // Auto-resize textarea
+        document.getElementById('chatInput').addEventListener('input', function () {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+    </script>
+</body>
+
+</html>
