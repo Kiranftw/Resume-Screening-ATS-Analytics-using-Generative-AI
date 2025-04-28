@@ -191,6 +191,10 @@ def courseRecommendations():
         youtube_course_recommendations=youtube_course_recommendations
     )
 
+@app.route('/chatbot')
+def chatbot():
+    return render_template('chatbot.html')
+
 @app.route('/')
 def landing_page():
     return render_template('Landing Page.html')

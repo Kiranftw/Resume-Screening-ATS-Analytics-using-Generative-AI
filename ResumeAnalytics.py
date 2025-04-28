@@ -63,7 +63,6 @@ class ResumeAnalytics(object):
                     model = chatmodel,
                     temperature = 0.7,
                 )
-                break
         logger.info("CHAT/TEXT GENERATION MODELS initialized successfully.")
         if self.model is None or self.chatmodel is None:
             raise ValueError(f"Error in initlizing the models")

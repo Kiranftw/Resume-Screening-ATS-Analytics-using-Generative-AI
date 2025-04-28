@@ -1,7 +1,7 @@
 {
     "Extracted Data": {
         "Name": "R SAI UDAY KIRAN",
-        "Contact Details": "udaykiranftw@gmail.com | +91 9398831577 | DOB 19 May, 2002",
+        "Contact Details": "udaykiranftw@gmail.com | +91 9398831577",
         "Summary or Objective": "Tech Enthusiast | Data Science/ Analytics",
         "Skills": {
             "Soft Skills": [],
@@ -19,19 +19,14 @@
                 "Matplotlib",
                 "Scikit Learn",
                 "TensorFlow",
-                "ML",
-                "DS",
-                "Linear Regression",
-                "Multilinear Regression",
+                "ML & DS",
+                "Linear & Multilinear Regression",
                 "Data Cleaning",
                 "Data Preprocessing",
                 "Logistics Regression",
                 "Decision Trees",
                 "K Means",
-                "KNN",
-                "CAD",
-                "CAM",
-                "SolidWorks"
+                "KNN"
             ]
         },
         "Experience": [
@@ -49,19 +44,13 @@
             }
         ],
         "Projects": [
-            {
-                "Title": "CV ANALYTICS DASHBOARD",
-                "Description": "Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply."
-            },
-            {
-                "Title": "Conversation chatbot using API",
-                "Description": "Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
-            }
+            "CV ANALYTICS DASHBOARD: Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply.",
+            "Conversation chatbot using API: Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
         ],
         "Certifications": [
-            "DSA PYTHON : By CampusX",
-            "Python & JAVA Essentials : By APNA College",
-            "Machine Learning : By IBM & CampusX"
+            "DSA PYTHON: By CampusX",
+            "Python & JAVA Essentials: By APNA College",
+            "Machine Learning: By IBM & CampusX"
         ],
         "Education": [
             "B. Tech, CSE DATA SCIENCE Nalla Narsimha Reddy educational society 2022 25 | Hyderabad CGPA: 7.6",
@@ -73,24 +62,23 @@
         "Total Score": 85,
         "Breakdown": {
             "Format Score": 10,
-            "Spelling & Grammar": 9,
+            "Spelling & Grammar": 8,
             "Summary": 10,
             "Skills": 9,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
-            "Education": 10,
-            "Contact Details": 7
+            "Education": 9,
+            "Contact Details": 9
         }
     },
     "Recommendations": [
-        "Ensure **consistent formatting** throughout the resume for improved readability, paying attention to spacing, font styles, and indentation - this will make the resume appear more polished and professional.",
-        "Add a brief **summary statement** highlighting your key skills and career goals, tailored to the specific job you are applying for, this helps grab the reader's attention right away.",
-        "Quantify your **achievements** in both the experience and project sections using metrics and numbers to demonstrate the impact of your work; for instance, mention the percentage increase in efficiency or cost savings achieved.",
-        "Consider adding a separate **'Awards and Recognition'** section to showcase any notable achievements beyond certifications, such as hackathon wins or academic awards.",
-        "Provide **more context** or results for the SIH (SMART INDIA HACKTHON) achievement to demonstrate the impact of your project, and the judging criteria.",
-        "Maintain consistency in your **date formatting** across all sections of your resume to prevent confusion and maintain a professional appearance; for example, use 'Month Year' format.",
-        "Provide the complete link in the **contact details** like github , because it contains the username or id",
-        "Make sure your **contact details** are easily visible and accurate, and consider adding a professional headshot to help recruiters associate a face with your application."
+        "Enhance the **Summary/Objective** to explicitly state career goals and align them with target job descriptions.",
+        "Quantify achievements in the **Experience** section to demonstrate the impact of your contributions using metrics and numbers.",
+        "Provide more details about the technologies used in the **Projects** section, and make sure that you demonstrate the outcomes.",
+        "Consider adding a section for **Awards and Recognition** to highlight any notable achievements beyond certifications.",
+        "Add **Soft Skills** section to showcase your soft skills.",
+        "Proofread the resume carefully to eliminate minor grammatical errors and improve overall **Spelling & Grammar**.",
+        "Include **Dates** to your Education Section clearly."
     ]
 }

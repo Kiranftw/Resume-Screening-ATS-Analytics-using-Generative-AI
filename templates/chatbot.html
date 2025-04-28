@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Chat Assistant | Document Analyzer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Resume Analyzer | Resume Assistant</title>
     <style>
         :root {
             --primary-color: #2563eb;
@@ -19,10 +18,6 @@
             --radius-sm: 6px;
             --radius-md: 8px;
             --radius-lg: 12px;
-            --card-background: #fff;
-            --text-secondary: #6b7280;
-            --accent-blue: #3b82f6;
-            --accent-light-blue: #e0e7ff;
             --ai-message-bg: #f3f4f6;
             --user-message-bg: #2563eb;
             --ai-message-text: #1f2937;
@@ -33,7 +28,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
@@ -52,12 +47,19 @@
             box-shadow: var(--shadow-md);
         }
 
-        /* Sidebar styles */
         .sidebar {
             width: 280px;
             padding: 2rem;
             background-color: white;
             border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            background-color: var(--light-bg);
             display: flex;
             flex-direction: column;
         }
@@ -105,52 +107,7 @@
             justify-content: center;
         }
 
-        /* Main content styles */
-        .main-content {
-            flex: 1;
-            padding: 2rem;
-            background-color: var(--light-bg);
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header styles */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .back-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logout-btn {
-            padding: 0.5rem 1rem;
-            background-color: white;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            font-weight: 500;
-            cursor: pointer;
-            text-decoration: none;
-            color: var(--text-dark);
-            transition: all 0.2s;
-            font-size: 0.9rem;
-        }
-
-        .logout-btn:hover {
-            background-color: #f1f5f9;
-        }
-
-        /* Chat container */
+        /* Chat container styles */
         .chat-container {
             flex: 1;
             display: flex;
@@ -158,6 +115,7 @@
             background-color: white;
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
             overflow: hidden;
         }
 
@@ -183,6 +141,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            background-color: var(--light-bg);
         }
 
         .message {
@@ -218,97 +177,86 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        /* Document attachment message */
-        .document-message {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem;
-            background-color: var(--accent-light-blue);
-            border-radius: var(--radius-md);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Documents preview container */
-        .documents-preview-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Compact document preview */
-        .document-preview-compact {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 0.75rem;
-            background-color: var(--accent-light-blue);
-            border-radius: var(--radius-md);
-            max-width: fit-content;
-            font-size: 0.85rem;
-        }
-
-        .document-icon {
-            width: 16px;
-            height: 16px;
-            color: var(--primary-color);
-            flex-shrink: 0;
-        }
-
-        .document-info {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            max-width: 150px;
-            overflow: hidden;
-        }
-
-        .document-name {
-            font-weight: 500;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .document-size {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            white-space: nowrap;
-        }
-
-        .remove-document {
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2px;
-            border-radius: 50%;
-        }
-
-        .remove-document:hover {
-            background-color: rgba(0, 0, 0, 0.05);
-        }
-
-        /* Chat input container */
+        /* Uploaded files section - Redesigned */
         .chat-input-container {
             padding: 1rem;
             border-top: 1px solid var(--border-color);
             background-color: white;
         }
 
+        .uploaded-files {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .file-pill {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #e6f0ff;
+            padding: 0.5rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            border: 1px solid #cce0ff;
+            color: var(--primary-color);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .file-pill:hover {
+            background-color: #d6e8ff;
+        }
+
+        .file-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .file-remove {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            margin-left: 0.25rem;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .file-remove:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chat input container */
         .chat-input-wrapper {
             display: flex;
             align-items: flex-end;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            position: relative;
         }
 
         .file-upload-btn {
-            background: none;
-            border: none;
+            background-color: #f1f5f9;
+            border: 1px solid var(--border-color);
             cursor: pointer;
             padding: 0.5rem;
             border-radius: var(--radius-sm);
@@ -317,10 +265,12 @@
             justify-content: center;
             color: var(--text-muted);
             transition: all 0.2s;
+            height: 40px;
+            width: 40px;
         }
 
         .file-upload-btn:hover {
-            background-color: #f1f5f9;
+            background-color: #e5e7eb;
             color: var(--primary-color);
         }
 
@@ -342,13 +292,17 @@
             border-radius: var(--radius-md);
             border: 1px solid var(--border-color);
             resize: none;
-            min-height: 50px;
+            min-height: 40px;
             max-height: 150px;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow-sm);
         }
 
         .chat-input:focus {
             outline: none;
             border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
         }
 
         .send-btn {
@@ -356,8 +310,8 @@
             color: white;
             border: none;
             border-radius: var(--radius-md);
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -379,6 +333,7 @@
             display: flex;
             gap: 0.5rem;
             padding: 1rem;
+            align-self: flex-start;
         }
 
         .loading-dot {
@@ -428,14 +383,6 @@
             .message {
                 max-width: 90%;
             }
-
-            .documents-preview-container {
-                flex-direction: column;
-            }
-
-            .document-preview-compact {
-                max-width: 100%;
-            }
         }
     </style>
 </head>
@@ -443,7 +390,7 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <h2 class="section-title">PDF Assistant</h2>
+            <h2 class="section-title">Resume Analyzer</h2>
 
             <!-- Navigation -->
             <div class="sidebar-nav">
@@ -451,32 +398,22 @@
                     <span class="nav-icon">📊</span>
                     <span>Dashboard</span>
                 </a>
-                <a href="/pdf-chat" class="nav-item active">
-                    <span class="nav-icon">💬</span>
-                    <span>Chat with PDF</span>
-                </a>
-                <a href="/document-history" class="nav-item">
+                <a href="/resume-insights" class="nav-item">
                     <span class="nav-icon">📚</span>
-                    <span>Document History</span>
+                    <span>Resume Insights</span>
                 </a>
-                <a href="/settings" class="nav-item">
-                    <span class="nav-icon">⚙️</span>
-                    <span>Settings</span>
+                <a href="/course-recommendations" class="nav-item">
+                    <span class="nav-icon">🎓</span>
+                    <span>Course Recommendations</span>
+                </a>
+                <a href="/chatbot" class="nav-item active">
+                    <span class="nav-icon">💬</span>
+                    <span>Resume Assistant</span>
                 </a>
             </div>
         </div>
 
         <div class="main-content">
-            <div class="header">
-                <a href="/dashboard" class="back-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 12H5M12 19l-7-7 7-7"></path>
-                    </svg>
-                    Back to Dashboard
-                </a>
-                <button class="logout-btn">Logout</button>
-            </div>
-
             <!-- Chat Container -->
             <div class="chat-container">
                 <div class="chat-header">
@@ -484,33 +421,35 @@
                         stroke-width="2">
                         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
                     </svg>
-                    <span>PDF Assistant</span>
+                    <span>Resume Assistant</span>
                 </div>
 
                 <div class="chat-messages" id="chatMessages">
                     <!-- Default welcome message -->
                     <div class="message ai-message">
-                        Hello! I'm your PDF assistant. Upload PDF documents using the + button below and I'll help you
-                        analyze and understand their content.
-                        You can ask me questions about the documents and I'll provide answers based on their contents.
+                        Hello! I'm your resume assistant. I can help you analyze your resume, suggest improvements, and
+                        answer career-related questions. Upload your resume to get started.
                         <div class="message-time" id="welcomeTime"></div>
                     </div>
                 </div>
 
                 <div class="chat-input-container">
+                    <!-- Uploaded files will appear here -->
+                    <div class="uploaded-files" id="uploadedFilesContainer"></div>
+
                     <div class="chat-input-wrapper">
-                        <button class="file-upload-btn" id="fileUploadBtn" title="Upload PDF">
+                        <button class="file-upload-btn" id="fileUploadBtn" title="Upload Resume">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 5v14M5 12h14"></path>
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
                             </svg>
-                            <input type="file" id="fileInput" accept=".pdf" style="display: none;">
+                            <input type="file" id="fileInput" accept=".pdf,.doc,.docx" style="display: none;">
                         </button>
 
-                        <div class="chat-input-area" id="chatInputArea">
-                            <!-- Documents preview will appear here -->
-                            <div class="documents-preview-container" id="documentsPreview"></div>
+                        <div class="chat-input-area">
                             <textarea class="chat-input" id="chatInput"
-                                placeholder="Ask a question about the document..." rows="1"></textarea>
+                                placeholder="Ask a question about your resume..." rows="1"></textarea>
                         </div>
 
                         <button class="send-btn" id="sendBtn" disabled>
@@ -541,24 +480,21 @@
         document.getElementById('fileInput').addEventListener('change', function (e) {
             if (e.target.files.length > 0) {
                 const file = e.target.files[0];
-                if (file.type === 'application/pdf') {
-                    // Add file to our collection
-                    const fileId = 'file-' + Date.now();
-                    uploadedFiles.push({
-                        id: fileId,
-                        file: file
-                    });
+                const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
 
-                    // Update the documents preview
-                    updateDocumentsPreview();
+                if (validTypes.includes(file.type)) {
+                    // Add file to uploaded files array
+                    uploadedFiles.push(file);
 
-                    // Enable send button if there's at least one file
+                    // Update the uploaded files display
+                    updateUploadedFilesDisplay();
+
+                    // Enable send button
                     document.getElementById('sendBtn').disabled = false;
 
-                    // Add system message about the uploaded file
-                    addMessage('ai', `I've received your PDF document "${file.name}". You can now ask me questions about it.`);
+                    // No system message about the file upload now
                 } else {
-                    alert('Please upload a PDF file.');
+                    alert('Please upload a PDF or Word document.');
                 }
 
                 // Reset the file input
@@ -566,81 +502,49 @@
             }
         });
 
-        // Update documents preview
-        function updateDocumentsPreview() {
-            const previewContainer = document.getElementById('documentsPreview');
-            previewContainer.innerHTML = '';
+        // Update uploaded files display
+        function updateUploadedFilesDisplay() {
+            const container = document.getElementById('uploadedFilesContainer');
+            container.innerHTML = '';
 
-            uploadedFiles.forEach(fileObj => {
-                const file = fileObj.file;
-                const fileId = fileObj.id;
-
-                const docElement = document.createElement('div');
-                docElement.className = 'document-preview-compact';
-                docElement.id = fileId;
-                docElement.innerHTML = `
-                    <svg class="document-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"></path>
-                        <polyline points="13 2 13 9 20 9"></polyline>
-                    </svg>
-                    <div class="document-info">
-                        <div class="document-name" title="${file.name}">${file.name}</div>
-                        <div class="document-size">${formatFileSize(file.size)}</div>
-                    </div>
-                    <button class="remove-document" onclick="removeSpecificDocument('${fileId}')">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-                `;
-
-                previewContainer.appendChild(docElement);
-            });
-
-            // Show or hide container based on if there are files
-            previewContainer.style.display = uploadedFiles.length > 0 ? 'flex' : 'none';
-        }
-
-        // Remove specific document
-        function removeSpecificDocument(fileId) {
-            // Find index of file to remove
-            const fileIndex = uploadedFiles.findIndex(file => file.id === fileId);
-
-            if (fileIndex !== -1) {
-                const fileName = uploadedFiles[fileIndex].file.name;
-
-                // Remove from array
-                uploadedFiles.splice(fileIndex, 1);
-
-                // Update UI
-                updateDocumentsPreview();
-
-                // Disable send button if no files remain
-                if (uploadedFiles.length === 0) {
-                    document.getElementById('sendBtn').disabled = true;
-                    addMessage('ai', 'All documents have been removed. Please upload a new PDF to continue.');
-                } else {
-                    addMessage('ai', `The document "${fileName}" has been removed.`);
-                }
+            if (uploadedFiles.length === 0) {
+                container.style.display = 'none';
+                return;
             }
-        }
 
-        // Remove all documents (legacy function kept for compatibility)
-        function removeDocument() {
-            uploadedFiles.length = 0;
-            updateDocumentsPreview();
-            document.getElementById('sendBtn').disabled = true;
-            addMessage('ai', 'All documents have been removed. Please upload a new PDF to continue.');
-        }
+            container.style.display = 'flex';
 
-        // Format file size
-        function formatFileSize(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            const k = 1024;
-            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+            uploadedFiles.forEach((file, index) => {
+                const fileExt = file.name.split('.').pop().toLowerCase();
+                let fileIcon = '📄';
+
+                if (fileExt === 'pdf') {
+                    fileIcon = '📕';
+                } else if (fileExt === 'doc' || fileExt === 'docx') {
+                    fileIcon = '📘';
+                }
+
+                const filePill = document.createElement('div');
+                filePill.className = 'file-pill';
+                filePill.innerHTML = `
+                    <span class="file-icon">${fileIcon}</span>
+                    <span>${file.name}</span>
+                    <span class="file-remove" data-index="${index}" title="Remove file">×</span>
+                `;
+                container.appendChild(filePill);
+
+                // Add event listener to remove button
+                filePill.querySelector('.file-remove').addEventListener('click', function () {
+                    const fileIndex = parseInt(this.getAttribute('data-index'));
+                    uploadedFiles.splice(fileIndex, 1);
+                    updateUploadedFilesDisplay();
+
+                    // Disable send button if no files and no message
+                    if (uploadedFiles.length === 0 && document.getElementById('chatInput').value.trim() === '') {
+                        document.getElementById('sendBtn').disabled = true;
+                    }
+                });
+            });
         }
 
         // Format time
@@ -661,6 +565,12 @@
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
 
+        // Enable/disable send button based on input
+        document.getElementById('chatInput').addEventListener('input', function () {
+            const sendBtn = document.getElementById('sendBtn');
+            sendBtn.disabled = this.value.trim() === '' && uploadedFiles.length === 0;
+        });
+
         // Send message
         document.getElementById('sendBtn').addEventListener('click', sendMessage);
         document.getElementById('chatInput').addEventListener('keypress', function (e) {
@@ -674,9 +584,15 @@
             const input = document.getElementById('chatInput');
             const message = input.value.trim();
 
-            if (message && uploadedFiles.length > 0) {
+            if (message || uploadedFiles.length > 0) {
                 // Add user message
-                addMessage('user', message);
+                if (message) {
+                    addMessage('user', message);
+                } else if (uploadedFiles.length > 0 && !message) {
+                    // If there's no message but there are files, add a default message
+                    addMessage('user', "Please analyze my resume.");
+                }
+
                 input.value = '';
 
                 // Reset input height
@@ -693,17 +609,28 @@
                 document.getElementById('chatMessages').appendChild(loadingDiv);
                 document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
 
-                // Simulate AI response (in a real app, this would be an API call)
+                // Simulate AI response
                 setTimeout(() => {
                     document.getElementById('chatMessages').removeChild(loadingDiv);
 
-                    // Sample responses - in a real app, these would come from your AI service
-                    const sampleResponses = [
-                        "Based on the documents, the key points are...",
-                        "The PDF mentions this information on page 3...",
-                        "I've analyzed the content and found that...",
-                        "The documents don't specifically address that, but they do mention..."
-                    ];
+                    // Sample responses based on whether a file was uploaded
+                    let sampleResponses;
+
+                    if (uploadedFiles.length > 0) {
+                        sampleResponses = [
+                            "Based on your resume, I recommend highlighting your project management experience more prominently.",
+                            "Your skills section could be stronger by adding more specific technical skills relevant to your target jobs.",
+                            "The work experience section is well-structured, but you could quantify your achievements with numbers.",
+                            "Consider adding a summary section at the top to quickly showcase your value proposition."
+                        ];
+                    } else {
+                        sampleResponses = [
+                            "I'd be happy to help you with your resume. Could you upload it so I can provide specific feedback?",
+                            "To give you personalized advice, I'll need to see your resume. Please upload it using the button below.",
+                            "Let me know what specific aspect of your resume you'd like help with after uploading it.",
+                            "Upload your resume and I can suggest improvements tailored to your experience and career goals."
+                        ];
+                    }
 
                     const randomResponse = sampleResponses[Math.floor(Math.random() * sampleResponses.length)];
                     addMessage('ai', randomResponse);
@@ -716,6 +643,9 @@
             this.style.height = 'auto';
             this.style.height = (this.scrollHeight) + 'px';
         });
+
+        // Initially hide the uploaded files container
+        document.getElementById('uploadedFilesContainer').style.display = 'none';
     </script>
 </body>
 
