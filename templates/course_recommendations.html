@@ -547,7 +547,7 @@
     <div class="container">
         <div class="sidebar">
             <h2 class="section-title">Resume Analyzer</h2>
-        
+
             <!-- Navigation -->
             <div class="sidebar-nav">
                 <a href="/dashboard" class="nav-item">
@@ -562,7 +562,7 @@
                     <span class="nav-icon">🎓</span>
                     <span>Course Recommendations</span>
                 </a>
-                <a href="/chatbot" class="nav-item active">
+                <a href="/PDFChatbot" class="nav-item active">
                     <span class="nav-icon">💬</span>
                     <span>Chatbot Assistant</span>
                 </a>
@@ -763,7 +763,7 @@
                             const a = document.createElement('a');
                             a.style.display = 'none';
                             a.href = url;
-                            a.download = 'cover_letter.docx';
+                            a.download = 'CoverLetter.txt';
                             document.body.appendChild(a);
                             a.click();
                             window.URL.revokeObjectURL(url);

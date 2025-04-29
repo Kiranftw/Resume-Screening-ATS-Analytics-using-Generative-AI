@@ -28,15 +28,15 @@ pytesseract.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-@staticmethod
 def ExceptionHandeler(func):
-    @wraps(func)
     def wrapper(*args, **kwargs):
         try:
             return func(*args, **kwargs)
-        except Exception as E:
-            print(f"An error occurred: {E}")
+        except Exception as e:
+            print(f"[Error] {e}")
+            return f"Error: {str(e)}"
     return wrapper
+
    
 class ResumeAnalytics(object):
     def __init__(self, modelname: str = 'models/gemini-2.0-flash', chatmodel = "models/gemma-3-27b-it") ->None:
@@ -58,14 +58,25 @@ class ResumeAnalytics(object):
                     system_instruction = "You are an expert resume screening assistant. Always return JSON. Be concise."
                 )
             elif model.name == chatmodel:
-                self.chatmodel: ChatGoogleGenerativeAI = ChatGoogleGenerativeAI(
-                    
+                self.chatmodel = ChatGoogleGenerativeAI(
                     model = chatmodel,
                     temperature = 0.7,
                 )
         logger.info("CHAT/TEXT GENERATION MODELS initialized successfully.")
         if self.model is None or self.chatmodel is None:
             raise ValueError(f"Error in initlizing the models")
+        self.chatmemory = ConversationSummaryBufferMemory(
+            llm = self.chatmodel,
+            max_token_limit=10000,
+            return_messages=True,
+            memory_key="history"
+        )
+        self.memory = ConversationSummaryBufferMemory(
+            llm=self.chatmodel,
+            max_tokens=100000,
+            return_messages=True,
+            memory_key="history"
+        )
     
     @ExceptionHandeler 
     @property
@@ -394,3 +405,54 @@ class ResumeAnalytics(object):
         except Exception as e:
             print(f"Error in getJobRecommendations: {e}")
             return None
+    
+    def pdfchatbot(self, Documents: List[str], Query: str) -> str:
+        try:
+            if not Query or Query.strip() == "":
+                return "Please type a query to continue."
+
+            if not Documents or all(doc.strip() == "" for doc in Documents):
+                return "Please upload one or more documents to continue."
+
+            # Initialize chat memory
+            self.chatmemory = ConversationSummaryBufferMemory(
+                llm=self.chatmodel,
+                max_tokens=100000,
+                return_messages=True,
+                memory_key="history"
+            )
+
+            self.corpus = []
+            for doc in Documents:
+                tempdata = self.documentParser(doc)
+                if tempdata and tempdata.get("content"):
+                    self.corpus.append(tempdata["content"])
+
+            if not self.corpus:
+                return "No content found in the uploaded documents."
+
+            # Combine all documents into a single string
+            combined_documents = "\n".join(self.corpus)
+
+            # Add the content to memory using the correct memory object
+            self.chatmemory.chat_memory.add_ai_message(
+                "Here are the uploaded documents that you should use to answer future queries:\n\n" + combined_documents
+            )
+            logger.log(logging.INFO, "Chat memory initialized with uploaded documents.")
+
+            # Build message history for the chat model
+            messages = self.chatmemory.chat_memory.messages.copy()
+            messages.append(HumanMessage(content=Query))
+
+            # Get model response
+            response = self.chatmodel.invoke(messages).content
+
+            # Update memory with the latest messages
+            self.chatmemory.chat_memory.add_user_message(Query)
+            self.chatmemory.chat_memory.add_ai_message(response)
+
+            return markdown.markdown(response)
+
+        except Exception as e:
+            logger.log(logging.ERROR, f"Error in pdfchatbot: {str(e)}")
+            return "An error occurred while processing the documents. Please try again."

@@ -406,7 +406,7 @@
                     <span class="nav-icon">🎓</span>
                     <span>Course Recommendations</span>
                 </a>
-                <a href="/chatbot" class="nav-item active">
+                <a href="/PDFChatbot" class="nav-item active">
                     <span class="nav-icon">💬</span>
                     <span>Resume Assistant</span>
                 </a>
@@ -425,228 +425,206 @@
                 </div>
 
                 <div class="chat-messages" id="chatMessages">
-                    <!-- Default welcome message -->
                     <div class="message ai-message">
                         Hello! I'm your resume assistant. I can help you analyze your resume, suggest improvements, and
                         answer career-related questions. Upload your resume to get started.
                         <div class="message-time" id="welcomeTime"></div>
                     </div>
-                </div>
-
-                <div class="chat-input-container">
-                    <!-- Uploaded files will appear here -->
-                    <div class="uploaded-files" id="uploadedFilesContainer"></div>
-
-                    <div class="chat-input-wrapper">
-                        <button class="file-upload-btn" id="fileUploadBtn" title="Upload Resume">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
-                                <polyline points="17 8 12 3 7 8"></polyline>
-                                <line x1="12" y1="3" x2="12" y2="15"></line>
-                            </svg>
-                            <input type="file" id="fileInput" accept=".pdf,.doc,.docx" style="display: none;">
-                        </button>
-
-                        <div class="chat-input-area">
-                            <textarea class="chat-input" id="chatInput"
-                                placeholder="Ask a question about your resume..." rows="1"></textarea>
-                        </div>
-
-                        <button class="send-btn" id="sendBtn" disabled>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <line x1="22" y1="2" x2="11" y2="13"></line>
-                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                            </svg>
-                        </button>
+                    {% if response %}
+                    <div class="message ai-message">
+                        {{ response|safe }}
+                        <div class="message-time">{{ current_time }}</div>
                     </div>
+                    {% endif %}
                 </div>
+
+                <form method="POST" enctype="multipart/form-data" id="chatForm">
+                    <div class="chat-input-container">
+                        <div class="uploaded-files" id="uploadedFilesContainer"></div>
+
+                        <div class="chat-input-wrapper">
+                            <button type="button" class="file-upload-btn" id="fileUploadBtn" title="Upload Resume">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                                <input type="file" id="fileInput" name="documents" accept=".pdf,.doc,.docx" multiple
+                                    style="display: none;">
+                            </button>
+
+                            <div class="chat-input-area">
+                                <textarea class="chat-input" name="query" id="chatInput"
+                                    placeholder="Ask a question about your resume..." rows="1"></textarea>
+                            </div>
+
+                            <button type="submit" class="send-btn" id="sendBtn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <script>
-        // Set welcome message time
+        // Set welcome time
         document.getElementById('welcomeTime').textContent = formatTime(new Date());
 
-        // Store uploaded files
         const uploadedFiles = [];
+        const fileInput = document.getElementById('fileInput');
+        const fileUploadBtn = document.getElementById('fileUploadBtn');
+        const sendBtn = document.getElementById('sendBtn');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+        const uploadedFilesContainer = document.getElementById('uploadedFilesContainer');
+
+        // Helper: format time
+        function formatTime(date) {
+            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+
+        // Helper: add message to chat
+        function addMessage(sender, text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${sender}-message`;
+            msgDiv.innerHTML = `
+            ${text}
+            <div class="message-time">${formatTime(new Date())}</div>
+        `;
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
 
         // File upload handling
-        document.getElementById('fileUploadBtn').addEventListener('click', function () {
-            document.getElementById('fileInput').click();
-        });
+        fileUploadBtn.addEventListener('click', () => fileInput.click());
 
-        document.getElementById('fileInput').addEventListener('change', function (e) {
-            if (e.target.files.length > 0) {
-                const file = e.target.files[0];
-                const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+        fileInput.addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
 
-                if (validTypes.includes(file.type)) {
-                    // Add file to uploaded files array
-                    uploadedFiles.push(file);
-
-                    // Update the uploaded files display
-                    updateUploadedFilesDisplay();
-
-                    // Enable send button
-                    document.getElementById('sendBtn').disabled = false;
-
-                    // No system message about the file upload now
-                } else {
-                    alert('Please upload a PDF or Word document.');
-                }
-
-                // Reset the file input
-                e.target.value = '';
-            }
-        });
-
-        // Update uploaded files display
-        function updateUploadedFilesDisplay() {
-            const container = document.getElementById('uploadedFilesContainer');
-            container.innerHTML = '';
-
-            if (uploadedFiles.length === 0) {
-                container.style.display = 'none';
+            const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+            if (!validTypes.includes(file.type)) {
+                alert('Please upload a PDF or Word document.');
                 return;
             }
 
-            container.style.display = 'flex';
+            uploadedFiles.push(file);
+            updateUploadedFilesDisplay();
+            sendBtn.disabled = false;
+
+            // Upload to backend
+            const formData = new FormData();
+            formData.append('resume', file);
+
+            try {
+                const response = await fetch('/PDFChatbot', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+                if (data.message) {
+                    addMessage('ai', data.message);
+                } else if (data.error) {
+                    addMessage('ai', data.error);
+                }
+            } catch {
+                addMessage('ai', 'File upload failed.');
+            }
+
+            e.target.value = '';
+        });
+
+        function updateUploadedFilesDisplay() {
+            uploadedFilesContainer.innerHTML = '';
+            if (uploadedFiles.length === 0) {
+                uploadedFilesContainer.style.display = 'none';
+                return;
+            }
+            uploadedFilesContainer.style.display = 'flex';
 
             uploadedFiles.forEach((file, index) => {
                 const fileExt = file.name.split('.').pop().toLowerCase();
-                let fileIcon = '📄';
+                const icon = fileExt === 'pdf' ? '📕' : '📘';
 
-                if (fileExt === 'pdf') {
-                    fileIcon = '📕';
-                } else if (fileExt === 'doc' || fileExt === 'docx') {
-                    fileIcon = '📘';
-                }
+                const pill = document.createElement('div');
+                pill.className = 'file-pill';
+                pill.innerHTML = `
+                <span class="file-icon">${icon}</span>
+                <span>${file.name}</span>
+                <span class="file-remove" data-index="${index}" title="Remove file">×</span>
+            `;
+                uploadedFilesContainer.appendChild(pill);
 
-                const filePill = document.createElement('div');
-                filePill.className = 'file-pill';
-                filePill.innerHTML = `
-                    <span class="file-icon">${fileIcon}</span>
-                    <span>${file.name}</span>
-                    <span class="file-remove" data-index="${index}" title="Remove file">×</span>
-                `;
-                container.appendChild(filePill);
-
-                // Add event listener to remove button
-                filePill.querySelector('.file-remove').addEventListener('click', function () {
-                    const fileIndex = parseInt(this.getAttribute('data-index'));
-                    uploadedFiles.splice(fileIndex, 1);
+                pill.querySelector('.file-remove').addEventListener('click', () => {
+                    uploadedFiles.splice(index, 1);
                     updateUploadedFilesDisplay();
-
-                    // Disable send button if no files and no message
-                    if (uploadedFiles.length === 0 && document.getElementById('chatInput').value.trim() === '') {
-                        document.getElementById('sendBtn').disabled = true;
+                    if (uploadedFiles.length === 0 && chatInput.value.trim() === '') {
+                        sendBtn.disabled = true;
                     }
                 });
             });
         }
 
-        // Format time
-        function formatTime(date) {
-            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        }
-
-        // Add message to chat
-        function addMessage(sender, text) {
-            const chatMessages = document.getElementById('chatMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${sender}-message`;
-            messageDiv.innerHTML = `
-                ${text}
-                <div class="message-time">${formatTime(new Date())}</div>
-            `;
-            chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        // Enable/disable send button based on input
-        document.getElementById('chatInput').addEventListener('input', function () {
-            const sendBtn = document.getElementById('sendBtn');
-            sendBtn.disabled = this.value.trim() === '' && uploadedFiles.length === 0;
+        // Enable/disable send button
+        chatInput.addEventListener('input', () => {
+            sendBtn.disabled = chatInput.value.trim() === '' && uploadedFiles.length === 0;
+            chatInput.style.height = 'auto';
+            chatInput.style.height = chatInput.scrollHeight + 'px';
         });
 
-        // Send message
-        document.getElementById('sendBtn').addEventListener('click', sendMessage);
-        document.getElementById('chatInput').addEventListener('keypress', function (e) {
+        // Send message to backend
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (!message && uploadedFiles.length === 0) return;
+
+            const userMsg = message || "Please analyze my resume.";
+            addMessage('user', userMsg);
+            chatInput.value = '';
+            chatInput.style.height = 'auto';
+
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'loading-dots';
+            loadingDiv.innerHTML = `
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            `;
+            chatMessages.appendChild(loadingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            fetch('/PDFChatbot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ query: userMsg })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    chatMessages.removeChild(loadingDiv);
+                    addMessage('ai', data.response || 'No response received.');
+                })
+                .catch(() => {
+                    chatMessages.removeChild(loadingDiv);
+                    addMessage('ai', 'Error reaching the assistant. Please try again.');
+                });
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
                 sendMessage();
             }
         });
 
-        function sendMessage() {
-            const input = document.getElementById('chatInput');
-            const message = input.value.trim();
-
-            if (message || uploadedFiles.length > 0) {
-                // Add user message
-                if (message) {
-                    addMessage('user', message);
-                } else if (uploadedFiles.length > 0 && !message) {
-                    // If there's no message but there are files, add a default message
-                    addMessage('user', "Please analyze my resume.");
-                }
-
-                input.value = '';
-
-                // Reset input height
-                input.style.height = 'auto';
-
-                // Show loading indicator
-                const loadingDiv = document.createElement('div');
-                loadingDiv.className = 'loading-dots';
-                loadingDiv.innerHTML = `
-                    <div class="loading-dot"></div>
-                    <div class="loading-dot"></div>
-                    <div class="loading-dot"></div>
-                `;
-                document.getElementById('chatMessages').appendChild(loadingDiv);
-                document.getElementById('chatMessages').scrollTop = document.getElementById('chatMessages').scrollHeight;
-
-                // Simulate AI response
-                setTimeout(() => {
-                    document.getElementById('chatMessages').removeChild(loadingDiv);
-
-                    // Sample responses based on whether a file was uploaded
-                    let sampleResponses;
-
-                    if (uploadedFiles.length > 0) {
-                        sampleResponses = [
-                            "Based on your resume, I recommend highlighting your project management experience more prominently.",
-                            "Your skills section could be stronger by adding more specific technical skills relevant to your target jobs.",
-                            "The work experience section is well-structured, but you could quantify your achievements with numbers.",
-                            "Consider adding a summary section at the top to quickly showcase your value proposition."
-                        ];
-                    } else {
-                        sampleResponses = [
-                            "I'd be happy to help you with your resume. Could you upload it so I can provide specific feedback?",
-                            "To give you personalized advice, I'll need to see your resume. Please upload it using the button below.",
-                            "Let me know what specific aspect of your resume you'd like help with after uploading it.",
-                            "Upload your resume and I can suggest improvements tailored to your experience and career goals."
-                        ];
-                    }
-
-                    const randomResponse = sampleResponses[Math.floor(Math.random() * sampleResponses.length)];
-                    addMessage('ai', randomResponse);
-                }, 1500);
-            }
-        }
-
-        // Auto-resize textarea
-        document.getElementById('chatInput').addEventListener('input', function () {
-            this.style.height = 'auto';
-            this.style.height = (this.scrollHeight) + 'px';
-        });
-
-        // Initially hide the uploaded files container
-        document.getElementById('uploadedFilesContainer').style.display = 'none';
+        uploadedFilesContainer.style.display = 'none';
     </script>
+
 </body>
 
 </html>

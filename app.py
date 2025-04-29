@@ -4,7 +4,8 @@ from werkzeug.utils import secure_filename
 from ResumeAnalytics import ResumeAnalytics
 import markdown
 app = Flask(__name__)
-
+import datetime
+import time
 # === Configuration ===
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt', 'doc', 'jpeg', 'jpg', 'png', 'webp'}
@@ -190,14 +191,70 @@ def courseRecommendations():
         paid_course_recommendations=paid_course_recommendations,
         youtube_course_recommendations=youtube_course_recommendations
     )
-
-@app.route('/chatbot')
-def chatbot():
-    return render_template('chatbot.html')
-
+@app.route('/PDFChatbot', methods=['GET', 'POST'])
+def PDFChatbot():
+    if request.method == 'POST':
+        # Get current time for the response
+        current_time = datetime.datetime.now().strftime("%I:%M %p")
+        
+        # Check if request is form-based or JSON
+        if request.content_type and 'application/json' in request.content_type:
+            # JSON request - only contains query
+            data = request.get_json()
+            query = data.get('query', '')
+            
+            # Since we're not using sessions, we need an alternative way to track documents
+            # One approach is to use a global variable in your analytics class or a persistent storage
+            if not hasattr(analytics, 'current_documents') or not analytics.current_documents:
+                return "Please upload your resume first.", 400
+                
+            saved_file_paths = analytics.current_documents
+        else:
+            # Multipart form - may contain files
+            uploaded_files = request.files.getlist('documents')
+            query = request.form.get('query', '')
+            
+            # Process uploaded files
+            saved_file_paths = []
+            for file in uploaded_files:
+                if file and file.filename:
+                    filename = secure_filename(file.filename)
+                    file_extension = filename.rsplit('.', 1)[1].lower() if '.' in filename else ''
+                    
+                    if file_extension in ['pdf', 'doc', 'docx']:
+                        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                        file.save(file_path)
+                        saved_file_paths.append(file_path)
+            
+            # Store file paths in analytics class for future queries
+            if saved_file_paths:
+                # Create a class attribute to store current documents
+                analytics.current_documents = saved_file_paths
+            elif hasattr(analytics, 'current_documents'):
+                # If no new files uploaded, use existing ones
+                saved_file_paths = analytics.current_documents
+        
+        # Return error if no files and no query
+        if not saved_file_paths:
+            return "No valid resume files uploaded.", 400
+        
+        if not query or query.strip() == "":
+            query = "Please analyze my resume."
+            
+        # Call the backend chatbot logic
+        try:
+            response = analytics.pdfchatbot(saved_file_paths, query)
+            return render_template('chatbot.html', response=response, current_time=current_time)
+        except Exception as e:
+            app.logger.error(f"Error in PDFChatbot: {str(e)}")
+            return f"An error occurred while processing your request: {str(e)}", 500
+    
+    # For GET request, just render the page with no response
+    return render_template('chatbot.html', response=None, current_time=datetime.datetime.now().strftime("%I:%M %p"))
+    
 @app.route('/')
 def landing_page():
     return render_template('Landing Page.html')
 # === Run App ===
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8000)
+    app.run(debug=True, host='0.0.0.0', port=5000)

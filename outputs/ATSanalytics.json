@@ -21,17 +21,15 @@
                 "TensorFlow",
                 "ML & DS",
                 "Linear & Multilinear Regression",
-                "Data Cleaning",
-                "Data Preprocessing",
+                "Data Cleaning & Data Prepressing",
                 "Logistics Regression",
                 "Decision Trees",
-                "K Means",
-                "KNN"
+                "K Means & KNN"
             ]
         },
         "Experience": [
             {
-                "Title": "Intern",
+                "Title": "ASSISTANT TOOL MAKER",
                 "Company": "Acme Tooling s",
                 "Duration": "Jan 2022 – June 2022",
                 "Description": "Gained hands on experience in complex mould designs and development Worked with CAD/CAM and SolidWorks design software s to build intricate designs. contributed to the end to end development of mould' s from initial design through manufacturing and quality control"
@@ -44,13 +42,19 @@
             }
         ],
         "Projects": [
-            "CV ANALYTICS DASHBOARD: Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply.",
-            "Conversation chatbot using API: Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
+            {
+                "Name": "CV ANALYTICS DASHBOARD",
+                "Description": "Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply."
+            },
+            {
+                "Name": "Conversation chatbot using API",
+                "Description": "Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
+            }
         ],
         "Certifications": [
-            "DSA PYTHON: By CampusX",
-            "Python & JAVA Essentials: By APNA College",
-            "Machine Learning: By IBM & CampusX"
+            "DSA PYTHON : By CampusX",
+            "Python & JAVA Essentials : By APNA College",
+            "Machine Learning : By IBM & CampusX"
         ],
         "Education": [
             "B. Tech, CSE DATA SCIENCE Nalla Narsimha Reddy educational society 2022 25 | Hyderabad CGPA: 7.6",
@@ -59,26 +63,26 @@
         ]
     },
     "ATS Score": {
-        "Total Score": 85,
+        "Total Score": 84,
         "Breakdown": {
-            "Format Score": 10,
+            "Format Score": 9,
             "Spelling & Grammar": 8,
-            "Summary": 10,
+            "Summary": 9,
             "Skills": 9,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
             "Education": 9,
-            "Contact Details": 9
+            "Contact Details": 10
         }
     },
     "Recommendations": [
-        "Enhance the **Summary/Objective** to explicitly state career goals and align them with target job descriptions.",
-        "Quantify achievements in the **Experience** section to demonstrate the impact of your contributions using metrics and numbers.",
-        "Provide more details about the technologies used in the **Projects** section, and make sure that you demonstrate the outcomes.",
-        "Consider adding a section for **Awards and Recognition** to highlight any notable achievements beyond certifications.",
-        "Add **Soft Skills** section to showcase your soft skills.",
-        "Proofread the resume carefully to eliminate minor grammatical errors and improve overall **Spelling & Grammar**.",
-        "Include **Dates** to your Education Section clearly."
+        "Consider adding a brief **summary** highlighting your key skills and experiences to immediately capture the recruiter's attention.",
+        "Quantify your achievements in your **work experience** using metrics to showcase the impact of your contributions and provide concrete evidence of your abilities. For example, instead of saying 'Contributed to the end-to-end development,' try 'Contributed to the end-to-end development, resulting in a 15% reduction in manufacturing time'.",
+        "Incorporate relevant **soft skills** such as communication, teamwork, and problem-solving to demonstrate your ability to collaborate effectively and thrive in a professional environment.",
+        "Standardize the formatting and ensure consistent tense usage throughout your resume to improve readability and maintain a professional appearance.",
+        "Proofread your resume carefully to eliminate any remaining spelling or **grammatical errors**, ensuring that your communication is clear, concise, and error-free.",
+        "Ensure that the link to **github** is working, and also highlight the main keywords with bold ** here i will use markdown formar in web app.",
+        "In Education section, try to mention the year of passing seperately and use same format for other education details."
     ]
 }
