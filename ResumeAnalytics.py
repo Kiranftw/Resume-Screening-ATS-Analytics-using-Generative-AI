@@ -59,8 +59,11 @@ class ResumeAnalytics(object):
                 )
             elif model.name == chatmodel:
                 self.chatmodel = ChatGoogleGenerativeAI(
-                    model = chatmodel,
+                    model = modelname,
                     temperature = 0.7,
+                    max_output_tokens = 10000,
+                    top_k = 40,
+                    top_p = 0.95
                 )
         logger.info("CHAT/TEXT GENERATION MODELS initialized successfully.")
         if self.model is None or self.chatmodel is None:
@@ -410,8 +413,6 @@ class ResumeAnalytics(object):
         try:
             if not Query or Query.strip() == "":
                 return "Please type a query to continue."
-
-            # Initialize chat memory only once
             if not hasattr(self, 'chatmemory') or self.chatmemory is None:
                 self.chatmemory = ConversationSummaryBufferMemory(
                     llm=self.chatmodel,
@@ -420,8 +421,6 @@ class ResumeAnalytics(object):
                     memory_key="history"
                 )
                 logger.log(logging.INFO, "Chat memory initialized.")
-
-            # Process and store documents only if new ones are uploaded
             if Documents and any(doc.strip() != "" for doc in Documents):
                 self.corpus = []
                 for doc in Documents:
@@ -432,25 +431,18 @@ class ResumeAnalytics(object):
                 if not self.corpus:
                     return "No content found in the uploaded documents."
 
-                # Add document content to memory for context
                 combined_documents = "\n".join(self.corpus)
                 self.chatmemory.chat_memory.add_ai_message(
                     "Here are the uploaded documents that you should use to answer future queries:\n\n" + combined_documents
                 )
                 logger.log(logging.INFO, "Uploaded documents added to memory.")
 
-            # Ensure corpus exists
             elif not hasattr(self, 'corpus') or not self.corpus:
                 return "Please upload one or more documents to continue."
-
-            # Build message history for the chat model
             messages = self.chatmemory.chat_memory.messages.copy()
             messages.append(HumanMessage(content=Query))
 
-            # Get response from the model
             response = self.chatmodel.invoke(messages).content
-
-            # Add this interaction to memory
             self.chatmemory.chat_memory.add_user_message(Query)
             self.chatmemory.chat_memory.add_ai_message(response)
 
