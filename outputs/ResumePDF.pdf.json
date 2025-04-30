@@ -2,25 +2,28 @@
     "RESUME_RELEVANCE_SCORE": 65,
     "ROLE_FIT_SCORE": 60,
     "ATS_SCORE": 70,
-    "KEYWORD_MATCH_SCORE": 75,
+    "KEYWORD_MATCH_SCORE": 68,
     "MATCHED_KEYWORDS": [
-        "Data Science",
         "Python",
-        "R",
         "Java",
+        "R",
         "SQL",
-        "TensorFlow",
         "Machine Learning",
         "Data Analysis",
+        "Data Science",
+        "TensorFlow",
+        "Big Data",
+        "Statistics",
         "Data Cleaning",
-        "statistics",
+        "Data Preprocessing",
         "github",
-        "linux",
-        "windows"
+        "Linux",
+        "Windows",
+        "Cloud",
+        "Communication",
+        "Algorithms"
     ],
     "MISSING_KEYWORDS": [
-        "Big Data",
-        "Data Pipelines",
         "Hadoop",
         "Spark",
         "Kafka",
@@ -28,192 +31,244 @@
         "AWS",
         "Azure",
         "Google Cloud",
-        "PyTorch",
         "NLP",
-        "MLOps",
-        "Model Monitoring"
-    ],
-    "MISSING_SKILLS": [
-        "Big Data Technologies",
-        "Cloud Platforms",
-        "Deep Learning Frameworks",
-        "Natural Language Processing (NLP)",
         "Time Series Forecasting",
         "MLOps",
-        "Model Monitoring"
+        "Model Monitoring",
+        "Data pipelines",
+        "Predictive models",
+        "Data storage",
+        "Data retrieval"
+    ],
+    "MISSING_SKILLS": [
+        "Big Data Frameworks (Hadoop, Spark, Kafka)",
+        "Cloud Platforms (AWS, Azure, Google Cloud)",
+        "NoSQL Database Management",
+        "Natural Language Processing (NLP)",
+        "MLOps",
+        "Data pipeline development",
+        "Predictive modeling",
+        "Data storage optimization",
+        "Data retrieval optimization"
     ],
     "RESUME_TIPS": [
-        "Emphasize **Big Data experience** by detailing projects where you processed large datasets using technologies like Hadoop, Spark, or Kafka, quantifying the data size and processing speed improvements.",
-        "Highlight your experience with **cloud platforms (AWS, Azure, Google Cloud)** by specifically mentioning projects where you deployed or managed data science solutions on these platforms.",
-        "Include your familiarity with **Deep Learning frameworks** such as PyTorch and showcase projects where you've used them for complex model development.  Consider mentioning any certifications or courses completed.",
-        "Showcase **data pipeline** development experience by describing the ETL processes you've built, emphasizing scalability and efficiency, and mentioning specific tools used like Apache Beam or NiFi.",
-        "Add a section or bullet points detailing your understanding of **MLOps practices** like model versioning, CI/CD pipelines, and automated testing to demonstrate your readiness for production environments.",
-        "Incorporate **NLP projects** by explaining any experience with text analysis, sentiment analysis, or language modeling, and detailing the specific libraries or techniques used, such as NLTK or spaCy.",
-        "Add quantitative metrics to project descriptions, highlighting improvements or results achieved through your work, such as a percentage increase in model accuracy or a reduction in processing time, focusing on **measurable impact**.",
-        "Rewrite the summary/objective to include key phrases from the job description to explicitly state the alignment of your skills with the role requirements, focusing on the **Big Data Scientist** aspect.",
-        "Add any relevant certifications or online courses related to Big Data, Cloud Computing, or MLOps to the certifications section to validate your skills, focusing on courses from recognized platforms like **Coursera** or **Udemy**.",
-        "Add a dedicated 'Big Data Technologies' section, listing specific tools and frameworks (Hadoop, Spark, Kafka, etc.), and specifying your level of proficiency (e.g., 'Proficient in Spark SQL and DataFrames' to increase **keyword density**)."
+        "Emphasize experience with **Big Data frameworks like Hadoop, Spark, or Kafka** in your experience section to align with the job description’s key requirements.",
+        "Highlight **cloud platform experience (AWS, Azure, or Google Cloud)** in the skills or projects section to directly address the requirements mentioned in the job description.",
+        "Add specific projects that showcase **data pipeline development skills**, clearly outlining the tools and technologies used to process large datasets, use bulleted points for better clarity.",
+        "Mention your experience with **NoSQL databases** like MongoDB or Cassandra in the skills or projects section, and quantify its impact if possible to make it more appealing.",
+        "Include any experience or projects related to **Natural Language Processing (NLP)** and explicitly mention any NLP libraries or techniques you have used to catch recruiter's attention.",
+        "Detail any experience related to **MLOps and model monitoring techniques**, emphasizing how you've ensured model performance and reliability in production environments.",
+        "Showcase your expertise in **predictive modeling** by elaborating on specific projects, the types of models used, and the outcomes achieved, use metrics like accuracy and model.",
+        "Revise your resume to incorporate more **keywords related to data storage and retrieval optimization**, and specify any relevant tools or techniques used to make you more appealing.",
+        "Quantify your achievements and impact in previous roles and projects by using numbers and metrics like percentages and cost saved so the recruiters can understand more efficiently.",
+        "Ensure your resume is **ATS-friendly** by using a clean, simple format and avoiding tables, charts, and unusual fonts to ensure accurate parsing and prevent applicant system errors."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Big Data Technologies": [
+        "Big Data Frameworks (Hadoop, Spark, Kafka)": [
+            {
+                "COURSE_NAME": "Apache Spark with Scala - Hands On with Big Data!",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn to use Apache Spark with Scala to process big data. Covers SparkContext, RDDs, DataFrames, and Spark SQL.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/"
+            },
             {
                 "COURSE_NAME": "Big Data Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "A series of courses covering the fundamentals of Big Data, including Hadoop, Spark, and MapReduce, with hands-on projects.",
+                "DESCRIPTION": "A series of courses covering the fundamental concepts and tools for working with big data, including Hadoop and Spark.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
             },
             {
-                "COURSE_NAME": "Apache Spark and Hadoop for Beginners",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn the basics of Apache Spark and Hadoop for processing large datasets and performing data analysis.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/apache-spark-and-hadoop-for-beginners-with-hands-on"
-            },
-            {
-                "COURSE_NAME": "Big Data Tutorial",
+                "COURSE_NAME": "Hadoop Tutorial for Beginners | Big Data Hadoop Tutorial | Hadoop Training | Edureka",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "FreeCodeCamp Org offers a comprehensive overview of Big Data concepts and technologies.",
+                "DESCRIPTION": "A comprehensive tutorial covering the basics of Hadoop, its architecture, and how to set up a Hadoop cluster.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=C95J-HOjOzo"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=44XYwqb8-Ys"
             }
         ],
-        "Cloud Platforms": [
+        "Cloud Platforms (AWS, Azure, Google Cloud)": [
             {
                 "COURSE_NAME": "AWS Certified Cloud Practitioner",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn the fundamentals of AWS cloud services and prepare for the AWS Certified Cloud Practitioner exam.",
+                "DESCRIPTION": "A foundational course covering AWS cloud concepts, services, security, architecture, and pricing.",
                 "DIFFICULTY": "Beginner",
                 "COURSE_LINK": "https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
             },
             {
-                "COURSE_NAME": "Microsoft Azure Fundamentals AZ-900",
+                "COURSE_NAME": "Microsoft Azure Fundamentals AZ-900 Certification",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Get started with Microsoft Azure and learn the basics of cloud computing with Azure services.",
+                "DESCRIPTION": "A comprehensive course to prepare for the Azure Fundamentals certification, covering core Azure services and concepts.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/microsoft-azure-fundamentals-az-900"
+                "COURSE_LINK": "https://www.udemy.com/course/microsoft-azure-fundamentals-az-900-certification-2020/"
             },
             {
-                "COURSE_NAME": "Google Cloud Platform Full Course",
+                "COURSE_NAME": "Google Cloud Platform Full Course | Google Cloud Certification Training | Edureka",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "FreeCodeCamp Org offers a comprehensive Google Cloud Platform tutorial.",
+                "DESCRIPTION": "A full course on Google Cloud Platform covering various services and solutions offered by GCP.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=wWjSz-cUPKI"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=R-V-i7Kfdxc"
             }
         ],
-        "Deep Learning Frameworks": [
+        "NoSQL Database Management": [
             {
-                "COURSE_NAME": "Deep Learning Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "A series of courses covering the fundamentals of Deep Learning, including TensorFlow and neural networks.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/deep-learning"
-            },
-            {
-                "COURSE_NAME": "PyTorch for Deep Learning with Python",
+                "COURSE_NAME": "The Complete MongoDB Developer Course",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn PyTorch and build deep learning models for various applications.",
+                "DESCRIPTION": "Learn how to build applications with MongoDB, including data modeling, querying, and indexing.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/pytorch-for-deep-learning-with-python"
+                "COURSE_LINK": "https://www.udemy.com/course/the-complete-mongodb-developer-course/"
             },
             {
-                "COURSE_NAME": "Deep Learning with TensorFlow",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "Tensorflow offers a comprehensive tutorial on Deep Learning.",
+                "COURSE_NAME": "NoSQL Database Systems",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "An overview of NoSQL database systems, including key-value, document, and graph databases.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=tPYj3fFJGjk"
+                "COURSE_LINK": "https://www.coursera.org/learn/nosql-databases"
+            },
+            {
+                "COURSE_NAME": "What is NoSQL? Introduction to NoSQL Databases",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "An introductory video explaining the concepts of NoSQL databases and their benefits over traditional relational databases.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=WVyC9dmPmOc"
             }
         ],
         "Natural Language Processing (NLP)": [
             {
                 "COURSE_NAME": "Natural Language Processing Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "A series of courses covering the fundamentals of NLP, including text analysis, sentiment analysis, and language modeling.",
+                "DESCRIPTION": "A series of courses covering NLP fundamentals, including sentiment analysis, text summarization, and machine translation.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/natural-language-processing"
             },
             {
                 "COURSE_NAME": "NLP - Natural Language Processing with Python",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn NLP techniques and build NLP applications using Python and NLTK.",
+                "DESCRIPTION": "Learn NLP techniques using Python, including tokenization, stemming, and sentiment analysis.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/nlp-natural-language-processing-with-python"
+                "COURSE_LINK": "https://www.udemy.com/course/nlp-natural-language-processing-with-python/"
             },
             {
-                "COURSE_NAME": "Natural Language Processing Tutorial",
+                "COURSE_NAME": "NLTK Course - Natural Language Processing with Python",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Great Learning offers an NLP tutorial covering various techniques.",
+                "DESCRIPTION": "A tutorial covering the basics of Natural Language Processing using NLTK.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=O2ONL7qhhjY"
-            }
-        ],
-        "Time Series Forecasting": [
-            {
-                "COURSE_NAME": "Time Series Analysis, Forecasting and Machine Learning",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn how to analyze time series data, build forecasting models, and apply machine learning techniques.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/time-series-analysis-forecasting-and-machine-learning"
-            },
-            {
-                "COURSE_NAME": "Practical Time Series Analysis",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course provides a practical introduction to time series analysis, covering a range of techniques and applications.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/practical-time-series-analysis"
-            },
-            {
-                "COURSE_NAME": "Time Series Analysis",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A concise and informative video from StatQuest, explaining the basics of time series analysis.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=QN1RAlGNDX0"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=eOBMRVqyFCs"
             }
         ],
         "MLOps": [
             {
                 "COURSE_NAME": "MLOps (Machine Learning Operations) Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the principles and practices of MLOps, including model deployment, monitoring, and maintenance.",
+                "DESCRIPTION": "Learn about MLOps principles, practices, and tools for deploying and managing machine learning models in production.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
             },
             {
                 "COURSE_NAME": "MLOps: Continuous Delivery and Automation Pipelines in Machine Learning",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn how to build automated pipelines for machine learning models using MLOps principles.",
+                "DESCRIPTION": "Build automated pipelines for continuous integration, continuous delivery, and continuous training of machine learning models.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning"
+                "COURSE_LINK": "https://www.udemy.com/course/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning/"
             },
             {
-                "COURSE_NAME": "What is MLOps?",
+                "COURSE_NAME": "MLOps Full Course",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A video explaining the basics of MLOps and its importance in machine learning workflows.",
+                "DESCRIPTION": "A detailed course covering the basics of MLOps.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=0uJEkOaKdL4"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=014Q72ryrv8"
             }
         ],
-        "Model Monitoring": [
+        "Data pipeline development": [
             {
-                "COURSE_NAME": "Model Monitoring and Explainability",
+                "COURSE_NAME": "Data Engineering with Google Cloud Platform",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to monitor machine learning models for performance degradation and ensure explainability.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/projects/model-monitoring-explainability"
-            },
-            {
-                "COURSE_NAME": "Machine Learning Model Monitoring with Amazon SageMaker",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn how to use Amazon SageMaker to monitor machine learning models in production.",
+                "DESCRIPTION": "Learn to design, build, and maintain data pipelines on Google Cloud Platform.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/machine-learning-model-monitoring-with-amazon-sagemaker"
+                "COURSE_LINK": "https://www.coursera.org/specializations/data-engineering-gcp"
             },
             {
-                "COURSE_NAME": "Model Monitoring in Production",
+                "COURSE_NAME": "Azure Data Factory Master Class",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn to build scalable data integration solutions using Azure Data Factory.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/azure-data-factory-master-class/"
+            },
+            {
+                "COURSE_NAME": "Data Pipelines with Airflow",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A video discussing the importance of model monitoring and best practices for implementation.",
+                "DESCRIPTION": "Build and manage data pipelines with Apache Airflow",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=g948_EszVwQ"
+            }
+        ],
+        "Predictive modeling": [
+            {
+                "COURSE_NAME": "Machine Learning A-Z™: Hands-On Python & R In Data Science",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Master Machine Learning on Python & R +Solve real life problems. Code templates included.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=RUC0mS4QONk"
+                "COURSE_LINK": "https://www.udemy.com/course/machinelearning/"
+            },
+            {
+                "COURSE_NAME": "Advanced Machine Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Go beyond the basics of machine learning with advanced techniques and algorithms.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/specializations/advanced-machine-learning"
+            },
+            {
+                "COURSE_NAME": "Predictive Modeling",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Predictive Modeling Full Course.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=KQrMm4mPdmU"
+            }
+        ],
+        "Data storage optimization": [
+            {
+                "COURSE_NAME": "Database Design and Basic SQL in PostgreSQL",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to design and implement efficient databases using PostgreSQL.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/database-design"
+            },
+            {
+                "COURSE_NAME": "Data Warehousing for Business Intelligence",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn data warehouse and business intelligence skills.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/data-warehousing-for-business-intelligence/"
+            },
+            {
+                "COURSE_NAME": "Database Systems - Cornell University Course (FULL)",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Cornell University's database systems course, offering in-depth lectures on design and architecture.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=4bktmKx3N0U"
+            }
+        ],
+        "Data retrieval optimization": [
+            {
+                "COURSE_NAME": "SQL Performance Tuning",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn how to optimize SQL queries for faster retrieval.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/sql-performance-tuning/"
+            },
+            {
+                "COURSE_NAME": "Data Retrieval",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Data Retrieval Concepts, Algorithms, and Technologies.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/lecture/data-retrieval/introduction-to-data-retrieval-lGfMt"
+            },
+            {
+                "COURSE_NAME": "Advanced SQL: Query Optimization and Performance Tuning",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Learn how to optimize complex SQL queries for large databases.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=RWHKihhB-mQ"
             }
         ]
     }

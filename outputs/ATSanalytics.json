@@ -19,12 +19,19 @@
                 "Matplotlib",
                 "Scikit Learn",
                 "TensorFlow",
-                "ML & DS",
-                "Linear & Multilinear Regression",
-                "Data Cleaning & Data Prepressing",
+                "ML",
+                "DS",
+                "Linear Regression",
+                "Multilinear Regression",
+                "Data Cleaning",
+                "Data Preprocessing",
                 "Logistics Regression",
                 "Decision Trees",
-                "K Means & KNN"
+                "K Means",
+                "KNN",
+                "CAD",
+                "CAM",
+                "SolidWorks"
             ]
         },
         "Experience": [
@@ -43,11 +50,11 @@
         ],
         "Projects": [
             {
-                "Name": "CV ANALYTICS DASHBOARD",
+                "Title": "CV ANALYTICS DASHBOARD",
                 "Description": "Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply."
             },
             {
-                "Name": "Conversation chatbot using API",
+                "Title": "Conversation chatbot using API",
                 "Description": "Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
             }
         ],
@@ -65,24 +72,23 @@
     "ATS Score": {
         "Total Score": 84,
         "Breakdown": {
-            "Format Score": 9,
-            "Spelling & Grammar": 8,
-            "Summary": 9,
+            "Format Score": 10,
+            "Spelling & Grammar": 9,
+            "Summary": 10,
             "Skills": 9,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
-            "Education": 9,
-            "Contact Details": 10
+            "Education": 10,
+            "Contact Details": 6
         }
     },
     "Recommendations": [
-        "Consider adding a brief **summary** highlighting your key skills and experiences to immediately capture the recruiter's attention.",
-        "Quantify your achievements in your **work experience** using metrics to showcase the impact of your contributions and provide concrete evidence of your abilities. For example, instead of saying 'Contributed to the end-to-end development,' try 'Contributed to the end-to-end development, resulting in a 15% reduction in manufacturing time'.",
-        "Incorporate relevant **soft skills** such as communication, teamwork, and problem-solving to demonstrate your ability to collaborate effectively and thrive in a professional environment.",
-        "Standardize the formatting and ensure consistent tense usage throughout your resume to improve readability and maintain a professional appearance.",
-        "Proofread your resume carefully to eliminate any remaining spelling or **grammatical errors**, ensuring that your communication is clear, concise, and error-free.",
-        "Ensure that the link to **github** is working, and also highlight the main keywords with bold ** here i will use markdown formar in web app.",
-        "In Education section, try to mention the year of passing seperately and use same format for other education details."
+        "Consider adding a brief **summary** or **objective statement** to the beginning of your resume.  This will quickly communicate your career goals and qualifications to potential employers.",
+        "Quantify your achievements in your **work experience** and **project descriptions** using specific numbers and metrics to demonstrate the impact of your contributions. For example, instead of 'Improved efficiency,' try 'Improved efficiency by 15% resulting to the company save 10,000$ per month.'",
+        "In skills include both **soft skills and hard skills**. Soft skills are just as important as hard skills and are valued by almost every single company. Soft skills are things like: Communication, Teamwork, Problem-solving, Time management and Leadership.",
+        "Improve the contact details section by adding links like **Github** and **linkedin** account. Also include your location (City, State).",
+        "Correct the grammatical error in the **Certifications** section and any other part of your resume, as there may be other errors in the resume.",
+        "Ensure the **dates** are clearly formatted to avoid ambiguity.  Use a consistent format throughout the document to enhance readability."
     ]
 }

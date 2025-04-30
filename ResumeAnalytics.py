@@ -411,51 +411,55 @@ class ResumeAnalytics(object):
             if not Query or Query.strip() == "":
                 return "Please type a query to continue."
 
-            if not Documents or all(doc.strip() == "" for doc in Documents):
+            # Initialize chat memory only once
+            if not hasattr(self, 'chatmemory') or self.chatmemory is None:
+                self.chatmemory = ConversationSummaryBufferMemory(
+                    llm=self.chatmodel,
+                    max_tokens=100000,
+                    return_messages=True,
+                    memory_key="history"
+                )
+                logger.log(logging.INFO, "Chat memory initialized.")
+
+            # Process and store documents only if new ones are uploaded
+            if Documents and any(doc.strip() != "" for doc in Documents):
+                self.corpus = []
+                for doc in Documents:
+                    tempdata = self.documentParser(doc)
+                    if tempdata and tempdata.get("content"):
+                        self.corpus.append(tempdata["content"])
+
+                if not self.corpus:
+                    return "No content found in the uploaded documents."
+
+                # Add document content to memory for context
+                combined_documents = "\n".join(self.corpus)
+                self.chatmemory.chat_memory.add_ai_message(
+                    "Here are the uploaded documents that you should use to answer future queries:\n\n" + combined_documents
+                )
+                logger.log(logging.INFO, "Uploaded documents added to memory.")
+
+            # Ensure corpus exists
+            elif not hasattr(self, 'corpus') or not self.corpus:
                 return "Please upload one or more documents to continue."
-
-            # Initialize chat memory
-            self.chatmemory = ConversationSummaryBufferMemory(
-                llm=self.chatmodel,
-                max_tokens=100000,
-                return_messages=True,
-                memory_key="history"
-            )
-
-            self.corpus = []
-            for doc in Documents:
-                tempdata = self.documentParser(doc)
-                if tempdata and tempdata.get("content"):
-                    self.corpus.append(tempdata["content"])
-
-            if not self.corpus:
-                return "No content found in the uploaded documents."
-
-            # Combine all documents into a single string
-            combined_documents = "\n".join(self.corpus)
-
-            # Add the content to memory using the correct memory object
-            self.chatmemory.chat_memory.add_ai_message(
-                "Here are the uploaded documents that you should use to answer future queries:\n\n" + combined_documents
-            )
-            logger.log(logging.INFO, "Chat memory initialized with uploaded documents.")
 
             # Build message history for the chat model
             messages = self.chatmemory.chat_memory.messages.copy()
             messages.append(HumanMessage(content=Query))
 
-            # Get model response
+            # Get response from the model
             response = self.chatmodel.invoke(messages).content
 
-            # Update memory with the latest messages
+            # Add this interaction to memory
             self.chatmemory.chat_memory.add_user_message(Query)
             self.chatmemory.chat_memory.add_ai_message(response)
 
-            return response
+            return markdown.markdown(response)
 
         except Exception as e:
             logger.log(logging.ERROR, f"Error in pdfchatbot: {str(e)}")
             return "An error occurred while processing the documents. Please try again."
+
 
 if __name__ == "__main__":
     object = ResumeAnalytics()
