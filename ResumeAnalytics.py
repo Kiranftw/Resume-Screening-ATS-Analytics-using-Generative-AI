@@ -451,8 +451,17 @@ class ResumeAnalytics(object):
             self.chatmemory.chat_memory.add_user_message(Query)
             self.chatmemory.chat_memory.add_ai_message(response)
 
-            return markdown.markdown(response)
+            return response
 
         except Exception as e:
             logger.log(logging.ERROR, f"Error in pdfchatbot: {str(e)}")
             return "An error occurred while processing the documents. Please try again."
+
+if __name__ == "__main__":
+    object = ResumeAnalytics()
+    document = [input()]
+    documents = document.split(",")
+    while True:
+        query = input()
+        data = object.pdfchatbot(document, query)
+        print(data)
