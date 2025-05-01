@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Analysis Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
         :root {
             --primary-color: #2563eb;
@@ -27,10 +28,13 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.5;
+        /* Logo styles - slightly reduced from previous version */
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 12px 18px;
+            margin-bottom: 18px;
         }
 
         .container {
@@ -109,10 +113,13 @@
         }
 
         .section-title {
-            font-size: 1.5rem;
-            font-weight: 600;
+            color: blue;
+            font-size: 2.25rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
             margin-bottom: 1.5rem;
-            color: var(--text-dark);
         }
 
         .upload-section {
@@ -597,11 +604,9 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <h2 class="section-title">Resume Analyzer</h2>
-
-            <!-- Navigation -->
+            <h2 class="section-title" style="color: black; font-size: 2.25rem;">Resume Analyzer</h2>
             <div class="sidebar-nav">
-                <a href="/dashboard" class="nav-item">
+                <a href="/dashboard" class="nav-item active">
                     <span class="nav-icon">📊</span>
                     <span>Dashboard</span>
                 </a>
@@ -613,9 +618,13 @@
                     <span class="nav-icon">🎓</span>
                     <span>Course Recommendations</span>
                 </a>
-                <a href="/PDFChatbot" class="nav-item active">
+                <a href="/PDFChatbot" class="nav-item">
                     <span class="nav-icon">💬</span>
-                    <span>Chatbot Assistant</span>
+                    <span>Resume Assistant</span>
+                </a>
+                <a href="/customcoverletter" class="nav-item">
+                    <span class="nav-icon">✉️</span>
+                    <span>Cover Letter Generator</span>
                 </a>
             </div>
         </div>

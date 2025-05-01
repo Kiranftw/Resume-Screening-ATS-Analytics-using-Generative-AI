@@ -1,274 +1,229 @@
 {
-    "RESUME_RELEVANCE_SCORE": 65,
-    "ROLE_FIT_SCORE": 60,
-    "ATS_SCORE": 70,
-    "KEYWORD_MATCH_SCORE": 68,
+    "RESUME_RELEVANCE_SCORE": 60,
+    "ROLE_FIT_SCORE": 55,
+    "ATS_SCORE": 65,
+    "KEYWORD_MATCH_SCORE": 62,
     "MATCHED_KEYWORDS": [
+        "Data Science",
         "Python",
-        "Java",
-        "R",
         "SQL",
         "Machine Learning",
         "Data Analysis",
-        "Data Science",
-        "TensorFlow",
-        "Big Data",
         "Statistics",
         "Data Cleaning",
-        "Data Preprocessing",
-        "github",
-        "Linux",
-        "Windows",
-        "Cloud",
-        "Communication",
-        "Algorithms"
+        "Data Visualization",
+        "Programming",
+        "Feature engineering",
+        "Data exploration",
+        "Data preparation",
+        "Github",
+        "APIs",
+        "Regression",
+        "Classification",
+        "Clustering"
     ],
     "MISSING_KEYWORDS": [
-        "Hadoop",
-        "Spark",
-        "Kafka",
-        "NoSQL",
-        "AWS",
-        "Azure",
-        "Google Cloud",
-        "NLP",
-        "Time Series Forecasting",
-        "MLOps",
-        "Model Monitoring",
-        "Data pipelines",
         "Predictive models",
-        "Data storage",
-        "Data retrieval"
+        "A/B testing",
+        "Causal inference",
+        "Reinforcement learning",
+        "Anomaly detection",
+        "Optimization",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "XGBoost",
+        "MLOps",
+        "Data engineers",
+        "Software engineers",
+        "Model deployment",
+        "Model monitoring",
+        "Tableau",
+        "Power BI",
+        "Communication skills",
+        "Experimental design"
     ],
     "MISSING_SKILLS": [
-        "Big Data Frameworks (Hadoop, Spark, Kafka)",
-        "Cloud Platforms (AWS, Azure, Google Cloud)",
-        "NoSQL Database Management",
-        "Natural Language Processing (NLP)",
-        "MLOps",
-        "Data pipeline development",
-        "Predictive modeling",
-        "Data storage optimization",
-        "Data retrieval optimization"
+        "Deep Learning",
+        "Cloud Platforms (AWS, Azure, GCP)",
+        "Big Data Technologies (Spark, Hadoop, Hive, Presto)",
+        "MLflow",
+        "Kubeflow",
+        "Docker",
+        "CI/CD pipelines"
     ],
     "RESUME_TIPS": [
-        "Emphasize experience with **Big Data frameworks like Hadoop, Spark, or Kafka** in your experience section to align with the job description’s key requirements.",
-        "Highlight **cloud platform experience (AWS, Azure, or Google Cloud)** in the skills or projects section to directly address the requirements mentioned in the job description.",
-        "Add specific projects that showcase **data pipeline development skills**, clearly outlining the tools and technologies used to process large datasets, use bulleted points for better clarity.",
-        "Mention your experience with **NoSQL databases** like MongoDB or Cassandra in the skills or projects section, and quantify its impact if possible to make it more appealing.",
-        "Include any experience or projects related to **Natural Language Processing (NLP)** and explicitly mention any NLP libraries or techniques you have used to catch recruiter's attention.",
-        "Detail any experience related to **MLOps and model monitoring techniques**, emphasizing how you've ensured model performance and reliability in production environments.",
-        "Showcase your expertise in **predictive modeling** by elaborating on specific projects, the types of models used, and the outcomes achieved, use metrics like accuracy and model.",
-        "Revise your resume to incorporate more **keywords related to data storage and retrieval optimization**, and specify any relevant tools or techniques used to make you more appealing.",
-        "Quantify your achievements and impact in previous roles and projects by using numbers and metrics like percentages and cost saved so the recruiters can understand more efficiently.",
-        "Ensure your resume is **ATS-friendly** by using a clean, simple format and avoiding tables, charts, and unusual fonts to ensure accurate parsing and prevent applicant system errors."
+        "Emphasize experience with **machine learning model deployment** and monitoring to align with MLOps requirements mentioned in the job description, highlighting practical experience.",
+        "Explicitly mention experience with **TensorFlow, PyTorch, or Keras** in the skills section, as these are highlighted in the job description as preferred qualifications.",
+        "Add details regarding experience with **cloud platforms like AWS, Azure, or GCP**, and related ML services like SageMaker, Azure ML, or Google AI Platform.",
+        "Include specific projects or experiences where **A/B testing or causal inference** were applied, demonstrating a solid foundation in statistical analysis.",
+        "Incorporate hands-on experience with **big data technologies like Spark, Hadoop, Hive, or Presto**, showcasing ability to work with large datasets.",
+        "Detail any experience with **MLOps practices and tools, such as MLflow, Kubeflow, Docker, and CI/CD pipelines**, to showcase expertise in model deployment and monitoring.",
+        "Showcase experience with **data visualization tools like Tableau or Power BI** in the skills section or project descriptions to highlight proficiency in communicating insights effectively.",
+        "Include projects that demonstrate expertise in **building predictive models or conducting A/B testing** to match the key responsibilities outlined in the job description.",
+        "Revise the experience section to use action verbs that better quantify achievements and contributions, such as **'Developed', 'Implemented', 'Improved'**, etc., to showcase impact.",
+        "Incorporate the phrase \"**communication skills**\" and provide specific examples of how these skills were used to translate technical findings for non-technical audiences."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Big Data Frameworks (Hadoop, Spark, Kafka)": [
+        "Deep Learning": [
             {
-                "COURSE_NAME": "Apache Spark with Scala - Hands On with Big Data!",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn to use Apache Spark with Scala to process big data. Covers SparkContext, RDDs, DataFrames, and Spark SQL.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/"
+                "COURSE_NAME": "Deep Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Covers the foundations of Deep Learning, teaches how to build neural networks, and how to lead successful machine learning projects. Includes CNNs, RNNs, and LSTMs.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/deep-learning"
             },
+            {
+                "COURSE_NAME": "Deep Learning A-Z™: Hands-On Artificial Neural Networks",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn to create Deep Learning Algorithms in Python from two Machine Learning & Data Science Experts. Uses TensorFlow, Keras, etc.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/deeplearning/"
+            },
+            {
+                "COURSE_NAME": "Neural Networks from Scratch - Python",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A series that teaches you to build neural networks from scratch using Python, offering a deeper understanding of the underlying mechanisms.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/playlist?list=PLQVvvaa0QuDcjD5BAw2DxE6OF2tius3V3"
+            }
+        ],
+        "Cloud Platforms (AWS, Azure, GCP)": [
+            {
+                "COURSE_NAME": "AWS Certified Machine Learning – Specialty",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Prepares you for the AWS Machine Learning certification, covering a broad range of AWS ML services and how to implement them.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/learn/aws-machine-learning-specialty"
+            },
+            {
+                "COURSE_NAME": "Microsoft Azure Machine Learning",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn to build, deploy, and manage machine learning solutions using Microsoft Azure Machine Learning service.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/microsoft-azure-machine-learning"
+            },
+            {
+                "COURSE_NAME": "Google Cloud Platform Full Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A comprehensive course covering various aspects of Google Cloud Platform, including machine learning services.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=G92xE2VnQxA"
+            }
+        ],
+        "Big Data Technologies (Spark, Hadoop, Hive, Presto)": [
             {
                 "COURSE_NAME": "Big Data Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "A series of courses covering the fundamental concepts and tools for working with big data, including Hadoop and Spark.",
+                "DESCRIPTION": "Learn about the tools used to manage, analyze, and leverage big data. Includes Hadoop, Spark, and MapReduce.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
             },
             {
-                "COURSE_NAME": "Hadoop Tutorial for Beginners | Big Data Hadoop Tutorial | Hadoop Training | Edureka",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A comprehensive tutorial covering the basics of Hadoop, its architecture, and how to set up a Hadoop cluster.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=44XYwqb8-Ys"
-            }
-        ],
-        "Cloud Platforms (AWS, Azure, Google Cloud)": [
-            {
-                "COURSE_NAME": "AWS Certified Cloud Practitioner",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "A foundational course covering AWS cloud concepts, services, security, architecture, and pricing.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
-            },
-            {
-                "COURSE_NAME": "Microsoft Azure Fundamentals AZ-900 Certification",
+                "COURSE_NAME": "Spark and Hadoop Developer in One Course",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "A comprehensive course to prepare for the Azure Fundamentals certification, covering core Azure services and concepts.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/microsoft-azure-fundamentals-az-900-certification-2020/"
+                "DESCRIPTION": "Master Apache Spark and Hadoop with this comprehensive course, covering real-time analytics and big data processing.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/apache-spark-and-hadoop-developer-in-one-course/"
             },
             {
-                "COURSE_NAME": "Google Cloud Platform Full Course | Google Cloud Certification Training | Edureka",
+                "COURSE_NAME": "Hadoop Tutorial for Beginners",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A full course on Google Cloud Platform covering various services and solutions offered by GCP.",
+                "DESCRIPTION": "An introductory tutorial to Hadoop, covering its architecture, components, and basic operations.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=R-V-i7Kfdxc"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=NyK2d9mNaZE"
             }
         ],
-        "NoSQL Database Management": [
-            {
-                "COURSE_NAME": "The Complete MongoDB Developer Course",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn how to build applications with MongoDB, including data modeling, querying, and indexing.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/the-complete-mongodb-developer-course/"
-            },
-            {
-                "COURSE_NAME": "NoSQL Database Systems",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "An overview of NoSQL database systems, including key-value, document, and graph databases.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/nosql-databases"
-            },
-            {
-                "COURSE_NAME": "What is NoSQL? Introduction to NoSQL Databases",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "An introductory video explaining the concepts of NoSQL databases and their benefits over traditional relational databases.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=WVyC9dmPmOc"
-            }
-        ],
-        "Natural Language Processing (NLP)": [
-            {
-                "COURSE_NAME": "Natural Language Processing Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "A series of courses covering NLP fundamentals, including sentiment analysis, text summarization, and machine translation.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/natural-language-processing"
-            },
-            {
-                "COURSE_NAME": "NLP - Natural Language Processing with Python",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn NLP techniques using Python, including tokenization, stemming, and sentiment analysis.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/nlp-natural-language-processing-with-python/"
-            },
-            {
-                "COURSE_NAME": "NLTK Course - Natural Language Processing with Python",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A tutorial covering the basics of Natural Language Processing using NLTK.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=eOBMRVqyFCs"
-            }
-        ],
-        "MLOps": [
+        "MLflow": [
             {
                 "COURSE_NAME": "MLOps (Machine Learning Operations) Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about MLOps principles, practices, and tools for deploying and managing machine learning models in production.",
+                "DESCRIPTION": "This specialization introduces MLOps concepts and covers tools like MLflow for managing the ML lifecycle.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
             },
             {
-                "COURSE_NAME": "MLOps: Continuous Delivery and Automation Pipelines in Machine Learning",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Build automated pipelines for continuous integration, continuous delivery, and continuous training of machine learning models.",
+                "COURSE_NAME": "MLflow: Managing the ML Lifecycle",
+                "PLATFORM": "Databricks",
+                "DESCRIPTION": "Offered by Databricks, this course covers how to use MLflow to track experiments, package code, and deploy models.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning/"
+                "COURSE_LINK": "https://www.databricks.com/learn/training/mlflow-managing-ml-lifecycle"
             },
             {
-                "COURSE_NAME": "MLOps Full Course",
+                "COURSE_NAME": "MLflow Tutorial",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A detailed course covering the basics of MLOps.",
+                "DESCRIPTION": "A practical tutorial on using MLflow for experiment tracking and model management.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=014Q72ryrv8"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=KMQRmcwYtP4"
             }
         ],
-        "Data pipeline development": [
+        "Kubeflow": [
             {
-                "COURSE_NAME": "Data Engineering with Google Cloud Platform",
+                "COURSE_NAME": "Machine Learning with Kubeflow",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to design, build, and maintain data pipelines on Google Cloud Platform.",
+                "DESCRIPTION": "Learn how to build and deploy machine learning pipelines on Kubernetes using Kubeflow.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/data-engineering-gcp"
+                "COURSE_LINK": "https://www.coursera.org/learn/machine-learning-with-kubeflow"
             },
             {
-                "COURSE_NAME": "Azure Data Factory Master Class",
+                "COURSE_NAME": "Kubeflow for Machine Learning",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn to build scalable data integration solutions using Azure Data Factory.",
+                "DESCRIPTION": "A practical guide to Kubeflow, covering model deployment and management on Kubernetes.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/azure-data-factory-master-class/"
+                "COURSE_LINK": "https://www.udemy.com/course/kubeflow-for-machine-learning/"
             },
             {
-                "COURSE_NAME": "Data Pipelines with Airflow",
+                "COURSE_NAME": "Kubeflow Tutorial",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Build and manage data pipelines with Apache Airflow",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=g948_EszVwQ"
+                "DESCRIPTION": "A tutorial series on setting up and using Kubeflow for machine learning workflows.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=p33KW-hJiz8"
             }
         ],
-        "Predictive modeling": [
+        "Docker": [
             {
-                "COURSE_NAME": "Machine Learning A-Z™: Hands-On Python & R In Data Science",
+                "COURSE_NAME": "Docker and Kubernetes: The Complete Guide",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Master Machine Learning on Python & R +Solve real life problems. Code templates included.",
+                "DESCRIPTION": "Learn how to deploy applications using Docker and Kubernetes, covering containerization and orchestration.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/"
+            },
+            {
+                "COURSE_NAME": "Docker for Data Science",
+                "PLATFORM": "datacamp",
+                "DESCRIPTION": "Focuses on using docker to create reproducible Data Science Environments",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/machinelearning/"
+                "COURSE_LINK": "https://www.datacamp.com/courses/docker-for-data-science"
             },
             {
-                "COURSE_NAME": "Advanced Machine Learning Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Go beyond the basics of machine learning with advanced techniques and algorithms.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/specializations/advanced-machine-learning"
-            },
-            {
-                "COURSE_NAME": "Predictive Modeling",
+                "COURSE_NAME": "Docker Tutorial for Beginners",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Predictive Modeling Full Course.",
+                "DESCRIPTION": "A beginner-friendly introduction to Docker, covering basic concepts and commands.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=KQrMm4mPdmU"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=fqMOX6JJhGo"
             }
         ],
-        "Data storage optimization": [
+        "CI/CD pipelines": [
             {
-                "COURSE_NAME": "Database Design and Basic SQL in PostgreSQL",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to design and implement efficient databases using PostgreSQL.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/database-design"
-            },
-            {
-                "COURSE_NAME": "Data Warehousing for Business Intelligence",
+                "COURSE_NAME": "Continuous Delivery & DevOps with Git, Jenkins, and Docker",
                 "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn data warehouse and business intelligence skills.",
+                "DESCRIPTION": "Learn to automate software delivery pipelines using Git, Jenkins, and Docker.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/data-warehousing-for-business-intelligence/"
+                "COURSE_LINK": "https://www.udemy.com/course/jenkins-gitlab-ci-for-beginners/"
             },
             {
-                "COURSE_NAME": "Database Systems - Cornell University Course (FULL)",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "Cornell University's database systems course, offering in-depth lectures on design and architecture.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=4bktmKx3N0U"
-            }
-        ],
-        "Data retrieval optimization": [
-            {
-                "COURSE_NAME": "SQL Performance Tuning",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn how to optimize SQL queries for faster retrieval.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/sql-performance-tuning/"
-            },
-            {
-                "COURSE_NAME": "Data Retrieval",
+                "COURSE_NAME": "DevOps Engineering on AWS",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Data Retrieval Concepts, Algorithms, and Technologies.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/lecture/data-retrieval/introduction-to-data-retrieval-lGfMt"
+                "DESCRIPTION": "Learn about DevOps practices and tools on AWS, including CI/CD pipelines and automation.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/devops-engineering-aws"
             },
             {
-                "COURSE_NAME": "Advanced SQL: Query Optimization and Performance Tuning",
+                "COURSE_NAME": "CI/CD Pipeline Tutorial",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Learn how to optimize complex SQL queries for large databases.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=RWHKihhB-mQ"
+                "DESCRIPTION": "A practical tutorial on building CI/CD pipelines using popular tools.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=0FGq376DvcI"
             }
         ]
     }

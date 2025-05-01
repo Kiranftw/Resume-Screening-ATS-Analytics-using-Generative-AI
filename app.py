@@ -256,6 +256,10 @@ def remove_file():
     
     return jsonify({"status": "success"})
 
+@app.route('/customcoverletter')
+def customCoverLetter():
+    return render_template("Cover letter.html")
+
 @app.route('/')
 def landing_page():
     return render_template('Landing Page.html')

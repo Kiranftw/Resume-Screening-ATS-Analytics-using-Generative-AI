@@ -360,9 +360,7 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <h2 class="section-title">Resume Analyzer</h2>
-
-            <!-- Navigation -->
+            <h2 class="section-title" style="color: black; font-size: 2.25rem;">Resume Analyzer</h2>
             <div class="sidebar-nav">
                 <a href="/dashboard" class="nav-item">
                     <span class="nav-icon">📊</span>
@@ -372,13 +370,17 @@
                     <span class="nav-icon">📚</span>
                     <span>Resume Insights</span>
                 </a>
-                <a href="/course-recommendations" class="nav-item">
+                <a href="/course-recommendations" class="nav-item active">
                     <span class="nav-icon">🎓</span>
                     <span>Course Recommendations</span>
                 </a>
-                <a href="/PDFChatbot" class="nav-item active">
+                <a href="/PDFChatbot" class="nav-item">
                     <span class="nav-icon">💬</span>
-                    <span>Chatbot Assistant</span>
+                    <span>Resume Assistant</span>
+                </a>
+                <a href="/customcoverletter" class="nav-item">
+                    <span class="nav-icon">✉️</span>
+                    <span>Cover Letter Generator</span>
                 </a>
             </div>
         </div>
@@ -433,7 +435,7 @@
                             <div class="course-platform {{ course.PLATFORM.lower() }}">{{ course.PLATFORM }}</div>
                         </div>
                         <div class="actions">
-                            <a href="{{ course.URL }}" target="_blank" class="enroll-btn">Enroll Now</a>
+                            <a href="{{ course.COURSE_LINK }}" target="_blank" class="enroll-btn">Enroll Now</a>
                             <button class="cancel-btn"
                                 onclick="event.stopPropagation(); this.parentElement.style.display = 'none';">Cancel</button>
                         </div>
@@ -474,7 +476,7 @@
                             <div class="course-platform youtube">YouTube</div>
                         </div>
                         <div class="actions">
-                            <a href="{{ course.URL }}" target="_blank" class="enroll-btn">Enroll Now</a>
+                            <a href="{{ course.COURSE_LINK }}" target="_blank" class="enroll-btn">Enroll Now</a>
                             <button class="cancel-btn"
                                 onclick="event.stopPropagation(); this.parentElement.style.display = 'none';">Cancel</button>
                         </div>

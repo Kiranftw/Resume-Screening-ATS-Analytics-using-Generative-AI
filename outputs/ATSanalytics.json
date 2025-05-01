@@ -19,8 +19,6 @@
                 "Matplotlib",
                 "Scikit Learn",
                 "TensorFlow",
-                "ML",
-                "DS",
                 "Linear Regression",
                 "Multilinear Regression",
                 "Data Cleaning",
@@ -28,15 +26,12 @@
                 "Logistics Regression",
                 "Decision Trees",
                 "K Means",
-                "KNN",
-                "CAD",
-                "CAM",
-                "SolidWorks"
+                "KNN"
             ]
         },
         "Experience": [
             {
-                "Title": "ASSISTANT TOOL MAKER",
+                "Title": "Intern",
                 "Company": "Acme Tooling s",
                 "Duration": "Jan 2022 – June 2022",
                 "Description": "Gained hands on experience in complex mould designs and development Worked with CAD/CAM and SolidWorks design software s to build intricate designs. contributed to the end to end development of mould' s from initial design through manufacturing and quality control"
@@ -49,14 +44,8 @@
             }
         ],
         "Projects": [
-            {
-                "Title": "CV ANALYTICS DASHBOARD",
-                "Description": "Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply."
-            },
-            {
-                "Title": "Conversation chatbot using API",
-                "Description": "Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
-            }
+            "CV ANALYTICS DASHBOARD: Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply.",
+            "Conversation chatbot using API: Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
         ],
         "Certifications": [
             "DSA PYTHON : By CampusX",
@@ -70,25 +59,26 @@
         ]
     },
     "ATS Score": {
-        "Total Score": 84,
+        "Total Score": 85,
         "Breakdown": {
             "Format Score": 10,
-            "Spelling & Grammar": 9,
+            "Spelling & Grammar": 8,
             "Summary": 10,
             "Skills": 9,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
             "Education": 10,
-            "Contact Details": 6
+            "Contact Details": 8
         }
     },
     "Recommendations": [
-        "Consider adding a brief **summary** or **objective statement** to the beginning of your resume.  This will quickly communicate your career goals and qualifications to potential employers.",
-        "Quantify your achievements in your **work experience** and **project descriptions** using specific numbers and metrics to demonstrate the impact of your contributions. For example, instead of 'Improved efficiency,' try 'Improved efficiency by 15% resulting to the company save 10,000$ per month.'",
-        "In skills include both **soft skills and hard skills**. Soft skills are just as important as hard skills and are valued by almost every single company. Soft skills are things like: Communication, Teamwork, Problem-solving, Time management and Leadership.",
-        "Improve the contact details section by adding links like **Github** and **linkedin** account. Also include your location (City, State).",
-        "Correct the grammatical error in the **Certifications** section and any other part of your resume, as there may be other errors in the resume.",
-        "Ensure the **dates** are clearly formatted to avoid ambiguity.  Use a consistent format throughout the document to enhance readability."
+        "Improve **spelling and grammar** throughout the resume. Correcting typos and grammatical errors will significantly improve the resume's professionalism.",
+        "Include a section detailing **soft skills**. Providing examples of soft skills, such as communication, teamwork, or problem-solving, will enhance the resume's appeal.",
+        "The resume has some **minor grammatical errors** and the candidate should review it carefully.",
+        "In **Contact Details** add the location, this will give a better visibility to the recruiters",
+        "In the **achievements** section, elaborate more on the impact or outcome of the proposed mobile app prototype at SIH to highlight its significance and potential value.",
+        "Ensure consistency in **formatting and punctuation** throughout the resume to maintain a professional and polished appearance, paying attention to details such as spacing and capitalization.",
+        "In the **Experience** section, quantify achievements with specific metrics or results whenever possible to demonstrate the impact of the work and provide concrete evidence of skills and contributions."
     ]
 }

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cover Letter Generator | Resume Analyzer Pro</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --light-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.5;
+            height: 100vh;
+            overflow: hidden;
+            /* Prevent double scrollbars */
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Fixed Sidebar */
+        .sidebar {
+            position: fixed;
+            width: 280px;
+            height: 100vh;
+            padding: 2rem;
+            background-color: white;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            /* Allow sidebar to scroll if needed */
+            z-index: 100;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: black;
+            /* Changed to black as requested */
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .nav-item {
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-md);
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-item:hover {
+            background-color: #f1f5f9;
+        }
+
+        .nav-item.active {
+            background-color: #e0e7ff;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            /* Match sidebar width */
+            height: 100vh;
+            overflow-y: auto;
+            /* Allow main content to scroll */
+            padding: 2rem;
+            background-color: var(--light-bg);
+        }
+
+        /* Cover Letter Container */
+        .cover-letter-container {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .cover-letter-container h1 {
+            color: var(--primary-color);
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .cover-letter-container h1::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.3rem;
+            height: 1.25rem;
+            width: 0.3rem;
+            background: var(--primary-color);
+            border-radius: var(--radius-sm);
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 11.25rem;
+            line-height: 1.6;
+        }
+
+        /* Generate Button */
+        .generate-button {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+            color: white;
+            padding: 0.875rem 1.75rem;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+            width: 100%;
+        }
+
+        .generate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Generated Letter */
+        .generated-letter {
+            margin-top: 2.5rem;
+            padding: 1.875rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            display: none;
+        }
+
+        .generated-letter h3 {
+            color: var(--primary-color);
+            font-size: 1.375rem;
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+        }
+
+        .generated-letter p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 0.9375rem;
+        }
+
+        .letter-actions {
+            display: flex;
+            gap: 0.9375rem;
+            margin-top: 1.5625rem;
+        }
+
+        .download-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2);
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(16, 185, 129, 0.3);
+        }
+
+        .regenerate-button {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(245, 158, 11, 0.2);
+        }
+
+        .regenerate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(245, 158, 11, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                overflow: auto;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .sidebar-nav {
+                flex-direction: row;
+                overflow-x: auto;
+                padding-bottom: 0.5rem;
+            }
+
+            .nav-item {
+                white-space: nowrap;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 1rem;
+                height: auto;
+            }
+
+            .letter-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Fixed Sidebar -->
+        <div class="sidebar">
+            <h2 class="section-title" style="color: black; font-size: 2.25rem;">Resume Analyzer</h2>
+            <div class="sidebar-nav">
+                <a href="/dashboard" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/resume-insights" class="nav-item">
+                    <span class="nav-icon">📚</span>
+                    <span>Resume Insights</span>
+                </a>
+                <a href="/course-recommendations" class="nav-item">
+                    <span class="nav-icon">🎓</span>
+                    <span>Course Recommendations</span>
+                </a>
+                <a href="/PDFChatbot" class="nav-item">
+                    <span class="nav-icon">💬</span>
+                    <span>Resume Assistant</span>
+                </a>
+                <a href="/customcoverletter" class="nav-item active">
+                    <span class="nav-icon">✉️</span>
+                    <span>Cover Letter Generator</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scrollable Main Content -->
+        <div class="main-content">
+            <div class="cover-letter-container">
+                <h1>Cover Letter Generator</h1>
+                <form id="coverLetterForm">
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title</label>
+                        <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter the job title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" id="companyName" name="companyName" placeholder="Enter the company name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="yourName">Your Name</label>
+                        <input type="text" id="yourName" name="yourName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="coverLetterContent">Cover Letter Content</label>
+                        <textarea id="coverLetterContent" name="coverLetterContent"
+                            placeholder="Write your cover letter content here..." required></textarea>
+                    </div>
+                    <button type="submit" class="generate-button">Generate Cover Letter</button>
+                </form>
+
+                <div class="generated-letter" id="generatedLetter">
+                    <h3>Generated Cover Letter</h3>
+                    <div id="letterContent"></div>
+                    <div class="letter-actions">
+                        <button class="download-button" onclick="downloadLetter()">Download as PDF</button>
+                        <button class="regenerate-button" onclick="resetForm()">Regenerate Letter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Ensure page loads at top
+        window.addEventListener('load', function () {
+            window.scrollTo(0, 0);
+        });
+
+        document.getElementById("coverLetterForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const jobTitle = document.getElementById("jobTitle").value;
+            const companyName = document.getElementById("companyName").value;
+            const yourName = document.getElementById("yourName").value;
+            const coverLetterContent = document.getElementById("coverLetterContent").value;
+
+            const today = new Date();
+            const dateString = today.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            const letterContent = `
+                <p>${dateString}</p>
+                <p>${yourName}</p>
+                <p>${companyName}</p>
+                <br>
+                <p>Dear Hiring Manager,</p>
+                <br>
+                <p>I am excited to apply for the ${jobTitle} position at ${companyName}. ${coverLetterContent}</p>
+                <br>
+                <p>Thank you for your time and consideration. I look forward to the opportunity to discuss how my skills and experiences align with your needs.</p>
+                <br>
+                <p>Sincerely,</p>
+                <p>${yourName}</p>
+            `;
+
+            document.getElementById("letterContent").innerHTML = letterContent;
+            document.getElementById("generatedLetter").style.display = "block";
+            document.getElementById("generatedLetter").scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function downloadLetter() {
+            alert("This would download the cover letter as a PDF in a real implementation");
+            // In a real implementation, you would use a library like jsPDF
+            // to generate and download the PDF
+        }
+
+        function resetForm() {
+            document.getElementById("coverLetterForm").reset();
+            document.getElementById("generatedLetter").style.display = "none";
+            document.getElementById("coverLetterForm").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
