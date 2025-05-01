@@ -16,10 +16,9 @@
                 "R",
                 "MySQL",
                 "MongoDB",
-                "PCB design tools (e.g., Altium Designer, Eagle)",
-                "Schematic capture",
-                "Component placement",
-                "Routing"
+                "PCB design tools (Altium Designer, Eagle)",
+                "OpenCV",
+                "Machine learning models"
             ]
         },
         "Experience": [
@@ -45,26 +44,26 @@
         ]
     },
     "ATS Score": {
-        "Total Score": 88,
+        "Total Score": 85,
         "Breakdown": {
             "Format Score": 10,
             "Spelling & Grammar": 9,
             "Summary": 10,
-            "Skills": 9,
+            "Skills": 10,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
             "Education": 10,
-            "Contact Details": 10
+            "Contact Details": 6
         }
     },
     "Recommendations": [
-        "Proofread carefully to eliminate **typos** and grammatical errors, enhancing the **professionalism** of your resume.",
-        "While you've listed some soft skills, provide **specific examples** of how you've demonstrated these skills in your **experiences or projects**, to make them more impactful.",
-        "Expand on your **project descriptions** to highlight your **contributions, methodologies, and outcomes**, quantifying results where possible to demonstrate impact.",
-        "Consider adding dates or a time frame to your **certifications** to show **recency and relevance**, enhancing their credibility.",
-        "Ensure consistent formatting throughout the resume, paying attention to details such as **font styles, spacing, and bullet points**, which contributes to a clean and organized presentation.",
-        "Incorporate **keywords** from job descriptions that match your qualifications, which will help your resume get past **ATS filters** and attract the attention of recruiters.",
-        "Quantify your achievements whenever possible, use numbers, percentages, or specific metrics to demonstrate the **impact** you've made in your **previous roles and projects**."
+        "**Consolidate contact details:** Ensure all contact information (LinkedIn, GitHub) is presented clearly and accessibly for easy recruiter access and also include the full URL for the LinkedIn and Github",
+        "**Quantify accomplishments:** Use numbers and metrics to highlight the impact of your work experience and projects. For example, 'Improved PCB manufacturability by X%' or 'Reduced error rate in age estimation by Y%'.",
+        "**Elaborate on certifications:** Provide more context for your certifications, including the issuing organization, completion date, and any key skills or knowledge gained. for example 'Python Certification By Google'",
+        "**Refine skills section:** Categorize skills more precisely (e.g., 'Programming Languages', 'Databases', 'Tools') and provide specific versions where relevant (e.g., 'Python 3.8', 'MySQL 8.0'). and add more Soft Skills",
+        "**Standardize date formats:** Use a consistent date format throughout your resume (e.g., Month Year - Month Year) for clarity and professionalism. Consistency in formatting improves readability.",
+        "**Add more details to your Projects:** Add the technologies that you used in your project in a seperate line in a bold format, Doing so, allows the reader to have a better understanding on what technologies you have experience on.",
+        "**Consider adding a skills section**: The education Section lacks the important information. Add a skills section to improve the readability."
     ]
 }

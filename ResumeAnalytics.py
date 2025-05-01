@@ -489,10 +489,3 @@ class ResumeAnalytics(object):
         
         logger.info("Custom cover letter generated successfully.")
         return markdown.markdown(response.text)
-
-
-if __name__ == "__main__":
-    ResumeAnalyticss = ResumeAnalytics()
-    path = input()
-    data = ResumeAnalyticss.getJobRecommendations(path)
-    print(data)

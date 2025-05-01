@@ -74,6 +74,7 @@ orjson==3.10.16
 packaging==24.2
 pandas==2.2.3
 parso==0.8.4
+pdfkit==1.0.0
 pexpect==4.9.0
 pillow==11.1.0
 prompt_toolkit==3.0.50
