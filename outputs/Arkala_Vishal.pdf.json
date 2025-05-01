@@ -1,0 +1,209 @@
+{
+    "RESUME_RELEVANCE_SCORE": 65,
+    "ROLE_FIT_SCORE": 50,
+    "ATS_SCORE": 70,
+    "KEYWORD_MATCH_SCORE": 75,
+    "MATCHED_KEYWORDS": [
+        "Python",
+        "SQL",
+        "Data Science",
+        "Machine Learning",
+        "Big Data",
+        "Data analysis",
+        "Data Collection",
+        "Data Pre processing",
+        "Data Warehousing",
+        "Computer Science",
+        "statistics",
+        "modeling",
+        "cloud platforms",
+        "AI",
+        "communication",
+        "problem solving",
+        "NoSQL databases",
+        "data pipelines",
+        "algorithms",
+        "data driven solutions",
+        "big data technologies",
+        "latest advancements",
+        "exploratory data analysis",
+        " Bachelor's or Master's degree",
+        "github"
+    ],
+    "MISSING_KEYWORDS": [
+        "R",
+        "Java",
+        "Hadoop",
+        "Spark",
+        "Kafka",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "TensorFlow",
+        "PyTorch",
+        "NLP",
+        "Time series forecasting",
+        "MLOps",
+        "Model monitoring"
+    ],
+    "MISSING_SKILLS": [
+        "Big Data frameworks",
+        "Deep learning frameworks",
+        "Deploying machine learning models",
+        "Data pipeline development",
+        "Statistical modeling",
+        "Cloud platform experience"
+    ],
+    "RESUME_TIPS": [
+        "Highlight your experience with **cloud platforms** such as **AWS**, **Azure**, or **Google Cloud** in your skills or experience section, since the job description emphasizes hands-on experience with these platforms. If you have used any of these, quantify your experience with specific projects.",
+        "Include specific projects or experiences that demonstrate your proficiency with **big data frameworks** like **Hadoop**, **Spark**, or **Kafka**. Provide context on the scale of data you've worked with and the problems you've solved using these technologies.",
+        "Explicitly mention your experience with **deep learning frameworks** such as **TensorFlow** or **PyTorch**. Provide details on the types of models you've built, the datasets you've used, and the results you've achieved.",
+        "Add details to how you have developed scalable **data pipelines** for processing large datasets. Provide specific examples, tools used, and outcomes achieved to quantify the value you added.",
+        "Incorporate your familiarity with **statistical modeling** techniques and provide clear examples of how you've used these techniques to extract meaningful insights and drive data-driven solutions in past projects or experiences.",
+        "Elaborate on your experience with **NoSQL databases**. Describe the types of NoSQL databases you've worked with (e.g., MongoDB) and how you've used them in specific projects to enhance data storage, retrieval, and processing.",
+        "Integrate keywords related to **MLOps** and **model monitoring** techniques to demonstrate your understanding of deploying and maintaining machine learning models in production environments. If you have any relevant experience, describe the tools and processes you've used.",
+        "Add a section detailing relevant certifications or online courses you've completed in areas such as **Big Data**, **Cloud Computing**, or **Machine Learning**. This will further highlight your commitment to continuous learning and skill development.",
+        "Quantify your achievements in the projects section by including metrics such as improvements in model accuracy, reductions in processing time, or the impact of your data-driven solutions on business outcomes. This will provide concrete evidence of your skills and abilities.",
+        "Align your resume with the job description by using similar language and terminology. Review the job description carefully and incorporate relevant keywords and phrases throughout your resume, particularly in the skills and experience sections."
+    ],
+    "COURSE_RECOMMENDATIONS": {
+        "Big Data frameworks": [
+            {
+                "COURSE_NAME": "Big Data Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization provides a comprehensive introduction to Big Data, including Hadoop, Spark, and related technologies. It covers data storage, processing, and analysis techniques.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
+            },
+            {
+                "COURSE_NAME": "Scalable Machine Learning with Apache Spark",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to use Apache Spark for scalable machine learning tasks. This course covers distributed data processing, machine learning algorithms, and model deployment on Spark.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/scalable-machine-learning-with-apache-spark"
+            },
+            {
+                "COURSE_NAME": "Apache Spark Tutorial for Beginners",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A beginner-friendly tutorial on Apache Spark, covering the basics of Spark architecture, data processing, and simple machine learning tasks. Ideal for those new to Big Data frameworks.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=qJDDy8E-R3E"
+            }
+        ],
+        "Deep learning frameworks": [
+            {
+                "COURSE_NAME": "TensorFlow in Practice Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization teaches you how to use TensorFlow to build and train deep learning models. It covers convolutional neural networks, recurrent neural networks, and other advanced techniques.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
+            },
+            {
+                "COURSE_NAME": "Deep Learning with Python and PyTorch",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn the fundamentals of deep learning using PyTorch. This course covers neural network architectures, training techniques, and deployment strategies.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/deep-learning-with-python-and-pytorch"
+            },
+            {
+                "COURSE_NAME": "Deep Learning with TensorFlow 2.0 Full Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A comprehensive tutorial on deep learning using TensorFlow 2.0. Covers building, training, and deploying deep learning models for various applications.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=tPYj3fFJGjk"
+            }
+        ],
+        "Deploying machine learning models": [
+            {
+                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization teaches you how to deploy and maintain machine learning models in production environments. It covers MLOps principles, model deployment strategies, and monitoring techniques.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "COURSE_NAME": "Deploying Machine Learning Models",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to deploy machine learning models using various tools and platforms. This course covers containerization, cloud deployment, and model monitoring techniques.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/deploying-machine-learning-models"
+            },
+            {
+                "COURSE_NAME": "MLOps Full Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A complete course on MLOps, covering all aspects of deploying, monitoring, and maintaining machine learning models in production. Includes practical examples and hands-on exercises.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=0120OSdD1Ls"
+            }
+        ],
+        "Data pipeline development": [
+            {
+                "COURSE_NAME": "Data Engineering on Google Cloud Platform Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to design and build data pipelines on Google Cloud Platform. This specialization covers data ingestion, processing, and storage techniques using various GCP services.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/data-engineering-gcp"
+            },
+            {
+                "COURSE_NAME": "Building Data Pipelines with Airflow",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to build and manage data pipelines using Apache Airflow. This course covers workflow orchestration, data transformation, and pipeline monitoring techniques.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/building-data-pipelines-with-airflow"
+            },
+            {
+                "COURSE_NAME": "Data Pipelines with Python",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A tutorial on building data pipelines using Python, covering data extraction, transformation, and loading techniques. Includes practical examples and code snippets.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=j50o6me5W54"
+            }
+        ],
+        "Statistical modeling": [
+            {
+                "COURSE_NAME": "Statistical Modeling in Python",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn statistical modeling techniques using Python. This course covers linear regression, logistic regression, time series analysis, and more.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/statistical-modeling-python"
+            },
+            {
+                "COURSE_NAME": "Statistical Modeling and Regression Analysis",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course provides an introduction to statistical modeling and regression analysis. It covers the theory and application of linear models, generalized linear models, and mixed-effects models.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/statistical-modeling-and-regression-analysis"
+            },
+            {
+                "COURSE_NAME": "Statistics - A Full University Course on Data Science Basics",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A full university course on statistics, covering the basics of data science. Includes probability, distributions, hypothesis testing, and regression analysis.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+            }
+        ],
+        "Cloud platform experience": [
+            {
+                "COURSE_NAME": "AWS Certified Cloud Practitioner",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Prepare for the AWS Certified Cloud Practitioner exam. This course covers the fundamentals of cloud computing and AWS services.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
+            },
+            {
+                "COURSE_NAME": "Microsoft Azure Fundamentals",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn the fundamentals of Microsoft Azure. This course covers cloud concepts, Azure services, and security principles.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/microsoft-azure-fundamentals-az-900"
+            },
+            {
+                "COURSE_NAME": "Google Cloud Platform Full Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A comprehensive course on Google Cloud Platform, covering various GCP services and cloud computing concepts. Includes practical examples and hands-on exercises.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=gVz3uvwEkDQ"
+            }
+        ]
+    }
+}

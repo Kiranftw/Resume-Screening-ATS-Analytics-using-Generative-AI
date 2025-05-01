@@ -1,84 +1,68 @@
 {
     "Extracted Data": {
-        "Name": "R SAI UDAY KIRAN",
-        "Contact Details": "udaykiranftw@gmail.com | +91 9398831577",
-        "Summary or Objective": "Tech Enthusiast | Data Science/ Analytics",
+        "Name": "KANDLAPALLY SHIVA TEJA",
+        "Contact Details": "Hyderabad, kandlapallyshivateja@gmail.com, +91 7671805692, Linkedin, GitHub",
+        "Summary or Objective": "A organised hardworking individual looking for a responsible position to gain practical experience and contribute for the growth of the industry.",
         "Skills": {
-            "Soft Skills": [],
+            "Soft Skills": [
+                "Managing Skills",
+                "Good Communication Skills",
+                "Time Management"
+            ],
             "Hard Skills": [
                 "Python",
-                "C",
                 "Java",
+                "C",
                 "R",
-                "SQL",
-                "GitHub",
-                "Linux",
-                "Windows",
-                "NumPy",
-                "Pandas",
-                "Matplotlib",
-                "Scikit Learn",
-                "TensorFlow",
-                "Linear Regression",
-                "Multilinear Regression",
-                "Data Cleaning",
-                "Data Preprocessing",
-                "Logistics Regression",
-                "Decision Trees",
-                "K Means",
-                "KNN"
+                "MySQL",
+                "MongoDB",
+                "Altium Designer",
+                "Eagle"
             ]
         },
         "Experience": [
             {
-                "Title": "Intern",
-                "Company": "Acme Tooling s",
-                "Duration": "Jan 2022 – June 2022",
-                "Description": "Gained hands on experience in complex mould designs and development Worked with CAD/CAM and SolidWorks design software s to build intricate designs. contributed to the end to end development of mould' s from initial design through manufacturing and quality control"
-            },
-            {
-                "Title": "Intern",
-                "Company": "InternPe",
-                "Duration": "Nov 2023 – Dec 2023",
-                "Description": "Applied the OOPS & Data Structures concepts while developing games and applications Worked on some specific modules like NumPy, Pandas for Data Manipulation on the real world datasets from Kaggle"
+                "Title": "PCB Designer",
+                "Company": "SV GLOBLES",
+                "Duration": "March 2022",
+                "Description": "Designed and developed PCB layouts, collaborating with teams to meet project specifications. Gained experience with PCB design tools (e.g., Altium Designer, Eagle) and performed schematic capture, component placement, and routing. Contributed to troubleshooting and optimizing designs for manufacturability, ensuring product functionality and quality."
             }
         ],
         "Projects": [
-            "CV ANALYTICS DASHBOARD: Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply.",
-            "Conversation chatbot using API: Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
+            "Age & Gender Estimation using OpenCV"
         ],
         "Certifications": [
-            "DSA PYTHON : By CampusX",
-            "Python & JAVA Essentials : By APNA College",
-            "Machine Learning : By IBM & CampusX"
+            "Python and machine learning",
+            "Cyber Security Fundamental",
+            "Data Science internship"
         ],
         "Education": [
-            "B. Tech, CSE DATA SCIENCE Nalla Narsimha Reddy educational society 2022 25 | Hyderabad CGPA: 7.6",
-            "Diploma, Industrial & Product Design CIPET CENTRAL INSTITUTE OF PETROCHEMICAL ENGEINEERING & TECHNOLO0GY 2020 22 | Hyderabad Percentage: 77.7%",
-            "Intermediate, MPC Narayana Junior college 2018 20 | Hyderabad Percentage: 70%"
+            "Bachelor of Engineering (Computer Science Data Science) November 2022 May 2025 NALLA NARASIMHA REDDY CGPA 8.6/10",
+            "DIPLOMA (Electronic & Video Engineering) August 2019 May 2022 GOVT INSTITUTE OF ELECTRONICS Percentage 83%",
+            "Class 10th SSC May 2018 May 2019 NARAYANA CONCEPT SCHOOL CGPA 8.5/10"
         ]
     },
     "ATS Score": {
-        "Total Score": 85,
+        "Total Score": 88,
         "Breakdown": {
             "Format Score": 10,
-            "Spelling & Grammar": 8,
+            "Spelling & Grammar": 9,
             "Summary": 10,
             "Skills": 9,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
             "Education": 10,
-            "Contact Details": 8
+            "Contact Details": 10
         }
     },
     "Recommendations": [
-        "Improve **spelling and grammar** throughout the resume. Correcting typos and grammatical errors will significantly improve the resume's professionalism.",
-        "Include a section detailing **soft skills**. Providing examples of soft skills, such as communication, teamwork, or problem-solving, will enhance the resume's appeal.",
-        "The resume has some **minor grammatical errors** and the candidate should review it carefully.",
-        "In **Contact Details** add the location, this will give a better visibility to the recruiters",
-        "In the **achievements** section, elaborate more on the impact or outcome of the proposed mobile app prototype at SIH to highlight its significance and potential value.",
-        "Ensure consistency in **formatting and punctuation** throughout the resume to maintain a professional and polished appearance, paying attention to details such as spacing and capitalization.",
-        "In the **Experience** section, quantify achievements with specific metrics or results whenever possible to demonstrate the impact of the work and provide concrete evidence of skills and contributions."
+        "Consider quantifying your achievements in the **work experience** section with specific numbers or metrics to demonstrate the impact of your contributions.",
+        "Expand on your **project descriptions** to provide more detail about the technologies used, your role, and the outcomes achieved to showcase your technical skills effectively.",
+        "Ensure consistency in formatting throughout the resume, especially with dates and locations, to improve readability and maintain a professional appearance.",
+        "While your contact details are present, ensure that the **LinkedIn and GitHub links** are functional and lead directly to your profiles for easy access by recruiters.",
+        "Proofread the resume carefully to eliminate minor **grammatical errors** and typos, as attention to detail is crucial in professional communication.",
+        "While your education section is comprehensive, consider prioritizing the most relevant educational experience (e.g., Bachelor's degree) and minimizing details about earlier education if space is limited.",
+        "Consider adding a few more relevant **hard skills** based on the job description. Tailor them based on the job requirements."
     ]
 }

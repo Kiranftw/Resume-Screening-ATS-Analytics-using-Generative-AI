@@ -1,312 +1,129 @@
 {
-    "RESUME_RELEVANCE_SCORE": 65,
-    "ROLE_FIT_SCORE": 60,
-    "ATS_SCORE": 70,
-    "KEYWORD_MATCH_SCORE": 75,
-    "MATCHED_KEYWORDS": [
-        "Data Scientist",
-        "Data Science",
-        "Machine Learning",
-        "Python",
-        "R",
-        "SQL",
-        "Data Analysis",
-        "Statistics",
-        "Data Visualization",
-        "Power BI",
-        "Programming",
-        "Databases",
-        "Data Cleaning",
-        "Data Preparation",
-        "Experiment",
-        "Communication",
-        "Problem Solving",
-        "Machine Learning techniques",
-        "Algorithms",
-        "Hypothesis Testing",
-        "Data",
-        "Data Mining",
-        "Insights",
-        "Model",
-        "Engineering",
-        "EDA",
-        "Statistical Analysis",
-        "predictive models"
-    ],
+    "RESUME_RELEVANCE_SCORE": 15,
+    "ROLE_FIT_SCORE": 5,
+    "ATS_SCORE": 2,
+    "KEYWORD_MATCH_SCORE": 10,
+    "MATCHED_KEYWORDS": [],
     "MISSING_KEYWORDS": [
-        "Deep Learning",
-        "TensorFlow",
-        "PyTorch",
-        "MLOps",
-        "Cloud Platforms",
-        "AWS",
-        "Azure",
-        "GCP",
-        "CI/CD Pipelines",
-        "Spark",
-        "Hadoop",
-        "Hive",
-        "Presto",
-        "Looker",
-        "Matplotlib",
-        "Seaborn",
-        "Plotly",
-        "Causal Inference",
-        "A/B Tests"
+        "Hospital",
+        "Insurance",
+        "Claim",
+        "Medical",
+        "Patient",
+        "Policy",
+        "Treatment",
+        "Cashless",
+        "Diagnosis"
     ],
     "MISSING_SKILLS": [
-        "Cloud Computing",
-        "MLOps Practices",
-        "Big Data Technologies",
-        "Experiment Design",
-        "Causal Inference Analysis",
-        "Deep Learning Frameworks",
-        "Data Engineering",
-        "Model Deployment",
-        "Data Integrity",
-        "Feature Engineering"
+        "Healthcare",
+        "Claims processing",
+        "Medical terminology",
+        "Insurance policies"
     ],
     "RESUME_TIPS": [
-        "Quantify achievements in project descriptions (e.g., 'Improved model accuracy by 15%').",
-        "Include specific projects showcasing experience with machine learning techniques (e.g., classification, clustering).",
-        "Add specific libraries/frameworks used (e.g., Scikit learn, TensorFlow).",
-        "Explicitly state experience with data visualization tools like Tableau, Matplotlib, Seaborn, or Plotly.",
-        "Include specific examples of statistical analysis and hypothesis testing performed.",
-        "Add details on data cleaning and preparation techniques used in projects.",
-        "Mention experience with data integration from various sources (databases, APIs).",
-        "Add 'SQL' to the skills section to emphasize database proficiency.",
-        "Add specific experience with 'cloud platforms (e.g., AWS, Azure, GCP)' to the resume.",
-        "Add details on experience with model deployment and monitoring (MLOps)."
+        "Include industry-relevant keywords such as **'Healthcare'**, **'Medical'**, and **'Insurance'** in your resume to enhance its alignment with the job description, and use industry-specific terms like 'claims processing' to highlight relevant experience. Tailoring your resume with these keywords will significantly improve its chances of being recognized by applicant tracking systems and recruiters.",
+        "Showcase experience in processing medical claims or working with insurance policies to demonstrate a clear understanding of the healthcare sector. Provide specific examples where you applied your expertise to enhance claims processing efficiency or improve patient outcomes, such as **'Claims processing'** or **'Policy analysis'**; quantify your accomplishments whenever possible to highlight your impact and effectiveness.",
+        "Incorporate medical terminology into your resume, such as including certifications or courses related to **'Medical terminology'** or 'Healthcare administration', to show expertise in the healthcare sector. This will immediately make your resume more appealing to recruiters seeking candidates with a solid understanding of the medical field.",
+        "Add a section detailing your understanding of different **'Insurance policies'** and their terms, conditions, and exclusions. Specifically mention experience with various types of healthcare insurance and how you have navigated complex claims processes. Highlighting your ability to interpret and apply policy details will enhance your credibility.",
+        "Include a summary or objective statement that explicitly mentions your career interests and skills in the context of the healthcare or insurance industry. For example, stating your aim to apply your data analysis skills to improve patient outcomes or streamline insurance claims processing immediately aligns your resume with the job's needs.",
+        "Quantify achievements in your experience section to demonstrate your impact in previous roles. For instance, mention reducing claim processing time by a specific percentage, improving data accuracy in medical records, or enhancing patient satisfaction scores through better healthcare data analysis. Use metrics to showcase tangible results.",
+        "Include projects or coursework related to healthcare data analysis or medical claims processing, such as a project on predicting healthcare costs using machine learning or a data analysis project focused on improving hospital efficiency. Ensure these projects highlight your ability to apply your skills to real-world healthcare challenges.",
+        "Certifications in healthcare-related areas such as **'Medical Coding'**, **'Healthcare Administration'**, or specialized data analysis certifications for healthcare data can significantly enhance your resume. List these certifications prominently and explain how they have equipped you with the necessary skills for the job.",
+        "Highlight your familiarity with healthcare regulations and compliance standards, such as HIPAA or other relevant data privacy laws. Demonstrate your commitment to maintaining data security and patient confidentiality, which are crucial in the healthcare industry.",
+        "Customize your resume for each application by focusing on the most relevant skills and experiences. Review the job description carefully and adjust your resume to mirror the keywords and requirements listed, ensuring your resume directly addresses the employer's needs and increases your chances of being selected for an interview."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Cloud Computing": [
+        "Healthcare": [
             {
-                "COURSE_NAME": "AWS Certified Cloud Practitioner",
+                "COURSE_NAME": "Healthcare Analytics",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn the fundamentals of AWS cloud services and prepare for the AWS certification exam.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=aws%20cloud%20practitioner"
-            },
-            {
-                "COURSE_NAME": "Microsoft Azure Fundamentals AZ-900",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Master the basics of Microsoft Azure and get ready for the AZ-900 certification.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/microsoft-azure-fundamentals-az-900-complete-course/"
-            },
-            {
-                "COURSE_NAME": "Google Cloud Platform Fundamentals",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Understand the core services and concepts of the Google Cloud Platform.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/gcp-fundamentals"
-            }
-        ],
-        "MLOps Practices": [
-            {
-                "COURSE_NAME": "MLOps (Machine Learning Operations) Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to deploy, monitor, and manage machine learning models in production using MLOps principles.",
+                "DESCRIPTION": "Learn how to analyze healthcare data to improve patient outcomes and reduce costs.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+                "COURSE_LINK": "https://www.coursera.org/specializations/healthcare-analytics"
             },
             {
-                "COURSE_NAME": "MLOps: Continuous Delivery and Automation Pipelines in Machine Learning",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Discover how to automate machine learning pipelines using CI/CD and MLOps tools.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning/"
-            },
-            {
-                "COURSE_NAME": "AWS Machine Learning DevOps Engineer Professional",
-                "PLATFORM": "LinuxFoundationX",
-                "DESCRIPTION": "Leverage AWS ML services to build, train, and deploy models at scale",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://training.linuxfoundation.org/training/aws-machine-learning-devops-engineer-professional/"
-            }
-        ],
-        "Big Data Technologies": [
-            {
-                "COURSE_NAME": "Apache Spark with Scala - Hands On with Big Data!",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn Apache Spark using Scala to process and analyze large datasets.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/"
-            },
-            {
-                "COURSE_NAME": "Hadoop Platform and Application Framework",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Understand the Hadoop ecosystem and how to use it for big data processing.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/hadoop"
-            },
-            {
-                "COURSE_NAME": "Big Data Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to use big data tools like Spark and Hadoop.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
-            }
-        ],
-        "Experiment Design": [
-            {
-                "COURSE_NAME": "A/B Testing",
-                "PLATFORM": "Udacity",
-                "DESCRIPTION": "Learn the fundamentals of A/B testing, including designing experiments, analyzing results, and making data-driven decisions.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udacity.com/course/ab-testing--ud257"
-            },
-            {
-                "COURSE_NAME": "Experimentation for Business Decisions",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to design and analyze experiments to make better business decisions.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/experimentation"
-            },
-            {
-                "COURSE_NAME": "Causal Inference",
+                "COURSE_NAME": "Health Informatics Specialization",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Understand causal relationships using experimentation.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/course/causal-inference-2"
-            }
-        ],
-        "Causal Inference Analysis": [
-            {
-                "COURSE_NAME": "Causal Inference",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn the statistical methods to infer causal relationships from observational data.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/course/causal-inference"
+                "DESCRIPTION": "This program teaches the fundamentals of health informatics, focusing on data management and analysis in healthcare settings.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/michiganx-health-informatics-specialization"
             },
             {
-                "COURSE_NAME": "Causal Inference: The Mixtape",
-                "PLATFORM": "Online (Free)",
-                "DESCRIPTION": "A free online book and course on causal inference methods.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://mixtape.scunning.com/"
-            },
-            {
-                "COURSE_NAME": "Directed Acyclic Graphs",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "A deep dive into Bayesian networks and DAGs",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=Directed%20Acyclic%20Graphs"
-            }
-        ],
-        "Deep Learning Frameworks": [
-            {
-                "COURSE_NAME": "Deep Learning Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn deep learning techniques using TensorFlow.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/deep-learning"
-            },
-            {
-                "COURSE_NAME": "PyTorch for Deep Learning with Python",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn PyTorch and implement deep learning models.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/pytorch-for-deep-learning-with-python/"
-            },
-            {
-                "COURSE_NAME": "TensorFlow in Practice Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Using TensorFlow to build Deep Learning models",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
-            }
-        ],
-        "Data Engineering": [
-            {
-                "COURSE_NAME": "Data Engineering Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn the foundations of data engineering, including data modeling, ETL, and data warehousing.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/data-engineering-foundations"
-            },
-            {
-                "COURSE_NAME": "The Ultimate Hands-On Hadoop - Tame your Big Data!",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Using the Hadoop ecosystem to build scalable data pipelines",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/the-ultimate-hands-on-hadoop-tame-your-big-data/"
-            },
-            {
-                "COURSE_NAME": "AWS Certified Data Engineer – Associate",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Leverage AWS tools to build reliable Data Pipelines.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/aws-certified-data-engineer-associate-with-practice-exam/"
-            }
-        ],
-        "Model Deployment": [
-            {
-                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn the key concepts of MLOps and how to deploy machine learning models in production.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
-            },
-            {
-                "COURSE_NAME": "Deploying Machine Learning Models",
-                "PLATFORM": "Udacity",
-                "DESCRIPTION": "Learn to deploy ML models using AWS SageMaker.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udacity.com/course/deploying-machine-learning-models--ud859"
-            },
-            {
-                "COURSE_NAME": "Advanced Machine Learning on Google Cloud Platform",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Using Google Cloud AI Platform to deploy models at scale",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/specializations/advanced-machine-learning-tensorflow-gcp"
-            }
-        ],
-        "Data Integrity": [
-            {
-                "COURSE_NAME": "Data Quality and Governance",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to ensure data integrity and quality through governance frameworks.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=Data%20Quality%20and%20Governance"
-            },
-            {
-                "COURSE_NAME": "Data Governance: The Master Data Management Approach",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Using data architecture to ensure data integrity at scale.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/data-governance-the-master-data-management-approach/"
-            },
-            {
-                "COURSE_NAME": "Database Management Essentials",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "A basic overview of data integrity methods",
+                "COURSE_NAME": "Healthcare Basics",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A comprehensive overview of the healthcare industry, including its structure, key players, and current challenges.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/database-management"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=T1xNjVw4Y1s"
             }
         ],
-        "Feature Engineering": [
+        "Claims processing": [
             {
-                "COURSE_NAME": "Feature Engineering for Machine Learning",
+                "COURSE_NAME": "Medical Billing and Coding",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to create effective features for machine learning models.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/feature-engineering"
+                "DESCRIPTION": "This course covers the basics of medical billing and coding, focusing on the processes involved in submitting and processing medical claims.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/courses?query=medical%20billing%20and%20coding"
             },
             {
-                "COURSE_NAME": "Feature Engineering",
-                "PLATFORM": "Kaggle",
-                "DESCRIPTION": "A hands-on course to improve feature selection",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.kaggle.com/learn/feature-engineering"
+                "COURSE_NAME": "Health Claim Processing",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn about health insurance claims process, including how to submit and manage claims, understanding the lifecycle of a health claim.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/learn/insurance/the-hong-kong-university-of-science-and-technology-health-claim-processing"
             },
             {
-                "COURSE_NAME": "Applied Feature Engineering",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Hands-on practical training to perform Feature Engineering for Machine Learning",
+                "COURSE_NAME": "Medical Billing Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A step-by-step guide to medical billing, covering the essential aspects of submitting and processing claims.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=VrZ-4wHXCmk"
+            }
+        ],
+        "Medical terminology": [
+            {
+                "COURSE_NAME": "Medical Terminology",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the essential medical terms related to human anatomy and physiology, diseases, and treatments.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/courses?query=medical%20terminology"
+            },
+            {
+                "COURSE_NAME": "Introduction to Medical Terminology",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn the language of medicine. This course covers the basics of medical terms, including prefixes, suffixes, and root words.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/learn/medical-terminology/umuc-introduction-to-medical-terminology"
+            },
+            {
+                "COURSE_NAME": "Medical Terminology - The Basics",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "An introduction to medical terminology, covering the key elements of medical terms.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=8YVq_z91R1I"
+            }
+        ],
+        "Insurance policies": [
+            {
+                "COURSE_NAME": "Understanding Health Insurance",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Gain a comprehensive understanding of health insurance policies, including different types, coverage, and benefits.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/courses?query=health%20insurance"
+            },
+            {
+                "COURSE_NAME": "Insurance and Risk Management",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Understand insurance from a risk management perspective, including underwriting, claims and different types of coverage.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/applied-feature-engineering/"
+                "COURSE_LINK": "https://www.edx.org/learn/insurance/the-hong-kong-university-of-science-and-technology-insurance-and-risk-management"
+            },
+            {
+                "COURSE_NAME": "Insurance Basics",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A clear explanation of the basics of insurance policies, covering the different types of policies and how they work.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=a258ImvyUMA"
             }
         ]
     }

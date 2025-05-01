@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, make_response
 import os
+import pdfkit
 from werkzeug.utils import secure_filename
 from ResumeAnalytics import ResumeAnalytics
 import markdown
@@ -12,7 +13,7 @@ ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt', 'doc', 'jpeg', 'jpg', 'png', 'webp'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # Max 16MB
-
+config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
 # Create uploads directory if it doesn't exist
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
@@ -50,6 +51,12 @@ def dashboard():
             jd_filename = secure_filename(jd.filename)
             jd_path = os.path.join(app.config['UPLOAD_FOLDER'], jd_filename)
             jd.save(jd_path)
+        
+        rolematch = []
+        rolematch = analytics.getJobRecommendations(resume_path)
+        shared_data['rolematch'] = rolematch
+        # Store the paths in shared_data for later use
+        print("[DEBUG] Role Match:", rolematch)  # <<=== (Optional) Print to debug
 
         # === Resume Analysis ===
 # === Resume Analysis ===
@@ -126,6 +133,7 @@ def show_course_recommendations():
     missing_soft_skills = shared_data.get('missing_skills', [])
     resume_tips = shared_data.get('resume_tips', [])
     courseRecommendations = shared_data.get('course_recommendations', {})
+    RIOLEMATCH = shared_data.get('rolematch', [])
 
     # Fetch cover letter preview first
     cover_letter_preview = shared_data.get(
@@ -137,12 +145,6 @@ def show_course_recommendations():
     print("[DEBUG] Cover Letter Preview:", cover_letter_preview)
 
     # Static role matches
-    role_matches = {
-        "Data Scientist": 92,
-        "Machine Learning Engineer": 89,
-        "AI Research Engineer": 87,
-        "Data Engineer": 85
-    }
     
     resume_tips = shared_data.get('resume_tips', []) + shared_data.get('ats_tips', [])
     import random
@@ -154,7 +156,7 @@ def show_course_recommendations():
         'course_recommendations.html',
         missing_technical_skills=missing_technical_skills,
         missing_soft_skills=missing_soft_skills,
-        role_matches=role_matches,
+        role_matches=RIOLEMATCH,
         resume_tips=resume_tips_html,
         cover_letter_preview=cover_letter_preview
     )
@@ -256,9 +258,60 @@ def remove_file():
     
     return jsonify({"status": "success"})
 
-@app.route('/customcoverletter')
-def customCoverLetter():
-    return render_template("Cover letter.html")
+from flask import Flask, render_template, request, make_response
+import pdfkit
+from werkzeug.utils import secure_filename
+import json
+
+@app.route('/download-cover-letter', methods=['POST'])
+def download_cover_letter():
+    try:
+        # Configure pdfkit
+        config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+        
+        # Get HTML content from form
+        html_content = request.form.get('html')
+        
+        # Generate PDF
+        pdf = pdfkit.from_string(html_content, False, configuration=config)
+        
+        # Create response
+        response = make_response(pdf)
+        response.headers['Content-Type'] = 'application/pdf'
+        response.headers['Content-Disposition'] = 'attachment; filename=cover_letter.pdf'
+        return response
+    except Exception as e:
+        return str(e), 500
+
+@app.route('/customcoverletter', methods=['GET', 'POST'])
+def custom_cover_letter():
+    if request.method == 'POST':
+        job_title = request.form.get('jobTitle')
+        company_name = request.form.get('companyName')
+        your_name = request.form.get('yourName')
+        additional_info = request.form.get('coverLetterContent')
+
+        # Get the raw cover letter text (not JSON)
+        cover_letter_content = analytics.getCustomCoverLetter(
+            job_title, company_name, your_name, additional_info
+        )
+
+        # If the response is JSON, extract the actual content
+        if cover_letter_content.startswith('{'):
+            try:
+                data = json.loads(cover_letter_content)
+                if 'cover_letter' in data:
+                    cover_letter_content = data['cover_letter']
+            except json.JSONDecodeError:
+                pass
+
+        return render_template("Cover letter.html", 
+                            generated=True,
+                            letter_content=cover_letter_content)
+    
+    return render_template("Cover letter.html", generated=False)
+
+# Add your other routes here...
 
 @app.route('/')
 def landing_page():

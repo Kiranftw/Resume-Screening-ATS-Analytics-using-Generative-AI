@@ -375,13 +375,13 @@ class ResumeAnalytics(object):
             "Identify the top 5 job roles that are most relevant to the resume and assign a relevance score out of 100 for each. "
             "Return the result as a valid JSON object, where each key is a job role and the value is the relevance score (an integer between 0 and 100). "
             "\n\n=== OUTPUT FORMAT EXAMPLE ===\n"
-            '{\n'
-            '  "Data Scientist": 95,\n'
-            '  "Data Analyst": 90,\n'
-            '  "Machine Learning Engineer": 85,\n'
-            '  "Business Analyst": 80,\n'
-            '  "Software Engineer": 75\n'
-            '}\n\n'
+            "ROLEMATCHES : {\n"
+                "    \"Data Scientist\": 92,\n"
+                "    \"Data Analyst\": 90,\n"
+                "    \"Machine Learning Engineer\": 88,\n"
+                "    \"AI Engineer\": 85,\n"
+                "    \"Software Engineer\": 80\n"
+            "}\n"
             "=== Resume Content ===\n"
             f"{resume['content']}"
         )
@@ -451,13 +451,54 @@ class ResumeAnalytics(object):
         except Exception as e:
             logger.log(logging.ERROR, f"Error in pdfchatbot: {str(e)}")
             return "An error occurred while processing the documents. Please try again."
+        
+    def getCustomCoverLetter(self, job_title, company_name, your_name, additional_info):
+        model = genai.GenerativeModel(
+            model_name="models/gemini-2.0-flash",
+            generation_config={"response_mime_type": "text/plain"},
+            safety_settings={},
+            tools=None,
+            system_instruction="You are an expert cover letter generator. Always return plain text."
+        )
+        prompt = f"""
+        Generate a professional cover letter with the following details:
+        - Applicant Name: {your_name}
+        - Company Name: {company_name}
+        - Job Title: {job_title}
+        - Additional Information: {additional_info}
+
+        The cover letter should:
+        1. Be properly formatted with sender/recipient information
+        2. Include a professional salutation
+        3. Clearly state the position being applied for
+        4. Highlight relevant skills and experiences
+        5. Show enthusiasm for the position
+        6. Include a professional closing
+        give me markdown format for some main points or impoortant information
+        Return ONLY the raw text of the cover letter, no JSON formatting.
+        """
+        
+        response = model.generate_content(prompt)
+        
+        if not os.path.exists(self.outputsFOLDER):
+            os.makedirs(self.outputsFOLDER, exist_ok=True)
+        outputpath = os.path.join(self.outputsFOLDER, "CustomCoverLetter.txt")
+        with open(outputpath, "w", encoding="utf-8") as file:
+            file.write(response.text)
+        
+        logger.info("Custom cover letter generated successfully.")
+        return response.text
 
 
 if __name__ == "__main__":
-    object = ResumeAnalytics()
-    document = [input()]
-    documents = document.split(",")
-    while True:
-        query = input()
-        data = object.pdfchatbot(document, query)
-        print(data)
+    ResumeAnalyticss = ResumeAnalytics()
+    # Example usage for getCustomCoverLetter
+    job_title_example = "Software Engineer"
+    company_name_example = "Tech Innovations Inc."
+    your_name_example = "John Doe"
+    additional_info_example = "I am particularly interested in the company's work on AI-driven solutions and believe my background in machine learning would be a strong asset."
+    print("Generating custom cover letter...")
+    custom_letter = ResumeAnalyticss.getCustomCoverLetter(job_title_example, company_name_example, your_name_example, additional_info_example)
+    print("\n--- Custom Cover Letter ---")
+    print(custom_letter)
+    print("\n--- End of Custom Cover Letter ---")

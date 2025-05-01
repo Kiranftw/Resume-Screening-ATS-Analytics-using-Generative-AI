@@ -1,7 +1,9 @@
 {
-    "Data Scientist": 92,
-    "Data Analyst": 90,
-    "Machine Learning Engineer": 88,
-    "AI Engineer": 85,
-    "Software Engineer": 80
+    "ROLEMATCHES": {
+        "Data Scientist": 85,
+        "Machine Learning Engineer": 82,
+        "PCB Designer": 80,
+        "Data Analyst": 78,
+        "Software Engineer": 75
+    }
 }
