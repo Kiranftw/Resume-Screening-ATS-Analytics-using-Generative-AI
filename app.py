@@ -51,12 +51,22 @@ def dashboard():
             jd_filename = secure_filename(jd.filename)
             jd_path = os.path.join(app.config['UPLOAD_FOLDER'], jd_filename)
             jd.save(jd_path)
+            print(f"[DEBUG] Job description uploaded: {jd_filename}")
         
-        rolematch = []
         rolematch = analytics.getJobRecommendations(resume_path)
-        shared_data['rolematch'] = rolematch
-        # Store the paths in shared_data for later use
-        print("[DEBUG] Role Match:", rolematch)  # <<=== (Optional) Print to debug
+        print(f"[DEBUG] Raw rolematch: {rolematch}")
+
+        # Ensure we store as dictionary in shared_data
+        if isinstance(rolematch, dict):
+            if 'ROLEMATCHES' in rolematch:
+                # If format is {'ROLEMATCHES': {...}}
+                shared_data['rolematch'] = rolematch['ROLEMATCHES']
+            else:
+                # If already in direct dictionary format
+                shared_data['rolematch'] = rolematch
+        else:
+            # Fallback to empty dict if not in expected format
+            shared_data['rolematch'] = {}
 
         # === Resume Analysis ===
 # === Resume Analysis ===
@@ -133,30 +143,27 @@ def show_course_recommendations():
     missing_soft_skills = shared_data.get('missing_skills', [])
     resume_tips = shared_data.get('resume_tips', [])
     courseRecommendations = shared_data.get('course_recommendations', {})
-    RIOLEMATCH = shared_data.get('rolematch', [])
 
     # Fetch cover letter preview first
     cover_letter_preview = shared_data.get(
         'cover_letter_preview',
         'No cover letter available. Please upload resume and job description to generate one.'
     )
-
     print("[DEBUG] Course Recommendations:", courseRecommendations)
     print("[DEBUG] Cover Letter Preview:", cover_letter_preview)
 
-    # Static role matches
     
     resume_tips = shared_data.get('resume_tips', []) + shared_data.get('ats_tips', [])
     import random
     random.shuffle(resume_tips)
     resume_tips_html = [markdown.markdown(tip) for tip in resume_tips]
-
+    role_matches = shared_data.get('rolematch', {})
     # Render the page
     return render_template(
         'course_recommendations.html',
         missing_technical_skills=missing_technical_skills,
         missing_soft_skills=missing_soft_skills,
-        role_matches=RIOLEMATCH,
+        role_matches=role_matches,
         resume_tips=resume_tips_html,
         cover_letter_preview=cover_letter_preview
     )
@@ -165,8 +172,7 @@ def show_course_recommendations():
 @app.route('/course-recommendations')
 def courseRecommendations():
     raw_course_data = shared_data.get('course_recommendations', {})
-
-
+    
     paid_course_recommendations = {}
     youtube_course_recommendations = {}
 
@@ -185,11 +191,9 @@ def courseRecommendations():
             paid_course_recommendations[topic] = paid_courses
         if youtube_courses:
             youtube_course_recommendations[topic] = youtube_courses 
-        
-    print("[DEBUG] Paid Course Recommendations:", paid_course_recommendations)
 
     return render_template(
-        'recommendations.html',
+        'recommendations.html',  # Make sure this matches your template file name
         paid_course_recommendations=paid_course_recommendations,
         youtube_course_recommendations=youtube_course_recommendations
     )

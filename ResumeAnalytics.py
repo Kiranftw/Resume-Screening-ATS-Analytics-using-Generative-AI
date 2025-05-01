@@ -375,17 +375,18 @@ class ResumeAnalytics(object):
             "Identify the top 5 job roles that are most relevant to the resume and assign a relevance score out of 100 for each. "
             "Return the result as a valid JSON object, where each key is a job role and the value is the relevance score (an integer between 0 and 100). "
             "\n\n=== OUTPUT FORMAT EXAMPLE ===\n"
-            "ROLEMATCHES : {\n"
-                "    \"Data Scientist\": 92,\n"
-                "    \"Data Analyst\": 90,\n"
-                "    \"Machine Learning Engineer\": 88,\n"
-                "    \"AI Engineer\": 85,\n"
-                "    \"Software Engineer\": 80\n"
+            "{\n"
+            '    "ROLEMATCHES": {\n'
+            '        "Data Scientist": 85,\n'
+            '        "Machine Learning Engineer": 82,\n'
+            '        "PCB Designer": 78,\n'
+            '        "Data Analyst": 75,\n'
+            '        "Software Engineer": 70\n'
+            '    }\n'
             "}\n"
             "=== Resume Content ===\n"
             f"{resume['content']}"
         )
-
         logger.info("Job Recommendations Prompt formatted successfully.")
         response = self.getResponse(prompt_text)
         logger.info("Job recommendations response received from model.")
@@ -487,18 +488,11 @@ class ResumeAnalytics(object):
             file.write(response.text)
         
         logger.info("Custom cover letter generated successfully.")
-        return response.text
+        return markdown.markdown(response.text)
 
 
 if __name__ == "__main__":
     ResumeAnalyticss = ResumeAnalytics()
-    # Example usage for getCustomCoverLetter
-    job_title_example = "Software Engineer"
-    company_name_example = "Tech Innovations Inc."
-    your_name_example = "John Doe"
-    additional_info_example = "I am particularly interested in the company's work on AI-driven solutions and believe my background in machine learning would be a strong asset."
-    print("Generating custom cover letter...")
-    custom_letter = ResumeAnalyticss.getCustomCoverLetter(job_title_example, company_name_example, your_name_example, additional_info_example)
-    print("\n--- Custom Cover Letter ---")
-    print(custom_letter)
-    print("\n--- End of Custom Cover Letter ---")
+    path = input()
+    data = ResumeAnalyticss.getJobRecommendations(path)
+    print(data)
