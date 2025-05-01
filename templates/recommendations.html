@@ -282,29 +282,6 @@
             border-bottom-left-radius: var(--radius-lg);
         }
 
-        /* YouTube section header */
-        .youtube-style {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: red;
-            font-weight: bold;
-            font-size: 1.25rem;
-            background-color: #fce8e6;
-            padding: 10px 15px;
-            border-left: 4px solid red;
-            border-radius: 6px;
-            margin-bottom: 1rem;
-        }
-
-        .youtube-style .category-icon svg {
-            flex-shrink: 0;
-        }
-
-        .category-title {
-            color: red;
-        }
-
         /* Action buttons */
         .actions {
             display: none;
@@ -412,7 +389,7 @@
                             <path d="M22 4L12 14.01l-3-3"></path>
                         </svg>
                     </div>
-                    Technical Courses
+                    Recommended Courses
                 </div>
                 <div class="courses-grid">
                     {% for topic, courses in paid_course_recommendations.items() %}
@@ -433,47 +410,6 @@
                             <div class="course-name">{{ course.COURSE_NAME }}</div>
                             <div class="course-description">{{ course.DESCRIPTION }}</div>
                             <div class="course-platform {{ course.PLATFORM.lower() }}">{{ course.PLATFORM }}</div>
-                        </div>
-                        <div class="actions">
-                            <a href="{{ course.COURSE_LINK }}" target="_blank" class="enroll-btn">Enroll Now</a>
-                            <button class="cancel-btn"
-                                onclick="event.stopPropagation(); this.parentElement.style.display = 'none';">Cancel</button>
-                        </div>
-                    </div>
-                    {% endfor %}
-                    {% endfor %}
-                </div>
-            </div>
-
-            <!-- YouTube Courses Section -->
-            <div class="course-category">
-                <div class="category-header youtube-style">
-                    <div class="category-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="red" stroke="red" stroke-width="2">
-                            <rect x="2" y="6" width="20" height="12" rx="2" ry="2"></rect>
-                            <path d="M10 9l5 3-5 3V9z"></path>
-                        </svg>
-                    </div>
-                    <span class="category-title">YouTube Courses</span>
-                </div>
-                <div class="courses-grid">
-                    {% for topic, courses in youtube_course_recommendations.items() %}
-                    {% for course in courses %}
-                    <div class="course-card" onclick="toggleActions(this)">
-                        <div class="card-border-left"></div>
-                        <div class="course-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z">
-                                </path>
-                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                            </svg>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-name">{{ course.COURSE_NAME }}</div>
-                            <div class="course-description">{{ course.DESCRIPTION }}</div>
-                            <div class="course-platform youtube">YouTube</div>
                         </div>
                         <div class="actions">
                             <a href="{{ course.COURSE_LINK }}" target="_blank" class="enroll-btn">Enroll Now</a>

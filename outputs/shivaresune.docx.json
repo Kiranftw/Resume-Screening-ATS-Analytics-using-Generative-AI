@@ -1,100 +1,220 @@
 {
-    "RESUME_RELEVANCE_SCORE": 55,
-    "ROLE_FIT_SCORE": 45,
-    "ATS_SCORE": 60,
-    "KEYWORD_MATCH_SCORE": 50,
+    "RESUME_RELEVANCE_SCORE": 65,
+    "ROLE_FIT_SCORE": 60,
+    "ATS_SCORE": 70,
+    "KEYWORD_MATCH_SCORE": 75,
     "MATCHED_KEYWORDS": [
         "Python",
-        "Data analysis",
-        "Machine learning",
-        "Programming",
-        "Data",
-        "databases",
+        "Java",
+        "R",
+        "Data Science",
+        "Machine Learning",
         "SQL",
-        "modeling",
-        "analysis",
-        "communication",
-        "computer science",
-        "engineering",
-        "statistics",
-        "data science",
-        "algorithms",
-        "testing",
-        "github",
-        "data exploration",
-        "data cleaning",
-        "visualization",
-        "project"
+        "MongoDB",
+        "MySQL",
+        "communication skills",
+        "Data Analysis",
+        "programming skills"
     ],
     "MISSING_KEYWORDS": [
-        "A/B tests",
+        "Big Data",
+        "Hadoop",
+        "Spark",
+        "Kafka",
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "TensorFlow",
+        "PyTorch",
+        "NLP",
+        "Time Series Forecasting",
         "MLOps",
-        "Data Visualization Tools",
-        "Data Informed Strategies",
-        "Predictive Models",
-        "Data Driven Solutions",
-        "Statistical Methods",
-        "Hypothesis Testing",
-        "Machine Learning Techniques",
-        "Supervised Learning",
-        "Unsupervised Learning",
-        "Reinforcement Learning",
-        "Anomaly Detection",
-        "Cloud Platforms",
-        "Big Data Technologies",
-        "Data Engineers",
-        "Software Engineers",
-        "Data Integrity"
+        "Model Monitoring",
+        "EDA",
+        "Statistical Modeling",
+        "Data Pipelines"
     ],
     "MISSING_SKILLS": [
-        "Model Deployment",
-        "Machine Learning Model Development",
-        "Causal Inference Analysis",
-        "Experiment Design",
-        "SQL Querying",
-        "Statistical Theory",
-        "Data Wrangling",
-        "Feature Engineering",
-        "Cross-Functional Collaboration",
-        "Data-Driven Decision Making",
-        "Python or R Proficiency",
-        "Database Management",
-        "Communication and Presentation Skills"
+        "Big Data Technologies",
+        "Cloud Platforms",
+        "Deep Learning Frameworks",
+        "Natural Language Processing",
+        "Data Modeling",
+        "Data Storage",
+        "Data Retrieval"
     ],
     "RESUME_TIPS": [
-        "Emphasize experience with **data cleaning and preparation techniques**, elaborating on specific methods used in projects.",
-        "Quantify achievements in projects by adding metrics, such as the accuracy of the **age and gender estimation model** and the scale of data processed.",
-        "Clearly state your proficiency in **statistical analysis and hypothesis testing**, providing examples where these skills were applied.",
-        "Include specific examples of **machine learning algorithms** used in projects to demonstrate practical experience in model building.",
-        "Detail your experience with **data visualization tools and techniques**, explicitly mentioning tools like Tableau or Power BI if familiar.",
-        "Add a section on **database skills**, explicitly mentioning experience with SQL and any experience with NoSQL databases like MongoDB.",
-        "Incorporate keywords related to **data exploration, cleaning, and preparation**, showcasing your ability to handle raw data effectively.",
-        "Mention experience with **model deployment and monitoring (MLOps)**, even if it's a basic understanding or personal project.",
-        "Highlight any experience with **cloud platforms (AWS, Azure, GCP)** and their associated ML services, demonstrating familiarity with modern data science infrastructure.",
-        "Expand on your experience with **big data technologies (e.g., Spark, Hadoop, Hive)**, if applicable, to show scalability skills."
+        "Emphasize **Big Data** experience by explicitly mentioning experience with **Hadoop**, **Spark**, or similar frameworks in project descriptions.",
+        "Highlight experience with **cloud platforms** like **AWS**, **Azure**, or **Google Cloud**; add a section detailing cloud projects or certifications.",
+        "Include specific projects or experience using **deep learning frameworks** such as **TensorFlow** or **PyTorch** in your projects or skills section.",
+        "Mention experience with **data pipeline** development and implementation, detailing the tools and technologies used.",
+        "Incorporate **statistical modeling** techniques and tools used in your projects, such as regression analysis or hypothesis testing.",
+        "Add details about conducting **exploratory data analysis (EDA)**, highlighting tools used and insights gained from data.",
+        "Include experience with **NoSQL databases** like **MongoDB** and explicitly state your proficiency level.",
+        "Detail any experience with **natural language processing (NLP)** techniques and applications, if applicable.",
+        "Quantify achievements and responsibilities with metrics to demonstrate the impact of your work, for example, 'Improved model accuracy by X% using Y technique'.",
+        "Add a section dedicated to **Big Data** technologies and tools to improve ATS compatibility, ensuring relevant keywords are easily identified."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Model Deployment": [
+        "Big Data Technologies": [
             {
-                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
+                "COURSE_NAME": "Big Data Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization teaches how to deploy, monitor, and maintain machine learning models in production, covering topics like model versioning, CI/CD pipelines, and performance monitoring.",
+                "DESCRIPTION": "A comprehensive specialization covering Hadoop, Spark, and MapReduce for processing large datasets.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+                "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
             },
             {
-                "COURSE_NAME": "Applied Machine Learning in Production",
+                "COURSE_NAME": "Analyzing Big Data with Spark",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Focuses on practical aspects of deploying and scaling machine learning models in real-world environments, including infrastructure, automation, and best practices for MLOps.",
+                "DESCRIPTION": "Learn to use Apache Spark for large-scale data analysis and machine learning.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/professional-certificate/aws-machine-learning"
+                "COURSE_LINK": "https://www.edx.org/course/analyzing-big-data-with-spark"
             },
             {
-                "COURSE_NAME": "MLOps Zoomcamp",
+                "COURSE_NAME": "Big Data Analytics Course",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A free, hands-on course that covers the fundamentals of MLOps, including model deployment, monitoring, and automation using modern tools and techniques.",
+                "DESCRIPTION": "This free course provides an introduction to Big Data analytics concepts and tools.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=KHF9wUYxZsY"
+            }
+        ],
+        "Cloud Platforms": [
+            {
+                "COURSE_NAME": "AWS Certified Cloud Practitioner",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A foundational course covering AWS cloud services and best practices.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
+            },
+            {
+                "COURSE_NAME": "Microsoft Azure Fundamentals",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Introduction to Azure cloud services, covering core concepts and solutions.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/microsoft-azure-fundamentals-az-900t00"
+            },
+            {
+                "COURSE_NAME": "Google Cloud Platform Full Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "This comprehensive course introduces the fundamentals of Google Cloud Platform.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=GugQn4L-NGo"
+            }
+        ],
+        "Deep Learning Frameworks": [
+            {
+                "COURSE_NAME": "TensorFlow in Practice Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to build and deploy deep learning models with TensorFlow.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=jGW-eJ6kHqU&list=PL3Mmuxcm_hPO6q7FJl1g-B-mOceqJ_9MH"
+                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
+            },
+            {
+                "COURSE_NAME": "Deep Learning with PyTorch",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn to build and train neural networks using PyTorch.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/deep-learning-with-pytorch"
+            },
+            {
+                "COURSE_NAME": "Deep Learning Full Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A comprehensive course covering the fundamentals of deep learning concepts and models.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=q30-FIcdsek"
+            }
+        ],
+        "Natural Language Processing": [
+            {
+                "COURSE_NAME": "Natural Language Processing Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn NLP techniques for processing and analyzing text data.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/natural-language-processing"
+            },
+            {
+                "COURSE_NAME": "Natural Language Processing with Python",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Use Python and NLTK to process and analyze text data.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/natural-language-processing-with-python"
+            },
+            {
+                "COURSE_NAME": "NLP Course for Beginners",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "This course provides an introduction to the fundamentals of NLP.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=xvqsFTUsOmc"
+            }
+        ],
+        "Data Modeling": [
+            {
+                "COURSE_NAME": "Data Modeling and Relational Database Design",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the fundamentals of data modeling and relational database design.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/data-modeling"
+            },
+            {
+                "COURSE_NAME": "Database Design and Development",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn the fundamentals of database design and development.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/database-design-and-development"
+            },
+            {
+                "COURSE_NAME": "Data Modeling Fundamentals",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "This course provides an introduction to the fundamentals of data modeling.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=rGa9jE3jW0g"
+            }
+        ],
+        "Data Storage": [
+            {
+                "COURSE_NAME": "Data Storage Technologies",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Explore data storage technologies",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/courses?query=data%20storage"
+            },
+            {
+                "COURSE_NAME": "Learn Data Storage online",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn Data Storage online",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/learn/data-storage"
+            },
+            {
+                "COURSE_NAME": "Data Storage Explained",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Learn Data Storage",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=Xt0tQDlxzSQ"
+            }
+        ],
+        "Data Retrieval": [
+            {
+                "COURSE_NAME": "Data mining and data retrieval in information retrieval (IR)",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course is about Data retrieval in information retrieval",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/lecture/information-retrieval/data-mining-and-data-retrieval-in-information-retrieval-ir-kYq9q"
+            },
+            {
+                "COURSE_NAME": "Introduction to Data Retrieval",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Introduction to Data Retrieval",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/learn/computer-science/university-of-california-irvine-introduction-to-data-retrieval"
+            },
+            {
+                "COURSE_NAME": "Data mining and data retrieval in information retrieval (IR)",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Learn the Data retrieval",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=gU24rWJlkF4"
             }
         ]
     }
