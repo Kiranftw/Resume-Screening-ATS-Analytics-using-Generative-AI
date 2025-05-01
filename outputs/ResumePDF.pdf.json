@@ -5,199 +5,98 @@
     "KEYWORD_MATCH_SCORE": 70,
     "MATCHED_KEYWORDS": [
         "Python",
-        "R",
         "Java",
+        "R",
         "SQL",
         "Data Science",
         "Machine Learning",
         "TensorFlow",
         "Data Analysis",
-        "Data Cleaning",
-        "statistics",
-        "programming",
-        "Github",
-        "Linux",
-        "windows",
-        "Azure",
+        "Big Data",
+        "Cloud Platforms",
         "AWS",
+        "Azure",
         "Google Cloud",
-        "Cloud",
-        "Deep Learning",
-        "NLP",
-        "Algorithms",
-        "Data manipulation"
+        "Data pipelines",
+        "Statistical modeling",
+        "Data driven solutions",
+        "Data storage",
+        "Data retrieval",
+        "Data processing",
+        "Documentation",
+        "Algorithms"
     ],
     "MISSING_KEYWORDS": [
-        "Big Data",
         "Hadoop",
         "Spark",
         "Kafka",
         "NoSQL",
-        "PyTorch",
         "MLOps",
-        "Time Series Forecasting",
-        "EDA",
-        "Data pipelines",
-        "Data models",
-        "Strategic Decision Making"
+        "Model Monitoring",
+        "NLP",
+        "Time Series Forecasting"
     ],
     "MISSING_SKILLS": [
-        "Big Data Technologies",
-        "Data Storage Optimization",
-        "Data Retrieval Optimization",
-        "Model Monitoring",
-        "Cloud Platform Management (AWS, Azure, Google Cloud)",
-        "Data processing"
+        "Deploying machine learning models in production",
+        "Big Data Frameworks"
     ],
     "RESUME_TIPS": [
-        "Emphasize experience with **Big Data technologies** like **Hadoop, Spark, and Kafka** in the experience section to directly align with job requirements.",
-        "Quantify achievements in project descriptions, such as the increase in efficiency or cost savings resulting from data-driven solutions, highlighting **data analysis** and **predictive modeling** impact.",
-        "Include specific projects or experiences related to **data pipeline development** and optimization, demonstrating your ability to handle large datasets and improve data processing workflows.",
-        "Explicitly mention experience with **MLOps practices** and **model monitoring techniques** to showcase your understanding of deploying and maintaining machine learning models in production environments.",
-        "Incorporate keywords like **data storage, retrieval, and processing** when describing your experience with optimizing data infrastructure to align with the job's focus on big data technologies.",
-        "Add details on hands-on experience with **cloud platforms** (AWS, Azure, or Google Cloud), specifically mentioning services used for data storage, processing, and machine learning deployment.",
-        "Include any projects involving **natural language processing (NLP)** and **time series forecasting** to address preferred qualifications and demonstrate expertise in advanced analytical techniques.",
-        "Clarify the use of **SQL** in projects involving data extraction, transformation, and loading (ETL) processes to emphasize your database skills.",
-        "Incorporate achievements related to **Data Driven Solutions** and make the Resume more tailored to the job description",
-        "Ensure that the resume is ATS-friendly by using standard section headings like \"Skills,\" \"Experience,\" and \"Education\" and avoiding tables or unusual formatting, and highlight **relevant keywords** in these sections."
+        "Highlight your experience with **Big Data frameworks** such as **Hadoop, Spark, or Kafka** in the experience section to increase visibility.",
+        "Explicitly mention experience with **NoSQL databases** within your skills or project sections to align with job requirements. ",
+        "Include projects where you have deployed **Machine Learning models** into **production environments** to demonstrate practical experience. ",
+        "Detail your familiarity with **MLOps and model monitoring techniques** in a project or skills section to showcase advanced capabilities.",
+        "If you have any experience with **Natural Language Processing (NLP)** or **time series forecasting**, prominently feature it in your projects. ",
+        "Expand upon your **cloud platform** experience (AWS, Azure, or Google Cloud) by detailing specific services and projects you've worked on. ",
+        "Add specific projects detailing **data pipeline** creation and optimization to showcase your skills in data engineering.",
+        "Quantify your achievements and contributions to projects using metrics and results to demonstrate impact and effectiveness.",
+        "Revise the resume to emphasize your analytical projects and **machine learning** skills. Showcase your expertise in the field.",
+        "Include a section detailing any certifications or training related to **Big Data**, **Cloud Computing**, or **Machine Learning** to boost credibility."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Big Data": [
+        "Deploying machine learning models in production": [
+            {
+                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization teaches you how to deploy, monitor, and manage machine learning models in production environments, covering topics like model deployment strategies, CI/CD pipelines for ML, and model monitoring techniques.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "COURSE_NAME": "MLOps Engineer Professional Certificate",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "The MLOps Engineer Professional Certificate program is designed to equip learners with the skills and knowledge to implement machine learning solutions to enterprise-level problems. It's designed to teach MLOps practices from model building to deployment, monitoring, and maintenance.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/microsoft-devops-engineer"
+            },
+            {
+                "COURSE_NAME": "MLOps Zoomcamp",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "MLOps Zoomcamp is a free online course that teaches you how to deploy machine learning models in production. It covers topics such as containerization, continuous integration, and continuous deployment.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=jW8nwqjJvJ4&list=PL3Mmux2v_h0TEg3t7gc6sU7eR500sESWt"
+            }
+        ],
+        "Big Data Frameworks": [
             {
                 "COURSE_NAME": "Big Data Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the fundamental tools and techniques used in big data analysis, including Hadoop, MapReduce, Spark, and more.",
+                "DESCRIPTION": "This specialization covers the fundamental concepts and tools for working with big data, including Hadoop, Spark, and MapReduce. It teaches you how to process, analyze, and visualize large datasets using these frameworks.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
             },
             {
-                "COURSE_NAME": "Analyzing Big Data with Microsoft R Server",
+                "COURSE_NAME": "Microsoft Professional Program in Big Data",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn how to use Microsoft R Server to analyze big data with popular big data technologies. It covers concepts and techniques for big data analysis.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/analyzing-big-data-with-microsoft-r-server"
+                "DESCRIPTION": "This program provides a comprehensive understanding of big data technologies and techniques, including Hadoop, Spark, Azure HDInsight, and data warehousing. It covers topics such as data ingestion, processing, storage, and analysis.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/professional-program/microsoft-professional-program-in-big-data"
             },
             {
-                "COURSE_NAME": "Data Engineering with Python",
-                "PLATFORM": "freeCodeCamp",
-                "DESCRIPTION": "Learn the basicsof data engineering with Python for FREE!",
+                "COURSE_NAME": "Big Data Analytics with Apache Spark",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Covers the fundamentals of Apache Spark, including how to set up a Spark environment, process data using Spark's core APIs, and perform basic data analysis tasks.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.freecodecamp.org/learn/data-analysis-with-python/"
-            }
-        ],
-        "Hadoop": [
-            {
-                "COURSE_NAME": "Hadoop Platform and Application Framework",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about the Hadoop ecosystem and how to use it to build scalable data processing applications.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/hadoop-platform-application-framework"
-            },
-            {
-                "COURSE_NAME": "Big Data Analytics with Apache Hadoop",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Gain hands-on experience with Hadoop, including how to store, process, and analyze big data.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/big-data-analytics-with-apache-hadoop"
-            },
-            {
-                "COURSE_NAME": "Hadoop Tutorial",
-                "PLATFORM": "freeCodeCamp",
-                "DESCRIPTION": "Beginner tutorial, introduction to Hadoop",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=rsFpYnRKOeM"
-            }
-        ],
-        "Spark": [
-            {
-                "COURSE_NAME": "Big Data Analysis with Scala and Spark",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to use Scala and Spark to analyze large datasets. Covers Spark's core concepts and advanced techniques.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/scala-spark-big-data"
-            },
-            {
-                "COURSE_NAME": "Taming Big Data with Apache Spark and Python",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn the fundamentals of Apache Spark and how to use it with Python to process large datasets.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/course/taming-big-data-with-apache-spark-and-python"
-            },
-            {
-                "COURSE_NAME": "PySpark Full Course - Learn Apache Spark using Python",
-                "PLATFORM": "freeCodeCamp",
-                "DESCRIPTION": "Learn Apache Spark using Python",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=jWx_CJGxG6w"
-            }
-        ],
-        "Kafka": [
-            {
-                "COURSE_NAME": "Apache Kafka Series - Learn Apache Kafka for Beginners v2",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "A comprehensive guide to Apache Kafka, covering its core concepts, architecture, and practical applications.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/lecture/apache-kafka/introduction-to-the-course-hG3vm"
-            },
-            {
-                "COURSE_NAME": "Real-Time Data Pipelines with Apache Kafka",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Explore how to build real-time data pipelines using Apache Kafka and related technologies.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/real-time-data-pipelines-with-apache-kafka"
-            },
-            {
-                "COURSE_NAME": "What is Apache Kafka? | Kafka Tutorial for Beginners",
-                "PLATFORM": "freeCodeCamp",
-                "DESCRIPTION": "A beginner tutorial for understanding Apache Kafka",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=jhukjV8F5y4"
-            }
-        ],
-        "NoSQL": [
-            {
-                "COURSE_NAME": "NoSQL Database Systems",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "An overview of NoSQL database systems, covering their types, characteristics, and use cases.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/lecture/nosql-databases/lecture-11-introduction-to-nosql-36r4J"
-            },
-            {
-                "COURSE_NAME": "Database Design with Non-Relational Databases on Cloud",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "How to use NoSQL with cloud",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/database-design-with-non-relational-databases-o"
-            },
-            {
-                "COURSE_NAME": "Introduction to NoSQL Databases",
-                "PLATFORM": "freeCodeCamp",
-                "DESCRIPTION": "Introduction to NoSQL databases with practical examples and use cases.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=WxyxTjQh6iE"
-            }
-        ],
-        "PyTorch": [
-            {
-                "COURSE_NAME": "Deep Learning with PyTorch",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn the basics of Deep Learning with PyTorch",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/specializations/pytorch"
-            },
-            {
-                "COURSE_NAME": "Introduction to Deep Learning with PyTorch",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn the basics of Deep Learning with PyTorch",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/course/introduction-to-deep-learning-with-pytorch"
-            },
-            {
-                "COURSE_NAME": "PyTorch Tutorials",
-                "PLATFORM": "freeCodeCamp",
-                "DESCRIPTION": "Practical guides on how to use PyTorch.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://pytorch.org/tutorials/"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=y4mzmx8C9-o"
             }
         ]
     }

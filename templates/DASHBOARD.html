@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Analysis Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <style>
         :root {
             --primary-color: #2563eb;
@@ -586,6 +587,19 @@
             animation-delay: 0.4s;
         }
 
+        /* Add this to your existing CSS */
+        #dashboard {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Ensure charts are visible in the screenshot */
+        .chart-container {
+            background-color: white;
+        }
+
         @keyframes blink {
 
             0%,
@@ -747,7 +761,8 @@
                 </div>
             </div>
 
-            <a href="#" class="download-btn">Download Report</a>
+            <!-- Change your download button to have an ID -->
+            <a href="#" class="download-btn" id="download-btn">Download Report</a>
 
             <script>
                 window.onload = function () {
@@ -794,7 +809,38 @@
                     const chatModal = document.getElementById('chat-modal');
                     chatModal.style.display = chatModal.style.display === 'flex' ? 'none' : 'flex';
                 }
+                document.getElementById('download-btn').addEventListener('click', function (e) {
+                    e.preventDefault();
 
+                    // Get the dashboard element
+                    const dashboard = document.getElementById('dashboard');
+
+                    // Show loading overlay
+                    document.getElementById('loading-overlay').style.display = 'flex';
+                    document.querySelector('.loading-box p').textContent = 'Generating report...';
+
+                    // Use html2canvas to capture the dashboard
+                    html2canvas(dashboard, {
+                        scale: 2, // Higher quality
+                        logging: false,
+                        useCORS: true,
+                        allowTaint: true,
+                        scrollY: -window.scrollY // Capture full height
+                    }).then(canvas => {
+                        // Hide loading overlay
+                        document.getElementById('loading-overlay').style.display = 'none';
+
+                        // Convert canvas to PNG image and download
+                        const link = document.createElement('a');
+                        link.download = 'resume-analysis-report.png';
+                        link.href = canvas.toDataURL('image/png');
+                        link.click();
+                    }).catch(err => {
+                        console.error('Error generating report:', err);
+                        document.getElementById('loading-overlay').style.display = 'none';
+                        alert('Error generating report. Please try again.');
+                    });
+                });
                 function sendMessage() {
                     const input = document.getElementById('chat-input');
                     const message = input.value.trim();

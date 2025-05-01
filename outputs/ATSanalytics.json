@@ -1,7 +1,7 @@
 {
     "Extracted Data": {
         "Name": "R SAI UDAY KIRAN",
-        "Contact Details": "udaykiranftw@gmail.com | +91 9398831577",
+        "Contact Details": "udaykiranftw@gmail.com | +91 9398831577 | DOB 19 May, 2002",
         "Summary or Objective": "Tech Enthusiast | Data Science/ Analytics",
         "Skills": {
             "Soft Skills": [],
@@ -19,6 +19,8 @@
                 "Matplotlib",
                 "Scikit Learn",
                 "TensorFlow",
+                "ML",
+                "DS",
                 "Linear Regression",
                 "Multilinear Regression",
                 "Data Cleaning",
@@ -44,8 +46,14 @@
             }
         ],
         "Projects": [
-            "CV ANALYTICS DASHBOARD: Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply.",
-            "Conversation chatbot using API: Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
+            {
+                "Title": "CV ANALYTICS DASHBOARD",
+                "Description": "Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply."
+            },
+            {
+                "Title": "Conversation chatbot using API",
+                "Description": "Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
+            }
         ],
         "Certifications": [
             "DSA PYTHON : By CampusX",
@@ -62,23 +70,23 @@
         "Total Score": 85,
         "Breakdown": {
             "Format Score": 10,
-            "Spelling & Grammar": 8,
+            "Spelling & Grammar": 9,
             "Summary": 10,
             "Skills": 9,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
             "Education": 10,
-            "Contact Details": 8
+            "Contact Details": 7
         }
     },
     "Recommendations": [
-        "**Enhance Summary:** Consider adding a brief professional summary highlighting key skills and experiences relevant to the desired roles.",
-        "**Expand Soft Skills:** Explicitly list soft skills such as communication, teamwork, and problem-solving to showcase a well-rounded profile.",
-        "**Quantify Achievements:** Whenever possible, quantify accomplishments within work experience and project descriptions to demonstrate impact.",
-        "**Correct Grammatical Errors:** Carefully proofread the resume to eliminate grammatical errors and typos, improving overall readability.",
-        "**Consistent Formatting:** Ensure consistent formatting throughout the resume, including font styles, sizes, and spacing, for a polished appearance.",
-        "**Tailor Skills:** Customize the skills section to match the specific requirements outlined in job descriptions, highlighting the most relevant abilities.",
-        "**Add achievements in the projects:** Mentioning achievements in the projects section helps recruiters understand the impact of the projects."
+        "Add quantifiable achievements to your **work experience** descriptions to showcase the impact you made in previous roles. For instance, instead of just stating responsibilities, include metrics like \"Improved efficiency by X%\" or \"Reduced costs by Y amount.\"",
+        "In the **skills** section, categorize your skills into relevant groups (e.g., programming languages, data analysis tools, machine learning algorithms) to make it easier for recruiters to identify your expertise. This helps in quickly scanning and matching your profile with job requirements.",
+        "Include a brief **summary** or **objective** at the beginning of your resume to highlight your career goals and key qualifications. This helps in grabbing the attention of recruiters and providing a clear overview of your skills and experience.",
+        "Quantify the impact of your **projects** by including metrics such as the number of users, cost savings, or performance improvements achieved. This adds credibility to your project descriptions and showcases your ability to deliver results.",
+        "Tailor your resume to match the specific requirements of each job you apply for by highlighting the most relevant skills and experience. Customize the content to align with the job description and demonstrate your suitability for the role.",
+        "Consider adding **soft skills** relevant to data science, such as communication, teamwork, and problem-solving. These skills are crucial for collaboration and effective project execution in a data science environment. Provide examples of how you've demonstrated these skills in your experiences.",
+        "Review the **contact details** section and make sure that the linkedIn URL is redirecting to the correct profile to not lose any opportunity"
     ]
 }
