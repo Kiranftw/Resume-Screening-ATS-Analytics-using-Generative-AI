@@ -35,11 +35,12 @@ FIRST
     Provide one free course from YouTube as an accessible alternative.​
     Each course must include the following details:​
     course_name: The title of the course.
-    platform: E.g., Coursera, edX, or YouTube.
+    platform: E.g., Coursera,Khan Academy, skillshare, freecodecamp, Harvard free courses, nptel, google, microsot all other top companies free
     description: A concise summary of what the course covers and how it addresses the missing skill.
     difficulty_level: Beginner, Intermediate, or Advanced.
     course_link: A valid URL to the course.​
     Ensure that the recommendations are relevant to the specific missing skill and vary in difficulty if appropriate.*​
+    Recommend free, publicly available online courses for [skill], and give only direct links from Coursera (free), edX (free), or freeCodeCamp. Avoid YouTube links.if you found yt free and open links give that as well
 {
   "RESUME_RELEVANCE_SCORE": 0,
   "ROLE_FIT_SCORE": 0,

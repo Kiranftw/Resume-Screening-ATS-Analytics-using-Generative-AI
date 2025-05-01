@@ -8,213 +8,320 @@
         "Java",
         "R",
         "Data Science",
-        "Machine Learning",
         "SQL",
-        "MongoDB",
-        "MySQL",
-        "communication skills",
+        "Machine Learning",
+        "Big Data",
+        "Cloud Platforms",
         "Data Analysis",
-        "programming skills"
+        "Statistical Modeling"
     ],
     "MISSING_KEYWORDS": [
-        "Big Data",
         "Hadoop",
         "Spark",
         "Kafka",
+        "NoSQL",
         "AWS",
         "Azure",
         "Google Cloud",
         "TensorFlow",
         "PyTorch",
-        "NLP",
-        "Time Series Forecasting",
-        "MLOps",
-        "Model Monitoring",
         "EDA",
-        "Statistical Modeling",
-        "Data Pipelines"
+        "MLOps",
+        "NLP"
     ],
     "MISSING_SKILLS": [
-        "Big Data Technologies",
-        "Cloud Platforms",
-        "Deep Learning Frameworks",
-        "Natural Language Processing",
-        "Data Modeling",
-        "Data Storage",
-        "Data Retrieval"
+        "Developing data pipelines",
+        "Optimizing data storage and retrieval",
+        "Deploying machine learning models",
+        "Model monitoring"
     ],
     "RESUME_TIPS": [
-        "Emphasize **Big Data** experience by explicitly mentioning experience with **Hadoop**, **Spark**, or similar frameworks in project descriptions.",
-        "Highlight experience with **cloud platforms** like **AWS**, **Azure**, or **Google Cloud**; add a section detailing cloud projects or certifications.",
-        "Include specific projects or experience using **deep learning frameworks** such as **TensorFlow** or **PyTorch** in your projects or skills section.",
-        "Mention experience with **data pipeline** development and implementation, detailing the tools and technologies used.",
-        "Incorporate **statistical modeling** techniques and tools used in your projects, such as regression analysis or hypothesis testing.",
-        "Add details about conducting **exploratory data analysis (EDA)**, highlighting tools used and insights gained from data.",
-        "Include experience with **NoSQL databases** like **MongoDB** and explicitly state your proficiency level.",
-        "Detail any experience with **natural language processing (NLP)** techniques and applications, if applicable.",
-        "Quantify achievements and responsibilities with metrics to demonstrate the impact of your work, for example, 'Improved model accuracy by X% using Y technique'.",
-        "Add a section dedicated to **Big Data** technologies and tools to improve ATS compatibility, ensuring relevant keywords are easily identified."
+        "Emphasize your experience with **Python** and any relevant **machine learning** projects to align with the 'Strong programming skills in Python' requirement.",
+        "Highlight any projects where you've used **SQL** or **NoSQL** databases to match the job description's requirements.",
+        "Include specific projects demonstrating **data analysis** and **statistical modeling** techniques to emphasize your ability to extract meaningful insights.",
+        "Explicitly list **Big Data** frameworks like **Hadoop, Spark, or Kafka**, if you have any experience, even in academic projects or personal learning.",
+        "Mention any experience with **cloud platforms (AWS, Azure, or Google Cloud)**, even if it's limited to coursework or personal projects.",
+        "Add **TensorFlow** or **PyTorch** to your skills section if you have used them in any capacity, even for simple tutorials or personal projects.and mention Deep Learning as a Keyword.",
+        "Include practical examples of **developing data pipelines** in your project descriptions, showcasing how you've handled large datasets.",
+        "Elaborate on your experience with **exploratory data analysis (EDA)**, detailing the tools and techniques used to uncover trends and patterns.",
+        "Quantify your accomplishments in previous roles with metrics to demonstrate the impact of your work, such as improvements in data processing speed or model accuracy.",
+        "Create a dedicated section for **relevant projects** and showcase the skills used in each project like deploying machine learning models."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Big Data Technologies": [
+        "Hadoop": [
             {
-                "COURSE_NAME": "Big Data Specialization",
+                "COURSE_NAME": "Hadoop Platform and Application Framework",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "A comprehensive specialization covering Hadoop, Spark, and MapReduce for processing large datasets.",
+                "DESCRIPTION": "This course introduces the Hadoop framework, covering its architecture, components, and application in processing large datasets. It includes hands-on exercises on setting up a Hadoop cluster and running MapReduce jobs.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
+                "COURSE_LINK": "https://www.coursera.org/learn/hadoop-platform-and-application-framework"
             },
             {
-                "COURSE_NAME": "Analyzing Big Data with Spark",
+                "COURSE_NAME": "Big Data Analysis with Hadoop",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn to use Apache Spark for large-scale data analysis and machine learning.",
+                "DESCRIPTION": "Learn the fundamentals of Big Data Analysis with Hadoop. This course will equip you with the skills to set up and manage Hadoop clusters, process large datasets, and run MapReduce jobs for data analysis.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/analyzing-big-data-with-spark"
+                "COURSE_LINK": "https://www.edx.org/learn/hadoop/universitat-polit-cnica-de-val-ncia-big-data-analysis-with-hadoop"
             },
             {
-                "COURSE_NAME": "Big Data Analytics Course",
+                "COURSE_NAME": "Hadoop Tutorial for Beginners",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "This free course provides an introduction to Big Data analytics concepts and tools.",
+                "DESCRIPTION": "A comprehensive tutorial for beginners covering the basics of Hadoop, including installation, setup, and running simple MapReduce jobs. It provides a hands-on introduction to Hadoop concepts.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=KHF9wUYxZsY"
+                "COURSE_LINK": "https://www.youtube.com/playlist?list=PLf0swTFhDUp1iQqQ_vd-o_O7jP5Ym5Hn1"
             }
         ],
-        "Cloud Platforms": [
+        "Spark": [
             {
-                "COURSE_NAME": "AWS Certified Cloud Practitioner",
+                "COURSE_NAME": "Big Data Analysis with Scala and Spark",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "A foundational course covering AWS cloud services and best practices.",
+                "DESCRIPTION": "This course teaches how to use Apache Spark for big data analysis with Scala. It covers Spark's architecture, Resilient Distributed Datasets (RDDs), and Spark SQL for data querying.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/scala-spark-big-data"
+            },
+            {
+                "COURSE_NAME": "Introduction to Apache Spark",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course provides a foundational understanding of Apache Spark, covering its core concepts, components, and applications in big data processing. It includes hands-on exercises with RDDs and Spark SQL.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
+                "COURSE_LINK": "https://www.edx.org/learn/apache-spark/uc-berkeleyx-cs105x-introduction-to-apache-spark"
+            },
+            {
+                "COURSE_NAME": "Apache Spark Tutorial for Beginners",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A beginner-friendly tutorial on Apache Spark, covering installation, setup, and basic operations with RDDs and DataFrames. It provides practical examples and exercises.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/playlist?list=PLf0swTFhDUp0W-A5z0fK_vN61yz-o5mmG"
+            }
+        ],
+        "Kafka": [
+            {
+                "COURSE_NAME": "Apache Kafka Series - Learn Apache Kafka for Beginners v2",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A comprehensive course on Apache Kafka, covering its architecture, components, and use cases in building real-time data pipelines. It includes hands-on exercises on setting up a Kafka cluster and producing/consuming messages.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/apache-kafka/"
+            },
+            {
+                "COURSE_NAME": "Real-Time Data Pipelines with Apache Kafka",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to build real-time data pipelines with Apache Kafka. This course covers Kafka's architecture, components, and APIs for producing, consuming, and processing data streams.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/learn/data-streaming/ibm-real-time-data-pipelines-with-apache-kafka"
+            },
+            {
+                "COURSE_NAME": "Kafka Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "This tutorial provides an introduction to Apache Kafka, covering its basic concepts, installation, and usage for building data streaming applications.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=5Kz-6c-nJ2I"
+            }
+        ],
+        "NoSQL": [
+            {
+                "COURSE_NAME": "NoSQL Database Systems",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course introduces NoSQL database systems, covering different types of NoSQL databases (e.g., MongoDB, Cassandra, Redis) and their use cases. It includes hands-on exercises on designing and implementing NoSQL databases.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/nosql-databases"
+            },
+            {
+                "COURSE_NAME": "Using MongoDB with Node.js and Docker",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to use MongoDB with Node.js and Docker to build scalable and efficient applications. This course covers MongoDB's data model, query language, and integration with Node.js.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/learn/mongodb/mongodbdx-using-mongodb-with-nodejs-and-docker"
+            },
+            {
+                "COURSE_NAME": "MongoDB Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "This tutorial provides a comprehensive introduction to MongoDB, covering its data model, query language, and basic operations. It includes hands-on examples and exercises.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=WDrfJ7yK1SQ"
+            }
+        ],
+        "AWS": [
+            {
+                "COURSE_NAME": "AWS Fundamentals: Going Cloud-Native",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course will help you gain an understanding of cloud computing concepts, AWS core services, security aspects, pricing models, and support. It covers essential services, including compute, storage, database, and networking.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/aws-fundamentals-going-cloud-native"
+            },
+            {
+                "COURSE_NAME": "AWS Cloud Practitioner Essentials",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "AWS Cloud Practitioner Essentials provides you with a foundational understanding of AWS Cloud concepts, services, security, architecture, pricing, and support. This course is intended for individuals who seek an overall understanding of the AWS Cloud.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/learn/cloud-computing/amazon-web-services-aws-aws-cloud-practitioner-essentials"
+            },
+            {
+                "COURSE_NAME": "AWS Tutorial For Beginners",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "This video is a great place to start your AWS learning journey.  I walk through an explanation of what AWS is, how it works, and I will walk you through how to get started in AWS step-by-step.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=SOTamWNgDKc"
+            }
+        ],
+        "Azure": [
+            {
+                "COURSE_NAME": "Microsoft Azure Fundamentals AZ-900 Exam Prep Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course will provide a comprehensive overview of cloud computing concepts and Microsoft Azure services, preparing you for the AZ-900 certification exam. It covers core Azure services, security, compliance, and pricing.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/specializations/microsoft-azure-fundamentals-az-900-exam-prep"
             },
             {
                 "COURSE_NAME": "Microsoft Azure Fundamentals",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Introduction to Azure cloud services, covering core concepts and solutions.",
+                "DESCRIPTION": "Gain foundational knowledge of cloud services and Microsoft Azure with this course. Learn about cloud concepts, Azure architecture, services, security, and pricing, providing a solid base for further exploration of Azure technologies.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/course/microsoft-azure-fundamentals-az-900t00"
+                "COURSE_LINK": "https://www.edx.org/course/microsoft-azure-fundamentals"
             },
             {
-                "COURSE_NAME": "Google Cloud Platform Full Course",
+                "COURSE_NAME": "Azure Tutorial for Beginners",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "This comprehensive course introduces the fundamentals of Google Cloud Platform.",
+                "DESCRIPTION": "This tutorial provides a step-by-step introduction to Microsoft Azure, covering the basics of cloud computing, Azure services, and how to create and manage resources in the Azure portal.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=GugQn4L-NGo"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=x9PyN_DU93I"
             }
         ],
-        "Deep Learning Frameworks": [
+        "Google Cloud": [
             {
-                "COURSE_NAME": "TensorFlow in Practice Specialization",
+                "COURSE_NAME": "Google Cloud Fundamentals: Core Infrastructure",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to build and deploy deep learning models with TensorFlow.",
+                "DESCRIPTION": "This course introduces you to Google Cloud Platform (GCP) and covers the core infrastructure components, services, and tools. Learn about compute, storage, networking, and security in GCP.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/gcp-infrastructure"
+            },
+            {
+                "COURSE_NAME": "Google Cloud Platform Fundamentals: Core Infrastructure",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Gain foundational knowledge of Google Cloud Platform (GCP) with this course. Learn about core infrastructure components, services, and tools, including compute, storage, networking, and security in GCP.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/learn/cloud-computing/google-cloud-google-cloud-platform-fundamentals-core-infrastructure"
+            },
+            {
+                "COURSE_NAME": "Google Cloud Platform (GCP) Tutorial for Beginners",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A beginner-friendly tutorial on Google Cloud Platform (GCP), covering the basics of cloud computing, GCP services, and how to create and manage resources in the GCP console.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=0pu-vJOh2Q4"
+            }
+        ],
+        "TensorFlow": [
+            {
+                "COURSE_NAME": "TensorFlow in Practice",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course teaches how to use TensorFlow for building and training machine learning models. It covers TensorFlow's API, layers, optimizers, and evaluation metrics, with hands-on exercises.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
             },
             {
-                "COURSE_NAME": "Deep Learning with PyTorch",
+                "COURSE_NAME": "TensorFlow 2 for Deep Learning",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn to build and train neural networks using PyTorch.",
+                "DESCRIPTION": "Learn TensorFlow 2 for deep learning with this course. Explore TensorFlow's features, APIs, and tools for building, training, and deploying deep learning models.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/deep-learning-with-pytorch"
+                "COURSE_LINK": "https://www.edx.org/course/tensorflow-2-for-deep-learning"
             },
             {
-                "COURSE_NAME": "Deep Learning Full Course",
+                "COURSE_NAME": "TensorFlow Tutorial",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A comprehensive course covering the fundamentals of deep learning concepts and models.",
+                "DESCRIPTION": "A comprehensive tutorial on TensorFlow, covering the basics of TensorFlow, its API, and how to build and train simple machine learning models.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=q30-FIcdsek"
+                "COURSE_LINK": "https://www.youtube.com/playlist?list=PLQVvvaa0QuDfhTFnVr4kJlNFh-icB0G6O"
             }
         ],
-        "Natural Language Processing": [
+        "PyTorch": [
+            {
+                "COURSE_NAME": "Deep Learning with PyTorch",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course teaches how to use PyTorch for building and training deep learning models. It covers PyTorch's tensors, layers, optimizers, and training loops, with hands-on exercises.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/deep-learning-pytorch"
+            },
+            {
+                "COURSE_NAME": "PyTorch for Deep Learning",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn PyTorch for deep learning with this course. Explore PyTorch's features, APIs, and tools for building, training, and deploying deep learning models.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/pytorch-for-deep-learning"
+            },
+            {
+                "COURSE_NAME": "PyTorch Tutorial for Deep Learning",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A comprehensive tutorial on PyTorch, covering the basics of PyTorch, its API, and how to build and train simple deep learning models.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/playlist?list=PLqnslRFeH4Uyjj_XBHdWv6egw4Mz49B9C"
+            }
+        ],
+        "EDA": [
+            {
+                "COURSE_NAME": "Data Analysis with Python",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course introduces data analysis techniques using Python, covering data cleaning, transformation, exploration, and visualization. It includes hands-on exercises with Pandas and Matplotlib.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/data-analysis-with-python"
+            },
+            {
+                "COURSE_NAME": "Exploratory Data Analysis for Machine Learning",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn exploratory data analysis (EDA) techniques for machine learning with this course. Explore data visualization, statistical analysis, and feature engineering to gain insights from data.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/learn/data-analysis/microsoft-exploratory-data-analysis-for-machine-learning"
+            },
+            {
+                "COURSE_NAME": "Exploratory Data Analysis Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A comprehensive tutorial on exploratory data analysis (EDA), covering data cleaning, transformation, visualization, and statistical analysis with Python.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=v-nk9T96V0E"
+            }
+        ],
+        "MLOps": [
+            {
+                "COURSE_NAME": "MLOps (Machine Learning Operations) Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization covers the principles and practices of MLOps, including model deployment, monitoring, and maintenance. Learn how to build and automate machine learning pipelines for production environments.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "COURSE_NAME": "Machine Learning Operations (MLOps)",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn about Machine Learning Operations (MLOps) and how to streamline the deployment, monitoring, and maintenance of machine learning models in production environments.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/microsoft-machine-learning-operations-mlops"
+            },
+            {
+                "COURSE_NAME": "MLOps Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A practical tutorial on MLOps, covering the basics of model deployment, monitoring, and maintenance in production environments.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=0XkX0qDtt-8"
+            }
+        ],
+        "NLP": [
             {
                 "COURSE_NAME": "Natural Language Processing Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn NLP techniques for processing and analyzing text data.",
+                "DESCRIPTION": "This specialization covers the fundamental concepts and techniques of natural language processing (NLP), including text processing, sentiment analysis, and machine translation. Learn how to build NLP applications with Python.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/natural-language-processing"
             },
             {
-                "COURSE_NAME": "Natural Language Processing with Python",
+                "COURSE_NAME": "Natural Language Processing",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Use Python and NLTK to process and analyze text data.",
+                "DESCRIPTION": "Explore the core concepts and techniques of natural language processing (NLP) with this course. Learn about text processing, sentiment analysis, and machine translation using Python and NLTK.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/natural-language-processing-with-python"
+                "COURSE_LINK": "https://www.edx.org/course/natural-language-processing-nlp-4-1x"
             },
             {
-                "COURSE_NAME": "NLP Course for Beginners",
+                "COURSE_NAME": "Natural Language Processing Tutorial",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "This course provides an introduction to the fundamentals of NLP.",
+                "DESCRIPTION": "A comprehensive tutorial on natural language processing (NLP), covering text processing, sentiment analysis, and machine translation with Python and NLTK.",
                 "DIFFICULTY": "Beginner",
                 "COURSE_LINK": "https://www.youtube.com/watch?v=xvqsFTUsOmc"
-            }
-        ],
-        "Data Modeling": [
-            {
-                "COURSE_NAME": "Data Modeling and Relational Database Design",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn the fundamentals of data modeling and relational database design.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/data-modeling"
-            },
-            {
-                "COURSE_NAME": "Database Design and Development",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn the fundamentals of database design and development.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/professional-certificate/database-design-and-development"
-            },
-            {
-                "COURSE_NAME": "Data Modeling Fundamentals",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This course provides an introduction to the fundamentals of data modeling.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://m.youtube.com/watch?v=rGa9jE3jW0g"
-            }
-        ],
-        "Data Storage": [
-            {
-                "COURSE_NAME": "Data Storage Technologies",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Explore data storage technologies",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=data%20storage"
-            },
-            {
-                "COURSE_NAME": "Learn Data Storage online",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn Data Storage online",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/learn/data-storage"
-            },
-            {
-                "COURSE_NAME": "Data Storage Explained",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "Learn Data Storage",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://m.youtube.com/watch?v=Xt0tQDlxzSQ"
-            }
-        ],
-        "Data Retrieval": [
-            {
-                "COURSE_NAME": "Data mining and data retrieval in information retrieval (IR)",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course is about Data retrieval in information retrieval",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/lecture/information-retrieval/data-mining-and-data-retrieval-in-information-retrieval-ir-kYq9q"
-            },
-            {
-                "COURSE_NAME": "Introduction to Data Retrieval",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Introduction to Data Retrieval",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/learn/computer-science/university-of-california-irvine-introduction-to-data-retrieval"
-            },
-            {
-                "COURSE_NAME": "Data mining and data retrieval in information retrieval (IR)",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "Learn the Data retrieval",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://m.youtube.com/watch?v=gU24rWJlkF4"
             }
         ]
     }

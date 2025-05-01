@@ -16,7 +16,7 @@
                 "R",
                 "MySQL",
                 "MongoDB",
-                "PCB design tools (Altium Designer, Eagle)",
+                "PCB design tools (e.g., Altium Designer, Eagle)",
                 "Schematic capture",
                 "Component placement",
                 "Routing"
@@ -49,8 +49,8 @@
         "Breakdown": {
             "Format Score": 10,
             "Spelling & Grammar": 9,
-            "Summary": 9,
-            "Skills": 10,
+            "Summary": 10,
+            "Skills": 9,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
@@ -59,12 +59,12 @@
         }
     },
     "Recommendations": [
-        "Enhance the **summary** section to more explicitly state your career goals and the specific type of role you are seeking. Tailor it to align with the requirements of the positions you're applying for to immediately grab the recruiter's attention.",
-        "Quantify your achievements in the **experience** section by including metrics such as the number of PCBs designed, the impact of your optimization efforts (e.g., reduced costs, improved efficiency), or the size of the teams you collaborated with. This will add more weight to your accomplishments.",
-        "In the **skills** section, consider adding specific technologies or software relevant to your field beyond just the broad categories. Mentioning specific versions or frameworks (e.g., TensorFlow for Python, specific database management tools) can showcase your expertise.",
-        "For the **projects** section, provide more context on the challenges you faced and the solutions you implemented. Instead of just describing the project, highlight the problem-solving skills and technical expertise you demonstrated.",
-        "In the **education** section, ensure that the dates are formatted consistently (e.g., Month Year - Month Year) for all entries. Also, consider adding relevant coursework or academic projects to showcase your skills and knowledge.",
-        "While you have listed certifications, it would be beneficial to include the issuing organization and the date of completion. This will add credibility to your **certifications** and allow recruiters to verify them if needed.",
-        "Consider adding a section for **Awards and Honors** if you have any academic or professional achievements that deserve recognition. This will further highlight your capabilities and differentiate you from other candidates."
+        "Proofread carefully to eliminate **typos** and grammatical errors, enhancing the **professionalism** of your resume.",
+        "While you've listed some soft skills, provide **specific examples** of how you've demonstrated these skills in your **experiences or projects**, to make them more impactful.",
+        "Expand on your **project descriptions** to highlight your **contributions, methodologies, and outcomes**, quantifying results where possible to demonstrate impact.",
+        "Consider adding dates or a time frame to your **certifications** to show **recency and relevance**, enhancing their credibility.",
+        "Ensure consistent formatting throughout the resume, paying attention to details such as **font styles, spacing, and bullet points**, which contributes to a clean and organized presentation.",
+        "Incorporate **keywords** from job descriptions that match your qualifications, which will help your resume get past **ATS filters** and attract the attention of recruiters.",
+        "Quantify your achievements whenever possible, use numbers, percentages, or specific metrics to demonstrate the **impact** you've made in your **previous roles and projects**."
     ]
 }

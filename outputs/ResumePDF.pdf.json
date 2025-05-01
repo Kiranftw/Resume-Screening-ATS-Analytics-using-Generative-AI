@@ -1,171 +1,139 @@
 {
-    "RESUME_RELEVANCE_SCORE": 65,
-    "ROLE_FIT_SCORE": 60,
-    "ATS_SCORE": 62,
-    "KEYWORD_MATCH_SCORE": 70,
-    "MATCHED_KEYWORDS": [
-        "Python",
-        "R",
-        "Java",
-        "SQL",
-        "Data Science",
-        "Machine Learning",
-        "Statistics",
-        "Data Analysis",
-        "Deep Learning",
-        "TensorFlow",
-        "Cloud",
-        "Data Cleaning",
-        "Data Preprocessing",
-        "NLP",
-        "Github"
-    ],
-    "MISSING_KEYWORDS": [
-        "Big Data",
-        "Hadoop",
-        "Spark",
-        "Kafka",
-        "NoSQL",
-        "AWS",
-        "Azure",
-        "Google Cloud",
-        "MLOps",
-        "Model Monitoring",
-        "Data Pipelines"
-    ],
-    "MISSING_SKILLS": [
-        "Big Data Frameworks",
-        "Cloud Platforms",
-        "Data Modeling",
-        "MLOps",
-        "Time Series Forecasting"
-    ],
-    "RESUME_TIPS": [
-        "Emphasize **Big Data** experience by adding projects or experiences that showcase your ability to work with large datasets and related technologies like **Hadoop**, **Spark**, or **Kafka**.",
-        "Highlight your experience with **cloud platforms (AWS, Azure, or Google Cloud)** in the skills or projects section, mentioning specific services you have used.",
-        "Include specific projects or experiences demonstrating your proficiency in building and maintaining **data pipelines** for processing large datasets.",
-        "Mention experience with **NoSQL** databases, such as MongoDB or Cassandra, in the skills or projects section to showcase your versatility in data storage solutions.",
-        "Quantify achievements in previous roles with numbers and metrics to demonstrate the impact of your work, especially in optimizing **data storage**, **retrieval**, and **processing**.",
-        "Create a dedicated section detailing your experience with **MLOps** and **model monitoring** techniques to align with the preferred qualifications listed in the job description.",
-        "Elaborate on projects involving **natural language processing (NLP)** to showcase your ability to extract insights from unstructured text data.",
-        "Expand on the **data analysis** skills section to include specific methodologies or tools used for exploratory data analysis (EDA) and statistical modeling.",
-        "Provide more details on any experience with **time series forecasting** to demonstrate your ability to predict future trends and patterns from sequential data.",
-        "Include any relevant certifications related to **Big Data**, **Cloud Computing**, or **Machine Learning** to further enhance your qualifications and demonstrate commitment to continuous learning."
+    "ATS_SCORE": {
+        "SCORE": 68,
+        "BREAKDOWN": {
+            "FORMATTING": 70,
+            "KEYWORD_DENSITY": 75,
+            "READABILITY": 70,
+            "RELEVANCE": 60
+        }
+    },
+    "RESUME_RELEVANCE_SCORE": 70,
+    "ROLE_FIT_SCORE": 65,
+    "KEYWORD_ANALYSIS": {
+        "MATCHED_KEYWORDS": [
+            "Data Science",
+            "Python",
+            "R",
+            "SQL",
+            "Linux",
+            "Windows",
+            "Data Cleaning",
+            "Data Preprocessing",
+            "Machine Learning",
+            "Github",
+            "statistics",
+            "modeling",
+            "data analysis",
+            "models",
+            "programming",
+            "Java",
+            "datasets"
+        ],
+        "MISSING_KEYWORDS": [
+            "Big Data",
+            "Hadoop",
+            "Spark",
+            "Kafka",
+            "NoSQL",
+            "AWS",
+            "Azure",
+            "Google Cloud",
+            "TensorFlow",
+            "PyTorch",
+            "NLP",
+            "Time Series Forecasting",
+            "MLOps",
+            "Model Monitoring",
+            "Data Pipelines",
+            "EDA"
+        ],
+        "MISSING_SKILLS": [
+            "Big Data Frameworks",
+            "Cloud Platforms",
+            "Deep Learning Frameworks"
+        ]
+    },
+    "OPTIMIZATION_RECOMMENDATIONS": [
+        "In your skills section, explicitly mention your proficiency with **Big Data frameworks** like **Hadoop**, **Spark**, or **Kafka**. This ensures alignment with the job description's key requirements and improves keyword density. Provide specific projects or experiences where you have used these frameworks.",
+        "Add a section detailing your experience with **Cloud Platforms** such as **AWS**, **Azure**, or **Google Cloud**. Include specific services or projects where you've utilized these platforms. Quantify your experience by stating the scale of the data or the impact of your work.",
+        "Include a section or expand on your existing ML section to highlight experience with **Deep Learning Frameworks** like **TensorFlow** or **PyTorch**. Mention specific projects where you have used these frameworks to build and deploy models. Explain the type of neural networks you've implemented and the results achieved.",
+        "In your project descriptions, explicitly mention if you have experience in developing **Data Pipelines**. Describe how you designed and implemented these pipelines to process large datasets. Highlight technologies used for data ingestion, transformation, and storage.",
+        "Include **Exploratory Data Analysis (EDA)** as a skill and provide examples of how you've used EDA to uncover trends and patterns in datasets. Mention the tools and techniques you employed during EDA, such as data visualization libraries or statistical methods. Quantify the insights you derived from EDA and their impact on decision-making.",
+        "Add projects showcasing experience with **NoSQL databases**. Elaborate on the type of NoSQL database (e.g., MongoDB, Cassandra) used, the use case, and the benefits gained by using NoSQL over traditional SQL databases. Mention data modeling strategies specific to NoSQL.",
+        "To boost your **Role Fit Score**, add details about any experience with **MLOps** and **model monitoring techniques**. Describe the processes you've used to ensure the reliability and performance of machine learning models in production. Mention specific tools for model monitoring, such as dashboards or alert systems.",
+        "Elaborate on your experience with **Natural Language Processing (NLP)** if you have any, highlighting specific projects or techniques used. Mention NLP tasks like sentiment analysis, text classification, or named entity recognition. Include the libraries and tools used in NLP projects.",
+        "Include experience with **Time Series Forecasting**, if applicable, detailing models used (e.g., ARIMA, LSTM) and the specific use case. Explain the steps taken to preprocess time series data, select appropriate models, and evaluate forecasting accuracy. Quantify the results of your time series forecasting projects.",
+        "Enhance your skills section by including proficiency levels for each skill (e.g., expert, proficient, intermediate). This offers a clearer understanding of your capabilities. For example, specify \"Python (Expert), R (Proficient), SQL (Intermediate)\"."
     ],
     "COURSE_RECOMMENDATIONS": {
         "Big Data Frameworks": [
             {
                 "COURSE_NAME": "Big Data Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the fundamental concepts and tools for working with big data, including Hadoop, Spark, and MapReduce. You'll learn how to process, analyze, and visualize large datasets.",
+                "DESCRIPTION": "Learn about the key components of the Big Data ecosystem, including Hadoop and Spark. Develop skills to analyze and process large datasets.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
             },
             {
-                "COURSE_NAME": "Analyzing Big Data with Microsoft R Server",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn how to use Microsoft R Server to analyze big data. This course covers topics such as data manipulation, statistical modeling, and machine learning with R on big data platforms.",
+                "COURSE_NAME": "Apache Spark with Scala - Hands On with Big Data!",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Master Apache Spark and Scala to process big data efficiently. This course covers setting up Spark, writing Spark applications, and optimizing performance.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/analyzing-big-data-microsoft-r-server"
+                "COURSE_LINK": "https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/"
             },
             {
-                "COURSE_NAME": "Hadoop Tutorial for Beginners | Big Data Hadoop Training | Hadoop Full Course - Great Learning",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This comprehensive tutorial is designed for beginners and covers all the fundamental concepts of Hadoop. It includes practical examples and step-by-step instructions.",
+                "COURSE_NAME": "Hadoop Tutorial for Beginners",
+                "PLATFORM": "YouTube (Simplilearn)",
+                "DESCRIPTION": "A comprehensive introduction to Hadoop and its components, covering installation, configuration, and basic data processing techniques.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=6fg5oWt99DU"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=Vq5c3J81Ubg"
             }
         ],
         "Cloud Platforms": [
             {
                 "COURSE_NAME": "AWS Certified Cloud Practitioner",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course provides a foundational understanding of AWS cloud services and prepares you for the AWS Certified Cloud Practitioner exam. You'll learn about cloud concepts, AWS services, security, architecture, pricing, and support.",
+                "DESCRIPTION": "Gain foundational knowledge of AWS cloud services and prepare for the AWS Certified Cloud Practitioner exam.",
                 "DIFFICULTY": "Beginner",
                 "COURSE_LINK": "https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
             },
             {
-                "COURSE_NAME": "Microsoft Azure Fundamentals AZ-900 Exam Prep Specialization",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "This specialization provides a thorough introduction to Microsoft Azure and prepares you for the AZ-900 exam. You'll learn about cloud concepts, Azure services, security, pricing, and support.",
+                "COURSE_NAME": "Microsoft Azure Fundamentals AZ-900 Certification",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn the fundamentals of Microsoft Azure and prepare for the AZ-900 certification exam. Covers core Azure services, security, and compliance.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/professional-certificate/microsoft-azure-fundamentals"
+                "COURSE_LINK": "https://www.udemy.com/course/microsoft-azure-fundamentals-az-900-certification-2020/"
             },
             {
-                "COURSE_NAME": "Google Cloud Platform Full Course - Learn Google Cloud Platform in 8 Hours | Simplilearn",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This full course on Google Cloud Platform covers all the essential concepts and services, including compute, storage, networking, and databases. It's a great starting point for learning GCP.",
+                "COURSE_NAME": "Google Cloud Platform Full Course",
+                "PLATFORM": "YouTube (freeCodeCamp.org)",
+                "DESCRIPTION": "A comprehensive introduction to Google Cloud Platform, covering compute, storage, networking, and data analytics services.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=GjtTZwS_xyE"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=Gcp-oKjpJkc"
             }
         ],
-        "Data Modeling": [
+        "Deep Learning Frameworks": [
             {
-                "COURSE_NAME": "Data Modeling and Relational Database Design",
+                "COURSE_NAME": "TensorFlow in Practice Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn the fundamentals of data modeling and relational database design. This course covers conceptual, logical, and physical data modeling, as well as database normalization and SQL.",
+                "DESCRIPTION": "Learn TensorFlow to build scalable AI-powered applications. Master deep learning techniques and best practices.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/data-modeling"
+                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
             },
             {
-                "COURSE_NAME": "Database Design and Modeling Fundamentals",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "This course covers the fundamental concepts of database design and modeling. You'll learn how to create entity-relationship diagrams (ERDs) and relational schemas.",
+                "COURSE_NAME": "Deep Learning with PyTorch: Zero to GANs",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Learn PyTorch through hands-on projects. This course covers the fundamentals of deep learning and generative adversarial networks.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/pytorch-deep-learning-advanced/"
+            },
+            {
+                "COURSE_NAME": "Deep Learning Full Course",
+                "PLATFORM": "YouTube (freeCodeCamp.org)",
+                "DESCRIPTION": "Comprehensive guide to deep learning concepts and techniques, covering neural networks, convolutional neural networks, and recurrent neural networks.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/course/database-design-and-modeling-fundamentals"
-            },
-            {
-                "COURSE_NAME": "Data Modeling Tutorial - Data Modeling Conceptual, Logical, Physical Models",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A comprehensive tutorial covering conceptual, logical, and physical data modeling, providing a solid foundation in data modeling principles.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=QWJ7xyGjLfc"
-            }
-        ],
-        "MLOps": [
-            {
-                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the key concepts and practices of MLOps, including model deployment, monitoring, and continuous integration/continuous delivery (CI/CD) for machine learning models.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
-            },
-            {
-                "COURSE_NAME": "MLOps (Machine Learning Operations) Engineer Professional Certificate",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "This professional certificate program provides a comprehensive overview of MLOps, covering topics such as model deployment, monitoring, and automation.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/professional-certificate/microsoft-mlops-machine-learning-operations-engineer"
-            },
-            {
-                "COURSE_NAME": "MLOps Full Course - Machine Learning Operations",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This full course on MLOps covers the key concepts and practices of machine learning operations, including model deployment, monitoring, and automation.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=0uB-yAGyW4o"
-            }
-        ],
-        "Time Series Forecasting": [
-            {
-                "COURSE_NAME": "Time Series Analysis in Python",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn time series analysis techniques using Python. This course covers topics such as data preprocessing, forecasting models (ARIMA, Exponential Smoothing), and model evaluation.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/time-series-analysis"
-            },
-            {
-                "COURSE_NAME": "Time Series Analysis",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "This course provides a comprehensive overview of time series analysis techniques. You'll learn how to model and forecast time series data using various statistical methods.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/time-series-analysis"
-            },
-            {
-                "COURSE_NAME": "Time Series Forecasting Theory | Full Course",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A full course covering the theory behind time series forecasting, providing a solid understanding of the underlying principles and techniques.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=qn_3nE2_FN4"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=IlxO7WcQ3WE"
             }
         ]
     }
