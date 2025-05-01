@@ -1,9 +1,9 @@
 {
     "ROLEMATCHES": {
         "Data Scientist": 88,
-        "Machine Learning Engineer": 85,
-        "Computer Vision Engineer": 82,
-        "Data Analyst": 78,
-        "PCB Designer": 75
+        "Data Analyst": 85,
+        "Machine Learning Engineer": 82,
+        "Software Engineer": 75,
+        "AI/ML Engineer": 70
     }
 }

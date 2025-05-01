@@ -1,139 +1,203 @@
 {
-    "ATS_SCORE": {
-        "SCORE": 68,
-        "BREAKDOWN": {
-            "FORMATTING": 70,
-            "KEYWORD_DENSITY": 75,
-            "READABILITY": 70,
-            "RELEVANCE": 60
-        }
-    },
-    "RESUME_RELEVANCE_SCORE": 70,
-    "ROLE_FIT_SCORE": 65,
-    "KEYWORD_ANALYSIS": {
-        "MATCHED_KEYWORDS": [
-            "Data Science",
-            "Python",
-            "R",
-            "SQL",
-            "Linux",
-            "Windows",
-            "Data Cleaning",
-            "Data Preprocessing",
-            "Machine Learning",
-            "Github",
-            "statistics",
-            "modeling",
-            "data analysis",
-            "models",
-            "programming",
-            "Java",
-            "datasets"
-        ],
-        "MISSING_KEYWORDS": [
-            "Big Data",
-            "Hadoop",
-            "Spark",
-            "Kafka",
-            "NoSQL",
-            "AWS",
-            "Azure",
-            "Google Cloud",
-            "TensorFlow",
-            "PyTorch",
-            "NLP",
-            "Time Series Forecasting",
-            "MLOps",
-            "Model Monitoring",
-            "Data Pipelines",
-            "EDA"
-        ],
-        "MISSING_SKILLS": [
-            "Big Data Frameworks",
-            "Cloud Platforms",
-            "Deep Learning Frameworks"
-        ]
-    },
-    "OPTIMIZATION_RECOMMENDATIONS": [
-        "In your skills section, explicitly mention your proficiency with **Big Data frameworks** like **Hadoop**, **Spark**, or **Kafka**. This ensures alignment with the job description's key requirements and improves keyword density. Provide specific projects or experiences where you have used these frameworks.",
-        "Add a section detailing your experience with **Cloud Platforms** such as **AWS**, **Azure**, or **Google Cloud**. Include specific services or projects where you've utilized these platforms. Quantify your experience by stating the scale of the data or the impact of your work.",
-        "Include a section or expand on your existing ML section to highlight experience with **Deep Learning Frameworks** like **TensorFlow** or **PyTorch**. Mention specific projects where you have used these frameworks to build and deploy models. Explain the type of neural networks you've implemented and the results achieved.",
-        "In your project descriptions, explicitly mention if you have experience in developing **Data Pipelines**. Describe how you designed and implemented these pipelines to process large datasets. Highlight technologies used for data ingestion, transformation, and storage.",
-        "Include **Exploratory Data Analysis (EDA)** as a skill and provide examples of how you've used EDA to uncover trends and patterns in datasets. Mention the tools and techniques you employed during EDA, such as data visualization libraries or statistical methods. Quantify the insights you derived from EDA and their impact on decision-making.",
-        "Add projects showcasing experience with **NoSQL databases**. Elaborate on the type of NoSQL database (e.g., MongoDB, Cassandra) used, the use case, and the benefits gained by using NoSQL over traditional SQL databases. Mention data modeling strategies specific to NoSQL.",
-        "To boost your **Role Fit Score**, add details about any experience with **MLOps** and **model monitoring techniques**. Describe the processes you've used to ensure the reliability and performance of machine learning models in production. Mention specific tools for model monitoring, such as dashboards or alert systems.",
-        "Elaborate on your experience with **Natural Language Processing (NLP)** if you have any, highlighting specific projects or techniques used. Mention NLP tasks like sentiment analysis, text classification, or named entity recognition. Include the libraries and tools used in NLP projects.",
-        "Include experience with **Time Series Forecasting**, if applicable, detailing models used (e.g., ARIMA, LSTM) and the specific use case. Explain the steps taken to preprocess time series data, select appropriate models, and evaluate forecasting accuracy. Quantify the results of your time series forecasting projects.",
-        "Enhance your skills section by including proficiency levels for each skill (e.g., expert, proficient, intermediate). This offers a clearer understanding of your capabilities. For example, specify \"Python (Expert), R (Proficient), SQL (Intermediate)\"."
+    "RESUME_RELEVANCE_SCORE": 65,
+    "ROLE_FIT_SCORE": 60,
+    "ATS_SCORE": 62,
+    "KEYWORD_MATCH_SCORE": 70,
+    "MATCHED_KEYWORDS": [
+        "Python",
+        "R",
+        "Java",
+        "SQL",
+        "Data Science",
+        "Machine Learning",
+        "TensorFlow",
+        "Data Analysis",
+        "Data Cleaning",
+        "statistics",
+        "programming",
+        "Github",
+        "Linux",
+        "windows",
+        "Azure",
+        "AWS",
+        "Google Cloud",
+        "Cloud",
+        "Deep Learning",
+        "NLP",
+        "Algorithms",
+        "Data manipulation"
+    ],
+    "MISSING_KEYWORDS": [
+        "Big Data",
+        "Hadoop",
+        "Spark",
+        "Kafka",
+        "NoSQL",
+        "PyTorch",
+        "MLOps",
+        "Time Series Forecasting",
+        "EDA",
+        "Data pipelines",
+        "Data models",
+        "Strategic Decision Making"
+    ],
+    "MISSING_SKILLS": [
+        "Big Data Technologies",
+        "Data Storage Optimization",
+        "Data Retrieval Optimization",
+        "Model Monitoring",
+        "Cloud Platform Management (AWS, Azure, Google Cloud)",
+        "Data processing"
+    ],
+    "RESUME_TIPS": [
+        "Emphasize experience with **Big Data technologies** like **Hadoop, Spark, and Kafka** in the experience section to directly align with job requirements.",
+        "Quantify achievements in project descriptions, such as the increase in efficiency or cost savings resulting from data-driven solutions, highlighting **data analysis** and **predictive modeling** impact.",
+        "Include specific projects or experiences related to **data pipeline development** and optimization, demonstrating your ability to handle large datasets and improve data processing workflows.",
+        "Explicitly mention experience with **MLOps practices** and **model monitoring techniques** to showcase your understanding of deploying and maintaining machine learning models in production environments.",
+        "Incorporate keywords like **data storage, retrieval, and processing** when describing your experience with optimizing data infrastructure to align with the job's focus on big data technologies.",
+        "Add details on hands-on experience with **cloud platforms** (AWS, Azure, or Google Cloud), specifically mentioning services used for data storage, processing, and machine learning deployment.",
+        "Include any projects involving **natural language processing (NLP)** and **time series forecasting** to address preferred qualifications and demonstrate expertise in advanced analytical techniques.",
+        "Clarify the use of **SQL** in projects involving data extraction, transformation, and loading (ETL) processes to emphasize your database skills.",
+        "Incorporate achievements related to **Data Driven Solutions** and make the Resume more tailored to the job description",
+        "Ensure that the resume is ATS-friendly by using standard section headings like \"Skills,\" \"Experience,\" and \"Education\" and avoiding tables or unusual formatting, and highlight **relevant keywords** in these sections."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Big Data Frameworks": [
+        "Big Data": [
             {
                 "COURSE_NAME": "Big Data Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about the key components of the Big Data ecosystem, including Hadoop and Spark. Develop skills to analyze and process large datasets.",
+                "DESCRIPTION": "This specialization covers the fundamental tools and techniques used in big data analysis, including Hadoop, MapReduce, Spark, and more.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
             },
             {
-                "COURSE_NAME": "Apache Spark with Scala - Hands On with Big Data!",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Master Apache Spark and Scala to process big data efficiently. This course covers setting up Spark, writing Spark applications, and optimizing performance.",
+                "COURSE_NAME": "Analyzing Big Data with Microsoft R Server",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to use Microsoft R Server to analyze big data with popular big data technologies. It covers concepts and techniques for big data analysis.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/apache-spark-with-scala-hands-on-with-big-data/"
+                "COURSE_LINK": "https://www.edx.org/course/analyzing-big-data-with-microsoft-r-server"
             },
             {
-                "COURSE_NAME": "Hadoop Tutorial for Beginners",
-                "PLATFORM": "YouTube (Simplilearn)",
-                "DESCRIPTION": "A comprehensive introduction to Hadoop and its components, covering installation, configuration, and basic data processing techniques.",
+                "COURSE_NAME": "Data Engineering with Python",
+                "PLATFORM": "freeCodeCamp",
+                "DESCRIPTION": "Learn the basicsof data engineering with Python for FREE!",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=Vq5c3J81Ubg"
+                "COURSE_LINK": "https://www.freecodecamp.org/learn/data-analysis-with-python/"
             }
         ],
-        "Cloud Platforms": [
+        "Hadoop": [
             {
-                "COURSE_NAME": "AWS Certified Cloud Practitioner",
+                "COURSE_NAME": "Hadoop Platform and Application Framework",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Gain foundational knowledge of AWS cloud services and prepare for the AWS Certified Cloud Practitioner exam.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
+                "DESCRIPTION": "Learn about the Hadoop ecosystem and how to use it to build scalable data processing applications.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/hadoop-platform-application-framework"
             },
             {
-                "COURSE_NAME": "Microsoft Azure Fundamentals AZ-900 Certification",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn the fundamentals of Microsoft Azure and prepare for the AZ-900 certification exam. Covers core Azure services, security, and compliance.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/microsoft-azure-fundamentals-az-900-certification-2020/"
+                "COURSE_NAME": "Big Data Analytics with Apache Hadoop",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Gain hands-on experience with Hadoop, including how to store, process, and analyze big data.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/big-data-analytics-with-apache-hadoop"
             },
             {
-                "COURSE_NAME": "Google Cloud Platform Full Course",
-                "PLATFORM": "YouTube (freeCodeCamp.org)",
-                "DESCRIPTION": "A comprehensive introduction to Google Cloud Platform, covering compute, storage, networking, and data analytics services.",
+                "COURSE_NAME": "Hadoop Tutorial",
+                "PLATFORM": "freeCodeCamp",
+                "DESCRIPTION": "Beginner tutorial, introduction to Hadoop",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=Gcp-oKjpJkc"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=rsFpYnRKOeM"
             }
         ],
-        "Deep Learning Frameworks": [
+        "Spark": [
             {
-                "COURSE_NAME": "TensorFlow in Practice Specialization",
+                "COURSE_NAME": "Big Data Analysis with Scala and Spark",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn TensorFlow to build scalable AI-powered applications. Master deep learning techniques and best practices.",
+                "DESCRIPTION": "Learn how to use Scala and Spark to analyze large datasets. Covers Spark's core concepts and advanced techniques.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
+                "COURSE_LINK": "https://www.coursera.org/learn/scala-spark-big-data"
             },
             {
-                "COURSE_NAME": "Deep Learning with PyTorch: Zero to GANs",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn PyTorch through hands-on projects. This course covers the fundamentals of deep learning and generative adversarial networks.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/pytorch-deep-learning-advanced/"
-            },
-            {
-                "COURSE_NAME": "Deep Learning Full Course",
-                "PLATFORM": "YouTube (freeCodeCamp.org)",
-                "DESCRIPTION": "Comprehensive guide to deep learning concepts and techniques, covering neural networks, convolutional neural networks, and recurrent neural networks.",
+                "COURSE_NAME": "Taming Big Data with Apache Spark and Python",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn the fundamentals of Apache Spark and how to use it with Python to process large datasets.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=IlxO7WcQ3WE"
+                "COURSE_LINK": "https://www.edx.org/course/taming-big-data-with-apache-spark-and-python"
+            },
+            {
+                "COURSE_NAME": "PySpark Full Course - Learn Apache Spark using Python",
+                "PLATFORM": "freeCodeCamp",
+                "DESCRIPTION": "Learn Apache Spark using Python",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=jWx_CJGxG6w"
+            }
+        ],
+        "Kafka": [
+            {
+                "COURSE_NAME": "Apache Kafka Series - Learn Apache Kafka for Beginners v2",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A comprehensive guide to Apache Kafka, covering its core concepts, architecture, and practical applications.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/lecture/apache-kafka/introduction-to-the-course-hG3vm"
+            },
+            {
+                "COURSE_NAME": "Real-Time Data Pipelines with Apache Kafka",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Explore how to build real-time data pipelines using Apache Kafka and related technologies.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/real-time-data-pipelines-with-apache-kafka"
+            },
+            {
+                "COURSE_NAME": "What is Apache Kafka? | Kafka Tutorial for Beginners",
+                "PLATFORM": "freeCodeCamp",
+                "DESCRIPTION": "A beginner tutorial for understanding Apache Kafka",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=jhukjV8F5y4"
+            }
+        ],
+        "NoSQL": [
+            {
+                "COURSE_NAME": "NoSQL Database Systems",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "An overview of NoSQL database systems, covering their types, characteristics, and use cases.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/lecture/nosql-databases/lecture-11-introduction-to-nosql-36r4J"
+            },
+            {
+                "COURSE_NAME": "Database Design with Non-Relational Databases on Cloud",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "How to use NoSQL with cloud",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/database-design-with-non-relational-databases-o"
+            },
+            {
+                "COURSE_NAME": "Introduction to NoSQL Databases",
+                "PLATFORM": "freeCodeCamp",
+                "DESCRIPTION": "Introduction to NoSQL databases with practical examples and use cases.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=WxyxTjQh6iE"
+            }
+        ],
+        "PyTorch": [
+            {
+                "COURSE_NAME": "Deep Learning with PyTorch",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the basics of Deep Learning with PyTorch",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/specializations/pytorch"
+            },
+            {
+                "COURSE_NAME": "Introduction to Deep Learning with PyTorch",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn the basics of Deep Learning with PyTorch",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/introduction-to-deep-learning-with-pytorch"
+            },
+            {
+                "COURSE_NAME": "PyTorch Tutorials",
+                "PLATFORM": "freeCodeCamp",
+                "DESCRIPTION": "Practical guides on how to use PyTorch.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://pytorch.org/tutorials/"
             }
         ]
     }

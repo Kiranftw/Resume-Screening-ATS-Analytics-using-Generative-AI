@@ -133,7 +133,7 @@ def dashboard():
 def chatbot_route():
     data = request.get_json()
     query = data.get("query", "")
-    response = analytics.chatbot(Query=query)
+    response = analytics.chatbot(query=query)
     return jsonify({"response": response})
 
 

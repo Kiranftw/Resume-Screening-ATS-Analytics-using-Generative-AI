@@ -201,28 +201,22 @@ class ResumeAnalytics(object):
             return None
             
     @ExceptionHandeler
-    def chatbot(self, Query: str) -> str:
-        if not Query or Query.strip() == "":
+    def chatbot(self, query: str) -> str:
+        if not query or query.strip() == "":
             return "Please type a message to continue."
 
-        self.memory = ConversationSummaryBufferMemory(
-            llm=self.chatmodel,
-            max_tokens=100000,
-            return_messages=True,
-            memory_key="history"
-        )
-
         messages = self.memory.chat_memory.messages.copy()
-        messages.append(HumanMessage(content=Query))
+        messages.append(HumanMessage(content=query))
 
         response = self.chatmodel.invoke(messages).content
-        self.memory.chat_memory.add_user_message(Query)
+        self.memory.chat_memory.add_user_message(query)
         self.memory.chat_memory.add_ai_message(response)
 
         return markdown.markdown(response)
     
     def getCoverLetter(self, resume: str, jobdescription: str):
         resume_text = self.documentParser(resume)
+        jobdescription = self.documentParser(jobdescription)
         prompt: ChatPromptTemplate = ChatPromptTemplate.from_template(
             """
         Based on the following resume and job description, generate a professional cover letter.

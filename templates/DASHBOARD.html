@@ -634,7 +634,7 @@
                 <div class="welcome-container">
                     <div class="welcome-box">
                         <span class="welcome">Welcome</span>
-                        <span class="username" style="color: rgb(4, 3, 47); font-weight: bold;">UDAYKIRAN</span>
+                        <span class="username" style="color: rgb(4, 3, 47); font-weight: bold;">USERNAME</span>
 
                     </div>
                 </div>
@@ -760,7 +760,7 @@
 
             <div class="chat-boat" onclick="toggleChat()">
                 <div>CHAT</div>
-                <div>BOAT</div>
+                <div>BOT</div>
             </div>
 
             <div class="chat-modal" id="chat-modal">
@@ -769,12 +769,15 @@
                     <button class="close-chat" onclick="toggleChat()">×</button>
                 </div>
                 <div class="chat-messages" id="chat-messages">
-                    <div class="bot-message">Hello! I'm your resume assistant. How can I help you improve your resume
-                        today?
+                    <div class="typing-indicator" id="bot-typing" style="display: none;">
+                        <span>Assistant is typing...</span>
                     </div>
+                    <div class="bot-message">Hello! I'm your resume assistant. How can I help you improve your resume
+                        today?</div>
                 </div>
                 <div class="chat-input-container">
-                    <input type="text" class="chat-input" id="chat-input" placeholder="Type your message...">
+                    <input type="text" class="chat-input" id="chat-input" placeholder="Type your message..."
+                        onkeypress="handleKeyPress(event)">
                     <button class="send-btn" onclick="sendMessage()">Send</button>
                 </div>
             </div>
