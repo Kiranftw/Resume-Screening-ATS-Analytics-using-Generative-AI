@@ -5,98 +5,167 @@
     "KEYWORD_MATCH_SCORE": 70,
     "MATCHED_KEYWORDS": [
         "Python",
-        "Java",
+        "Data Science",
         "R",
         "SQL",
-        "Data Science",
         "Machine Learning",
         "TensorFlow",
         "Data Analysis",
+        "Data Cleaning",
+        "Statistical Modeling",
         "Big Data",
+        "Java",
+        "AI",
         "Cloud Platforms",
-        "AWS",
-        "Azure",
-        "Google Cloud",
-        "Data pipelines",
-        "Statistical modeling",
-        "Data driven solutions",
-        "Data storage",
-        "Data retrieval",
-        "Data processing",
-        "Documentation",
-        "Algorithms"
+        "Google Cloud"
     ],
     "MISSING_KEYWORDS": [
         "Hadoop",
         "Spark",
         "Kafka",
         "NoSQL",
+        "AWS",
+        "Azure",
+        "PyTorch",
         "MLOps",
-        "Model Monitoring",
         "NLP",
-        "Time Series Forecasting"
+        "Time Series Forecasting",
+        "Data Pipelines",
+        "EDA"
     ],
     "MISSING_SKILLS": [
-        "Deploying machine learning models in production",
-        "Big Data Frameworks"
+        "Big Data Technologies",
+        "Data Modeling",
+        "Model Monitoring",
+        "Deploying Machine Learning Models",
+        "Data Driven Solutions"
     ],
     "RESUME_TIPS": [
-        "Highlight your experience with **Big Data frameworks** such as **Hadoop, Spark, or Kafka** in the experience section to increase visibility.",
-        "Explicitly mention experience with **NoSQL databases** within your skills or project sections to align with job requirements. ",
-        "Include projects where you have deployed **Machine Learning models** into **production environments** to demonstrate practical experience. ",
-        "Detail your familiarity with **MLOps and model monitoring techniques** in a project or skills section to showcase advanced capabilities.",
-        "If you have any experience with **Natural Language Processing (NLP)** or **time series forecasting**, prominently feature it in your projects. ",
-        "Expand upon your **cloud platform** experience (AWS, Azure, or Google Cloud) by detailing specific services and projects you've worked on. ",
-        "Add specific projects detailing **data pipeline** creation and optimization to showcase your skills in data engineering.",
-        "Quantify your achievements and contributions to projects using metrics and results to demonstrate impact and effectiveness.",
-        "Revise the resume to emphasize your analytical projects and **machine learning** skills. Showcase your expertise in the field.",
-        "Include a section detailing any certifications or training related to **Big Data**, **Cloud Computing**, or **Machine Learning** to boost credibility."
+        "**Explicitly mention experience with Big Data frameworks like Hadoop, Spark, or Kafka** in the experience section to align with the job requirements, highlighting any projects or responsibilities where these technologies were used.",
+        "Add **specific projects or experiences that demonstrate your proficiency in Cloud Platforms (AWS, Azure, or Google Cloud)**. Quantify your accomplishments with specific metrics or results to showcase the impact of your work.",
+        "Incorporate the term **'Data Pipelines'** into your resume, detailing your experience in developing and implementing scalable data pipelines for processing large datasets. Mention the tools and technologies used in creating these pipelines.",
+        "Include **'NoSQL databases'** in your skills section and briefly describe any relevant experience with NoSQL databases in your project descriptions to enhance keyword visibility and ATS compatibility.",
+        "Add **details about your experience with model deployment and monitoring** in production environments. Highlight any experience you have with MLOps and the tools you've used for model monitoring.",
+        "Explicitly state your experience in performing **'Exploratory Data Analysis (EDA)'** and provide specific examples of insights you've uncovered through EDA. Quantify the impact of your EDA on decision-making.",
+        "Include **any projects or experiences related to Natural Language Processing (NLP)**, as the job description lists it as a preferred qualification. Detail the NLP techniques and tools you've used.",
+        "Highlight any experience you have with **Time Series Forecasting** and mention specific forecasting models or techniques you've applied. Showcase any experience in predicting future trends based on historical data.",
+        "Expand on your **experience in 'Data Modeling'** and include specific examples of data models you've developed and maintained. Include the tools and methodologies you've used in the data modeling process.",
+        "Add **experience related to building 'Data Driven Solutions'** in your experience or projects section. Clearly outline the business challenges you addressed and the data-driven solutions you developed to solve them."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Deploying machine learning models in production": [
-            {
-                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization teaches you how to deploy, monitor, and manage machine learning models in production environments, covering topics like model deployment strategies, CI/CD pipelines for ML, and model monitoring techniques.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
-            },
-            {
-                "COURSE_NAME": "MLOps Engineer Professional Certificate",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "The MLOps Engineer Professional Certificate program is designed to equip learners with the skills and knowledge to implement machine learning solutions to enterprise-level problems. It's designed to teach MLOps practices from model building to deployment, monitoring, and maintenance.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/professional-certificate/microsoft-devops-engineer"
-            },
-            {
-                "COURSE_NAME": "MLOps Zoomcamp",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "MLOps Zoomcamp is a free online course that teaches you how to deploy machine learning models in production. It covers topics such as containerization, continuous integration, and continuous deployment.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=jW8nwqjJvJ4&list=PL3Mmux2v_h0TEg3t7gc6sU7eR500sESWt"
-            }
-        ],
-        "Big Data Frameworks": [
+        "Big Data Technologies": [
             {
                 "COURSE_NAME": "Big Data Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the fundamental concepts and tools for working with big data, including Hadoop, Spark, and MapReduce. It teaches you how to process, analyze, and visualize large datasets using these frameworks.",
+                "DESCRIPTION": "This specialization covers the fundamental concepts and tools for working with big data, including Hadoop, Spark, and MapReduce. It teaches how to process, analyze, and visualize large datasets using cutting-edge technologies.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
             },
             {
-                "COURSE_NAME": "Microsoft Professional Program in Big Data",
+                "COURSE_NAME": "Analyzing Big Data with Microsoft R Server",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "This program provides a comprehensive understanding of big data technologies and techniques, including Hadoop, Spark, Azure HDInsight, and data warehousing. It covers topics such as data ingestion, processing, storage, and analysis.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/professional-program/microsoft-professional-program-in-big-data"
+                "DESCRIPTION": "Learn how to use Microsoft R Server to analyze big data using R. This course covers data manipulation, statistical modeling, and machine learning techniques for large datasets.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/analyzing-big-data-with-microsoft-r-server"
             },
             {
-                "COURSE_NAME": "Big Data Analytics with Apache Spark",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "Covers the fundamentals of Apache Spark, including how to set up a Spark environment, process data using Spark's core APIs, and perform basic data analysis tasks.",
+                "COURSE_NAME": "Data Engineering with Python",
+                "PLATFORM": "freeCodeCamp",
+                "DESCRIPTION": "A project-based curriculum teaching big data and data engineering tools with Python, focusing on Hadoop, Spark, and data pipelines.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.freecodecamp.org/learn/scientific-computing-with-python/"
+            }
+        ],
+        "Data Modeling": [
+            {
+                "COURSE_NAME": "Data Modeling and Relational Database Design",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course teaches the fundamentals of data modeling, including conceptual, logical, and physical data models. It covers relational database design principles and best practices.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=y4mzmx8C9-o"
+                "COURSE_LINK": "https://www.coursera.org/learn/data-modeling"
+            },
+            {
+                "COURSE_NAME": "Database Design and Data Modeling Fundamentals",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course provides a comprehensive introduction to database design and data modeling, covering key concepts and techniques for designing efficient and effective databases.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/database-design-and-data-modeling-fundamentals"
+            },
+            {
+                "COURSE_NAME": "Data Modeling Full Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "https://www.youtube.com/watch?v=fhk9mtX28Nw",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=fhk9mtX28Nw"
+            }
+        ],
+        "Model Monitoring": [
+            {
+                "COURSE_NAME": "MLOps (Machine Learning Operations) Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization covers the key principles and practices of MLOps, including model deployment, monitoring, and maintenance. It teaches how to build robust and scalable machine learning systems.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "COURSE_NAME": "Monitoring and Observability for Machine Learning",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to monitor and observe machine learning models in production. This course covers techniques for detecting and addressing issues such as model drift, data quality problems, and performance degradation.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/monitoring-and-observability-for-machine-learning"
+            },
+            {
+                "COURSE_NAME": "MLOps Full Course | Learn Machine Learning Operations",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "https://www.youtube.com/watch?v=0uGEDm-kSEQ",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=0uGEDm-kSEQ"
+            }
+        ],
+        "Deploying Machine Learning Models": [
+            {
+                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This specialization covers the end-to-end process of deploying machine learning models in production, including model serving, monitoring, and scaling. It teaches how to build robust and scalable ML systems.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "COURSE_NAME": "Deploying Machine Learning Models",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to deploy machine learning models using various tools and techniques. This course covers model serving, API development, and cloud deployment strategies.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/deploying-machine-learning-models"
+            },
+            {
+                "COURSE_NAME": "How To Deploy A Machine Learning Model",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "https://m.youtube.com/watch?v=n-K5RHDy-Vg",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=n-K5RHDy-Vg"
+            }
+        ],
+        "Data Driven Solutions": [
+            {
+                "COURSE_NAME": "Data-driven Decision Making",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to use data to make informed business decisions. This course covers data analysis techniques, data visualization, and communication strategies for presenting data-driven insights.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/data-driven-decision-making"
+            },
+            {
+                "COURSE_NAME": "Data Analysis for Decision Making",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course teaches how to use data analysis to support decision-making in various business contexts. It covers data collection, data cleaning, and data visualization techniques.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/data-analysis-for-decision-making"
+            },
+            {
+                "COURSE_NAME": "Data-Driven Business Decisions",
+                "PLATFORM": "skillshare",
+                "DESCRIPTION": "https://www.skillshare.com/en/classes/Data-Driven-Business-Decisions/1777464972",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.skillshare.com/en/classes/Data-Driven-Business-Decisions/1777464972"
             }
         ]
     }

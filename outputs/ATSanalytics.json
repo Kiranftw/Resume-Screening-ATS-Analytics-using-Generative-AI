@@ -19,8 +19,6 @@
                 "Matplotlib",
                 "Scikit Learn",
                 "TensorFlow",
-                "ML",
-                "DS",
                 "Linear Regression",
                 "Multilinear Regression",
                 "Data Cleaning",
@@ -33,7 +31,7 @@
         },
         "Experience": [
             {
-                "Title": "Intern",
+                "Title": "ASSISTANT TOOL MAKER",
                 "Company": "Acme Tooling s",
                 "Duration": "Jan 2022 – June 2022",
                 "Description": "Gained hands on experience in complex mould designs and development Worked with CAD/CAM and SolidWorks design software s to build intricate designs. contributed to the end to end development of mould' s from initial design through manufacturing and quality control"
@@ -46,14 +44,8 @@
             }
         ],
         "Projects": [
-            {
-                "Title": "CV ANALYTICS DASHBOARD",
-                "Description": "Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply."
-            },
-            {
-                "Title": "Conversation chatbot using API",
-                "Description": "Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
-            }
+            "CV ANALYTICS DASHBOARD",
+            "Conversation chatbot using API"
         ],
         "Certifications": [
             "DSA PYTHON : By CampusX",
@@ -72,21 +64,20 @@
             "Format Score": 10,
             "Spelling & Grammar": 9,
             "Summary": 10,
-            "Skills": 9,
+            "Skills": 10,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
             "Education": 10,
-            "Contact Details": 7
+            "Contact Details": 6
         }
     },
     "Recommendations": [
-        "Add quantifiable achievements to your **work experience** descriptions to showcase the impact you made in previous roles. For instance, instead of just stating responsibilities, include metrics like \"Improved efficiency by X%\" or \"Reduced costs by Y amount.\"",
-        "In the **skills** section, categorize your skills into relevant groups (e.g., programming languages, data analysis tools, machine learning algorithms) to make it easier for recruiters to identify your expertise. This helps in quickly scanning and matching your profile with job requirements.",
-        "Include a brief **summary** or **objective** at the beginning of your resume to highlight your career goals and key qualifications. This helps in grabbing the attention of recruiters and providing a clear overview of your skills and experience.",
-        "Quantify the impact of your **projects** by including metrics such as the number of users, cost savings, or performance improvements achieved. This adds credibility to your project descriptions and showcases your ability to deliver results.",
-        "Tailor your resume to match the specific requirements of each job you apply for by highlighting the most relevant skills and experience. Customize the content to align with the job description and demonstrate your suitability for the role.",
-        "Consider adding **soft skills** relevant to data science, such as communication, teamwork, and problem-solving. These skills are crucial for collaboration and effective project execution in a data science environment. Provide examples of how you've demonstrated these skills in your experiences.",
-        "Review the **contact details** section and make sure that the linkedIn URL is redirecting to the correct profile to not lose any opportunity"
+        "**Enhance contact details** by including LinkedIn profile URL and a professional-looking headshot to make it more impactful and easy to network with you.",
+        "Ensure consistent formatting throughout the resume to improve readability. For instance, ensure spacing and font sizes are consistently applied across different sections like **work experience and education**.",
+        "Quantify achievements in project descriptions to demonstrate impact; for example, mention specific metrics or results achieved with the **CV Analytics Dashboard** like increase in resume relevance scores or user engagement rates.",
+        "Include specific **soft skills** relevant to Data Science or Analytics roles, such as communication, teamwork, problem-solving, and critical thinking, to complement your technical skills.",
+        "In the experience section, elaborate further on the tools and technologies used in each project and role, highlighting the specific contributions and outcomes, which will help recruiters understand the depth of your technical expertise in areas like **CAD/CAM, SolidWorks, Python**.",
+        "Maintain uniformity and proofread the entire resume for minor grammatical errors. Pay special attention to punctuation and capitalization for **professional presentation**."
     ]
 }

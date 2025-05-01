@@ -133,7 +133,7 @@ def dashboard():
 def chatbot_route():
     data = request.get_json()
     query = data.get("query", "")
-    response = analytics.chatbot(query=query)
+    response = analytics.chatbot(Query=query)
     return jsonify({"response": response})
 
 
@@ -172,22 +172,30 @@ def show_course_recommendations():
 @app.route('/course-recommendations')
 def courseRecommendations():
     raw_course_data = shared_data.get('course_recommendations', {})
+    
     paid_course_recommendations = {}
+    youtube_course_recommendations = {}
 
-    # Process all courses as paid courses
+    # Separate YouTube vs paid platforms
     for topic, courses in raw_course_data.items():
         paid_courses = []
+        youtube_courses = []
+
         for course in courses:
-            # Skip YouTube courses or process all as paid
-            if course['PLATFORM'].lower() != 'youtube':
+            if course['PLATFORM'].lower() == 'youtube':
+                youtube_courses.append(course)
+            else:
                 paid_courses.append(course)
-        
+
         if paid_courses:
             paid_course_recommendations[topic] = paid_courses
+        if youtube_courses:
+            youtube_course_recommendations[topic] = youtube_courses 
 
     return render_template(
         'recommendations.html',  # Make sure this matches your template file name
-        paid_course_recommendations=paid_course_recommendations
+        paid_course_recommendations=paid_course_recommendations,
+        youtube_course_recommendations=youtube_course_recommendations
     )
 
 # === Helper Function ===

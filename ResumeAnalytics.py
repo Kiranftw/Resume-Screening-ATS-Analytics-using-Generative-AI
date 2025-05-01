@@ -409,9 +409,10 @@ class ResumeAnalytics(object):
             if not Query or Query.strip() == "":
                 return "Please type a query to continue."
             if not hasattr(self, 'chatmemory') or self.chatmemory is None:
+                # Reduce the max_tokens to a more reasonable number
                 self.chatmemory = ConversationSummaryBufferMemory(
                     llm=self.chatmodel,
-                    max_tokens=100000,
+                    max_token_limit=4000,  # More reasonable limit
                     return_messages=True,
                     memory_key="history"
                 )
@@ -483,3 +484,27 @@ class ResumeAnalytics(object):
         
         logger.info("Custom cover letter generated successfully.")
         return markdown.markdown(response.text)
+
+if __name__ == "__main__":
+    analytics = ResumeAnalytics()
+
+    # Ask for documents once
+    doc_input = input("Enter paths to resume documents (comma-separated): ")
+    documents = [doc.strip() for doc in doc_input.split(",") if os.path.exists(doc.strip())]
+
+    if not documents:
+        print("No valid documents provided. Exiting.")
+        exit()
+
+    print("\nYou can now start chatting about the uploaded documents.")
+    print("Type 'exit' to end the chat.\n")
+
+    while True:
+        query = input("You: ")
+        if query.lower() in ["exit", "quit"]:
+            print("Exiting chat.")
+            break
+
+        response = analytics.pdfchatbot(Documents=documents, Query=query)
+        print(f"Bot:\n{response}\n")
+
