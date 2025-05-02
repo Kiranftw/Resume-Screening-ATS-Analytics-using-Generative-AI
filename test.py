@@ -1,36 +1,24 @@
+from fpdf import FPDF
 import os
-from ResumeAnalytics import ResumeAnalytics  # Replace with your module name
-from typing import List
+folder = os.getcwd()
 
-def get_pdf_paths() -> List[str]:
-    print("Enter full path(s) to PDF document(s), separated by commas:")
-    paths_input = input(">> ").strip()
-    paths = [p.strip() for p in paths_input.split(",") if os.path.exists(p.strip())]
-    if not paths:
-        print("No valid files found.")
-    return paths
+# Create a sample resume PDF without "programming" or "coding"
+resume_text = """programming"""
 
-def run_chatbot():
-    print("📄 PDF Chatbot is starting...")
-    pdf_paths = get_pdf_paths()
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font("Arial", size=12)
+for line in resume_text.split("\n"):
+    pdf.multi_cell(0, 10, line)
 
-    if not pdf_paths:
-        print("No valid documents provided. Exiting.")
-        return
+resume_path = os.path.join(folder,"resume.pdf")
+pdf.output(resume_path)
 
-    chatbot = ResumeAnalytics()
+# Create a sample JD text file that includes "programming" and "coding"
+jd_text = """coding"""
 
-    print("✅ Chatbot is ready! Ask questions based on the uploaded PDFs.")
-    print("Type 'exit' or 'quit' to end the session.")
+jdpath = os.path.join(folder,"jd.txt")
+with open(jdpath, "w") as f:
+    f.write(jd_text)
 
-    while True:
-        query = input("\nYou: ").strip()
-        if query.lower() in ["exit", "quit"]:
-            print("👋 Goodbye!")
-            break
-
-        response = chatbot.pdfchatbot(Documents=pdf_paths, Query=query)
-        print(f"\n🤖 Bot:\n{response}")
-
-if __name__ == "__main__":
-    run_chatbot()
+resume_path, jdpath

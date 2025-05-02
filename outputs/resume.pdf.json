@@ -1,0 +1,25 @@
+{
+    "RESUME_RELEVANCE_SCORE": 70,
+    "ROLE_FIT_SCORE": 75,
+    "ATS_SCORE": 80,
+    "KEYWORD_MATCH_SCORE": 85,
+    "MATCHED_KEYWORDS": [
+        "programming",
+        "coding"
+    ],
+    "MISSING_KEYWORDS": [],
+    "MISSING_SKILLS": [],
+    "RESUME_TIPS": [
+        "**Expand upon specific programming languages:**  Instead of just stating 'programming', explicitly list languages like Python, Java, or C++ to improve clarity and keyword matching.",
+        "**Quantify experience with metrics:** Add specific metrics (e.g., lines of code, project size) to showcase the impact of your programming skills to enhance the experience section.",
+        "**Detail projects where programming was crucial:** Elaborate on projects and highlight how your coding skills were pivotal to their success with increased details.",
+        "**Tailor the resume to specific job requirements:**  Customize your resume for each job by emphasizing the most relevant programming skills and experiences listed in the job description.",
+        "**Incorporate relevant keywords from the job description:**  Sprinkle in more synonyms for 'coding', such as 'software development' or 'scripting', to capture a wider range of ATS matches.",
+        "**Add a skills section:**  Create a dedicated 'Skills' section listing both programming languages and related tools (e.g., IDEs, frameworks, libraries) for better visibility.",
+        "**Mention version control systems:**  Include tools like Git or specific platforms like GitHub or GitLab to demonstrate your ability to collaborate on code effectively and show industry alignment.",
+        "**Consider showcasing proficiency levels:**  Indicate your level of expertise in each programming language (e.g., 'Expert in Python', 'Proficient in Java') to provide more context.",
+        "**Include relevant certifications or courses:**  List any programming-related certifications or courses you've completed to further validate your skills and knowledge base to show experience.",
+        "**Ensure ATS compatibility:** Save your resume as a .docx file to prevent formatting issues and ensure that the ATS can accurately parse the content to show value."
+    ],
+    "COURSE_RECOMMENDATIONS": {}
+}

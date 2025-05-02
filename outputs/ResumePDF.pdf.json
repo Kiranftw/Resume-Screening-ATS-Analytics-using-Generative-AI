@@ -1,171 +1,383 @@
 {
     "RESUME_RELEVANCE_SCORE": 65,
     "ROLE_FIT_SCORE": 60,
-    "ATS_SCORE": 62,
-    "KEYWORD_MATCH_SCORE": 70,
+    "ATS_SCORE": 70,
+    "KEYWORD_MATCH_SCORE": 75,
     "MATCHED_KEYWORDS": [
-        "Python",
+        "Data Scientist",
         "Data Science",
-        "R",
+        "Python",
         "SQL",
         "Machine Learning",
-        "TensorFlow",
+        "Statistics",
         "Data Analysis",
         "Data Cleaning",
-        "Statistical Modeling",
-        "Big Data",
-        "Java",
-        "AI",
-        "Cloud Platforms",
-        "Google Cloud"
+        "Feature Engineering",
+        "Data Visualization",
+        "Regression",
+        "Classification",
+        "Clustering",
+        "GitHub",
+        "Engineering",
+        "Mathematics",
+        "Algorithms",
+        "Data",
+        "Data Manipulation",
+        "Data Preprocessing"
     ],
     "MISSING_KEYWORDS": [
-        "Hadoop",
-        "Spark",
-        "Kafka",
-        "NoSQL",
-        "AWS",
-        "Azure",
+        "Deep Learning",
+        "TensorFlow",
         "PyTorch",
+        "Keras",
+        "XGBoost",
+        "A/B Testing",
+        "Causal Inference",
         "MLOps",
-        "NLP",
-        "Time Series Forecasting",
-        "Data Pipelines",
-        "EDA"
+        "Model Deployment",
+        "Data Engineers",
+        "Software Engineers",
+        "Tableau",
+        "Power BI",
+        "Matplotlib",
+        "Seaborn",
+        "Plotly",
+        "Product Managers",
+        "Economics",
+        "Physics",
+        "Data Wrangling",
+        "NoSQL",
+        "Experimental Design",
+        "Anomaly Detection",
+        "Optimization",
+        "Reinforcement Learning",
+        "Model Monitoring"
     ],
     "MISSING_SKILLS": [
-        "Big Data Technologies",
-        "Data Modeling",
-        "Model Monitoring",
-        "Deploying Machine Learning Models",
-        "Data Driven Solutions"
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "XGBoost",
+        "A/B Testing",
+        "Causal Inference",
+        "MLOps",
+        "Tableau",
+        "Power BI",
+        "Docker",
+        "AWS",
+        "Azure",
+        "GCP"
     ],
     "RESUME_TIPS": [
-        "**Explicitly mention experience with Big Data frameworks like Hadoop, Spark, or Kafka** in the experience section to align with the job requirements, highlighting any projects or responsibilities where these technologies were used.",
-        "Add **specific projects or experiences that demonstrate your proficiency in Cloud Platforms (AWS, Azure, or Google Cloud)**. Quantify your accomplishments with specific metrics or results to showcase the impact of your work.",
-        "Incorporate the term **'Data Pipelines'** into your resume, detailing your experience in developing and implementing scalable data pipelines for processing large datasets. Mention the tools and technologies used in creating these pipelines.",
-        "Include **'NoSQL databases'** in your skills section and briefly describe any relevant experience with NoSQL databases in your project descriptions to enhance keyword visibility and ATS compatibility.",
-        "Add **details about your experience with model deployment and monitoring** in production environments. Highlight any experience you have with MLOps and the tools you've used for model monitoring.",
-        "Explicitly state your experience in performing **'Exploratory Data Analysis (EDA)'** and provide specific examples of insights you've uncovered through EDA. Quantify the impact of your EDA on decision-making.",
-        "Include **any projects or experiences related to Natural Language Processing (NLP)**, as the job description lists it as a preferred qualification. Detail the NLP techniques and tools you've used.",
-        "Highlight any experience you have with **Time Series Forecasting** and mention specific forecasting models or techniques you've applied. Showcase any experience in predicting future trends based on historical data.",
-        "Expand on your **experience in 'Data Modeling'** and include specific examples of data models you've developed and maintained. Include the tools and methodologies you've used in the data modeling process.",
-        "Add **experience related to building 'Data Driven Solutions'** in your experience or projects section. Clearly outline the business challenges you addressed and the data-driven solutions you developed to solve them."
+        "Emphasize experience with **deep learning frameworks** like TensorFlow or PyTorch in the skills section to match the job description.",
+        "Add details on **model deployment** and **MLOps** practices, highlighting any experience with Docker or CI/CD pipelines.",
+        "Showcase experience with **data visualization tools** such as Tableau, Power BI, Matplotlib, Seaborn, or Plotly with specific examples in your projects.",
+        "Include projects or experiences that demonstrate proficiency in **A/B testing** or **experimental design**, quantifying the impact of changes.",
+        "Detail your experience with **data wrangling**, **cleaning**, and **feature engineering** explicitly, mentioning specific techniques used.",
+        "If you have experience with **cloud platforms** like AWS, Azure, or GCP and their ML services, add this to your skills and experience sections.",
+        "Add a section detailing **experience with NoSQL databases** if applicable, mentioning specific database types you have worked with.",
+        "Expand on your experience with **regression, classification, and clustering**, providing specific examples of model implementation.",
+        "Include any experience with **anomaly detection** and **optimization** techniques, demonstrating their application in solving real-world problems.",
+        "Highlight any experience with **causal inference analysis**, showing how you've determined the true impact of interventions."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Big Data Technologies": [
+        "TensorFlow": [
             {
-                "COURSE_NAME": "Big Data Specialization",
+                "COURSE_NAME": "TensorFlow in Practice Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the fundamental concepts and tools for working with big data, including Hadoop, Spark, and MapReduce. It teaches how to process, analyze, and visualize large datasets using cutting-edge technologies.",
+                "DESCRIPTION": "Learn to use TensorFlow to build scalable AI-powered applications with deep learning. Covers basic TensorFlow concepts, building image recognition models, and using natural language processing.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
+                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
             },
             {
-                "COURSE_NAME": "Analyzing Big Data with Microsoft R Server",
+                "COURSE_NAME": "AI Programming with Python",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn how to use Microsoft R Server to analyze big data using R. This course covers data manipulation, statistical modeling, and machine learning techniques for large datasets.",
+                "DESCRIPTION": "This Professional Certificate program is designed to provide learners with practical skills and knowledge in artificial intelligence (AI) and programming. Students will gain hands-on experience using popular libraries and frameworks like TensorFlow and Keras to develop AI applications.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/analyzing-big-data-with-microsoft-r-server"
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/microsoft-ai-programming-with-python"
             },
             {
-                "COURSE_NAME": "Data Engineering with Python",
-                "PLATFORM": "freeCodeCamp",
-                "DESCRIPTION": "A project-based curriculum teaching big data and data engineering tools with Python, focusing on Hadoop, Spark, and data pipelines.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.freecodecamp.org/learn/scientific-computing-with-python/"
-            }
-        ],
-        "Data Modeling": [
-            {
-                "COURSE_NAME": "Data Modeling and Relational Database Design",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course teaches the fundamentals of data modeling, including conceptual, logical, and physical data models. It covers relational database design principles and best practices.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/data-modeling"
-            },
-            {
-                "COURSE_NAME": "Database Design and Data Modeling Fundamentals",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "This course provides a comprehensive introduction to database design and data modeling, covering key concepts and techniques for designing efficient and effective databases.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/course/database-design-and-data-modeling-fundamentals"
-            },
-            {
-                "COURSE_NAME": "Data Modeling Full Course",
+                "COURSE_NAME": "TensorFlow Tutorial for Beginners",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "https://www.youtube.com/watch?v=fhk9mtX28Nw",
+                "DESCRIPTION": "A comprehensive tutorial for beginners to get started with TensorFlow, covering basic concepts and practical examples.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=fhk9mtX28Nw"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=tPYj3fFJGjk"
             }
         ],
-        "Model Monitoring": [
+        "PyTorch": [
+            {
+                "COURSE_NAME": "Deep Learning with PyTorch",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the basics of deep learning and neural networks with PyTorch. Covers tensors, linear regression, logistic regression, and neural network architectures.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/deep-learning-pytorch"
+            },
+            {
+                "COURSE_NAME": "Microsoft Professional Program in AI",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn AI skills such as machine learning, data science, and ethical AI practices with Microsoft's Professional Program in AI. Covers AI concepts, Python programming, and machine learning frameworks.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/professional-program/microsoft-artificial-intelligence"
+            },
+            {
+                "COURSE_NAME": "PyTorch for Deep Learning with Python Full Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A comprehensive tutorial for deep learning with PyTorch in Python, covering neural networks, convolutional neural networks, and recurrent neural networks.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=GIsg-ZqyQMk"
+            }
+        ],
+        "Keras": [
+            {
+                "COURSE_NAME": "Deep Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the foundations of Deep Learning, understand how to build neural networks, and learn to lead successful machine learning projects. Uses Keras and TensorFlow.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/deep-learning"
+            },
+            {
+                "COURSE_NAME": "Introduction to Deep Learning with Keras",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Introduction to Deep Learning with Keras. Use Keras to quickly build neural networks to solve a variety of problems. Introduction to Deep Learning with Keras.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/learn/deep-learning/ibm-introduction-to-deep-learning-with-keras"
+            },
+            {
+                "COURSE_NAME": "Keras tutorial - CNN, ANN, and RNN Deep Learning with Python",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "In this Keras tutorial, we cover the basic API for Keras using Tensorflow in the backend.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=ovzrn-nXtHQ"
+            }
+        ],
+        "XGBoost": [
+            {
+                "COURSE_NAME": "Machine Learning with Python",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn to apply machine learning algorithms in Python. Covers various algorithms including XGBoost.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/machine-learning-with-python"
+            },
+            {
+                "COURSE_NAME": "Applied Machine Learning in Python",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn advanced machine learning techniques using Python. Covers XGBoost and other ensemble methods.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/umich-applied-data-science-with-python"
+            },
+            {
+                "COURSE_NAME": "XGBoost with scikit-learn",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Learn how to use XGBoost with scikit-learn in Python. A comprehensive tutorial.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=wng5KzR2aY4"
+            }
+        ],
+        "A/B Testing": [
+            {
+                "COURSE_NAME": "A/B Testing Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A series of courses to help you learn and implement A/B testing methodologies.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/ab-testing"
+            },
+            {
+                "COURSE_NAME": "Conducting Experiments for Business Decisions",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to design, conduct, and analyze experiments for business decisions. Covers A/B testing and other experimental methods.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/conducting-experiments-for-business-decisions"
+            },
+            {
+                "COURSE_NAME": "A/B Testing",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A tutorial on A/B testing for data science.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=T-1Jre49wrM"
+            }
+        ],
+        "Causal Inference": [
+            {
+                "COURSE_NAME": "Causal Inference",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to infer causal relationships from data.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/learn/causal-inference"
+            },
+            {
+                "COURSE_NAME": "Causal Diagrams: Draw Your Assumptions Before Your Conclusions",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course explores the fundamentals of causal diagrams, also known as Directed Acyclic Graphs (DAGs), and how they can be used to represent causal assumptions.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/causal-diagrams-draw-your-assumptions-before-your"
+            },
+            {
+                "COURSE_NAME": "Causal Inference: The Basics",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A tutorial on the basics of causal inference.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=ndg79ykTh_k"
+            }
+        ],
+        "MLOps": [
             {
                 "COURSE_NAME": "MLOps (Machine Learning Operations) Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the key principles and practices of MLOps, including model deployment, monitoring, and maintenance. It teaches how to build robust and scalable machine learning systems.",
+                "DESCRIPTION": "Learn how to deploy, monitor, and manage machine learning models in production.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
             },
             {
-                "COURSE_NAME": "Monitoring and Observability for Machine Learning",
+                "COURSE_NAME": "MLOps: Continuous Delivery and Automation Pipelines in Machine Learning",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn how to monitor and observe machine learning models in production. This course covers techniques for detecting and addressing issues such as model drift, data quality problems, and performance degradation.",
+                "DESCRIPTION": "This course covers the essential concepts, tools, and techniques for building robust and automated MLOps pipelines, enabling you to streamline the deployment and management of machine learning models in real-world applications.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/monitoring-and-observability-for-machine-learning"
+                "COURSE_LINK": "https://www.edx.org/course/mlops-continuous-delivery-and-automation-pipelines"
             },
             {
-                "COURSE_NAME": "MLOps Full Course | Learn Machine Learning Operations",
+                "COURSE_NAME": "MLOps Zoomcamp",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "https://www.youtube.com/watch?v=0uGEDm-kSEQ",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=0uGEDm-kSEQ"
+                "DESCRIPTION": "This course teaches you how to build an end-to-end production ready model.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=j6E0rlv8KS8"
             }
         ],
-        "Deploying Machine Learning Models": [
+        "Tableau": [
             {
-                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
+                "COURSE_NAME": "Data Visualization with Tableau Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers the end-to-end process of deploying machine learning models in production, including model serving, monitoring, and scaling. It teaches how to build robust and scalable ML systems.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
-            },
-            {
-                "COURSE_NAME": "Deploying Machine Learning Models",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn how to deploy machine learning models using various tools and techniques. This course covers model serving, API development, and cloud deployment strategies.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/deploying-machine-learning-models"
-            },
-            {
-                "COURSE_NAME": "How To Deploy A Machine Learning Model",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "https://m.youtube.com/watch?v=n-K5RHDy-Vg",
+                "DESCRIPTION": "A comprehensive introduction to Tableau and data visualization techniques.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://m.youtube.com/watch?v=n-K5RHDy-Vg"
+                "COURSE_LINK": "https://www.coursera.org/specializations/data-visualization-tableau"
+            },
+            {
+                "COURSE_NAME": "Analyzing and Visualizing Data with Power BI",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "In this course, you will learn how to use Microsoft Power BI to create impactful data visualizations and insightful reports.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/microsoft-data-analysis"
+            },
+            {
+                "COURSE_NAME": "Tableau Full Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A comprehensive tutorial on using Tableau for data visualization.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=8lGcdrdGg-0"
             }
         ],
-        "Data Driven Solutions": [
+        "Power BI": [
             {
-                "COURSE_NAME": "Data-driven Decision Making",
+                "COURSE_NAME": "Microsoft Power BI Data Analyst Professional Certificate",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to use data to make informed business decisions. This course covers data analysis techniques, data visualization, and communication strategies for presenting data-driven insights.",
+                "DESCRIPTION": "This series of courses provides you with hands-on experience in extracting, transforming, loading, and analyzing data using Power BI.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/data-driven-decision-making"
+                "COURSE_LINK": "https://www.coursera.org/professional-certificates/microsoft-power-bi-data-analyst"
             },
             {
-                "COURSE_NAME": "Data Analysis for Decision Making",
+                "COURSE_NAME": "Analyzing and Visualizing Data with Power BI",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "This course teaches how to use data analysis to support decision-making in various business contexts. It covers data collection, data cleaning, and data visualization techniques.",
+                "DESCRIPTION": "Learn the core data analysis and visualization functions of Microsoft Power BI.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/course/data-analysis-for-decision-making"
+                "COURSE_LINK": "https://www.edx.org/course/analyzing-and-visualizing-data-with-power-bi"
             },
             {
-                "COURSE_NAME": "Data-Driven Business Decisions",
-                "PLATFORM": "skillshare",
-                "DESCRIPTION": "https://www.skillshare.com/en/classes/Data-Driven-Business-Decisions/1777464972",
+                "COURSE_NAME": "Power BI Full Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Power BI tutorial for beginners to learn basic concepts step by step.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.skillshare.com/en/classes/Data-Driven-Business-Decisions/1777464972"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=2w-mHgV-524"
+            }
+        ],
+        "Docker": [
+            {
+                "COURSE_NAME": "Docker for Data Science",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Containers are revolutionizing software development. This course teaches you how to use Docker for Data Science.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/lecture/practical-mlops/docker-for-data-science-p3N4z"
+            },
+            {
+                "COURSE_NAME": "Introduction to Containers, Docker & Kubernetes",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course offers a comprehensive introduction to the world of containerization. It's designed to equip participants with the foundational knowledge and practical skills needed to effectively utilize container technologies such as Docker and Kubernetes.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/introduction-to-containers-docker-kubernetes"
+            },
+            {
+                "COURSE_NAME": "Docker Tutorial for Beginners",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Docker tutorial for beginners to learn basic concepts step by step.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=fqMOX6JJhGo"
+            }
+        ],
+        "AWS": [
+            {
+                "COURSE_NAME": "AWS Machine Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Explore machine learning on the Amazon Web Services (AWS) Cloud. Learn about AWS machine learning services and how to use them.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/aws-machine-learning"
+            },
+            {
+                "COURSE_NAME": "AWS Fundamentals: Going Cloud-Native",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course is designed to help individuals learn the core aspects of cloud computing on Amazon Web Services (AWS). It provides a foundational understanding of cloud concepts, AWS services, and best practices for building and deploying applications in the cloud.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/aws-fundamentals-going-cloud-native"
+            },
+            {
+                "COURSE_NAME": "AWS Tutorial For Beginners",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "AWS Tutorial For Beginners.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=sRqn0x0X67Y"
+            }
+        ],
+        "Azure": [
+            {
+                "COURSE_NAME": "Microsoft Azure AI Fundamentals",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A fundamental course introducing Azure's AI capabilities.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/ai-fundamentals-azure"
+            },
+            {
+                "COURSE_NAME": "Microsoft Azure Data Scientist",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This program provides you with the skills and knowledge to succeed as a Data Scientist using Microsoft Azure. You will gain hands-on experience with tools like Azure Machine Learning.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/professional-program/microsoft-azure-data-scientist"
+            },
+            {
+                "COURSE_NAME": "Azure Tutorial for Beginners",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Azure Tutorial for Beginners.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=uh439jNfNqY"
+            }
+        ],
+        "GCP": [
+            {
+                "COURSE_NAME": "Google Cloud Platform Fundamentals: Core Infrastructure",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course introduces you to the Google Cloud Platform (GCP) and the core infrastructure services it offers.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/gcp-fundamentals"
+            },
+            {
+                "COURSE_NAME": "Data Engineering on Google Cloud Platform Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Transform your career and become a data engineering expert in this Specialization. Learn how to design, build, and maintain data processing systems on Google Cloud Platform.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/data-engineering-gcp"
+            },
+            {
+                "COURSE_NAME": "GCP Tutorial for Beginners",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "GCP Tutorial for Beginners.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=K936E_E2f54"
             }
         ]
     }

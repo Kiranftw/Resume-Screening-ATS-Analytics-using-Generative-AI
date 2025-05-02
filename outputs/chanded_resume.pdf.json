@@ -1,0 +1,271 @@
+{
+    "RESUME_RELEVANCE_SCORE": 65,
+    "ROLE_FIT_SCORE": 55,
+    "ATS_SCORE": 70,
+    "KEYWORD_MATCH_SCORE": 70,
+    "MATCHED_KEYWORDS": [
+        "Data Science",
+        "Python",
+        "Machine Learning",
+        "SQL",
+        "Data Analysis",
+        "Data Visualization",
+        "Data Cleaning",
+        "Feature Engineering",
+        "Data Exploration",
+        "MySQL",
+        "MongoDB",
+        "Statistics",
+        "AI",
+        "Deep Learning",
+        "Power BI",
+        "Data informed strategies",
+        "Data driven solutions",
+        "predictive models",
+        "real world problems",
+        "programming languages",
+        "Data",
+        "mathematics",
+        "engineering",
+        "data science methodologies",
+        "data sets",
+        "visualization",
+        "github",
+        "databases",
+        "classification",
+        "clustering",
+        "Business",
+        "communication skills",
+        "experimental design",
+        "hypothesis testing"
+    ],
+    "MISSING_KEYWORDS": [
+        "R",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "XGBoost",
+        "MLOps",
+        "Tableau",
+        "Matplotlib",
+        "Seaborn",
+        "Plotly",
+        "A/B testing",
+        "causal inference analysis",
+        "reinforcement learning",
+        "anomaly detection",
+        "optimization",
+        "model deployment",
+        "data engineers",
+        "software engineers",
+        "marketing campaigns",
+        "product managers",
+        "executives",
+        "computer science",
+        "physics",
+        "economics",
+        "NoSQL",
+        "dimensionality reduction",
+        "ensemble methods",
+        "data wrangling",
+        "large datasets",
+        "verbal and written communication skills",
+        "critical thinking skills",
+        "AWS",
+        "Azure",
+        "GCP",
+        "SageMaker",
+        "Azure ML",
+        "Google AI Platform",
+        "MLflow",
+        "Kubeflow",
+        "Docker",
+        "CI/CD pipelines",
+        "Looker",
+        "e commerce",
+        "finance",
+        "healthcare",
+        "NLP",
+        "computer vision",
+        "Spark",
+        "Hadoop",
+        "Hive",
+        "Presto"
+    ],
+    "MISSING_SKILLS": [
+        "R",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "XGBoost",
+        "MLOps",
+        "Tableau",
+        "Matplotlib",
+        "Seaborn",
+        "Plotly",
+        "A/B testing",
+        "causal inference analysis",
+        "reinforcement learning",
+        "anomaly detection",
+        "optimization",
+        "model deployment",
+        "data engineers",
+        "software engineers",
+        "computer science",
+        "physics",
+        "economics",
+        "NoSQL",
+        "dimensionality reduction",
+        "ensemble methods",
+        "data wrangling",
+        "large datasets",
+        "AWS",
+        "Azure",
+        "GCP",
+        "SageMaker",
+        "Azure ML",
+        "Google AI Platform",
+        "MLflow",
+        "Kubeflow",
+        "Docker",
+        "CI/CD pipelines",
+        "Looker",
+        "e commerce",
+        "finance",
+        "healthcare",
+        "Spark",
+        "Hadoop",
+        "Hive",
+        "Presto",
+        "Computer Vision"
+    ],
+    "RESUME_TIPS": [
+        "Emphasize proficiency in **TensorFlow** and **PyTorch** within the skills section to align with the job description's preferred qualifications for deep learning frameworks, highlighting practical experience with these tools through project examples.",
+        "Incorporate specific projects or experiences utilizing **MLOps** practices, such as model deployment and monitoring, to demonstrate a comprehensive understanding of the machine learning lifecycle beyond model development, aligning with the job's focus on production environments.",
+        "Add details about experience with **cloud platforms** like AWS, Azure, or GCP, and their associated ML services (e.g., SageMaker, Azure ML, Google AI Platform), to showcase cloud computing skills and familiarity with scalable machine learning infrastructure.",
+        "Expand on the experience with data visualization tools by explicitly mentioning **Tableau**, **Matplotlib**, **Seaborn**, or **Plotly**, and provide examples of dashboards or visualizations created for previous projects to demonstrate effective communication of insights.",
+        "Include a section detailing experience with **big data technologies** such as Spark, Hadoop, Hive, or Presto, if applicable, to demonstrate the ability to work with large datasets and distributed computing frameworks, addressing a preferred qualification in the job description.",
+        "Explicitly mention experience in **A/B testing** and **experimental design** to highlight a solid foundation in statistical methods and the ability to evaluate the impact of changes and interventions using data-driven approaches, aligning with the job’s requirements.",
+        "Showcase experience with **NoSQL databases**, alongside the existing mention of MySQL and MongoDB, to broaden the demonstrated database skills and align with the job's preference for candidates familiar with both relational and non-relational data storage solutions.",
+        "Incorporate experience with **CI/CD pipelines** and tools like Docker to demonstrate understanding of continuous integration and continuous deployment practices, highlighting skills relevant to building scalable and reproducible machine learning pipelines.",
+        "Add examples of applying machine learning techniques to **specific domains** such as e-commerce, finance, or healthcare, if applicable, to tailor the resume to the industry focus and demonstrate relevant practical experience in solving domain-specific problems.",
+        "Quantify achievements and results in previous projects and roles, using metrics and numbers to demonstrate the impact of contributions, such as 'Improved model accuracy by 15%' or 'Reduced data processing time by 30%,' to strengthen the impact of the resume."
+    ],
+    "COURSE_RECOMMENDATIONS": {
+        "R": [
+            {
+                "COURSE_NAME": "Data Science: R Basics",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course introduces the basics of R, including data types, syntax, and fundamental programming concepts. It's designed for beginners and covers data manipulation, basic plotting, and simple statistical analysis.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/data-science-r-basics"
+            },
+            {
+                "COURSE_NAME": "Data Science Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A comprehensive specialization covering the R programming language, statistical inference, regression models, machine learning, and data product development. Offers a thorough grounding in R for data science.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/jhu-data-science"
+            },
+            {
+                "COURSE_NAME": "R Programming",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "This freeCodeCamp course provides a comprehensive introduction to R programming for data science. It covers basic syntax, data structures, data manipulation with dplyr, data visualization with ggplot2, and statistical analysis.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=lb1m2mytv-w"
+            }
+        ],
+        "TensorFlow": [
+            {
+                "COURSE_NAME": "TensorFlow in Practice Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to use TensorFlow to build scalable AI-powered applications. Covers basic TensorFlow functions, building computer vision models, and natural language processing.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
+            },
+            {
+                "COURSE_NAME": "AI for Medicine Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "The TensorFlow: Advanced Techniques Specialization teaches how to use functional APIs, custom training loops, custom layers, models and loss functions, and how to use TensorFlow in real-world scenarios.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/ai-for-medicine"
+            },
+            {
+                "COURSE_NAME": "TensorFlow Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Sentdex’s TensorFlow tutorial series covers the basics of TensorFlow, including installation, graph computation, and neural networks. It's great for understanding the fundamental concepts behind TensorFlow.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=BjFj7e-vm9I"
+            }
+        ],
+        "PyTorch": [
+            {
+                "COURSE_NAME": "Deep Learning with PyTorch",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course covers the basics of deep learning with PyTorch, including tensors, autograd, neural networks, and training models. It's designed for those with some machine learning background.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/deep-learning-pytorch"
+            },
+            {
+                "COURSE_NAME": "PyTorch for Deep Learning with Python",
+                "PLATFORM": "Udemy",
+                "DESCRIPTION": "Teaches how to use PyTorch, including the basics of tensors, operations, neural networks, CNNs, RNNs, and using PyTorch for computer vision and natural language processing.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.udemy.com/course/pytorch-for-deep-learning-with-python/"
+            },
+            {
+                "COURSE_NAME": "PyTorch Full Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "This freeCodeCamp course provides a comprehensive introduction to PyTorch for deep learning. It covers tensors, neural networks, CNNs, RNNs, and practical applications of PyTorch in various domains.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=GIsg-ZUyQMk"
+            }
+        ],
+        "Keras": [
+            {
+                "COURSE_NAME": "TensorFlow Data and Deployment Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to train and improve a network using data, use computer vision in your Keras models, and deploy trained models to the web, mobile, and embedded devices.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-data-and-deployment"
+            },
+            {
+                "COURSE_NAME": "Deep Learning with Keras",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Covers the core principles of building deep learning models with Keras, including layers, activation functions, optimization algorithms, and model evaluation. Requires some prior experience with Python.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/ibm-deep-learning"
+            },
+            {
+                "COURSE_NAME": "Keras Tutorial",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "This tutorial series covers how to use Keras for building deep learning models. It includes examples of basic neural networks, CNNs, and RNNs.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=ov43eqH-oP4"
+            }
+        ],
+        "XGBoost": [
+            {
+                "COURSE_NAME": "Advanced Machine Learning Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "A specialization to train learners to design and implement machine learning algorithms to solve data-driven prediction problems, with a focus on advanced topics such as ensemble methods and deep learning.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/specializations/aml"
+            },
+            {
+                "COURSE_NAME": "Machine Learning with Python: From Linear Models to Deep Learning",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This introductory course builds your skills in building machine learning models, including linear regression, k-nearest neighbors, model selection, and regularization.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/course/machine-learning-with-python-from-linear-models-to"
+            },
+            {
+                "COURSE_NAME": "XGBoost Course",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Explains the concepts behind XGBoost and demonstrates how to implement and optimize XGBoost models in Python.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=OtB45U-f_2g"
+            }
+        ]
+    }
+}

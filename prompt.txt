@@ -13,14 +13,21 @@ FIRST
    - Assess years of experience, job titles, responsibilities, and project relevance.  
    - Emphasize hands-on expertise and practical application of skills over theoretical knowledge.
 
-3. *Matched Keywords*  
-   List all keywords from the job description found in the resume, including variations and synonyms (e.g., "machine learning" and "ML").  
-   - Ensure the list is comprehensive and relevant to the role.
+    3. Matched Keywords
+    Extract and list all keywords and phrases from the job description that are found in the resume.
 
-4. *Missing Keywords and Skills*  
-   Identify critical keywords and skills from the job description absent in the resume.  
-   - Focus on terms likely to impact applicant tracking system (ATS) filtering (e.g., specific tools or certifications).  
-   - Separate keywords (e.g., "Agile") from skills (e.g., "Agile project management").
+    Include direct matches as well as contextual synonyms or relevant variations (e.g., “machine learning” → “ML”, “deep learning”, or “Python”; “statistical learning” → “R”, “data modeling”) .
+
+    Ensure that the list is comprehensive, contextually aligned with the job role, and includes associated tools or methods where applicable.
+
+    4. Missing Keywords and Skills
+    Identify important job description keywords and skills not present in the resume.
+
+    Focus on terms that significantly influence ATS filtering, including domain-specific tools, platforms, and certifications.
+
+    Distinguish between high-level keywords (e.g., “Agile”) and actionable or tool-based skills (e.g., “Agile project management”, “JIRA”).
+
+    If a concept is present but the associated tool is missing (e.g., “statistical learning” is present, but “R” is not), mark the associated tool (e.g., “R”) as missing to ensure completeness.
 
 5. *Resume Optimization Recommendations*  
    Provide exactly 10 actionable suggestions to improve the resume’s alignment with the job description.  

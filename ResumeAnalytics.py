@@ -485,26 +485,4 @@ class ResumeAnalytics(object):
         logger.info("Custom cover letter generated successfully.")
         return markdown.markdown(response.text)
 
-if __name__ == "__main__":
-    analytics = ResumeAnalytics()
-
-    # Ask for documents once
-    doc_input = input("Enter paths to resume documents (comma-separated): ")
-    documents = [doc.strip() for doc in doc_input.split(",") if os.path.exists(doc.strip())]
-
-    if not documents:
-        print("No valid documents provided. Exiting.")
-        exit()
-
-    print("\nYou can now start chatting about the uploaded documents.")
-    print("Type 'exit' to end the chat.\n")
-
-    while True:
-        query = input("You: ")
-        if query.lower() in ["exit", "quit"]:
-            print("Exiting chat.")
-            break
-
-        response = analytics.pdfchatbot(Documents=documents, Query=query)
-        print(f"Bot:\n{response}\n")
 
