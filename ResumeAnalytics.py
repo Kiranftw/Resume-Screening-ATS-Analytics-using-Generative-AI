@@ -199,8 +199,8 @@ class ResumeAnalytics(object):
         except Exception as e:
             print(f"Error in resumeanalytics: {e}")
             return None
-            
-    @ExceptionHandeler
+
+    @ExceptionHandeler  
     def chatbot(self, query: str) -> str:
         if not query or query.strip() == "":
             return "Please type a message to continue."

@@ -7,14 +7,13 @@ import markdown
 app = Flask(__name__)
 import datetime
 import time
-# === Configuration ===
+
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt', 'doc', 'jpeg', 'jpg', 'png', 'webp'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # Max 16MB
 config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
-# Create uploads directory if it doesn't exist
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # === Global Variables ===
@@ -132,9 +131,18 @@ def dashboard():
 @app.route('/chatbot', methods=['POST'])
 def chatbot_route():
     data = request.get_json()
-    query = data.get("query", "")
-    response = analytics.chatbot(Query=query)
-    return jsonify({"response": response})
+    user_query = data.get('query')
+
+    if not user_query:
+        return jsonify({'response': 'Please enter a valid message.'})
+
+    try:
+        analytics = ResumeAnalytics()  # ✅ create an instance
+        response = analytics.chatbot(query=user_query)  # ✅ call instance method
+        return jsonify({'response': response})
+    except Exception as e:
+        print("Error:", e)
+        return jsonify({'response': 'Server busy, please try again later.'})
 
 
 @app.route('/resume-insights')
@@ -144,7 +152,6 @@ def show_course_recommendations():
     resume_tips = shared_data.get('resume_tips', [])
     courseRecommendations = shared_data.get('course_recommendations', {})
 
-    # Fetch cover letter preview first
     cover_letter_preview = shared_data.get(
         'cover_letter_preview',
         'No cover letter available. Please upload resume and job description to generate one.'

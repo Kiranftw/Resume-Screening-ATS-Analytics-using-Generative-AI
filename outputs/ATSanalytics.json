@@ -1,84 +1,86 @@
 {
     "Extracted Data": {
-        "Name": "R SAI UDAY KIRAN",
-        "Contact Details": "udaykiranftw@gmail.com | +91 9398831577",
-        "Summary or Objective": "Tech Enthusiast | Data Science/ Analytics",
+        "Name": "Harsha Vardhini Pendyala",
+        "Contact Details": "LinkedIn: www.linkedin.com/in/harsha vardhini04, Email: 40harsha@gmail.com, GitHub: https://github.com/Harshavarma04/, Phone: (+91) 8886066070, Address: Chengicherla, Hyderabad, Telangana",
+        "Summary or Objective": null,
         "Skills": {
-            "Soft Skills": [],
+            "Soft Skills": [
+                "Problem Solving",
+                "Data Analysis"
+            ],
             "Hard Skills": [
                 "Python",
                 "C",
-                "Java",
+                "MYSQL",
                 "R",
-                "SQL",
-                "GitHub",
-                "Linux",
-                "Windows",
-                "NumPy",
-                "Pandas",
-                "Matplotlib",
-                "Scikit Learn",
-                "TensorFlow",
-                "Linear Regression",
-                "Multilinear Regression",
-                "Data Cleaning",
-                "Data Preprocessing",
-                "Logistics Regression",
-                "Decision Trees",
-                "K Means",
-                "KNN"
+                "Java",
+                "Artificial intelligence",
+                "MongoDB",
+                "Machine Learning",
+                "Statistics",
+                "NLP",
+                "Mongo DB",
+                "Microsoft Power BI",
+                "Microsoft Excel",
+                "W.E.K.A toolkit",
+                "Postman",
+                "MySQL workbench"
             ]
         },
         "Experience": [
             {
-                "Title": "Intern",
-                "Company": "Acme Tooling s",
-                "Duration": "Jan 2022 – June 2022",
-                "Description": "Gained hands on experience in complex mould designs and development Worked with CAD/CAM and SolidWorks design software s to build intricate designs. contributed to the end to end development of mould' s from initial design through manufacturing and quality control"
+                "Title": "Data Science Intern",
+                "Company": "Innomatics Research Labs",
+                "Duration": "11th Sep 2024 to 20th Nov 2024",
+                "Description": "AICTE Google AI ML course 25th July 2024 To 8th Sep 2024"
             },
             {
-                "Title": "Intern",
-                "Company": "InternPe",
-                "Duration": "Nov 2023 – Dec 2023",
-                "Description": "Applied the OOPS & Data Structures concepts while developing games and applications Worked on some specific modules like NumPy, Pandas for Data Manipulation on the real world datasets from Kaggle"
+                "Title": "Data analytics Internship",
+                "Company": "Internship studio",
+                "Duration": "15 May 2024 To 19 Jun 2024",
+                "Description": "1stop Data science program 01 Oct 2023 To 15 Nov 2023"
             }
         ],
         "Projects": [
-            "CV ANALYTICS DASHBOARD: Developed a CV Analytics Dashboard that helps job applicants evaluate the relevance of their resume based upon the Job Description identifies missing skills and recommend improvements. Used a Gemini LLM to create an algorithm that calculates the relevance score of a resume based on job descriptions. Extract missing keywords & skills that provides applicants with insights in to areas needing for improvement Provides relevant course recommendations based on missing skills and generate automated cover letters for applicants who s ready for apply.",
-            "Conversation chatbot using API: Developed a basic Conversation chatbot using a Gemini LLM s API that can process both text and images providing a comprehensive insight in to data"
+            "Smart Sentiment Analysis of YouTube Comments. (Role Team Lead): Developed a sentiment analysis model for YouTube comments, classifying emotions to gain insights into viewer reactions and engagement trends, with an option to download results as a PDF report for easy review and analysis.",
+            "Keyword Based Resume Screening to Enhance Recruitment Efficiency: Built a scalable automated resume screening pipeline for handling 900+ resumes, reducing manual screening time by 90% and boosting recruitment efficiency with data driven shortlisting.",
+            "Extracting Keyphrases From Scientific Content. (Role Team Lead): Developed an intelligent web application using NLP and Flask that extracts and explains key terms from scientific text, enabling faster comprehension and reducing information lookup time by 80% for researchers and students.",
+            "Exploratory Data Analysis Projects: Performed EDA on credit and AMCAT datasets, analyzing and visualizing credit trends, and applied statistical tests to validate hypotheses and explore data relationships."
         ],
         "Certifications": [
-            "DSA PYTHON : By CampusX",
-            "Python & JAVA Essentials : By APNA College",
-            "Machine Learning : By IBM & CampusX"
+            "Advanced Data Analysis Internship Program certification from Innomatics research labs.",
+            "Data science foundations certification from Great learning.",
+            "Advanced ML and GenAI Internship Program certification from Innomatics research labs.",
+            "Artificial intelligence program certification from RINEX.",
+            "Pragati: Path to Future Cohort 3 certification from Infosys in collaboration with Springboard."
         ],
         "Education": [
-            "B. Tech, CSE DATA SCIENCE, Nalla Narsimha Reddy educational society, 2022-25 | Hyderabad, CGPA: 7.6",
-            "Diploma, Industrial & Product Design, CIPET CENTRAL INSTITUTE OF PETROCHEMICAL ENGEINEERING & TECHNOLO0GY, 2020-22 | Hyderabad, Percentage: 77.7%",
-            "Intermediate, MPC, Narayana Junior college, 2018-20 | Hyderabad, Percentage: 70%"
+            "B. TECH (CSE DS) NALLA NARASIMHA REDDY EDUCATIONAL SOCITY SGROUP OF INSTITUTIONS JNTUH PURSUING 8.56",
+            "INTERRMIDIATE SRI CHAITANYA JUNIOR KALASALA TSBIE 2021 9.20",
+            "S.S.C ST. ALPHONSUS HIGH SCHOOL SSC BOARD 2019 8.3"
         ]
     },
     "ATS Score": {
-        "Total Score": 85,
+        "Total Score": 78,
         "Breakdown": {
-            "Format Score": 10,
-            "Spelling & Grammar": 9,
-            "Summary": 10,
-            "Skills": 9,
+            "Format Score": 7,
+            "Spelling & Grammar": 10,
+            "Summary": 0,
+            "Skills": 8,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
             "Education": 10,
-            "Contact Details": 7
+            "Contact Details": 10
         }
     },
     "Recommendations": [
-        "Improve **Contact Details** section by adding LinkedIn profile URL to enhance professional visibility and networking opportunities.",
-        "Quantify achievements in the **Experience** section with specific metrics to demonstrate the impact of your contributions in previous roles.",
-        "Expand the **Skills** section to include relevant soft skills, highlighting your ability to collaborate, communicate, and solve problems effectively.",
-        "In the **Projects** section, elaborate on the technologies used and the challenges overcome to showcase your technical proficiency and problem-solving skills.",
-        "Consider adding a brief **Summary** or **Objective** statement at the beginning of your resume to clearly articulate your career goals and qualifications.",
-        "Proofread the resume carefully to correct any minor **Spelling** or **Grammar** errors, ensuring a professional and polished presentation.",
-        "Consistently format dates and locations throughout the **Experience** and **Education** sections for a cleaner and more organized appearance. Also there is a typo error in collage name in Education Section."
+        "Consider adding a **Summary or Objective** section at the beginning of your resume. This provides a brief overview of your skills and career goals, immediately grabbing the attention of recruiters and highlighting your key qualifications for the desired role.",
+        "Expand on your **soft skills** by providing specific examples of how you've demonstrated them in previous roles or projects. Instead of just listing 'Problem Solving,' describe a situation where you successfully resolved a complex issue using your problem-solving abilities.",
+        "Ensure consistency in the formatting and presentation of your **work experience**. Include quantifiable achievements and responsibilities to showcase the impact you made in each role, making it easier for recruiters to assess your capabilities.",
+        "While you've listed several projects, consider focusing on the ones most relevant to the jobs you're applying for. Provide more detail about your **contributions**, the technologies you used, and the outcomes you achieved to demonstrate your skills effectively.",
+        "To further enhance your resume, consider adding quantifiable results or metrics to your project descriptions to provide a more concrete understanding of your impact and accomplishments.",
+        "To make your resume more impactful, consider tailoring your skills section to match the specific requirements outlined in the job descriptions for the roles you're applying for.",
+        "Consider mentioning the roles you did in each project, this will highlight your skills and capabilities in a more effective manner."
     ]
 }

@@ -649,7 +649,6 @@
                     <div class="welcome-box">
                         <span class="welcome">Welcome</span>
                         <span class="username" style="color: rgb(4, 3, 47); font-weight: bold;">USERNAME</span>
-
                     </div>
                 </div>
                 <button class="logout-btn">Logout</button>
@@ -682,7 +681,6 @@
                         </div>
                     </div>
                 </div>
-
                 <button type="submit" class="analyze-btn">Analyze</button>
             </form>
             <div id="loading-overlay">
@@ -690,11 +688,10 @@
                     <p>Analyzing, please wait...</p>
                 </div>
             </div>
+
             {% if show_dashboard %}
             <div class="dashboard" id="dashboard">
                 <h2 class="section-title">Analysis Results</h2>
-
-                <!-- Scores Section -->
                 <div class="scores-container">
                     <div class="score-card">
                         <div class="score-circle">
@@ -718,8 +715,6 @@
                         <p>Resume Format Score</p>
                     </div>
                 </div>
-
-                <!-- Resume Components Section -->
                 <div class="dashboard-content">
                     <div class="checklist-card">
                         <h3 class="checklist-title">Resume Components</h3>
@@ -730,8 +725,6 @@
                         </div>
                         {% endfor %}
                     </div>
-
-                    <!-- Resume Strength Analysis Section -->
                     <div class="analysis-section">
                         <div class="chart-card">
                             <h3 class="chart-title">Resume Strength Analysis</h3>
@@ -745,8 +738,6 @@
                                 </svg>
                             </div>
                         </div>
-
-                        <!-- Missing Info Section -->
                         <div class="missing-info">
                             <div class="missing-card">
                                 <h4 class="missing-title">MISSING KEYWORDS</h4>
@@ -759,23 +750,13 @@
                         </div>
                     </div>
                 </div>
+                <a href="#" class="download-btn" id="download-btn">Download Report</a>
             </div>
-
-            <!-- Change your download button to have an ID -->
-            <a href="#" class="download-btn" id="download-btn">Download Report</a>
-
-            <script>
-                window.onload = function () {
-                    document.getElementById('dashboard').style.display = 'block';  // Show the dashboard
-                    document.querySelector('.upload-container').style.display = 'none';  // Hide the upload section
-                };
-            </script>
             {% endif %}
 
-
             <div class="chat-boat" onclick="toggleChat()">
-                <div>CHAT</div>
-                <div>BOT</div>
+                <span>Chat</span>
+                <span>Assistant</span>
             </div>
 
             <div class="chat-modal" id="chat-modal">
@@ -784,15 +765,15 @@
                     <button class="close-chat" onclick="toggleChat()">×</button>
                 </div>
                 <div class="chat-messages" id="chat-messages">
+                    <div class="bot-message">Hello! How can I help you with your resume today?</div>
                     <div class="typing-indicator" id="bot-typing" style="display: none;">
-                        <span>Assistant is typing...</span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <div class="bot-message">Hello! I'm your resume assistant. How can I help you improve your resume
-                        today?</div>
                 </div>
                 <div class="chat-input-container">
-                    <input type="text" class="chat-input" id="chat-input" placeholder="Type your message..."
-                        onkeypress="handleKeyPress(event)">
+                    <input type="text" class="chat-input" id="chat-input" placeholder="Type your question...">
                     <button class="send-btn" onclick="sendMessage()">Send</button>
                 </div>
             </div>
@@ -809,28 +790,22 @@
                     const chatModal = document.getElementById('chat-modal');
                     chatModal.style.display = chatModal.style.display === 'flex' ? 'none' : 'flex';
                 }
-                document.getElementById('download-btn').addEventListener('click', function (e) {
+
+                // Download dashboard as image
+                document.getElementById('download-btn')?.addEventListener('click', function (e) {
                     e.preventDefault();
-
-                    // Get the dashboard element
                     const dashboard = document.getElementById('dashboard');
-
-                    // Show loading overlay
                     document.getElementById('loading-overlay').style.display = 'flex';
                     document.querySelector('.loading-box p').textContent = 'Generating report...';
 
-                    // Use html2canvas to capture the dashboard
                     html2canvas(dashboard, {
-                        scale: 2, // Higher quality
+                        scale: 2,
                         logging: false,
                         useCORS: true,
                         allowTaint: true,
-                        scrollY: -window.scrollY // Capture full height
+                        scrollY: -window.scrollY
                     }).then(canvas => {
-                        // Hide loading overlay
                         document.getElementById('loading-overlay').style.display = 'none';
-
-                        // Convert canvas to PNG image and download
                         const link = document.createElement('a');
                         link.download = 'resume-analysis-report.png';
                         link.href = canvas.toDataURL('image/png');
@@ -841,6 +816,8 @@
                         alert('Error generating report. Please try again.');
                     });
                 });
+
+                // Chatbot message sender
                 function sendMessage() {
                     const input = document.getElementById('chat-input');
                     const message = input.value.trim();
@@ -848,69 +825,61 @@
                     const botTyping = document.getElementById('bot-typing');
 
                     if (message) {
-                        // Add user message
                         chatMessages.innerHTML += `<div class="user-message">${message}</div>`;
                         input.value = '';
                         chatMessages.scrollTop = chatMessages.scrollHeight;
-
-                        // Show typing indicator
                         botTyping.style.display = 'flex';
 
-                        // Send message to backend
                         fetch('/chatbot', {
                             method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
+                            headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ query: message })
                         })
                             .then(response => response.json())
                             .then(data => {
-                                // Hide typing indicator
                                 botTyping.style.display = 'none';
-
                                 const botResponse = data.response || "Sorry, I couldn't process your message.";
                                 chatMessages.innerHTML += `<div class="bot-message">${botResponse}</div>`;
                                 chatMessages.scrollTop = chatMessages.scrollHeight;
                             })
                             .catch(() => {
                                 botTyping.style.display = 'none';
-                                chatMessages.innerHTML += `<div class="bot-message">There was an error connecting to the assistant.</div>`;
+                                chatMessages.innerHTML += `<div class="bot-message">Error connecting to assistant.</div>`;
                                 chatMessages.scrollTop = chatMessages.scrollHeight;
                             });
                     }
                 }
-                // Add event listener for Enter key in chat
+
+                // Enter key triggers chat send
                 document.getElementById('chat-input').addEventListener('keypress', function (e) {
-                    if (e.key === 'Enter') {
-                        sendMessage();
-                    }
+                    if (e.key === 'Enter') sendMessage();
                 });
 
-                // Add event listener for Enter key in chat
-                document.getElementById('chat-input').addEventListener('keypress', function (e) {
-                    if (e.key === 'Enter') {
-                        sendMessage();
-                    }
-                });
-
-                // File input display filename
-                document.getElementById('resume-upload').addEventListener('change', function () {
-                    const fileName = this.files[0]?.name || 'No file chosen';
-                    this.nextElementSibling.textContent = fileName;
-                });
-
-                document.getElementById('jd-upload').addEventListener('change', function () {
-                    const fileName = this.files[0]?.name || 'No file chosen';
-                    this.nextElementSibling.textContent = fileName;
-                });
-            </script>
-            <script>
+                // Show loading on form submission
                 document.querySelector("form").addEventListener("submit", function () {
                     document.getElementById("loading-overlay").style.display = "flex";
                 });
-            </script>
 
+                // File input - display chosen filename correctly
+                document.getElementById('resume-upload').addEventListener('change', function () {
+                    const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+                    const label = this.closest('.upload-card').querySelector('.choose-file-btn');
+                    label.textContent = fileName;
+                });
+
+                document.getElementById('jd-upload').addEventListener('change', function () {
+                    const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+                    const label = this.closest('.upload-card').querySelector('.choose-file-btn');
+                    label.textContent = fileName;
+                });
+
+                // Show dashboard if it should be visible
+                {% if show_dashboard %}
+                    document.getElementById('dashboard').style.display = 'block';
+                {% endif %}
+            </script>
+        </div>
+    </div>
 </body>
 
 </html>
