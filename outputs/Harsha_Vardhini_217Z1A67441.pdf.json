@@ -1,36 +1,41 @@
 {
-    "RESUME_RELEVANCE_SCORE": 75,
-    "ROLE_FIT_SCORE": 70,
-    "ATS_SCORE": 80,
-    "KEYWORD_MATCH_SCORE": 85,
+    "RESUME_RELEVANCE_SCORE": 70,
+    "ROLE_FIT_SCORE": 65,
+    "ATS_SCORE": 75,
+    "KEYWORD_MATCH_SCORE": 60,
     "MATCHED_KEYWORDS": [
         "Data Science",
-        "Machine Learning",
         "Python",
         "R",
         "Java",
+        "Machine Learning",
         "Data Analysis",
         "SQL",
         "NoSQL",
         "NLP",
+        "Exploratory Data Analysis (EDA)",
+        "Statistics",
         "Big Data",
-        "Exploratory Data Analysis",
-        "Statistical modeling",
         "AI",
-        "MySQL",
+        "Cloud Platforms",
         "Problem Solving",
-        "Data pipelines"
+        "Data pipelines",
+        "Data models",
+        "MySQL",
+        "MongoDB"
     ],
     "MISSING_KEYWORDS": [
         "Hadoop",
         "Spark",
         "Kafka",
-        "Cloud platforms (AWS, Azure, or Google Cloud)",
-        "Deep learning",
+        "AWS",
+        "Azure",
+        "Google Cloud",
         "TensorFlow",
         "PyTorch",
         "MLOps",
-        "Model monitoring"
+        "Model Monitoring",
+        "Time Series Forecasting"
     ],
     "MISSING_SKILLS": [
         "Hadoop",
@@ -42,178 +47,179 @@
         "TensorFlow",
         "PyTorch",
         "MLOps",
-        "Model monitoring"
+        "Model Monitoring",
+        "Time Series Forecasting"
     ],
     "RESUME_TIPS": [
-        "Emphasize experience with **Big Data** frameworks like **Hadoop**, **Spark**, and **Kafka** in the experience section to increase visibility for relevant searches.",
-        "Detail experience with **Cloud platforms** like **AWS**, **Azure**, or **Google Cloud** in project descriptions or a dedicated cloud skills section. This shows practical application of cloud technologies.",
-        "Explicitly mention experience with **Deep Learning** frameworks such as **TensorFlow** or **PyTorch** within project descriptions or skills section, as they are highly valued in the job description.",
-        "Add details about implementing **data pipelines** using technologies like **Spark** or **Kafka**, highlighting the scalability and efficiency of these implementations.",
-        "Include projects where you applied **statistical modeling** techniques, specifically mentioning the types of models used and the business insights derived.",
-        "Quantify the impact of **data driven solutions** developed in previous roles, focusing on measurable improvements or outcomes achieved.",
-        "Incorporate **MLOps** and **model monitoring** techniques used in deployed machine learning models to demonstrate understanding of production environments.",
-        "Highlight experience with both **SQL** and **NoSQL** databases, providing specific examples of database management or optimization tasks performed.",
-        "Create a separate section for **Certifications** and explicitly mention your certifications in Data science and AI domain.",
-        "Include your contributions in projects related to **natural language processing (NLP)**, detailing the specific tools and techniques applied."
+        "Emphasize experience with **Big Data frameworks** like Hadoop, Spark, or Kafka in your project descriptions to align with the job description.",
+        "Highlight your experience with **Cloud Platforms** (AWS, Azure, or Google Cloud) by adding specific projects or experiences to your resume.",
+        "Include **Deep Learning** frameworks such as TensorFlow or PyTorch in your skills section to showcase relevant expertise.",
+        "Detail your experience with **MLOps** and **Model Monitoring** techniques in project descriptions to demonstrate production-level skills.",
+        "Add projects or experiences related to **Time Series Forecasting** to match the preferred qualifications.",
+        "Quantify achievements by adding metrics to your project descriptions to highlight the impact of your work, such as **reducing manual screening time by 90%**.",
+        "Expand on projects involving **Data Pipelines** to showcase your ability to develop and implement scalable data processing solutions.",
+        "Create a dedicated section for **Certifications and Academic Achievements** to emphasize your continuous learning and expertise in the field.",
+        "Mention experience with **Data Modeling** in the context of your projects or experience to demonstrate your analytical capabilities.",
+        "Clearly state your proficiency level (e.g., Beginner, Intermediate, Expert) for each skill listed in the **Skills** section to provide a clearer understanding of your abilities."
     ],
     "COURSE_RECOMMENDATIONS": {
         "Hadoop": [
             {
                 "COURSE_NAME": "Big Data Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization provides a comprehensive introduction to Big Data, including the Hadoop ecosystem, MapReduce, and Spark. It covers data storage, processing, and analysis techniques.",
+                "DESCRIPTION": "This specialization covers the fundamentals of Big Data, including Hadoop and MapReduce, and teaches how to apply these technologies to real-world problems.",
                 "DIFFICULTY": "Beginner",
                 "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
             },
             {
-                "COURSE_NAME": "Hadoop Platform and Application Framework",
+                "COURSE_NAME": "Taming Big Data with Apache Hadoop and Spark",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn the fundamentals of the Hadoop platform, including its architecture, components, and application framework. Covers data ingestion, storage, and processing using Hadoop.",
+                "DESCRIPTION": "Learn how to use Apache Hadoop and Spark to process and analyze large datasets, covering setup, configuration, and basic programming models.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/learn/hadoop/university-of-california-san-diego-hadoop-platform-and-application-framework"
+                "COURSE_LINK": "https://www.edx.org/course/taming-big-data-with-apache-hadoop-and-spark"
             },
             {
-                "COURSE_NAME": "Intro to Hadoop and MapReduce",
+                "COURSE_NAME": "Hadoop Tutorial for Beginners",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "This free course provides a basic introduction to Hadoop and MapReduce, covering the core concepts and components of the Hadoop ecosystem.",
+                "DESCRIPTION": "A comprehensive tutorial for beginners covering the basics of Hadoop and its ecosystem, including HDFS, MapReduce, and YARN.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/playlist?list=PL9ooVrP1hQOHfhk2GXmw88H_VNF4nIZNw"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=Nyj9j9Rwf1g"
             }
         ],
         "Spark": [
             {
-                "COURSE_NAME": "Apache Spark Specialization",
+                "COURSE_NAME": "Big Data Analysis with Scala and Spark",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization covers Apache Spark, including its architecture, components, and programming model. Learn how to use Spark for big data processing, machine learning, and real-time analytics.",
+                "DESCRIPTION": "Learn how to use Apache Spark for big data analysis using Scala, covering data ingestion, transformation, and analysis techniques.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/apache-spark"
+                "COURSE_LINK": "https://www.coursera.org/learn/scala-spark-big-data"
             },
             {
-                "COURSE_NAME": "Scalable Machine Learning with Apache Spark",
+                "COURSE_NAME": "Introduction to Apache Spark",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn how to use Apache Spark for scalable machine learning applications. Covers data ingestion, processing, and model training using Spark's MLlib library.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/learn/data-science/ibm-scalable-machine-learning-with-apache-spark"
+                "DESCRIPTION": "An introductory course to Apache Spark, covering the core concepts, architecture, and basic programming techniques for data processing.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/introduction-to-apache-spark"
             },
             {
                 "COURSE_NAME": "Spark and Python for Big Data with PySpark",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "This free course introduces Apache Spark and PySpark for big data processing with Python. Covers data manipulation, analysis, and visualization using PySpark.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=JMP1pfQtUMg"
+                "DESCRIPTION": "A comprehensive tutorial on using PySpark for big data processing, covering data manipulation, transformation, and analysis techniques.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=g0K_c36GGeE"
             }
         ],
         "Kafka": [
             {
-                "COURSE_NAME": "Kafka Connect: Building Data Pipelines",
+                "COURSE_NAME": "Kafka Streams: Real-time Data Processing",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Master Kafka Connect to build scalable, reliable data pipelines, integrating diverse systems with ease.",
+                "DESCRIPTION": "Learn how to use Kafka Streams for real-time data processing, covering stream processing concepts, API usage, and application development.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/kafka-connect-data-pipelines"
+                "COURSE_LINK": "https://www.coursera.org/learn/kafka-streams-real-time-data-processing"
             },
             {
-                "COURSE_NAME": "Real-Time Data Pipelines with Apache Kafka",
+                "COURSE_NAME": "Analyzing Streaming Data with Apache Kafka",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Craft real-time data pipelines using Apache Kafka, ensuring efficient data flow and processing.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/learn/apache-kafka/confluent-real-time-data-pipelines-with-apache-kafka"
+                "DESCRIPTION": "Learn how to analyze streaming data with Apache Kafka, covering data ingestion, processing, and visualization techniques.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/analyzing-streaming-data-with-apache-kafka"
             },
             {
-                "COURSE_NAME": "Kafka Tutorial",
+                "COURSE_NAME": "Apache Kafka Tutorial for Beginners",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A concise guide on getting started with Apache Kafka, including setting up and basic operations.",
+                "DESCRIPTION": "A beginner-friendly tutorial on Apache Kafka, covering the core concepts, architecture, and basic usage for building real-time data pipelines.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=srR5aWk1JPU"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=5mmn-w3Y4kE"
             }
         ],
         "AWS": [
             {
-                "COURSE_NAME": "AWS Fundamentals: Building Serverless Applications",
+                "COURSE_NAME": "AWS Fundamentals: Going Cloud-Native",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to construct scalable serverless applications on AWS using Lambda, API Gateway, and DynamoDB.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/aws-fundamentals-building-serverless-applications"
+                "DESCRIPTION": "This course introduces the basic concepts of cloud computing and AWS services, covering compute, storage, and networking.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.coursera.org/learn/aws-fundamentals-going-cloud-native"
             },
             {
                 "COURSE_NAME": "AWS Cloud Practitioner Essentials",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Gain fundamental knowledge of AWS cloud services, security, architecture, pricing, and support.",
+                "DESCRIPTION": "Learn the fundamentals of AWS cloud computing, including services, security, architecture, and pricing models.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/learn/aws/amazon-web-services-aws-cloud-practitioner-essentials"
+                "COURSE_LINK": "https://www.edx.org/course/aws-cloud-practitioner-essentials"
             },
             {
-                "COURSE_NAME": "AWS Tutorial For Beginners",
+                "COURSE_NAME": "AWS Tutorial For Beginners | AWS Full Course - Learn AWS In 10 Hours | AWS Training | Edureka",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "An introduction to AWS cloud computing, covering essential services and how to start building on AWS.",
+                "DESCRIPTION": "An in-depth tutorial covering AWS services and their applications, including compute, storage, databases, and security.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=ULGyFGmh-lY"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=k1RI5locZE4"
             }
         ],
         "Azure": [
             {
                 "COURSE_NAME": "Microsoft Azure Fundamentals AZ-900 Exam Prep Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Prepare for the AZ-900 certification by mastering Azure fundamentals, including cloud concepts, services, security, and compliance.",
+                "DESCRIPTION": "Learn the fundamentals of Microsoft Azure, including cloud concepts, core Azure services, security, and pricing.",
                 "DIFFICULTY": "Beginner",
                 "COURSE_LINK": "https://www.coursera.org/specializations/microsoft-azure-fundamentals-az-900-exam-prep"
             },
             {
-                "COURSE_NAME": "Microsoft Azure Solutions Architect Technologies",
+                "COURSE_NAME": "Microsoft Azure Fundamentals",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn about the technologies that comprise Microsoft Azure solutions",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/microsoft-azure-solutions-architect-technologies"
+                "DESCRIPTION": "Learn the foundational concepts of Microsoft Azure, including cloud services, security, compliance, and management tools.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/microsoft-azure-fundamentals"
             },
             {
-                "COURSE_NAME": "Azure Tutorial for Beginners",
+                "COURSE_NAME": "Azure Tutorial for Beginners | Microsoft Azure Full Course - Learn Azure in 8 Hours | Edureka",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "This free course provides a basic introduction to Azure services.",
+                "DESCRIPTION": "A comprehensive tutorial on Microsoft Azure, covering various services and their applications, including compute, storage, databases, and networking.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=vJFnczuJppU"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=sEN2hn2PErE"
             }
         ],
         "Google Cloud": [
             {
                 "COURSE_NAME": "Google Cloud Fundamentals: Core Infrastructure",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Gain a foundational understanding of Google Cloud's core infrastructure, services, and solutions.",
+                "DESCRIPTION": "Learn the fundamental concepts of Google Cloud Platform (GCP), including compute, storage, networking, and identity management.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/gcp-infrastructure"
+                "COURSE_LINK": "https://www.coursera.org/learn/gcp-fundamentals"
             },
             {
-                "COURSE_NAME": "Preparing for the Google Cloud Certified Professional Cloud Architect Exam",
+                "COURSE_NAME": "Google Cloud Platform Fundamentals: Core Infrastructure",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Helps students prepare to take the Google Cloud Certified Professional Cloud Architect exam.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/professional-certificate/google-cloud-google-cloud-architect"
+                "DESCRIPTION": "An introductory course to Google Cloud Platform, covering the core services, infrastructure, and management tools.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.edx.org/course/google-cloud-platform-fundamentals-core-infrastructure"
             },
             {
-                "COURSE_NAME": "Google Cloud Platform (GCP) Tutorial for Beginners",
+                "COURSE_NAME": "Google Cloud Platform (GCP) Tutorial - Full Course for Beginners",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "The Google Cloud Platform, or GCP, is a collection of over 100 cloud computing services from Google.",
+                "DESCRIPTION": "A comprehensive tutorial on Google Cloud Platform (GCP), covering various services and their applications, including compute, storage, databases, and networking.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=K95jQn-t4Lw"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=0pusu5z2B7g"
             }
         ],
         "TensorFlow": [
             {
                 "COURSE_NAME": "TensorFlow in Practice Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn TensorFlow to design, build, and train neural networks and use them to create exciting AI applications.",
+                "DESCRIPTION": "Learn to build and train neural networks using TensorFlow, covering topics such as convolutional neural networks, recurrent neural networks, and sequence models.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
             },
             {
-                "COURSE_NAME": "TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning",
+                "COURSE_NAME": "TensorFlow: Data and Deployment",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "A broad introduction to TensorFlow, teaching you the fundamentals of the library and how to apply it in various ML tasks.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/professional-certificate/ibm-tensorflow-for-artificial-intelligence-machine-learning-and-deep-learning"
+                "DESCRIPTION": "Learn how to use TensorFlow for data processing and model deployment, covering data ingestion, feature engineering, and deployment strategies.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/tensorflow-data-and-deployment"
             },
             {
-                "COURSE_NAME": "TensorFlow Tutorial",
+                "COURSE_NAME": "TensorFlow Tutorial for Beginners",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Step-by-step guide on getting started with TensorFlow, covering basic operations and model creation.",
+                "DESCRIPTION": "A beginner-friendly tutorial on TensorFlow, covering the core concepts, architecture, and basic usage for building neural networks.",
                 "DIFFICULTY": "Beginner",
                 "COURSE_LINK": "https://www.youtube.com/watch?v=tPYj3fFJGjk"
             }
@@ -222,69 +228,92 @@
             {
                 "COURSE_NAME": "Deep Learning with PyTorch",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Explore deep learning techniques using PyTorch, from basic tensor operations to building complex neural networks.",
+                "DESCRIPTION": "Learn the fundamentals of deep learning using PyTorch, covering topics such as neural networks, convolutional neural networks, and recurrent neural networks.",
                 "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/learn/deep-learning-pytorch"
             },
             {
-                "COURSE_NAME": "Intro to Deep Learning with PyTorch",
+                "COURSE_NAME": "AI with Python",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Get an introduction to deep learning with PyTorch, including coding neural networks",
+                "DESCRIPTION": "This course provides a broad introduction to AI with a focus on using Python and PyTorch to build AI models and applications.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/course/introduction-to-deep-learning-with-pytorch"
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/ibm-ai-with-python"
             },
             {
-                "COURSE_NAME": "PyTorch Full Course",
+                "COURSE_NAME": "PyTorch Tutorial for Deep Learning",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Comprehensive tutorial on PyTorch, teaching you to build and train deep learning models from scratch.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=V_xro1bcAuA"
+                "DESCRIPTION": "A comprehensive tutorial on PyTorch, covering the core concepts, architecture, and basic usage for building neural networks.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=vJ9wZHD1_kc"
             }
         ],
         "MLOps": [
             {
-                "COURSE_NAME": "MLOps (Machine Learning Operations) Specialization",
+                "COURSE_NAME": "MLOps Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to apply DevOps principles to machine learning, automating and streamlining ML workflows.",
-                "DIFFICULTY": "Advanced",
+                "DESCRIPTION": "This specialization covers the principles and practices of MLOps, including model deployment, monitoring, and maintenance.",
+                "DIFFICULTY": "Intermediate",
                 "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
             },
             {
-                "COURSE_NAME": "Introduction to MLOps",
+                "COURSE_NAME": "MLOps (Machine Learning Operations) Fundamentals",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Intro to MLOps and what MLOps solves",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/course/introduction-to-mlops"
+                "DESCRIPTION": "Learn the basics of MLOps, including model deployment, monitoring, and continuous integration/continuous delivery (CI/CD) pipelines.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/machine-learning-operations-mlops-fundamentals"
             },
             {
-                "COURSE_NAME": "MLOps Zoomcamp",
+                "COURSE_NAME": "MLOps Full Course | Machine Learning Operations | MLOps Tutorial For Beginners | Simplilearn",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Complete MLOps course, where students learn about the lifecycle of machine learning models",
+                "DESCRIPTION": "A comprehensive tutorial on MLOps, covering the key concepts, tools, and techniques for deploying and managing machine learning models in production.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=jGW-aEqU3wE"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=0JjCqF_94L0"
             }
         ],
-        "Model monitoring": [
+        "Model Monitoring": [
             {
-                "COURSE_NAME": "AI Model Monitoring: From Development to Production",
+                "COURSE_NAME": "AI Model Monitoring: Performance & Fairness",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to monitor AI models effectively, ensuring high performance and addressing issues that arise post-deployment.",
-                "DIFFICULTY": "Intermediate",
+                "DESCRIPTION": "This course teaches how to monitor AI models for performance and fairness, including techniques for detecting and mitigating bias.",
+                "DIFFICULTY": "Advanced",
                 "COURSE_LINK": "https://www.coursera.org/learn/ai-model-monitoring"
             },
             {
-                "COURSE_NAME": "AI Product Management: Build Responsible AI Products",
+                "COURSE_NAME": "Practical Data Science with Ruben",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Covers responsible AI product development including model monitoring.",
+                "DESCRIPTION": "This courses features data science and machine learning tutorials along with data visualization, model monitoring and management techniques",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/ai-product-management-build-responsible-ai-products"
+                "COURSE_LINK": "https://www.edx.org/bio/ruben-berrendorf"
             },
             {
-                "COURSE_NAME": "Model Monitoring and Explainability",
+                "COURSE_NAME": "Model Monitoring in Production - Full Tutorial",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Demonstrates techniques for monitoring machine learning models and ensuring transparency.",
+                "DESCRIPTION": "A tutorial on monitoring machine learning models in production, covering metrics, tools, and techniques for ensuring model performance.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://m.youtube.com/watch?v=iV-PqZ-amY4"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=KxRDOjKfdqM"
+            }
+        ],
+        "Time Series Forecasting": [
+            {
+                "COURSE_NAME": "Time Series Analysis",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn the fundamentals of time series analysis, including techniques for forecasting, modeling, and prediction.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/timeseries"
+            },
+            {
+                "COURSE_NAME": "Supply Chain Analytics",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to apply data analytics techniques to optimize supply chain processes, including demand forecasting, inventory management, and logistics.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/supply-chain-analytics"
+            },
+            {
+                "COURSE_NAME": "Time Series Forecasting Theory | AR, MA, ARMA, ARIMA | Data Science",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "A tutorial on time series forecasting, covering various models such as AR, MA, ARMA, and ARIMA.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=UgFn0Hz7tGY"
             }
         ]
     }

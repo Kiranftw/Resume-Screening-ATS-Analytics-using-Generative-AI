@@ -210,29 +210,27 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # === Routes ===
+current_documents = []  
 @app.route('/PDFChatbot', methods=['GET', 'POST'])
 def PDFChatbot():
     global current_documents
-    current_documents = []
-    current_time = datetime.datetime.now().strftime("%I:%M %p")
     
     if request.method == 'POST':
         # Handle file uploads
         uploaded_files = request.files.getlist('documents')
         query = request.form.get('query', '').strip()
         
-        # Save uploaded files
+        # Save uploaded files (append to current_documents)
         new_files = []
         for file in uploaded_files:
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
                 file.save(filepath)
-                new_files.append(filepath)
+                if filepath not in current_documents:  # Avoid duplicates
+                    new_files.append(filepath)
         
-        # Update current documents
-        if new_files:
-            current_documents = new_files
+        current_documents.extend(new_files)  # Add new files to global list
         
         # Default query if empty
         if not query and current_documents:
@@ -240,19 +238,15 @@ def PDFChatbot():
         elif not query:
             return jsonify({"response": "Please upload a resume or ask a question."})
         
-        # Process the query
         try:
+            # Process with ALL accumulated documents
             response = analytics.pdfchatbot(current_documents, query)
             return jsonify({"response": response})
         except Exception as e:
             app.logger.error(f"Error in PDFChatbot: {str(e)}")
-            return jsonify({"response": f"An error occurred: {str(e)}"}), 500
+            return jsonify({"response": "Error processing request. Please try again."}), 500
     
-    # GET request - render the chat interface
-    return render_template('chatbot.html', 
-                         current_time=current_time,
-                         uploaded_files=current_documents,
-                         messages=[])
+    return render_template('chatbot.html')
 
 @app.route('/remove-file', methods=['POST'])
 def remove_file():

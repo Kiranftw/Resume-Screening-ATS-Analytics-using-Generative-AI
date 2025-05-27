@@ -1,7 +1,7 @@
 {
     "Extracted Data": {
         "Name": "Harsha Vardhini Pendyala",
-        "Contact Details": "LinkedIn: www.linkedin.com/in/harsha vardhini04, Email: 40harsha@gmail.com, GitHub: https://github.com/Harshavarma04/, Phone: (+91) 8886066070, Address: Chengicherla, Hyderabad, Telangana",
+        "Contact Details": "LinkedIn: www.linkedin.com/in/harsha vardhini04\nEmail: 40harsha@gmail.com\nGitHub: https://github.com/Harshavarma04/\nPhone: (+91) 8886066070\nAddress: Chengicherla, Hyderabad, Telangana",
         "Summary or Objective": null,
         "Skills": {
             "Soft Skills": [
@@ -14,17 +14,11 @@
                 "MYSQL",
                 "R",
                 "Java",
-                "Artificial intelligence",
+                "Artificial Intelligence",
                 "MongoDB",
                 "Machine Learning",
                 "Statistics",
-                "NLP",
-                "Mongo DB",
-                "Microsoft Power BI",
-                "Microsoft Excel",
-                "W.E.K.A toolkit",
-                "Postman",
-                "MySQL workbench"
+                "NLP"
             ]
         },
         "Experience": [
@@ -52,7 +46,7 @@
             "Data science foundations certification from Great learning.",
             "Advanced ML and GenAI Internship Program certification from Innomatics research labs.",
             "Artificial intelligence program certification from RINEX.",
-            "Pragati: Path to Future Cohort 3 certification from Infosys in collaboration with Springboard."
+            "Pragati: Path to Future Cohort 3\" certification from Infosys in collaboration with Springboard."
         ],
         "Education": [
             "B. TECH (CSE DS) NALLA NARASIMHA REDDY EDUCATIONAL SOCITY SGROUP OF INSTITUTIONS JNTUH PURSUING 8.56",
@@ -61,12 +55,12 @@
         ]
     },
     "ATS Score": {
-        "Total Score": 78,
+        "Total Score": 82,
         "Breakdown": {
-            "Format Score": 7,
+            "Format Score": 8,
             "Spelling & Grammar": 10,
             "Summary": 0,
-            "Skills": 8,
+            "Skills": 9,
             "Experience": 10,
             "Projects": 10,
             "Certifications": 10,
@@ -75,12 +69,12 @@
         }
     },
     "Recommendations": [
-        "Consider adding a **Summary or Objective** section at the beginning of your resume. This provides a brief overview of your skills and career goals, immediately grabbing the attention of recruiters and highlighting your key qualifications for the desired role.",
-        "Expand on your **soft skills** by providing specific examples of how you've demonstrated them in previous roles or projects. Instead of just listing 'Problem Solving,' describe a situation where you successfully resolved a complex issue using your problem-solving abilities.",
-        "Ensure consistency in the formatting and presentation of your **work experience**. Include quantifiable achievements and responsibilities to showcase the impact you made in each role, making it easier for recruiters to assess your capabilities.",
-        "While you've listed several projects, consider focusing on the ones most relevant to the jobs you're applying for. Provide more detail about your **contributions**, the technologies you used, and the outcomes you achieved to demonstrate your skills effectively.",
-        "To further enhance your resume, consider adding quantifiable results or metrics to your project descriptions to provide a more concrete understanding of your impact and accomplishments.",
-        "To make your resume more impactful, consider tailoring your skills section to match the specific requirements outlined in the job descriptions for the roles you're applying for.",
-        "Consider mentioning the roles you did in each project, this will highlight your skills and capabilities in a more effective manner."
+        "Add a **professional summary** or objective statement at the beginning of your resume. This will immediately highlight your key qualifications and career goals to the recruiter, making your resume more impactful.",
+        "Quantify your achievements in the **work experience** and **projects** sections. Instead of just listing your responsibilities, use numbers and metrics to showcase the impact of your work, e.g., 'Increased sales by 30% in Q2' or 'Reduced customer support tickets by 15% through automation'.",
+        "Tailor your **skills section** to match the job description. Prioritize the skills that are most relevant to the target role and ensure they are prominently displayed. You can also add proficiency levels (e.g., beginner, intermediate, expert) to provide more context.",
+        "Consolidate your **education section** by listing the degree, university, and graduation date (or expected graduation date). You can also include relevant coursework or academic achievements, but keep it concise and focused.",
+        "Reorder your **certifications** and group similar certification. Adding dates to your certifications can further demonstrate your commitment to professional development.",
+        "Proofread your resume carefully for any **spelling or grammatical errors**. Even small mistakes can make a negative impression, so it's worth taking the time to ensure your resume is polished and error-free.",
+        "Consider adding a section for **awards and recognitions** to showcase any notable achievements or accolades you've received throughout your career. This can help you stand out from other candidates and demonstrate your exceptional performance."
     ]
 }

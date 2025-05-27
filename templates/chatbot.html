@@ -269,7 +269,7 @@
             line-height: 1;
         }
 
-        /* Typing Indicator - Just Dots */
+        /* Typing Indicator */
         .typing-dots {
             display: flex;
             gap: 4px;
@@ -347,7 +347,7 @@
 
 <body>
     <div class="container">
-        <!-- Sidebar -->
+        <!-- Sidebar Navigation -->
         <div class="sidebar">
             <h2 class="section-title" style="color: black; font-size: 2.25rem;">Resume Analyzer</h2>
             <div class="sidebar-nav">
@@ -374,7 +374,7 @@
             </div>
         </div>
 
-        <!-- Chat Interface -->
+        <!-- Main Chat Interface -->
         <div class="main-content">
             <div class="chat-container">
                 <div class="chat-header">
@@ -429,6 +429,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // DOM Elements
             const fileInput = document.getElementById('fileInput');
             const fileUploadBtn = document.getElementById('fileUploadBtn');
             const sendBtn = document.getElementById('sendBtn');
@@ -438,12 +439,13 @@
             const uploadedFilesContainer = document.getElementById('uploadedFilesContainer');
             const currentTimeElement = document.getElementById('currentTime');
 
-            // Set current time
+            // State management
+            let uploadedFiles = []; // Tracks all uploaded files
+
+            // Initialize UI
             currentTimeElement.textContent = formatTime(new Date());
 
-            // Store uploaded files
-            let uploadedFiles = [];
-
+            // Utility functions
             function formatTime(date) {
                 return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
             }
@@ -482,14 +484,63 @@
                     filePill.innerHTML = `
                         <span class="file-icon">${fileIcon}</span>
                         <span>${file.name}</span>
-                        <span class="file-remove" onclick="removeUploadedFile('${file.name}')">×</span>
+                        <span class="file-remove" data-filename="${file.name}">×</span>
                     `;
                     uploadedFilesContainer.appendChild(filePill);
                 });
+
+                // Update send button state
                 sendBtn.disabled = chatInput.value.trim() === '' && uploadedFiles.length === 0;
+
+                // Add event listeners to remove buttons
+                document.querySelectorAll('.file-remove').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const filename = e.target.getAttribute('data-filename');
+                        removeUploadedFile(filename);
+                    });
+                });
             }
 
+            function removeUploadedFile(filename) {
+                uploadedFiles = uploadedFiles.filter(file => file.name !== filename);
+                updateFileDisplay();
+            }
+
+            // Event Listeners
             fileUploadBtn.addEventListener('click', () => fileInput.click());
+
+            fileInput.addEventListener('change', () => {
+                if (fileInput.files.length > 0) {
+                    // Validate file types
+                    const validTypes = [
+                        'application/pdf',
+                        'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                    ];
+
+                    const filesToAdd = Array.from(fileInput.files).filter(file =>
+                        validTypes.includes(file.type)
+                    );
+
+                    const invalidFiles = Array.from(fileInput.files).filter(file =>
+                        !validTypes.includes(file.type)
+                    );
+
+                    if (invalidFiles.length > 0) {
+                        addMessage('ai', `⚠️ Please upload only PDF or DOCX files. ${invalidFiles.length} file(s) were ignored.`);
+                    }
+
+                    if (filesToAdd.length > 0) {
+                        // Add new files, avoiding duplicates
+                        const existingFilenames = uploadedFiles.map(f => f.name);
+                        const newFiles = filesToAdd.filter(file =>
+                            !existingFilenames.includes(file.name)
+                        );
+
+                        uploadedFiles = [...uploadedFiles, ...newFiles];
+                        updateFileDisplay();
+                    }
+                }
+            });
 
             chatInput.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
@@ -498,66 +549,42 @@
                 }
             });
 
-            fileInput.addEventListener('change', async (e) => {
-                if (fileInput.files.length > 0) {
-                    // Validate file types
-                    const validTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-                    const invalidFiles = Array.from(fileInput.files).filter(
-                        file => !validTypes.includes(file.type)
-                    );
-
-                    if (invalidFiles.length > 0) {
-                        addMessage('ai', `⚠️ Please upload only PDF or DOCX files. ${invalidFiles.length} file(s) were ignored.`);
-                        // Only keep valid files
-                        fileInput.files = Array.from(fileInput.files).filter(
-                            file => validTypes.includes(file.type)
-                        );
-                    }
-
-                    // Add new files to our uploadedFiles array
-                    uploadedFiles = [...uploadedFiles, ...Array.from(fileInput.files)];
-                    updateFileDisplay();
-                }
-            });
-
             chatInput.addEventListener('input', () => {
-                sendBtn.disabled = chatInput.value.trim() === '' && uploadedFiles.length === 0;
+                // Auto-resize textarea
                 chatInput.style.height = 'auto';
                 chatInput.style.height = `${Math.min(chatInput.scrollHeight, 150)}px`;
+
+                // Update send button state
+                sendBtn.disabled = chatInput.value.trim() === '' && uploadedFiles.length === 0;
             });
 
             chatForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const message = chatInput.value.trim() || "Please analyze my resume.";
 
-                // Add user message (without files)
+                // Add user message to chat
                 if (message) {
                     addMessage('user', message);
                 }
 
+                // Clear input and disable send button during processing
                 chatInput.value = '';
                 chatInput.style.height = 'auto';
-                sendBtn.disabled = uploadedFiles.length === 0;
+                sendBtn.disabled = true;
 
-                // Create AI message container
+                // Create AI message with loading indicator
                 const aiMessageDiv = addMessage('ai', '');
                 const loadingIndicator = addTypingIndicator();
                 aiMessageDiv.appendChild(loadingIndicator);
 
                 try {
                     const formData = new FormData();
+                    formData.append('query', message);
 
-                    // Add query if exists
-                    if (message) {
-                        formData.append('query', message);
-                    }
-
-                    // Add all uploaded files
+                    // Only send files that haven't been processed yet
                     uploadedFiles.forEach(file => {
-                        if (file instanceof File) {
+                        if (file instanceof File) {  // Only new files
                             formData.append('documents', file);
-                        } else {
-                            formData.append('existing_files', file.name);
                         }
                     });
 
@@ -567,95 +594,51 @@
                     });
 
                     if (!response.ok) {
-                        throw new Error('Server error');
+                        throw new Error(`Server error: ${response.status}`);
                     }
 
-                    // Remove loading indicator
+                    const result = await response.json();
                     aiMessageDiv.removeChild(loadingIndicator);
 
-                    // Process the response as JSON
-                    const result = await response.json();
+                    // Process and display response
+                    let aiResponse = result.response || result.message || "No response from server";
 
-                    // Extract the response text if it's in JSON format
-                    let aiResponse = result.response || result.message || JSON.stringify(result);
+                    // Clean markdown formatting if present
+                    aiResponse = aiResponse.toString().replace(/\*\*/g, '').trim();
 
-                    // Clean up if the response starts with markdown formatting
-                    if (aiResponse.startsWith('**')) {
-                        aiResponse = aiResponse.replace(/\*\*/g, '').trim();
-                    }
-                    if (aiResponse.startsWith('{"response":"')) {
-                        try {
-                            const parsed = JSON.parse(aiResponse);
-                            aiResponse = parsed.response;
-                        } catch (e) {
-                            console.error('Error parsing response:', e);
-                        }
-                    }
-
-                    // Update the message with the response
                     aiMessageDiv.innerHTML = `
                         ${aiResponse}
                         <div class="message-time">${formatTime(new Date())}</div>
                     `;
 
+                    // Mark files as processed (convert File objects to plain objects)
+                    uploadedFiles = uploadedFiles.map(file => {
+                        return file instanceof File ? { name: file.name } : file;
+                    });
+
+                    updateFileDisplay();
                     chatMessages.scrollTop = chatMessages.scrollHeight;
 
                 } catch (err) {
-                    if (loadingIndicator && loadingIndicator.parentNode === aiMessageDiv) {
+                    // Error handling
+                    if (loadingIndicator.parentNode === aiMessageDiv) {
                         aiMessageDiv.removeChild(loadingIndicator);
                     }
 
                     aiMessageDiv.innerHTML = `
-                        ⚠️ Error contacting the server. Please try again.
+                        ⚠️ Error: ${err.message || 'Failed to process request'}
                         <div class="message-time">${formatTime(new Date())}</div>
                     `;
-                    console.error(err);
+                    console.error('Chat error:', err);
+                } finally {
+                    // Re-enable send button if there's content
+                    sendBtn.disabled = chatInput.value.trim() === '' && uploadedFiles.length === 0;
                 }
             });
 
             // Initialize file display
             updateFileDisplay();
         });
-
-        function removeUploadedFile(filename) {
-            const uploadedFilesContainer = document.getElementById('uploadedFilesContainer');
-            const filePills = Array.from(uploadedFilesContainer.querySelectorAll('.file-pill'));
-
-            const filePill = filePills.find(pill =>
-                pill.querySelector('span:not(.file-icon):not(.file-remove)').textContent === filename
-            );
-
-            if (filePill) {
-                uploadedFilesContainer.removeChild(filePill);
-            }
-
-            // Update the uploadedFiles array
-            const uploadedFiles = Array.from(document.querySelectorAll('.file-pill')).map(pill => {
-                return {
-                    name: pill.querySelector('span:not(.file-icon):not(.file-remove)').textContent
-                };
-            });
-
-            const sendBtn = document.getElementById('sendBtn');
-            const chatInput = document.getElementById('chatInput');
-            sendBtn.disabled = chatInput.value.trim() === '' && uploadedFiles.length === 0;
-        }
-
-        function removeFile(filename) {
-            fetch('/remove-file', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ filename: filename })
-            })
-                .then(response => {
-                    if (response.ok) {
-                        removeUploadedFile(filename.split('/').pop());
-                    }
-                })
-                .catch(error => console.error('Error:', error));
-        }
     </script>
 </body>
 
