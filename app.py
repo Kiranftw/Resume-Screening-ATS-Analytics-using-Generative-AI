@@ -7,7 +7,7 @@ import markdown
 app = Flask(__name__)
 import datetime
 import time
-
+import tempfile
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt', 'doc', 'jpeg', 'jpg', 'png', 'webp'}
 
@@ -279,6 +279,25 @@ def download_cover_letter():
 @app.route('/customcoverletter', methods=['GET', 'POST'])
 def custom_cover_letter():
     if request.method == 'POST':
+        # Check if this is a PDF generation request
+        if 'html' in request.form:
+            html_content = request.form.get('html')
+            
+            # Create a temporary file
+            with tempfile.NamedTemporaryFile(suffix='.pdf', delete=False) as output:
+                pdfkit.from_string(html_content, output.name)
+                output.seek(0)
+                
+                response = make_response(output.read())
+                response.headers['Content-Type'] = 'application/pdf'
+                response.headers['Content-Disposition'] = 'attachment; filename=cover_letter.pdf'
+                
+                # Clean up
+                os.unlink(output.name)
+                
+                return response
+        
+        # Normal cover letter generation
         job_title = request.form.get('jobTitle')
         company_name = request.form.get('companyName')
         your_name = request.form.get('yourName')
@@ -301,7 +320,6 @@ def custom_cover_letter():
                             letter_content=cover_letter_content)
     
     return render_template("Cover letter.html", generated=False)
-
 
 @app.route('/')
 def landing_page():

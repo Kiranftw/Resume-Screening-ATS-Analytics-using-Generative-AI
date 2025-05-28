@@ -486,4 +486,3 @@ class ResumeAnalytics(object):
         logger.info("Custom cover letter generated successfully.")
         return markdown.markdown(response.text)
 
-

@@ -465,31 +465,31 @@
 
             // Create a clean HTML document for PDF generation
             const cleanHtml = `
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <style>
-                        body { 
-                            font-family: Arial, sans-serif; 
-                            line-height: 1.6; 
-                            padding: 2cm;
-                            white-space: pre-line;
-                        }
-                        .signature {
-                            margin-top: 50px;
-                        }
-                    </style>
-                </head>
-                <body>
-                    ${letterContent.replace(/\n/g, '<br>')}
-                </body>
-                </html>
-            `;
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                body { 
+                    font-family: Arial, sans-serif; 
+                    line-height: 1.6; 
+                    padding: 2cm;
+                    white-space: pre-line;
+                }
+                .signature {
+                    margin-top: 50px;
+                }
+            </style>
+        </head>
+        <body>
+            ${letterContent.replace(/\n/g, '<br>')}
+        </body>
+        </html>
+    `;
 
             // Create a form dynamically
             const form = document.createElement('form');
             form.method = 'POST';
-            form.action = "/download-cover-letter";
+            form.action = "/customcoverletter";
 
             // Add the HTML content as a hidden input
             const input = document.createElement('input');

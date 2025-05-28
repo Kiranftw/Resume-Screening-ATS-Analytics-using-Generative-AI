@@ -1,99 +1,266 @@
 {
-    "RESUME_RELEVANCE_SCORE": 15,
-    "ROLE_FIT_SCORE": 5,
-    "ATS_SCORE": 3,
-    "KEYWORD_MATCH_SCORE": 10,
-    "MATCHED_KEYWORDS": [],
+    "RESUME_RELEVANCE_SCORE": 65,
+    "ROLE_FIT_SCORE": 60,
+    "ATS_SCORE": 70,
+    "KEYWORD_MATCH_SCORE": 68,
+    "MATCHED_KEYWORDS": [
+        "AI",
+        "Data Science",
+        "Python",
+        "Deep Learning",
+        "Machine Learning",
+        "LLMs",
+        "Large Language Models",
+        "Data Engineering",
+        "Data Cleaning",
+        "Data Preprocessing",
+        "GitHub",
+        "Linux",
+        "Windows",
+        "Transformers",
+        "Datasets",
+        "Evaluate",
+        "API",
+        "PyTorch",
+        "Fine tuning",
+        "Foundation Models",
+        "Model Compression",
+        "Model Architectures",
+        "Reasoning",
+        "Hugging Face",
+        "Data",
+        "Open Source",
+        "Algorithms",
+        "Automated",
+        "Chatbot"
+    ],
     "MISSING_KEYWORDS": [
-        "Quality Control",
-        "Manufacturing Process",
-        "Sales Contract"
+        "Cybersecurity",
+        "Autonomous AI",
+        "Security Teams",
+        "Strategic Priorities",
+        "Autonomous Data Intelligence",
+        "AI Engineer",
+        "Quantization",
+        "Performance Tuning",
+        "Benchmarking Pipelines",
+        "Token Throughput",
+        "Energy Efficiency",
+        "Pruning",
+        "Distillation",
+        "Deployment Readiness",
+        "Agentic RAG",
+        "Retrieval Augmented Generation",
+        "Multi-hop Reasoning",
+        "Temporal Reasoning",
+        "Multi-modal Reasoning",
+        "Ablations",
+        "Performance Dashboards",
+        "Autograd",
+        "Memory Profiling",
+        "Efficient Dataloaders",
+        "Mixed Precision",
+        "LLaMA",
+        "Falcon",
+        "Mistral",
+        "Open LLaMA",
+        "T5",
+        "MMLU",
+        "GSM8K",
+        "HELM",
+        "TruthfulQA",
+        "GPTQ",
+        "AWQ",
+        "QLoRA",
+        "Bitsandbytes",
+        "Low Bit Inference",
+        "Accelerate",
+        "Vision Language",
+        "Audio",
+        "ArXiv",
+        "Blogs"
     ],
     "MISSING_SKILLS": [
-        "Quality Control",
-        "Manufacturing Process",
-        "Sales Contract"
+        "Cybersecurity Solutions Development",
+        "Quantization Techniques (GPTQ, AWQ, QLoRA)",
+        "Benchmarking and Evaluation (MMLU, GSM8K, HELM)",
+        "Model Deployment",
+        "SOTA Model Architectures",
+        "Mixed Precision Training",
+        "Multi-Modal Model Training (Vision Language/Audio)"
     ],
     "RESUME_TIPS": [
-        "Add a **'Summary or Objective'** section at the beginning of your resume to highlight your key skills and career goals, tailored to the job description.",
-        "Include a section detailing your experience in **'Quality Control'**, emphasizing hands-on experience and practical application of skills.",
-        "In the **'Experience'** section, describe your involvement in the **'Manufacturing Process'**, focusing on your contributions and the impact of your work.",
-        "Add details about your understanding and experience with **'Sales Contract'**, including negotiation, compliance, and risk management.",
-        "In the **'Skills'** section, explicitly list 'Quality Control' and 'Manufacturing Process' to improve ATS compatibility and keyword visibility.",
-        "Quantify your achievements in each role with specific numbers and metrics to demonstrate the impact of your contributions to **'Manufacturing Process'** and overall quality.",
-        "Ensure your resume is in a standard format (e.g., PDF or DOCX) that is easily parsed by ATS systems, optimizing for keyword recognition related to **'Quality Control'**.",
-        "Tailor your resume to include industry-specific terms and jargon related to steel manufacturing to align with the job description and expertise in **'Manufacturing Process'**.",
-        "Use action verbs to describe your responsibilities and accomplishments in each role, emphasizing your ability to drive results and improve **'Quality Control'** processes.",
-        "Proofread your resume carefully to eliminate any typos or grammatical errors, ensuring professionalism and attention to detail in demonstrating your approach to **'Sales Contract'** management."
+        "Emphasize experience with **Large Language Models (LLMs)** and their application in projects. Highlight projects where you've fine-tuned LLMs or worked with reasoning architectures, providing specific examples and outcomes.",
+        "Showcase your familiarity with the **Hugging Face ecosystem**, including Transformers, Datasets, and Accelerate. Mention any public models or repositories you've contributed to, which demonstrates practical experience.",
+        "Add specific projects demonstrating your work with **PyTorch**, particularly in areas like autograd, memory profiling, and efficient dataloaders. Detailing hands-on experience strengthens your profile.",
+        "Explicitly state your experience with **model quantization**, pruning, and distillation techniques. Mention tools like GPTQ, AWQ, or QLoRA to show familiarity with model compression strategies.",
+        "Include any experience with **benchmarking pipelines** and evaluation metrics such as MMLU, GSM8K, or HELM. Quantify your model's performance in terms of accuracy, speed, and throughput.",
+        "Clearly articulate your understanding of **Retrieval Augmented Generation (RAG)** pipelines, especially agentic approaches. Showcase projects where you've extended or evaluated RAG for complex reasoning tasks.",
+        "Highlight any contributions to **open-source communities** or published work on arXiv or GitHub. Sharing your work demonstrates your commitment and expertise to the field.",
+        "Mention experience with training and optimizing **multi-modal models** (vision language/audio). This demonstrates advanced capabilities and a broader scope of knowledge in AI.",
+        "Incorporate skills and tools related to **Cybersecurity** to showcase your capabilities to tackle evolving security challenges at scale. Utilize Autonomous AI to show your proficiency in repetitive, resource intensive tasks.",
+        "Incorporate the term **Autonomous Data Intelligence** to show your technical hands on experience in AI to push the boundaries of what's possible with Large Language Models."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Quality Control": [
+        "Cybersecurity Solutions Development": [
             {
-                "COURSE_NAME": "Six Sigma: Define and Measure",
+                "COURSE_NAME": "Cybersecurity Specialization",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course covers the foundational aspects of Six Sigma, focusing on defining the problem and measuring current performance. It's suitable for understanding quality control processes.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/six-sigma-define-measure"
-            },
-            {
-                "COURSE_NAME": "Statistical Quality Control",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn the fundamentals of statistical quality control to improve product quality, monitor production processes, and reduce variability.",
+                "DESCRIPTION": "This specialization covers various aspects of cybersecurity, including network security, cryptography, and ethical hacking, providing a comprehensive understanding of building secure systems.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/learn/manufacturing/georgia-institute-of-technology-statistical-quality-control"
+                "COURSE_LINK": "https://www.coursera.org/specializations/cybersecurity"
             },
             {
-                "COURSE_NAME": "Quality Management",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This video from freeCodeCamp.org offers a comprehensive introduction to quality management principles and practices.",
+                "COURSE_NAME": "Professional Certificate in Introduction to Cybersecurity",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "A comprehensive beginner-level introduction to the field of cybersecurity, covering essential concepts and tools, including risk assessment and management.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=2S4h30QtK6E"
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/ritx-introduction-to-cybersecurity"
+            },
+            {
+                "COURSE_NAME": "Network Security Course",
+                "PLATFORM": "freeCodeCamp",
+                "DESCRIPTION": "Learn about network security concepts and tools through hands-on projects, covering topics like firewalls, intrusion detection, and prevention.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.freecodecamp.org/learn/information-security/"
             }
         ],
-        "Manufacturing Process": [
+        "Quantization Techniques (GPTQ, AWQ, QLoRA)": [
             {
-                "COURSE_NAME": "Manufacturing Processes",
+                "COURSE_NAME": "In-Memory Computing and Data Acceleration",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course provides an overview of various manufacturing processes, covering topics such as machining, casting, forming, and joining.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/manufacturing-processes"
-            },
-            {
-                "COURSE_NAME": "Advanced Manufacturing Process Analysis",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Study modern manufacturing processes, equipment, and systems. Learn how to analyze and optimize different manufacturing operations.",
+                "DESCRIPTION": "Although not directly about quantization, this course covers memory optimization and data acceleration techniques that are foundational to understanding quantization methods.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/learn/manufacturing/university-of-california-berkeley-advanced-manufacturing-process-analysis"
+                "COURSE_LINK": "https://www.coursera.org/learn/in-memory-computing-data-acceleration"
             },
             {
-                "COURSE_NAME": "Manufacturing Engineering Fundamentals",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This video from freeCodeCamp.org provides a foundational understanding of manufacturing engineering principles and practices.",
+                "COURSE_NAME": "Neural Networks and Deep Learning",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "While it doesn't focus solely on quantization, this course provides essential knowledge of neural networks and deep learning, which is necessary to understand quantization techniques. The final weeks discuss optimization and efficiency.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=eAEQ-Hy2ADY"
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/ibm-ai-enterprise-workflow"
+            },
+            {
+                "COURSE_NAME": "Introduction to Deep Learning with PyTorch",
+                "PLATFORM": "YouTube (freeCodeCamp.org)",
+                "DESCRIPTION": "This course provides a comprehensive introduction to PyTorch, covering fundamental concepts like tensors, autograd, and neural networks. It also touches on optimization techniques relevant to quantization.",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=GIsg-ZUy0JY"
             }
         ],
-        "Sales Contract": [
+        "Benchmarking and Evaluation (MMLU, GSM8K, HELM)": [
             {
-                "COURSE_NAME": "Contract Law: From Trust to Promise to Contract",
+                "COURSE_NAME": "AI Product Management",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Understand the foundations of contract law, focusing on the key elements of contract formation and enforcement. Learn about offer, acceptance, and consideration.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/contract-law"
-            },
-            {
-                "COURSE_NAME": "Construction Contracts: Law and Management",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn to draft, negotiate, and manage construction contracts, focusing on legal aspects, risk allocation, and dispute resolution.",
+                "DESCRIPTION": "Learn how to define, measure, and evaluate the success of AI products, including setting benchmarks and monitoring performance metrics. Use your understanding of key metrics like MMLU, GSM8K and HELM",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/learn/legal-contracts/columbia-university-construction-contracts-law-and-management"
+                "COURSE_LINK": "https://www.coursera.org/learn/ai-product-management"
             },
             {
-                "COURSE_NAME": "Contract Law - Introduction & Offer Part 1",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This video from freeCodeCamp.org provides a comprehensive overview of contract law, focusing on offer and acceptance.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=vJ12HqIQT3Q"
+                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This specialization focuses on deploying and maintaining machine learning models in production environments, including performance monitoring and evaluation.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/aws-machine-learning-engineering-for-production-mlops"
+            },
+            {
+                "COURSE_NAME": "Full Stack Deep Learning",
+                "PLATFORM": "YouTube (freeCodeCamp.org)",
+                "DESCRIPTION": "Focuses on performance benchmarks and evaluation techniques for different deep learning models, which is essential for real-world applications.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=0J3MP0RZZVc"
+            }
+        ],
+        "Model Deployment": [
+            {
+                "COURSE_NAME": "TensorFlow in Practice Specialization",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to deploy machine learning models using TensorFlow, covering topics like TensorFlow Serving, TensorFlow Lite, and TensorFlow.js for web and mobile deployment.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
+            },
+            {
+                "COURSE_NAME": "Microsoft Professional Program in Data Science",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This program covers various aspects of data science, including model deployment and scaling, using Microsoft Azure cloud services.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/professional-program/microsoft-data-science"
+            },
+            {
+                "COURSE_NAME": "Machine Learning Deployment with MLOps",
+                "PLATFORM": "YouTube (freeCodeCamp.org)",
+                "DESCRIPTION": "Understand MLOps principles and best practices for deploying machine learning models in production environments, covering containerization, CI/CD pipelines, and monitoring.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=5Ym-W-wL-40"
+            }
+        ],
+        "SOTA Model Architectures": [
+            {
+                "COURSE_NAME": "Sequence Models",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "This course dives into the nuances of sequence models and various transformer architectures, helping you understand and apply SOTA sequence models.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.coursera.org/learn/nlp-sequence-models"
+            },
+            {
+                "COURSE_NAME": "Natural Language Processing",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Focuses on advanced techniques in NLP, including transformer architectures, attention mechanisms, and pre-training methods, helping you understand and apply SOTA NLP models.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/microsoft-ai"
+            },
+            {
+                "COURSE_NAME": "Transformers from Scratch",
+                "PLATFORM": "YouTube (freeCodeCamp.org)",
+                "DESCRIPTION": "Learn to build transformer models from scratch, understanding the underlying components and architectures that drive SOTA NLP models.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=mMa2mxvCBbo"
+            }
+        ],
+        "Mixed Precision Training": [
+            {
+                "COURSE_NAME": "Custom and Distributed Training with TensorFlow",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Learn how to optimize training using mixed precision and other advanced techniques with TensorFlow.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/learn/custom-distributed-training-tensorflow"
+            },
+            {
+                "COURSE_NAME": "AI Hardware Acceleration",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Explore how hardware optimizations like mixed precision can improve the training efficiency and speed up AI applications.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/course/accelerating-ai-with-gpus"
+            },
+            {
+                "COURSE_NAME": "Deep Learning Optimization Techniques",
+                "PLATFORM": "YouTube (freeCodeCamp.org)",
+                "DESCRIPTION": "Focuses on optimization techniques that apply to mixed precision training, including memory management and computational efficiency.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=EfO-H-UnQ7I"
+            }
+        ],
+        "Multi-Modal Model Training (Vision Language/Audio)": [
+            {
+                "COURSE_NAME": "AI for Medicine",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Focuses on AI applications in medical imaging and audio analysis, teaching how to analyze and combine these different data modalities for diagnosis and treatment planning.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.coursera.org/specializations/ai-for-medicine"
+            },
+            {
+                "COURSE_NAME": "Robotics: Aerial Robotics",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "This course helps you create robotics that combine aerial vision with other sensor data. Offers multi-modal data fusion through aerial robotics.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/introduction-to-aerial-robotics"
+            },
+            {
+                "COURSE_NAME": "Multi-Modal Deep Learning",
+                "PLATFORM": "YouTube (freeCodeCamp.org)",
+                "DESCRIPTION": "Covers the architectures and techniques required to train deep learning models that effectively combine vision, language, and audio data.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=1zGgmue9e8U"
             }
         ]
     }
