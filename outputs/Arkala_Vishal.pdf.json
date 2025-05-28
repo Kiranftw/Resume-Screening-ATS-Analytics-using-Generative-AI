@@ -1,208 +1,198 @@
 {
     "RESUME_RELEVANCE_SCORE": 65,
-    "ROLE_FIT_SCORE": 50,
+    "ROLE_FIT_SCORE": 60,
     "ATS_SCORE": 70,
     "KEYWORD_MATCH_SCORE": 75,
     "MATCHED_KEYWORDS": [
         "Python",
-        "SQL",
         "Data Science",
         "Machine Learning",
-        "Big Data",
-        "Data analysis",
+        "SQL",
+        "MongoDB",
         "Data Collection",
         "Data Pre processing",
         "Data Warehousing",
-        "Computer Science",
-        "statistics",
-        "modeling",
-        "cloud platforms",
-        "AI",
-        "communication",
-        "problem solving",
-        "NoSQL databases",
-        "data pipelines",
-        "algorithms",
-        "data driven solutions",
-        "big data technologies",
-        "latest advancements",
-        "exploratory data analysis",
-        " Bachelor's or Master's degree",
-        "github"
+        "deep learning",
+        "Hugging Face",
+        "PyTorch",
+        "LLMs",
+        "large language models"
     ],
     "MISSING_KEYWORDS": [
-        "R",
-        "Java",
-        "Hadoop",
-        "Spark",
-        "Kafka",
-        "AWS",
-        "Azure",
-        "Google Cloud",
-        "TensorFlow",
-        "PyTorch",
-        "NLP",
-        "Time series forecasting",
-        "MLOps",
-        "Model monitoring"
+        "Fine tuning",
+        "Benchmarking",
+        "Quantization",
+        "Model compression",
+        "GPTQ",
+        "AWQ",
+        "QLoRA",
+        "bitsandbytes",
+        "low bit inference",
+        "Transformers",
+        "Accelerate",
+        "Datasets",
+        "Evaluate",
+        "multi modal models",
+        "vision language/audio",
+        "RAG (Retrieval Augmented Generation)"
     ],
     "MISSING_SKILLS": [
-        "Big Data frameworks",
-        "Deep learning frameworks",
-        "Deploying machine learning models",
-        "Data pipeline development",
-        "Statistical modeling",
-        "Cloud platform experience"
+        "Hugging Face ecosystem",
+        "Fine tuning LLMs",
+        "Benchmarking pipelines",
+        "Quantization techniques",
+        "Model compression techniques",
+        "RAG pipelines"
     ],
     "RESUME_TIPS": [
-        "Highlight your experience with **cloud platforms** such as **AWS**, **Azure**, or **Google Cloud** in your skills or experience section, since the job description emphasizes hands-on experience with these platforms. If you have used any of these, quantify your experience with specific projects.",
-        "Include specific projects or experiences that demonstrate your proficiency with **big data frameworks** like **Hadoop**, **Spark**, or **Kafka**. Provide context on the scale of data you've worked with and the problems you've solved using these technologies.",
-        "Explicitly mention your experience with **deep learning frameworks** such as **TensorFlow** or **PyTorch**. Provide details on the types of models you've built, the datasets you've used, and the results you've achieved.",
-        "Add details to how you have developed scalable **data pipelines** for processing large datasets. Provide specific examples, tools used, and outcomes achieved to quantify the value you added.",
-        "Incorporate your familiarity with **statistical modeling** techniques and provide clear examples of how you've used these techniques to extract meaningful insights and drive data-driven solutions in past projects or experiences.",
-        "Elaborate on your experience with **NoSQL databases**. Describe the types of NoSQL databases you've worked with (e.g., MongoDB) and how you've used them in specific projects to enhance data storage, retrieval, and processing.",
-        "Integrate keywords related to **MLOps** and **model monitoring** techniques to demonstrate your understanding of deploying and maintaining machine learning models in production environments. If you have any relevant experience, describe the tools and processes you've used.",
-        "Add a section detailing relevant certifications or online courses you've completed in areas such as **Big Data**, **Cloud Computing**, or **Machine Learning**. This will further highlight your commitment to continuous learning and skill development.",
-        "Quantify your achievements in the projects section by including metrics such as improvements in model accuracy, reductions in processing time, or the impact of your data-driven solutions on business outcomes. This will provide concrete evidence of your skills and abilities.",
-        "Align your resume with the job description by using similar language and terminology. Review the job description carefully and incorporate relevant keywords and phrases throughout your resume, particularly in the skills and experience sections."
+        "Emphasize experience with **fine-tuning LLMs** on custom datasets, detailing specific projects and outcomes. This directly addresses a core requirement and demonstrates practical experience.",
+        "Quantify your experience with **benchmarking pipelines**, highlighting specific metrics such as accuracy, speed, and token throughput achieved. Mention specific tools used for evaluation.",
+        "Showcase your familiarity with **model compression techniques**, such as quantization (GPTQ, AWQ, QLoRA, bitsandbytes) and distillation, in projects or experiences.",
+        "Explicitly mention experience with **Hugging Face ecosystem (Transformers, Accelerate, Datasets, Evaluate)** by detailing projects or contributions. Use concrete examples of how you have used each component.",
+        "Describe any experience with **Retrieval Augmented Generation (RAG) pipelines** and reasoning agents, including any modifications or evaluations conducted. Mention the types of models you have worked with.",
+        "Detail any projects involving **multi-modal models (vision language/audio)**, emphasizing the architectures used and results achieved. Mention the specific datasets you have used.",
+        "Highlight open-source contributions or published work (arXiv, GitHub, blogs) related to AI, including specific projects and links to the relevant repositories or publications.",
+        "Include specific projects where you have used **PyTorch internals** (autograd, memory profiling, efficient dataloaders, mixed precision) to optimize model performance. Describe the specific optimizations and their impact.",
+        "Add a section detailing any **experience with model deployment** and the challenges you encountered and overcame. Show the ability to transform research into production.",
+        "Mention familiarity with specific **foundation models** such as LLaMA, Falcon, Mistral, Open LLaMA, or T5 and provide specific examples of how you have fine-tuned or worked with them. This will demonstrate your experience with modern LLMs."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Big Data frameworks": [
+        "Fine tuning LLMs": [
             {
-                "COURSE_NAME": "Big Data Specialization",
+                "COURSE_NAME": "Fine-tuning Large Language Models",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization provides a comprehensive introduction to Big Data, including Hadoop, Spark, and related technologies. It covers data storage, processing, and analysis techniques.",
+                "DESCRIPTION": "Learn how to fine-tune large language models (LLMs) on specific datasets to improve performance on specialized reasoning tasks. Covers techniques for adapting pre-trained models to new tasks.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/big-data"
+                "COURSE_LINK": "https://www.coursera.org/courses?query=fine%20tuning%20large%20language%20models"
             },
             {
-                "COURSE_NAME": "Scalable Machine Learning with Apache Spark",
+                "COURSE_NAME": "How to Fine-Tune a Foundation Model",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn how to use Apache Spark for scalable machine learning tasks. This course covers distributed data processing, machine learning algorithms, and model deployment on Spark.",
+                "DESCRIPTION": "This course teaches you how to take publicly available, pre-trained, foundation models and adapt them to your specific business needs by fine-tuning them with your own data.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/scalable-machine-learning-with-apache-spark"
+                "COURSE_LINK": "https://www.edx.org/learn/artificial-intelligence/aws-how-to-fine-tune-a-foundation-model"
             },
             {
-                "COURSE_NAME": "Apache Spark Tutorial for Beginners",
+                "COURSE_NAME": "Fine-Tuning LLMs: Llama 2, Mistral, and More",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A beginner-friendly tutorial on Apache Spark, covering the basics of Spark architecture, data processing, and simple machine learning tasks. Ideal for those new to Big Data frameworks.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=qJDDy8E-R3E"
+                "DESCRIPTION": "Full Course - Fine-Tuning LLMs: Llama 2, Mistral, and More by AssemblyAI",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=wVw9KezGUnA"
             }
         ],
-        "Deep learning frameworks": [
+        "Benchmarking pipelines": [
             {
-                "COURSE_NAME": "TensorFlow in Practice Specialization",
+                "COURSE_NAME": "MLOps (Machine Learning Operations) Fundamentals",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization teaches you how to use TensorFlow to build and train deep learning models. It covers convolutional neural networks, recurrent neural networks, and other advanced techniques.",
+                "DESCRIPTION": "Learn to design and implement MLOps pipelines, including benchmarking and performance evaluation, for machine learning models.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/tensorflow-in-practice"
-            },
-            {
-                "COURSE_NAME": "Deep Learning with Python and PyTorch",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn the fundamentals of deep learning using PyTorch. This course covers neural network architectures, training techniques, and deployment strategies.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/deep-learning-with-python-and-pytorch"
-            },
-            {
-                "COURSE_NAME": "Deep Learning with TensorFlow 2.0 Full Tutorial",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A comprehensive tutorial on deep learning using TensorFlow 2.0. Covers building, training, and deploying deep learning models for various applications.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=tPYj3fFJGjk"
-            }
-        ],
-        "Deploying machine learning models": [
-            {
-                "COURSE_NAME": "Machine Learning Engineering for Production (MLOps) Specialization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization teaches you how to deploy and maintain machine learning models in production environments. It covers MLOps principles, model deployment strategies, and monitoring techniques.",
-                "DIFFICULTY": "Advanced",
                 "COURSE_LINK": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops"
             },
             {
-                "COURSE_NAME": "Deploying Machine Learning Models",
+                "COURSE_NAME": "TinyML and Efficient Deep Learning Computing",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn how to deploy machine learning models using various tools and platforms. This course covers containerization, cloud deployment, and model monitoring techniques.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/deploying-machine-learning-models"
+                "DESCRIPTION": "This course teaches you how to design, benchmark, and deploy deep learning models on resource-constrained devices, covering energy efficiency and performance metrics.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/course/tinyml-and-efficient-deep-learning-computing"
             },
             {
-                "COURSE_NAME": "MLOps Full Course",
+                "COURSE_NAME": "ML Monitoring in Production - Full Tutorial (Weights & Biases)",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A complete course on MLOps, covering all aspects of deploying, monitoring, and maintaining machine learning models in production. Includes practical examples and hands-on exercises.",
+                "DESCRIPTION": "How to Set up Monitoring in Production Using Weights & Biases",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=0120OSdD1Ls"
+                "COURSE_LINK": "https://m.youtube.com/watch?v=y0Q-Qj_242U"
             }
         ],
-        "Data pipeline development": [
+        "Quantization techniques": [
             {
-                "COURSE_NAME": "Data Engineering on Google Cloud Platform Specialization",
+                "COURSE_NAME": "Neural Networks and Deep Learning",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to design and build data pipelines on Google Cloud Platform. This specialization covers data ingestion, processing, and storage techniques using various GCP services.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/data-engineering-gcp"
-            },
-            {
-                "COURSE_NAME": "Building Data Pipelines with Airflow",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Learn how to build and manage data pipelines using Apache Airflow. This course covers workflow orchestration, data transformation, and pipeline monitoring techniques.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/building-data-pipelines-with-airflow"
-            },
-            {
-                "COURSE_NAME": "Data Pipelines with Python",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A tutorial on building data pipelines using Python, covering data extraction, transformation, and loading techniques. Includes practical examples and code snippets.",
+                "DESCRIPTION": "While not solely focused on quantization, this foundational course covers the principles behind neural networks, which helps in understanding quantization techniques for model compression.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=j50o6me5W54"
+                "COURSE_LINK": "https://www.coursera.org/learn/neural-networks-deep-learning"
+            },
+            {
+                "COURSE_NAME": "Inference Engine Optimization",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn about optimizing deep learning inference using quantization and other techniques to improve performance and reduce model size.",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://www.edx.org/course/inference-engine-optimization"
+            },
+            {
+                "COURSE_NAME": "8-bit Quantization and TensorFlow Lite: Speed up inference",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "8-bit Quantization and TensorFlow Lite: Speed up inference by TensorFlow",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=4_2mRQmTFz8"
             }
         ],
-        "Statistical modeling": [
+        "Model compression techniques": [
             {
-                "COURSE_NAME": "Statistical Modeling in Python",
+                "COURSE_NAME": "Practical Deep Learning: Model Compression",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn statistical modeling techniques using Python. This course covers linear regression, logistic regression, time series analysis, and more.",
+                "DESCRIPTION": "This course covers the key techniques for compressing deep learning models, including pruning, quantization, and knowledge distillation.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/statistical-modeling-python"
+                "COURSE_LINK": "https://www.coursera.org/lecture/efficient-deep-learning/model-compression-IeqQZ"
             },
             {
-                "COURSE_NAME": "Statistical Modeling and Regression Analysis",
+                "COURSE_NAME": "Deep Learning Specialization",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "This course provides an introduction to statistical modeling and regression analysis. It covers the theory and application of linear models, generalized linear models, and mixed-effects models.",
+                "DESCRIPTION": "A portion of this specialization covers model compression techniques, including pruning and quantization, to optimize models for deployment.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/statistical-modeling-and-regression-analysis"
+                "COURSE_LINK": "https://www.edx.org/professional-certificate/ibm-applied-ai"
             },
             {
-                "COURSE_NAME": "Statistics - A Full University Course on Data Science Basics",
+                "COURSE_NAME": "Compressing Deep Neural Networks",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A full university course on statistics, covering the basics of data science. Includes probability, distributions, hypothesis testing, and regression analysis.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+                "DESCRIPTION": "Learn how to compress deep neural networks by Georgia Tech",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=YqkZk7d9cEE"
             }
         ],
-        "Cloud platform experience": [
+        "Hugging Face ecosystem": [
             {
-                "COURSE_NAME": "AWS Certified Cloud Practitioner",
+                "COURSE_NAME": "Hugging Face Course",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Prepare for the AWS Certified Cloud Practitioner exam. This course covers the fundamentals of cloud computing and AWS services.",
+                "DESCRIPTION": "Learn about the Hugging Face ecosystem, including Transformers, Datasets, and Accelerate, for natural language processing and deep learning tasks.",
                 "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/aws-cloud-practitioner-essentials"
+                "COURSE_LINK": "https://huggingface.co/learn/nlp-course/chapter1/1"
             },
             {
-                "COURSE_NAME": "Microsoft Azure Fundamentals",
+                "COURSE_NAME": "Transformer Models and Natural Language Processing",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "Learn the fundamentals of Microsoft Azure. This course covers cloud concepts, Azure services, and security principles.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.edx.org/course/microsoft-azure-fundamentals-az-900"
+                "DESCRIPTION": "Dive into transformer models and their applications in NLP, including using Hugging Face's Transformers library.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/course/transformer-models-and-natural-language-processing"
             },
             {
-                "COURSE_NAME": "Google Cloud Platform Full Course",
+                "COURSE_NAME": "Hugging Face Transformers Quickstart - NLP with Transformers",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A comprehensive course on Google Cloud Platform, covering various GCP services and cloud computing concepts. Includes practical examples and hands-on exercises.",
+                "DESCRIPTION": "Hugging Face Transformers Quickstart - NLP with Transformers by Patrick Loeber",
+                "DIFFICULTY": "Beginner",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=jqtC9b2EysQ"
+            }
+        ],
+        "RAG pipelines": [
+            {
+                "COURSE_NAME": "Generative AI with Large Language Models",
+                "PLATFORM": "Coursera",
+                "DESCRIPTION": "Explore generative AI and LLMs, including techniques like Retrieval Augmented Generation (RAG) to improve model performance and knowledge integration.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=gVz3uvwEkDQ"
+                "COURSE_LINK": "https://www.coursera.org/specializations/generative-ai-with-llms"
+            },
+            {
+                "COURSE_NAME": "Building LLM-powered Apps with LangChain",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to build applications powered by Large Language Models (LLMs) using LangChain, including implementing RAG pipelines for enhanced knowledge retrieval.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.deeplearning.ai/short-courses/building-llm-powered-apps-with-langchain"
+            },
+            {
+                "COURSE_NAME": "RAG from Scratch",
+                "PLATFORM": "YouTube",
+                "DESCRIPTION": "Rag From Scratch - Building a RAG pipeline from Scratch by Sam Witteveen",
+                "DIFFICULTY": "Advanced",
+                "COURSE_LINK": "https://m.youtube.com/watch?v=ZZ1QXz-jYxk"
             }
         ]
     }

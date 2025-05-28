@@ -1,0 +1,37 @@
+Company Description
+
+
+
+UAE-based ZySec AI provides cutting-edge cybersecurity solutions to help enterprises tackle evolving security challenges at scale. Utilizing an autonomous AI workforce, ZySec AI enhances operational efficiency by automating repetitive, resource-intensive tasks, enabling security teams to focus on strategic priorities. Our mission is to make AI more efficient, accessible, and private for security professionals.mWe're building the future of Autonomous Data Intelligence at CyberPod AI and were looking for a deeply technical, hands-on AI Engineer to push the boundaries of whats possible with Large Language Models (LLMs).
+
+
+This role is for someone whos already been in the trenches: fine-tuned foundation models, experimented with quantization and performance tuning, and knows PyTorch inside out. If youre passionate about optimizing LLMs, crafting efficient reasoning architectures, and contributing to open-source communities like Hugging Face, this is your playground.
+
+
+Role Description
+
+
+
+Fine-tune Large Language Models (LLMs) on custom datasets for specialized reasoning tasks.
+Design and run benchmarking pipelines across accuracy, speed, token throughput, and energy efficiency.
+Implement quantization, pruning, and distillation techniques for model compression and deployment readiness.
+Evaluate and extend agentic RAG (Retrieval-Augmented Generation) pipelines and reasoning agents.
+Contribute to SOTA model architectures for multi-hop, temporal, and multimodal reasoning.
+Collaborate closely with the data engineering, infra, and applied research teams to bring ideas from paper to production.
+Own and drive experiments, ablations, and performance dashboards end-to-end.
+
+
+Requirements
+
+
+
+Hands-on experience working with deep learning and large models, particularly LLMs.
+Strong understanding of PyTorch internals: autograd, memory profiling, efficient dataloaders, mixed precision.
+Proven track record in fine-tuning LLMs (e.g., LLaMA, Falcon, Mistral, Open LLaMA, T5, etc.) on real-world use cases.
+Benchmarking skills: can run standardized evals (e.g., MMLU, GSM8K, HELM, TruthfulQA) and interpret metrics.
+Deep familiarity with quantization techniques: GPTQ, AWQ, QLoRA, bitsandbytes, and low-bit inference.
+Working knowledge of Hugging Face ecosystem (Transformers, Accelerate, Datasets, Evaluate).
+Active Hugging Face profile with at least one public model/repo published.
+Experience in training and optimizing multi-modal models (vision-language/audio) is a big plus.
+Published work (arXiv, GitHub, blogs) or open-source contributions preferred.
+If you are passionate about AI and want to be a part of a dynamic and innovative team, then ZySec AI is the perfect place for you. Apply now and join us in shaping the future of artificial intelligence.

@@ -1,9 +1,9 @@
 {
     "ROLEMATCHES": {
-        "Data Scientist": 92,
-        "Data Analyst": 90,
-        "Machine Learning Engineer": 88,
-        "AI/ML Engineer": 85,
-        "Business Intelligence Analyst": 80
+        "Data Scientist": 88,
+        "Machine Learning Engineer": 85,
+        "Data Analyst": 82,
+        "AI Engineer": 80,
+        "Software Engineer": 75
     }
 }

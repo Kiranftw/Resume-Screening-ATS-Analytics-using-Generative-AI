@@ -189,11 +189,77 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
             width: 100%;
+            position: relative;
         }
 
         .generate-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 8px rgba(37, 99, 235, 0.3);
+        }
+
+        .generate-button.loading {
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .generate-button.loading::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border: 3px solid transparent;
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: button-loading-spinner 1s ease infinite;
+        }
+
+        @keyframes button-loading-spinner {
+            from {
+                transform: rotate(0turn);
+            }
+
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        /* Loading overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Generated Letter Styles */
@@ -299,6 +365,11 @@
 
 <body>
     <div class="container">
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner"></div>
+        </div>
+
         <!-- Sidebar Navigation -->
         <div class="sidebar">
             <h2 class="section-title">Resume Analyzer</h2>
@@ -350,7 +421,7 @@
                             placeholder="Write any key points you want to include in your cover letter..."
                             required></textarea>
                     </div>
-                    <button type="submit" class="generate-button">Generate Cover Letter</button>
+                    <button type="submit" class="generate-button" id="generateButton">Generate Cover Letter</button>
                 </form>
 
                 {% if generated %}
@@ -370,9 +441,27 @@
     </div>
 
     <script>
+        // Add loading indicator when form is submitted
+        document.getElementById('coverLetterForm').addEventListener('submit', function (e) {
+            const generateButton = document.getElementById('generateButton');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+
+            // Show loading states
+            generateButton.classList.add('loading');
+            loadingOverlay.style.display = 'flex';
+
+            // Disable the button to prevent multiple submissions
+            generateButton.disabled = true;
+        });
+
         function downloadLetter() {
             // Get the clean letter content
             let letterContent = document.getElementById('letterContent').innerText;
+
+            // Clean up extra whitespace and tabs
+            letterContent = letterContent.replace(/\t+/g, '')  // Remove tabs
+                .replace(/\n\s+\n/g, '\n\n')  // Remove extra spaces between paragraphs
+                .replace(/\n{3,}/g, '\n\n');  // Limit to max 2 newlines
 
             // Create a clean HTML document for PDF generation
             const cleanHtml = `

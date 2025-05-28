@@ -165,6 +165,7 @@ def show_course_recommendations():
     random.shuffle(resume_tips)
     resume_tips_html = [markdown.markdown(tip) for tip in resume_tips]
     role_matches = shared_data.get('rolematch', {})
+    print("[DEBUG] Role Matches:", role_matches)
     # Render the page
     return render_template(
         'course_recommendations.html',
