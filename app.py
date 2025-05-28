@@ -16,15 +16,14 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # Max 16MB
 config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-# === Global Variables ===
 analytics = ResumeAnalytics()
-shared_data = {}  # For sharing state between routes
+shared_data = {}  
 
-# === Helper Function ===
+
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 coverletterdata = ""
-# === Routes ===
+
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
     resume_filename = jd_filename = None
@@ -55,20 +54,18 @@ def dashboard():
         rolematch = analytics.getJobRecommendations(resume_path)
         print(f"[DEBUG] Raw rolematch: {rolematch}")
 
-        # Ensure we store as dictionary in shared_data
+       
         if isinstance(rolematch, dict):
             if 'ROLEMATCHES' in rolematch:
-                # If format is {'ROLEMATCHES': {...}}
+                
                 shared_data['rolematch'] = rolematch['ROLEMATCHES']
             else:
-                # If already in direct dictionary format
+                
                 shared_data['rolematch'] = rolematch
         else:
-            # Fallback to empty dict if not in expected format
+            
             shared_data['rolematch'] = {}
 
-        # === Resume Analysis ===
-# === Resume Analysis ===
         result = analytics.resumeanalytics(resume_path, jd_path)
         global coverletterdata
         coverletterdata = analytics.getCoverLetter(resume_path, jd_path)
@@ -98,8 +95,7 @@ def dashboard():
         shared_data['course_recommendations'] = course_recommendations
 
 
-        print("[DEBUG] Course Recommendations:", course_recommendations)  # <<=== (Optional) Print to debug
-        # === ATS Analysis ===
+        print("[DEBUG] Course Recommendations:", course_recommendations)
         atsresult = analytics.ATSanalytics(resume_path)
         if atsresult is None:
             return render_template('DASHBOARD.html', error="Error in ATS analysis. Please try again.")
@@ -139,8 +135,8 @@ def chatbot_route():
         return jsonify({'response': 'Please enter a valid message.'})
 
     try:
-        analytics = ResumeAnalytics()  # ✅ create an instance
-        response = analytics.chatbot(query=user_query)  # ✅ call instance method
+        analytics = ResumeAnalytics() 
+        response = analytics.chatbot(query=user_query) 
         return jsonify({'response': response})
     except Exception as e:
         print("Error:", e)
@@ -219,11 +215,10 @@ def PDFChatbot():
     global current_documents
     
     if request.method == 'POST':
-        # Handle file uploads
+       
         uploaded_files = request.files.getlist('documents')
         query = request.form.get('query', '').strip()
         
-        # Save uploaded files (append to current_documents)
         new_files = []
         for file in uploaded_files:
             if file and allowed_file(file.filename):
@@ -235,14 +230,12 @@ def PDFChatbot():
         
         current_documents.extend(new_files)  # Add new files to global list
         
-        # Default query if empty
         if not query and current_documents:
             query = "Please analyze my resume."
         elif not query:
             return jsonify({"response": "Please upload a resume or ask a question."})
         
         try:
-            # Process with ALL accumulated documents
             response = analytics.pdfchatbot(current_documents, query)
             return jsonify({"response": response})
         except Exception as e:
@@ -274,10 +267,8 @@ import json
 @app.route('/api/download-cover-letter', methods=['GET'])  # Match the frontend URL and method
 def download_cover_letter():
     try:
-        # Get the generated cover letter text (you'll need to store it somewhere)
         global coverletterdata
         cover_letter_text = coverletterdata
-        # Create response - return as plain text
         response = make_response(cover_letter_text)
         response.headers['Content-Type'] = 'text/plain'
         response.headers['Content-Disposition'] = 'attachment; filename=CoverLetter.txt'
@@ -293,12 +284,10 @@ def custom_cover_letter():
         your_name = request.form.get('yourName')
         additional_info = request.form.get('coverLetterContent')
 
-        # Get the raw cover letter text (not JSON)
         cover_letter_content = analytics.getCustomCoverLetter(
             job_title, company_name, your_name, additional_info
         )
 
-        # If the response is JSON, extract the actual content
         if cover_letter_content.startswith('{'):
             try:
                 data = json.loads(cover_letter_content)
@@ -313,12 +302,10 @@ def custom_cover_letter():
     
     return render_template("Cover letter.html", generated=False)
 
-# Add your other routes here...
 
 @app.route('/')
 def landing_page():
     return render_template('Landing Page.html')
-# ... (keep your other routes the same)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
