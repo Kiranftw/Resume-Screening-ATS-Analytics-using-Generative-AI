@@ -23,7 +23,7 @@ shared_data = {}  # For sharing state between routes
 # === Helper Function ===
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
+coverletterdata = ""
 # === Routes ===
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
@@ -70,6 +70,8 @@ def dashboard():
         # === Resume Analysis ===
 # === Resume Analysis ===
         result = analytics.resumeanalytics(resume_path, jd_path)
+        global coverletterdata
+        coverletterdata = analytics.getCoverLetter(resume_path, jd_path)
         if jd_path and resume_path:
             cover_letter = analytics.getCoverLetter(resume_path, jd_path)
             shared_data['cover_letter'] = cover_letter
@@ -269,22 +271,16 @@ import pdfkit
 from werkzeug.utils import secure_filename
 import json
 
-@app.route('/download-cover-letter', methods=['POST'])
+@app.route('/api/download-cover-letter', methods=['GET'])  # Match the frontend URL and method
 def download_cover_letter():
     try:
-        # Configure pdfkit
-        config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
-        
-        # Get HTML content from form
-        html_content = request.form.get('html')
-        
-        # Generate PDF
-        pdf = pdfkit.from_string(html_content, False, configuration=config)
-        
-        # Create response
-        response = make_response(pdf)
-        response.headers['Content-Type'] = 'application/pdf'
-        response.headers['Content-Disposition'] = 'attachment; filename=cover_letter.pdf'
+        # Get the generated cover letter text (you'll need to store it somewhere)
+        global coverletterdata
+        cover_letter_text = coverletterdata
+        # Create response - return as plain text
+        response = make_response(cover_letter_text)
+        response.headers['Content-Type'] = 'text/plain'
+        response.headers['Content-Disposition'] = 'attachment; filename=CoverLetter.txt'
         return response
     except Exception as e:
         return str(e), 500

@@ -221,6 +221,7 @@ class ResumeAnalytics(object):
             """
         Based on the following resume and job description, generate a professional cover letter.
         The cover letter should highlight the candidate's relevant skills and experiences that match the job requirements.
+        give me long cover letter with 200 to 500 words in case if you found something intresting
 
         Resume:
         {RESUME}
@@ -248,7 +249,7 @@ class ResumeAnalytics(object):
         with open(PATH, "w", encoding="utf-8") as file:
             file.write(response)
         logger.info("Cover letter generated successfully.")
-        return markdown.markdown(response)
+        return response
     
     @ExceptionHandeler
     def ATSanalytics(self,resume: str, jobdescription: str = None) -> Optional[Dict[str, Any]]:

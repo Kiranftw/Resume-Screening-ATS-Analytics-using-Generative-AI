@@ -6,374 +6,156 @@
     "MATCHED_KEYWORDS": [
         "Data Science",
         "Machine Learning",
-        "Artificial intelligence",
+        "AI",
         "Python",
-        "Data Analysis",
         "NLP",
+        "Data Analysis",
         "MySQL",
         "MongoDB",
-        "AI",
-        "Deep Learning"
+        "Data Engineering",
+        "Large Language Models (LLMs)",
+        "Deep Learning",
+        "PyTorch",
+        "Hugging Face",
+        "GitHub",
+        "Transformers"
     ],
     "MISSING_KEYWORDS": [
-        "Large Language Models (LLMs)",
-        "PyTorch",
         "Fine tuning",
-        "Quantization",
-        "Hugging Face",
-        "Transformers",
-        "RAG (Retrieval Augmented Generation)",
         "Benchmarking",
+        "Quantization",
+        "Pruning",
+        "Distillation",
+        "Retrieval Augmented Generation (RAG)",
+        "SOTA model architectures",
+        "Multi-hop reasoning",
+        "Temporal reasoning",
+        "Multi-modal reasoning",
+        "Autograd",
+        "Memory profiling",
+        "Efficient dataloaders",
+        "Mixed precision",
         "GPTQ",
         "AWQ",
         "QLoRA",
-        "bitsandbytes"
+        "Bitsandbytes",
+        "Accelerate",
+        "Datasets",
+        "Evaluate",
+        "Vision language models",
+        "Audio models",
+        "ArXiv",
+        "Blogs"
     ],
     "MISSING_SKILLS": [
-        "LLaMA",
-        "Falcon",
-        "Mistral",
-        "Open LLaMA",
-        "T5",
-        "mixed precision",
-        "memory profiling",
-        "multi modal models"
+        "Fine tuning LLMs (e.g., LLaMA, Falcon, Mistral, Open LLaMA, T5, etc.)",
+        "Benchmarking skills (e.g., MMLU, GSM8K, HELM, TruthfulQA)",
+        "Quantization techniques (GPTQ, AWQ, QLoRA, bitsandbytes)",
+        "Training and optimizing multi-modal models (vision language/audio)"
     ],
     "RESUME_TIPS": [
-        "Emphasize experience with **Large Language Models (LLMs)** by detailing specific projects or tasks where you utilized them. Describe the models you have worked with and the outcomes achieved to showcase your practical skills.",
-        "Highlight your proficiency in **PyTorch** by including specific projects where you used it for model development or optimization. Focus on its internals like autograd and efficient dataloaders to demonstrate in-depth knowledge.",
-        "Add a section detailing your experience with **Fine tuning** LLMs, mentioning the datasets used, models fine-tuned (e.g., LLaMA, Falcon), and performance improvements achieved to prove your hands-on skills.",
-        "Include details about your familiarity with **Quantization** techniques such as GPTQ, AWQ, and QLoRA. Provide examples of how you have used these techniques to improve model efficiency and deployment readiness.",
-        "Create an **Active Hugging Face profile** and mention it in your resume, including any models or repositories you have published. Actively engaging in the Hugging Face community can significantly enhance your profile.",
-        "Incorporate experience with **Transformers** library from Hugging Face, detailing how you used it for various NLP tasks. Focus on how you leveraged the library to solve specific problems and improve model performance.",
-        "Explain your experience with **RAG (Retrieval Augmented Generation)** pipelines, including how you evaluated and extended these pipelines to improve reasoning agents. Highlight any contributions to SOTA model architectures.",
-        "Document your **Benchmarking** skills by mentioning standardized evaluations you have run (e.g., MMLU, GSM8K) and how you interpreted the metrics. Show that you are capable of accurately measuring and improving model performance.",
-        "Add projects that involve **Multi-modal models**, such as vision language/audio models. This will significantly enhance your profile and demonstrate your versatility in handling different types of data and model architectures.",
-        "Update your resume with specific projects or experiences related to **Deep Learning**, emphasizing your involvement in optimizing models and bringing ideas from paper to production. Showcase your ability to translate theoretical knowledge into practical solutions."
+        "Emphasize experience with **Large Language Models (LLMs)** and specify which ones you've worked with (e.g., LLaMA, Falcon).",
+        "Highlight any projects where you performed **fine-tuning** of pre-trained models, detailing the datasets and techniques used.",
+        "Include specific experience with **benchmarking** and evaluation metrics (e.g., MMLU, GSM8K) for LLMs.",
+        "Detail knowledge and hands-on experience with **quantization, pruning, and distillation** techniques for model compression.",
+        "Add any experience with **Retrieval Augmented Generation (RAG)** pipelines and reasoning agents, specifying the architectures used.",
+        "Showcase experience with **PyTorch internals**, such as autograd, memory profiling, and efficient dataloaders, within your projects.",
+        "Add any experience with training and optimizing **multi-modal models (vision language/audio)** and related frameworks.",
+        "Mention contributions to the **Hugging Face** ecosystem, highlighting any published models or repositories.",
+        "Include any publications on **arXiv** or personal blogs related to AI and machine learning, showcasing your expertise.",
+        "Quantify achievements in projects using metrics (e.g., accuracy improvements, speed gains) related to LLM optimization and performance."
     ],
     "COURSE_RECOMMENDATIONS": {
-        "Large Language Models (LLMs)": [
+        "Fine tuning LLMs (e.g., LLaMA, Falcon, Mistral, Open LLaMA, T5, etc.)": [
             {
-                "COURSE_NAME": "Large Language Models: Application through Production",
+                "COURSE_NAME": "Fine-Tuning Large Language Models",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course explores the application of Large Language Models (LLMs) from initial design to production deployment. It covers fine-tuning, prompt engineering, and deployment strategies, providing hands-on experience with LLMs.",
+                "DESCRIPTION": "Learn to fine-tune large language models for specific tasks, covering techniques like transfer learning and adaptation. The course focuses on practical applications and hands-on experience with popular LLMs.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/large-language-models-application-through-production"
+                "COURSE_LINK": "https://www.coursera.org/courses?query=fine%20tuning%20large%20language%20models"
             },
             {
-                "COURSE_NAME": "Building Generative AI Applications with Google Cloud",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to build generative AI applications using Google Cloud's generative AI tools and models. Learn how to perform prompt engineering, and fine-tune large language models for particular tasks.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/generative-ai-applications-google-cloud"
-            },
-            {
-                "COURSE_NAME": "How to build and train your own Large Language Model (LLM)",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "Step by step guide to building and training your own Large Language Model (LLM).",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=Q0x_0F-e9Fo"
-            }
-        ],
-        "PyTorch": [
-            {
-                "COURSE_NAME": "PyTorch for Deep Learning with Python Bootcamp",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "Learn how to use PyTorch, the popular Deep Learning framework, to create Artificial Neural Networks for Computer Vision and Natural Language Processing",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/pytorch-for-deep-learning-with-python-bootcamp/"
-            },
-            {
-                "COURSE_NAME": "Deep Learning with PyTorch",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course is part of the AI Product Management Specialization. You will learn how to build PyTorch models for real-world applications. This course covers key concepts such as PyTorch tensors and automatic differentiation.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/pytorch-deep-learning"
-            },
-            {
-                "COURSE_NAME": "PyTorch Full Course for Beginners | Deep Learning with Python",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This course teaches you Deep Learning with Python, covering topics from basic PyTorch tensors to neural networks.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=GIsg-ZUyQMk"
-            }
-        ],
-        "Fine tuning": [
-            {
-                "COURSE_NAME": "Fine-tuning Large Language Models",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn how to fine-tune open-source large language models (LLMs).",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.coursera.org/learn/fine-tuning-large-language-models"
-            },
-            {
-                "COURSE_NAME": "Fine-tuning a Transformer Model",
-                "PLATFORM": "HuggingFace",
-                "DESCRIPTION": "Learn how to fine-tune a Transformers model on a text classification task.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://huggingface.co/learn/nlp-course/chapter7/2?fw=pt"
-            },
-            {
-                "COURSE_NAME": "How to Fine-Tune Large Language Models (LLMs)",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "Learn how to fine-tune pre-trained large language models (LLMs) for better performance",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=5t-nfnl-Y7E"
-            }
-        ],
-        "Quantization": [
-            {
-                "COURSE_NAME": "Deep Learning Quantization",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This specialization focuses on quantization techniques for deep learning models. It covers the basics of quantization, various methods, and implementation details to optimize models for deployment.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=deep%20learning%20quantization"
-            },
-            {
-                "COURSE_NAME": "Quantization and Training of Neural Networks",
+                "COURSE_NAME": "Large Language Models: From Zero to Hero",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "This course dives into the methods and mathematics behind quantization and training of neural networks. Explore the quantization and training techniques that can be used on a multitude of applications from embedded systems and micro-controllers, to the data center. Topics covered include: fixed point representation, quantization techniques and deployment, binarized neural networks, and training methods to retain accuracy.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.edx.org/course/quantization-and-training-of-neural-networks"
+                "DESCRIPTION": "This course covers the fundamentals of large language models, including pre-training, fine-tuning, and evaluation. It includes case studies and projects to solidify your understanding.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.edx.org/search?q=large%20language%20models"
             },
             {
-                "COURSE_NAME": "Quantization in Neural Networks — Deep Learning Course",
+                "COURSE_NAME": "LLM Training",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Learn about quantization of neural networks and why it's important in deep learning. This tutorial explores the basics and methods of quantization to optimize models.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=PqPIm3y9Dyo"
+                "DESCRIPTION": "A comprehensive guide on how to train and fine-tune Large Language Models (LLMs). From beginner to advanced.",
+                "DIFFICULTY": "Intermediate",
+                "COURSE_LINK": "https://www.youtube.com/watch?v=E9-Y_mEju-U"
             }
         ],
-        "Hugging Face": [
-            {
-                "COURSE_NAME": "Hugging Face Ecosystem - Models, Datasets and Hub",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "This course covers the core concepts and tools within the Hugging Face ecosystem, including Transformers, Datasets, and the Hub, to help you effectively use pre-trained models and datasets.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.udemy.com/course/hugging-face-models-datasets-and-hub/"
-            },
-            {
-                "COURSE_NAME": "Natural Language Processing with Transformers",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This Specialization brings you state-of-the-art Natural Language Processing (NLP) models from the Hugging Face Transformers library",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/specializations/natural-language-processing-transformers"
-            },
-            {
-                "COURSE_NAME": "Hugging Face tutorial - getting started with BERT and transformers",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This beginner-friendly tutorial introduces you to BERT and Hugging Face Transformers, demonstrating how to use them for NLP tasks.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=tiZFewofSL4"
-            }
-        ],
-        "Transformers": [
-            {
-                "COURSE_NAME": "Transformer Networks: A Deep Dive",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Explore the architecture and applications of transformer networks, including attention mechanisms, encoder-decoder structures, and their role in NLP tasks. This course covers the theory and implementation of transformers.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=transformer%20networks"
-            },
-            {
-                "COURSE_NAME": "Transformers for Natural Language Processing",
-                "PLATFORM": "edX",
-                "DESCRIPTION": "Gain expertise in using transformers for various NLP tasks, covering models like BERT, GPT, and RoBERTa. Learn how to fine-tune and apply these models to solve real-world problems in NLP.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/transformers-for-natural-language-processing"
-            },
-            {
-                "COURSE_NAME": "Transformers Explained: A Step-by-Step Visual Walkthrough",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A comprehensive visual explanation of how transformers work, breaking down the key components and mechanisms step by step.",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=SZxpAsOd49M"
-            }
-        ],
-        "RAG (Retrieval Augmented Generation)": [
-            {
-                "COURSE_NAME": "Building RAG Applications with LlamaIndex",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course is designed for intermediate level AI/ML practitioners who wants to master the fundamental concepts, latest techniques, and best practices of RAG with LlamaIndex.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/learn/rag-applications-llamaindex"
-            },
-            {
-                "COURSE_NAME": "Full GenAI course for FREE: Retrieval Augmented Generation",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This free course for Retrieval Augmented Generation is an end-to-end free course in Retrieval Augmented Generation, including vector databases, LLMs and LangChain/LlamaIndex.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=wmNCe86k-rU"
-            },
-            {
-                "COURSE_NAME": "LangChain: Chat with Your Data (RAG) | FREE Course",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "LangChain: Chat with Your Data (RAG) | FREE Course",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=ixFh7L3L5OU"
-            }
-        ],
-        "Benchmarking": [
+        "Benchmarking skills (e.g., MMLU, GSM8K, HELM, TruthfulQA)": [
             {
                 "COURSE_NAME": "Evaluating Machine Learning Models",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn to evaluate the performance of machine learning models using various metrics and techniques. Understand how to select the best model for a given task through rigorous benchmarking.",
+                "DESCRIPTION": "Learn how to rigorously evaluate machine learning models using various metrics and techniques. Includes hands-on exercises and case studies.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=machine%20learning%20model%20evaluation"
+                "COURSE_LINK": "https://www.coursera.org/courses?query=evaluating%20machine%20learning%20models"
             },
             {
-                "COURSE_NAME": "Measuring and Evaluating Machine Learning Models",
+                "COURSE_NAME": "Model Evaluation and Selection",
                 "PLATFORM": "edX",
-                "DESCRIPTION": "This course teaches you how to measure and evaluate machine learning models to build better algorithms. Learn to evaluate classifiers, evaluate rankers, evaluate regression models, evaluate clusterers, choose which evaluation metrics to use, learn about A/B testing, learn about statistical hypothesis testing, and learn about online evaluation.",
+                "DESCRIPTION": "Covers the principles and methods for evaluating and selecting machine learning models. Topics include cross-validation, hyperparameter tuning, and performance metrics.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.edx.org/course/measuring-and-evaluating-machine-learning-models"
+                "COURSE_LINK": "https://www.edx.org/search?q=model%20evaluation"
             },
             {
-                "COURSE_NAME": "Model Evaluation, Model Selection, and Algorithm Selection",
+                "COURSE_NAME": "Metrics for Machine Learning",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "This video describes several techniques to evaluate the model",
-                "DIFFICULTY": "Beginner",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=EuBBz3bI5oM"
-            }
-        ],
-        "GPTQ": [
-            {
-                "COURSE_NAME": "Advanced Quantization Techniques for Deep Learning",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "An in-depth course on advanced quantization techniques, including GPTQ, to optimize and compress deep learning models for deployment on resource-constrained devices.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.udemy.com/courses/?q=deep+learning+quantization"
-            },
-            {
-                "COURSE_NAME": "Deep Learning: Quantization",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This video provides a brief introduction on deep learning quantization.",
+                "DESCRIPTION": "Focuses on the various metrics used to evaluate machine learning models, including regression, classification, and ranking metrics. Gain an understanding of model evaluation.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=w8uQ8yVjY28"
-            },
-            {
-                "COURSE_NAME": "GPTQ: ACCURATE POST-TRAINING QUANTIZATION FOR GENERATIVE TRANSFORMERS",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A guide through the most recent paper GPTQ: Accurate Post-Training Quantization for Generative Transformers",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=48t6RcNwM_4"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=eM6RsQYjFrc"
             }
         ],
-        "AWQ": [
+        "Quantization techniques (GPTQ, AWQ, QLoRA, bitsandbytes)": [
             {
-                "COURSE_NAME": "Advanced Quantization Techniques for Deep Learning",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "An in-depth course on advanced quantization techniques, including Activation-Aware Weight Quantization (AWQ) to optimize and compress deep learning models for deployment on resource-constrained devices.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.udemy.com/courses/?q=deep+learning+quantization"
-            },
-            {
-                "COURSE_NAME": "Activation-Aware Weight Quantization for Neural Network Compression and Acceleration",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This course provides a detailed look into Activation-Aware Weight Quantization.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=Fk9uM2wljbA"
-            },
-            {
-                "COURSE_NAME": "[Paper Explained] Activation-aware Weight Quantization (AWQ) explained",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "Paper reading on how it works and why it's useful to implement.",
-                "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=2iH-vP8O6b8"
-            }
-        ],
-        "QLoRA": [
-            {
-                "COURSE_NAME": "Fine-Tuning Large Language Models with QLoRA",
+                "COURSE_NAME": "Model Compression with Quantization and Pruning",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "Explore QLoRA (Quantization-Aware Low-Rank Adaptation) for efficient fine-tuning of large language models. Learn to adapt pre-trained models with minimal computational resources and maintain performance.",
+                "DESCRIPTION": "Explore various model compression techniques, including quantization and pruning. The course covers practical implementation and trade-offs.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=QLoRA"
+                "COURSE_LINK": "https://www.coursera.org/courses?query=model%20compression"
             },
             {
-                "COURSE_NAME": " QLoRA: Efficient Finetuning of Quantized LLMs",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "QLoRA: Efficient Finetuning of Quantized LLMs",
+                "COURSE_NAME": "Deep Learning Model Optimization",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn advanced techniques for optimizing deep learning models, including quantization, pruning, and knowledge distillation. The course includes hands-on projects and case studies.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=5g68FV49WSw"
+                "COURSE_LINK": "https://www.edx.org/search?q=deep%20learning%20optimization"
             },
             {
-                "COURSE_NAME": "Fine-Tuning LLMs with LoRA and QLoRA: Implementing PEFT with PyTorch and Hugging Face",
+                "COURSE_NAME": "Quantization Techniques in Deep Learning",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "Fine-Tuning LLMs with LoRA and QLoRA: Implementing PEFT with PyTorch and Hugging Face",
+                "DESCRIPTION": "A deep dive into quantization techniques used to optimize deep learning models for deployment on resource-constrained devices.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=OHm1QWjIogo"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=xognUe975WI"
             }
         ],
-        "bitsandbytes": [
+        "Training and optimizing multi-modal models (vision language/audio)": [
             {
-                "COURSE_NAME": "Implementing bitsandbytes for Deep Learning",
+                "COURSE_NAME": "Multi-Modal Machine Learning",
                 "PLATFORM": "Coursera",
-                "DESCRIPTION": "This course guides you on how to implement bitsandbytes for better performance",
+                "DESCRIPTION": "Explore the principles and techniques for building multi-modal machine learning models. The course covers vision, language, and audio modalities.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=deep%20learning%20quantization"
+                "COURSE_LINK": "https://www.coursera.org/courses?query=multi%20modal%20machine%20learning"
             },
             {
-                "COURSE_NAME": "8-bit Matrix Multiplication via Online Quantization for Resource-Constrained Deep Learning",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "This video shows how to implement 8-bit Matrix Multiplication via Online Quantization for Resource-Constrained Deep Learning.",
+                "COURSE_NAME": "Deep Learning for Multi-Modal Data",
+                "PLATFORM": "edX",
+                "DESCRIPTION": "Learn how to apply deep learning techniques to multi-modal data. Topics include feature fusion, cross-modal attention, and transfer learning.",
                 "DIFFICULTY": "Advanced",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=M5nZtYvWlgM"
-            }
-        ],
-        "mixed precision": [
-            {
-                "COURSE_NAME": "Mixed Precision Training",
-                "PLATFORM": "NVIDIA Developer",
-                "DESCRIPTION": "This guide explains how to use mixed precision to speed up training and reduce memory usage. It covers best practices and examples for TensorFlow and PyTorch.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://developer.nvidia.com/blog/mixed-precision-training-deep-learning/"
+                "COURSE_LINK": "https://www.edx.org/search?q=multi-modal%20data"
             },
             {
-                "COURSE_NAME": "Mixed Precision Training with PyTorch",
-                "PLATFORM": "Lightning AI",
-                "DESCRIPTION": "Learn how to implement mixed precision training with PyTorch Lightning. This tutorial covers automatic mixed precision (AMP) and best practices for optimizing performance.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://lightning.ai/docs/pytorch/stable/advanced/precision_intermediate.html"
-            },
-            {
-                "COURSE_NAME": "Mixed Precision Training in PyTorch",
+                "COURSE_NAME": "Multimodal Deep Learning",
                 "PLATFORM": "YouTube",
-                "DESCRIPTION": "A practical guide on implementing mixed precision training in PyTorch to improve training speed and reduce memory footprint.",
+                "DESCRIPTION": "Covers the fundamentals of training and optimizing multi-modal models. From beginner to advanced.",
                 "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://m.youtube.com/watch?v=QcQtj7Pq90I"
-            }
-        ],
-        "memory profiling": [
-            {
-                "COURSE_NAME": "Memory Management in Python",
-                "PLATFORM": "Coursera",
-                "DESCRIPTION": "Learn about memory management techniques in Python to optimize code performance. This course covers garbage collection, memory profiling, and best practices for reducing memory usage.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.coursera.org/courses?query=memory+management+python"
-            },
-            {
-                "COURSE_NAME": "Memory profiling with memray",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "Learn how to implement memory profiling to better understand performance.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=rY-51hB7J5g"
-            }
-        ],
-        "multi modal models": [
-            {
-                "COURSE_NAME": "Multimodal Machine Learning with Python",
-                "PLATFORM": "Udemy",
-                "DESCRIPTION": "A good course to implement ML with Python. Learn how to build models that process and integrate multiple data modalities.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.udemy.com/course/multimodal-machine-learning-with-python/"
-            },
-            {
-                "COURSE_NAME": "Zero-shot Multilingual Machine Translation with Multimodal Guidance",
-                "PLATFORM": "YouTube",
-                "DESCRIPTION": "A course on multi modal ML with guidance on how to approach it.",
-                "DIFFICULTY": "Intermediate",
-                "COURSE_LINK": "https://www.youtube.com/watch?v=9mJg9jDDDkY"
+                "COURSE_LINK": "https://www.youtube.com/watch?v=v8V1_5zcPA0"
             }
         ]
     }

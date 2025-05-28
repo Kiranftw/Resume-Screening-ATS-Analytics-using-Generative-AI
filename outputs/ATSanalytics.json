@@ -1,79 +1,92 @@
 {
     "Extracted Data": {
-        "Name": "Arkala Vishal",
-        "Contact Details": "vishalarkala04@gmail.com, LinkedIn, +91 7674079736",
-        "Summary or Objective": "Dynamic fresher with Gen AI skills, eager to contribute to SAT Infotech's growth. Confident in my ability to thrive in a fast paced environment and add value for this role",
+        "Name": "Harsha Vardhini Pendyala",
+        "Contact Details": "LinkedIn: www.linkedin.com/in/harsha vardhini04, Email: 40harsha@gmail.com, GitHub: https://github.com/Harshavarma04/, Phone: (+91) 8886066070, Address: Chengicherla, Hyderabad, Telangana",
+        "Summary or Objective": null,
         "Skills": {
-            "Soft Skills": [],
+            "Soft Skills": [
+                "Problem Solving",
+                "Data Analysis"
+            ],
             "Hard Skills": [
                 "Python",
-                "SQL (MySQL)",
-                "Excel",
+                "C",
+                "MYSQL",
+                "R",
+                "Java",
+                "Artificial intelligence",
                 "MongoDB",
-                "FastAPI",
-                "LangChain",
-                "Numpy",
-                "Pandas",
-                "Matplotlib",
-                "SK Learn",
-                "Data Collection",
-                "Data Pre processing",
-                "Data Warehousing",
-                "Linear and Logistic regression",
-                "KNN",
-                "Decision Tree",
-                "K Means",
+                "Machine Learning",
                 "Statistics",
-                "Probability",
-                "Matrices"
+                "NLP"
             ]
         },
         "Experience": [
             {
-                "Title": "Industrial Training",
-                "Company": "Surya Tech Solution",
-                "Duration": "Sep 2021 - Jan 2022",
-                "Description": "At Anurag College of Engineering, I pursued a diploma in electrical and electronics engineering. Subsequently, I successfully completed my industrial training in the field of Optical Fibre gaining valuable hands on experience and practical knowledge in this specialized area."
+                "Title": "Data Science Intern",
+                "Company": "Innomatics Research Labs",
+                "Duration": "11th Sep 2024 to 20th Nov 2024",
+                "Description": null
+            },
+            {
+                "Title": "AICTE Google AI ML course",
+                "Company": null,
+                "Duration": "25th July 2024 To 8th Sep 2024",
+                "Description": null
+            },
+            {
+                "Title": "Data analytics Internship",
+                "Company": "Internship studio",
+                "Duration": "15 May 2024 To 19 Jun 2024",
+                "Description": null
+            },
+            {
+                "Title": "Data science program",
+                "Company": "1stop",
+                "Duration": "01 Oct 2023 To 15 Nov 2023",
+                "Description": null
             }
         ],
         "Projects": [
-            "Song Recommendation System: Developed a Python app using Spotify's API for personalized song recommendations, utilizing collaborative and content based filtering. Enhanced the user experience with data visualization to provide insights into the recommendation process",
-            "Image Captioning Project: Developed an image captioning model using Vision Transformer (ViT) for feature extraction and LSTM for text generation. Implemented attention mechanisms and greedy search algorithms, evaluated with BLEU metrics on the Flickr 8k dataset.",
-            "Smart India Hackathon (SIH): I proposed a mobile app prototype at SIH to enhance tourist's beach experiences and safety by helping them discover and engage in recreational activities."
+            "Smart Sentiment Analysis of YouTube Comments. (Role Team Lead): Developed a sentiment analysis model for YouTube comments, classifying emotions to gain insights into viewer reactions and engagement trends, with an option to download results as a PDF report for easy review and analysis.",
+            "Keyword Based Resume Screening to Enhance Recruitment Efficiency: Built a scalable automated resume screening pipeline for handling 900+ resumes, reducing manual screening time by 90% and boosting recruitment efficiency with data driven shortlisting.",
+            "Extracting Keyphrases From Scientific Content. (Role Team Lead): Developed an intelligent web application using NLP and Flask that extracts and explains key terms from scientific text, enabling faster comprehension and reducing information lookup time by 80% for researchers and students.",
+            "Exploratory Data Analysis Projects: Performed EDA on credit and AMCAT datasets, analyzing and visualizing credit trends, and applied statistical tests to validate hypotheses and explore data relationships."
         ],
         "Certifications": [
-            "Data Science Foundation - Great Learning",
-            "What Is Generative AI - LinkedIn",
-            "Databases and SQL for Data Science with Python - IBM",
-            "AI ML Virtual Internship - AICTE"
+            "Advanced Data Analysis Internship Program certification from Innomatics research labs.",
+            "Data science foundations certification from Great learning.",
+            "Advanced ML and GenAI Internship Program certification from Innomatics research labs.",
+            "Artificial intelligence program certification from RINEX.",
+            "Pragati: Path to Future Cohort 3 certification from Infosys in collaboration with Springboard."
         ],
         "Education": [
-            "Nalla Narasimha Reddy Education Society's Group of Institutions, Computer Science and Engineering Specialization in Data science. | CGPA 7.55 | present 2025",
-            "Diploma in Electrical and Electronics Engineering Anurag College of Engineering | CGPA 7.0% | 2019 2022"
+            "B. TECH (CSE DS) NALLA NARASIMHA REDDY EDUCATIONAL SOCITY SGROUP OF INSTITUTIONS JNTUH PURSUING 8.56",
+            "INTERRMIDIATE SRI CHAITANYA JUNIOR KALASALA TSBIE 2021 9.20",
+            "S.S.C ST. ALPHONSUS HIGH SCHOOL SSC BOARD 2019 8.3"
         ]
     },
     "ATS Score": {
-        "Total Score": 83,
+        "Total Score": 79,
         "Breakdown": {
-            "Format Score": 5,
+            "Format Score": 8,
             "Spelling & Grammar": 10,
-            "Summary": 10,
-            "Skills": 10,
-            "Experience": 10,
+            "Summary": 0,
+            "Skills": 9,
+            "Experience": 8,
             "Projects": 10,
             "Certifications": 10,
             "Education": 10,
-            "Contact Details": 8
+            "Contact Details": 10
         }
     },
     "Recommendations": [
-        "Improve the **resume format** by using a single-column layout to enhance readability and ensure that it is easily parsed by ATS systems, it is a crucial step in ensuring your application is properly processed.",
-        "Consider adding quantifiable achievements to the **work experience** section to demonstrate the impact of your contributions, this would make your resume more appealing to potential employers.",
-        "It would be beneficial to include a separate **soft skills** section, highlighting attributes such as communication, teamwork, and problem-solving, these skills are highly valued by employers and showcase your interpersonal abilities.",
-        "Although not necessary, consider adding **volunteer experience** to showcase a more well-rounded profile. However, only do so if it is relevant to the job position.",
-        "Ensure your **contact details** are clearly visible and up-to-date to facilitate easy communication from potential employers, including professional email address and LinkedIn profile is highly recommended.",
-        "The resume should ideally be one page in length, so by removing the **irrelevant information** or redundant content, will help to make the resume more concise and focused.",
-        "Consider adding **relevant coursework** if you are a recent graduate to show your grasp on Data Science, it is beneficial in showcasing your academic background and its relevance to the job.",
-        "Make sure to remove the **extra spaces** in resume to improve readability and make the resume look cleaner. Check for extra line spacing, indentation, and other irregularities that don't contribute towards the content."
+        "Add a professional **summary or objective** at the beginning of your resume to highlight your key skills and career goals. This helps recruiters quickly understand your value proposition.",
+        "While you've listed both hard and soft skills, consider **quantifying** your soft skills with specific examples from your experience. For instance, instead of just listing 'Problem Solving,' describe a situation where you successfully solved a problem.",
+        "For each work experience entry, provide a detailed **description** of your responsibilities and achievements. Use action verbs to showcase your contributions and quantify your impact whenever possible.",
+        "In your projects section, focus on **results and outcomes**. Instead of just describing the project, highlight the impact it had or the value it created. Mention any specific metrics or achievements.",
+        "Ensure **consistent formatting** throughout your resume, including font sizes, spacing, and bullet point styles. A well-formatted resume is easier to read and presents a professional image.",
+        "Consider adding **keywords** from the job descriptions of positions you're applying for to your resume, especially in the skills and experience sections. This can help your resume get past automated screening systems.",
+        "Proofread your resume carefully for any **spelling or grammatical errors**. Even minor mistakes can detract from your credibility and make your resume seem less polished."
     ]
 }
